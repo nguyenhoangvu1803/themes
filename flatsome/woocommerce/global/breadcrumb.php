@@ -12,10 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-echo "EE<br/>";
-echo $breadcrumb;
-echo "DD<br/>";
-
 if ( !empty($breadcrumb) ) {
 
 	do_action('flatsome_before_breadcrumb');
