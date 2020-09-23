@@ -35,6 +35,9 @@ input[type='search']::placeholder {
 .breadcrumbs a:last-child{
 	color:#333333;
 }
+.product-title.entry-title {
+  font-weight: 500;
+}
 .footer-wrapper ul.menu>li i, .footer-wrapper .widget>ul>li i{
 	margin-right: 7px;
 }

@@ -104,6 +104,7 @@ jQuery(function ($) {
       select.find('option').each(function (optionIndex, optionElement) {
         var radioGroup = select.attr('id') + "Group";
         var label = $("<label />");
+        label.addClass('active');
         container.append(label);
 
         if (select.val() == $(this).val()) {
@@ -164,6 +165,7 @@ jQuery(function ($) {
       select.find('option').each(function (optionIndex, optionElement) {
         var radioGroup = select.attr('id') + "Group";
         var label = $("<label />");
+        label.addClass('active');
         container.append(label);
 
         if (select.val() == $(this).val()) {
