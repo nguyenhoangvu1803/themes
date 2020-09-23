@@ -104,10 +104,10 @@ jQuery(function ($) {
       select.find('option').each(function (optionIndex, optionElement) {
         var radioGroup = select.attr('id') + "Group";
         var label = $("<label />");
-        label.addClass('active');
         container.append(label);
 
         if (select.val() == $(this).val()) {
+          label.addClass('active');
           $("<input type='radio' name='" + radioGroup + "' />")
             .attr("value", $(this).val())
             .prop('checked', true)
@@ -165,10 +165,10 @@ jQuery(function ($) {
       select.find('option').each(function (optionIndex, optionElement) {
         var radioGroup = select.attr('id') + "Group";
         var label = $("<label />");
-        label.addClass('active');
         container.append(label);
 
         if (select.val() == $(this).val()) {
+          label.addClass('active');
           $("<input type='radio' name='" + radioGroup + "' />")
             .attr("value", $(this).val())
             .prop('checked', true)
