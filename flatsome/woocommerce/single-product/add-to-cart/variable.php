@@ -186,6 +186,7 @@ jQuery(function ($) {
 
       container.find(":radio + span").mousedown(
         function (e) {
+          console.log($(this));
           var $span = $(this);
           var $radio = $($span.prev());
           if ($radio.is(':checked')) {
