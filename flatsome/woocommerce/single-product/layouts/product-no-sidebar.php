@@ -68,9 +68,9 @@
     		?>
     </div>
   </div>
-	<div class="container">
+	<!-- <div class="container">
 		<div id="beforereview">
 			<?php echo do_shortcode("[jgm-all-reviews]"); ?>
 		</div><!-- review -->
-	</div>
+	</div> -->
 </div>

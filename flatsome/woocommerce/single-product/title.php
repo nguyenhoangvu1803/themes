@@ -39,34 +39,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="is-divider small"></div>
 <?php } ?>
 <script>
-  // var $ = jQuery;
-  // $(document).ready(function() {
-  //   $("#load-review").click(function(event){
-  //     event.preventDefault();
-  //     var targetOffset = $('#beforereview').offset().top;
-  //     $('html, body').animate({scrollTop: targetOffset}, 500);
-  //     if ($(this).attr("data-click") == '0') {
-  //       $(this).attr('data-click', '1');
-  //       $('<link/>', {
-  //         rel: 'stylesheet',
-  //         type: 'text/css',
-  //         href: 'https://cdn.judge.me/judgeme_widget_v2.css'
-  //       }).appendTo('head');
-  //       $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
-  //     }
-  //   });
-  //   $('.woocommerce-tabs').waypoint(function(direction) {
-  //     if ($("#load-review").attr("data-click") == '0') {
-  //       $("#load-review").attr('data-click', '1');
-  //       $('<link/>', {
-  //         rel: 'stylesheet',
-  //         type: 'text/css',
-  //         href: 'https://cdn.judge.me/judgeme_widget_v2.css'
-  //       }).appendTo('head');
-  //       $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
-  //     }
-  //   }, {
-  //     offset: '25%'
-  //   });
-  // });
+  var $ = jQuery;
+  $(document).ready(function() {
+    $("#load-review").click(function(event){
+      event.preventDefault();
+      var targetOffset = $('#beforereview').offset().top;
+      $('html, body').animate({scrollTop: targetOffset}, 500);
+      if ($(this).attr("data-click") == '0') {
+        $(this).attr('data-click', '1');
+        $('<link/>', {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://cdn.judge.me/judgeme_widget_v2.css'
+        }).appendTo('head');
+        $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
+      }
+    });
+    $('.woocommerce-tabs').waypoint(function(direction) {
+      if ($("#load-review").attr("data-click") == '0') {
+        $("#load-review").attr('data-click', '1');
+        $('<link/>', {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://cdn.judge.me/judgeme_widget_v2.css'
+        }).appendTo('head');
+        $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
+      }
+    }, {
+      offset: '25%'
+    });
+  });
 </script>
