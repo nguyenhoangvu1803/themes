@@ -26,19 +26,20 @@ if ( ! comments_open() ) {
 $tab_style              = get_theme_mod( 'product_display' );
 $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ratings_enabled() : get_option( 'woocommerce_enable_review_rating' ) === 'yes';
 ?>
-<div id="reviews" class="woocommerce-Reviews row">
+<div id="beforereview" class="woocommerce-Reviews row">
 	<div id="comments" class="col large-<?php if ( get_comment_pages_count() == 0 || $tab_style == 'sections' || $tab_style == 'tabs_vertical' ) { echo '12'; } else { echo '7'; } ?>">
 
 
 
 		<div class="container">
-			<div id="beforereview">
+			<div>
 				<?php echo do_shortcode("[jgm-all-reviews]"); ?>
-			</div>review
+			</div>
 		</div>
 		
 
-		<<!-- h3 class="woocommerce-Reviews-title normal">
+		<!-- 
+		<h3 class="woocommerce-Reviews-title normal">
 			<?php
 			$count = $product->get_review_count();
 			if ( $count && $review_ratings_enabled ) {
@@ -49,8 +50,8 @@ $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ra
 				esc_html_e( 'Reviews', 'woocommerce' );
 			}
 			?>
-		</h3> -->
-		<!-- 
+		</h3>
+
 		<?php if ( have_comments() ) : ?>
 			<ol class="commentlist">
 				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
@@ -80,6 +81,7 @@ $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ra
 			<p class="woocommerce-noreviews"><?php esc_html_e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 		<?php endif; ?>
 		 -->
+
 	</div>
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
