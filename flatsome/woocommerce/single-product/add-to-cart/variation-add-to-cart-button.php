@@ -129,6 +129,7 @@ global $product;
 	</style>
   <div id="hourglasswraper" class="flag">
     <div class="flag-img">
+        <img src="<?php echo get_stylesheet_directory_uri() . '/img/almost.svg';?>" alt="" />
       	<div id="hourglass" class="fa-stack fa-4x">
           <i class="fa fa-stack-1x fa-hourglass-start"></i>
           <i class="fa fa-stack-1x fa-hourglass-half"></i>
