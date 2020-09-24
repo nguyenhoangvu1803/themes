@@ -45,8 +45,8 @@ global $product;
   </div>
   <div style="font-size: 13px;color: #4F4F4F;">This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: 500;color: #000;">Get it before it's gone!</span></div>
   <div>
-  <img  alt="credit cards" src="https://flagwix.com/wp-content/uploads/2020/09/checkout-opt.png">
-  <img src="https://flagwix.com/wp-content/uploads/2020/09/product.jpg">
+  <img  alt="credit cards" src="https://149.28.149.209/wp-content/uploads/2020/09/guaranteed-safe-checkout-single.png">
+  <img src="https://149.28.149.209/wp-content/uploads/2020/09/4-step.png">
   </div>
   <script>
 		function getRandomInt(max) {
