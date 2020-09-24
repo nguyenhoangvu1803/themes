@@ -5,8 +5,8 @@
 .radioSelectContainer > label {
     float: left;
 }
-.radioSelectContainer > label:last-child {
-	margin-right: 0;
+.radioSelectContainer > label:not(:last-child) {
+	margin-right: 15px;
 }
 .radioSelectContainer input[type="radio"] {
 	display: none;
@@ -15,11 +15,33 @@
   	font-size: 13px;
     font-weight: 600;
     color: rgba(0,0,0,.3);
+    line-height: 21px;
+    position: relative;
+    padding: 12px 10px 12px 45px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.3);
+}
+.radioSelectContainer > label > span:before {
+	content: '';
+    width: 21px;
+    height: 21px;
+    border: 2px solid rgba(0,0,0,.3);
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    left: 13px;
+}
+.radioSelectContainer > label > input:checked + span:before{
+	content: '\2714';
+    border-color: #000;
+    background: #000;
+    color: #fff;
+    text-align: center;
 }
 .radioSelectContainer > label > span:hover {
   	cursor: pointer;
 }
-.radioSelectContainer > label > input:checked + span {
+.radioSelectContainer > label > input:checked + span, .radioSelectContainer > label > input + span:hover {
     color: #000; 
 }
 .variations td.label label {
