@@ -59,11 +59,18 @@ ins span{
 .price del, .product_list_widget del, del .woocommerce-Price-amount {
 	font-size: 18px;
 }
+.woocommerce-variation-price del {
+	vertical-align: top;
+    margin-top: 2px;
+    display: inline-block;
+}
 .product_saving_amount {
 	color: #53A42F;
 	background-color: rgba(103, 175, 71, 0.15);
-	padding: 3px 7px;
+	padding: 0 7px;
 	border-radius: 3px;
 	font-size: 12px;
 	font-weight: 500;
+    line-height: 21px;
+    display: inline-block;
 }
