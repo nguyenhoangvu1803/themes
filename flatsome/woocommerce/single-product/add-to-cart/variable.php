@@ -54,7 +54,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		</table>
 
 		<div class="single_variation_wrap">
-      <div style="font-size: 0.88em;">This is the best offer you've ever seen, <span style="font-weight: 700;">only this <?php echo date('F'); ?></span></div>
+      <div class="font-size: 13px; color: #828282;">This is the best offer you've ever seen, <span style="font-weight: 700; color: #000;">only this <?php echo date('F'); ?></span></div>
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.
