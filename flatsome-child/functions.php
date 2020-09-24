@@ -209,11 +209,11 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
   if( $product instanceof WC_Product && $product->is_type('variable') && is_product() ) {
     // $currency_symbol = get_woocommerce_currency_symbol();
     // $saved = $regular_price - $sale_price;
-    $percentage = (int) ( $regular_price - $sale_price ) / $regular_price * 100;
+    $percentage = ( $regular_price - $sale_price ) / $regular_price * 100;
     return '
         <ins>' . wc_price( $sale_price ) . '</ins>
         <del>' . wc_price( $regular_price ) . '</del>
-        <span class="product_saving_amount"> You saved ' . $percentage . '% this time</span>
+        <span class="product_saving_amount"> You saved ' . round($percentage) . '% this time</span>
     ';
   }
 
