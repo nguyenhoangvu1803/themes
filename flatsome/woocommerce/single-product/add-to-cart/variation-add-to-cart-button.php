@@ -128,8 +128,7 @@ global $product;
 
 	</style>
   <div id="hourglasswraper" class="flag">
-    <div class="flag-img">
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/almost.svg';?>" alt="" />
+    <!-- <div class="flag-img">
       	<div id="hourglass" class="fa-stack fa-4x">
           <i class="fa fa-stack-1x fa-hourglass-start"></i>
           <i class="fa fa-stack-1x fa-hourglass-half"></i>
@@ -137,11 +136,11 @@ global $product;
           <i class="fa fa-stack-1x fa-hourglass-end"></i>
           <i class="fa fa-stack-1x fa-hourglass-o"></i>
         </div>
-    </div>
-    <?php $pieces = rand(5, 15); ?>
-    <div class="flag-body">
-      <span style="font-weight: bold">Almost gone.</span> There are only <?php  echo rand(2, 5); ?> left.
-    </div>
+    </div> -->
+  </div>
+  <?php $pieces = rand(5, 15); ?>
+  <div class="flag-body">
+    <img src="<?php echo get_template_directory_uri() . '/assets/img/almost.svg';?>" alt="" /><span style="font-weight: bold">Almost gone.</span> There are only <?php  echo rand(2, 5); ?> left.
   </div>
   <div>This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: bold;">Get it before it's gone!</span></div>
   <div>
