@@ -20,6 +20,7 @@
     padding: 12px 10px 12px 45px;
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,.3);
+    transform: 0.5s;
 }
 .radioSelectContainer > label > span:before {
 	content: '';
@@ -42,7 +43,8 @@
   	cursor: pointer;
 }
 .radioSelectContainer > label > input:checked + span, .radioSelectContainer > label > input + span:hover {
-    color: #000; 
+    color: #000;
+    border-color: #000;
 }
 .variations td.label label {
  	font-weight: 500;
