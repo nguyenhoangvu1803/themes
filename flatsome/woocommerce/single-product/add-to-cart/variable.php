@@ -107,7 +107,6 @@ jQuery(function ($) {
         container.append(label);
 
         if (select.val() == $(this).val()) {
-          label.addClass('active');
           $("<input type='radio' name='" + radioGroup + "' />")
             .attr("value", $(this).val())
             .prop('checked', true)
@@ -168,7 +167,6 @@ jQuery(function ($) {
         container.append(label);
 
         if (select.val() == $(this).val()) {
-          label.addClass('active');
           $("<input type='radio' name='" + radioGroup + "' />")
             .attr("value", $(this).val())
             .prop('checked', true)
