@@ -91,7 +91,9 @@ table.variations {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
+    width: calc(100% - 29% - 15px);
 }
 .buttons_added {
 	float: left;
+	max-width: 29%;
 }
