@@ -14,7 +14,7 @@
 .radioSelectContainer > label > span {
   	font-size: 13px;
     font-weight: 600;
-    color: rgba(0,0,0,.3);
+    color: #333;
     line-height: 21px;
     position: relative;
     padding: 12px 10px 12px 45px;
@@ -46,7 +46,8 @@
     color: #000;
     border-color: #000;
 }
-.variations td.label label {
+.variations td.label label, .product-lightbox .qty,
+.sticky-add-to-cart > .qty {
  	font-weight: 500;
     font-size: 12px;
     text-transform: uppercase;
@@ -77,4 +78,20 @@ ins span{
     line-height: 21px;
     display: inline-block;
     vertical-align: top;
+}
+table.variations {
+	margin-bottom: 30px;
+}
+.sticky-add-to-cart>.single_add_to_cart_button, 
+.woocommerce-variation-add-to-cart>.single_add_to_cart_button, 
+.quick_buy_container .wc_quick_buy_button {
+    border-radius: 3px;
+    min-height: 55px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.buttons_added {
+	float: left;
 }
