@@ -26,13 +26,13 @@ if ( ! comments_open() ) {
 $tab_style              = get_theme_mod( 'product_display' );
 $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ratings_enabled() : get_option( 'woocommerce_enable_review_rating' ) === 'yes';
 ?>
-<div id="beforereview" class="woocommerce-Reviews row">
+<div id="reviews" class="woocommerce-Reviews row">
 	<div id="comments" class="col large-<?php if ( get_comment_pages_count() == 0 || $tab_style == 'sections' || $tab_style == 'tabs_vertical' ) { echo '12'; } else { echo '7'; } ?>">
 
 
 
 		<div class="container">
-			<div>
+			<div id="beforereview">
 				<?php echo do_shortcode("[jgm-all-reviews]"); ?>
 			</div>
 		</div>
