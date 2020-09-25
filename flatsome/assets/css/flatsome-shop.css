@@ -166,13 +166,14 @@ ul.product-tabs li a span {
 }
 .product-small .box-text {
 	padding-left: 18px;
+	padding-bottom: 12px;
 }
 .product-small .product-title {
 	font-weight: 600;
 	font-size: 14px;
 	color: #000;
 	line-height: 1.5;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 .product-small .amount {
 	color: #000;
