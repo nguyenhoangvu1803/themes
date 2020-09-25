@@ -209,6 +209,70 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </div>
 </form>
+
+<div class="stamped-reviews-wrapper">
+    <div class="stamped-ratings-wrapper stamped-review-card">
+        <div class="stamped-reviews-image">
+            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/1596893201__20200617_093810_HDR__original-scaled.jpg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/1596893201__20200617_093810_HDR__original-scaled.jpg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
+        </div>
+        <div class="stamped-reviews-date" data-date="9">12/05/2018</div>
+        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
+        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Hand of god</span>!</a></div>
+        <div class="stamped-reviews-message stamped-style-color-text"><span>Love this flag!! Means so much with no words to say</span></div>
+        <div class="stamped-reviews-author stamped-style-color-text">Stephanie Smith. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
+        <div class="stamped-reviews-location" style="display: none;">United States</div>
+        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
+    </div>
+    <div class="stamped-ratings-wrapper stamped-review-card">
+        <div class="stamped-reviews-image">
+            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/image1.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/image1.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
+        </div>
+        <div class="stamped-reviews-date" data-date="1">12/05/2018</div>
+        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
+        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Love it’s vibe!!</span></a></div>
+        <div class="stamped-reviews-message stamped-style-color-text"><span>Colorful, vibrant flag! Very well made!! We have a solar light on it and a glazing ball that matches perfectly in front of it! We love it!!</span></div>
+        <div class="stamped-reviews-author stamped-style-color-text">Cyndi Pridemore. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
+        <div class="stamped-reviews-location" style="display: none;">United States</div>
+        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
+    </div>
+    <div class="stamped-ratings-wrapper stamped-review-card">
+        <div class="stamped-reviews-image">
+            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/image0-rotated.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/image0-rotated.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
+        </div>
+        <div class="stamped-reviews-date" data-date="2">12/05/2018</div>
+        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
+        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Thank you, it’s beautiful!!!</span></a></div>
+        <div class="stamped-reviews-message stamped-style-color-text"><span>We love our flag, it’s in our inspirational garden!</span></div>
+        <div class="stamped-reviews-author stamped-style-color-text">Janet Castens. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
+        <div class="stamped-reviews-location" style="display: none;">United States</div>
+        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
+    </div>
+    <div class="stamped-ratings-wrapper stamped-review-card">
+        <div class="stamped-reviews-image">
+            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/image2.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/image2.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
+        </div>
+        <div class="stamped-reviews-date" data-date="2">12/05/2018</div>
+        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
+        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Absolutely Beautiful!</span>!</a></div>
+        <div class="stamped-reviews-message stamped-style-color-text"><span>I received it . Thank you . It’s beautiful</span></div>
+        <div class="stamped-reviews-author stamped-style-color-text">Elena Servin. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
+        <div class="stamped-reviews-location" style="display: none;">United States</div>
+        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
+    </div>
+    <div class="stamped-ratings-wrapper stamped-review-card">
+        <div class="stamped-reviews-image">
+            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/Image-scaled.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/Image-scaled.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
+        </div>
+        <div class="stamped-reviews-date" data-date="2">12/05/2018</div>
+        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
+        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>It is exactly as it looks!</span>!</a></div>
+        <div class="stamped-reviews-message stamped-style-color-text"><span>We got the correct flag. Thank u so much.</span></div>
+        <div class="stamped-reviews-author stamped-style-color-text">Mark Lewis. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
+        <div class="stamped-reviews-location" style="display: none;">United States</div>
+        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
+    </div>
+</div>
+
 </div>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
@@ -387,70 +451,6 @@ do_action( 'woocommerce_before_cart' ); ?>
     		float: left;
   	}
 </style>
-<div class="stamped-reviews-wrapper">
-
-    <div class="stamped-ratings-wrapper stamped-review-card">
-        <div class="stamped-reviews-image">
-            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/1596893201__20200617_093810_HDR__original-scaled.jpg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/1596893201__20200617_093810_HDR__original-scaled.jpg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
-        </div>
-        <div class="stamped-reviews-date" data-date="9">12/05/2018</div>
-        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
-        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Hand of god</span>!</a></div>
-        <div class="stamped-reviews-message stamped-style-color-text"><span>Love this flag!! Means so much with no words to say</span></div>
-        <div class="stamped-reviews-author stamped-style-color-text">Stephanie Smith. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
-        <div class="stamped-reviews-location" style="display: none;">United States</div>
-        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
-    </div>
-    <div class="stamped-ratings-wrapper stamped-review-card">
-        <div class="stamped-reviews-image">
-            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/image1.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/image1.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
-        </div>
-        <div class="stamped-reviews-date" data-date="1">12/05/2018</div>
-        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
-        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Love it’s vibe!!</span></a></div>
-        <div class="stamped-reviews-message stamped-style-color-text"><span>Colorful, vibrant flag! Very well made!! We have a solar light on it and a glazing ball that matches perfectly in front of it! We love it!!</span></div>
-        <div class="stamped-reviews-author stamped-style-color-text">Cyndi Pridemore. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
-        <div class="stamped-reviews-location" style="display: none;">United States</div>
-        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
-    </div>
-    <div class="stamped-ratings-wrapper stamped-review-card">
-        <div class="stamped-reviews-image">
-            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/image0-rotated.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/image0-rotated.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
-        </div>
-        <div class="stamped-reviews-date" data-date="2">12/05/2018</div>
-        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
-        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Thank you, it’s beautiful!!!</span></a></div>
-        <div class="stamped-reviews-message stamped-style-color-text"><span>We love our flag, it’s in our inspirational garden!</span></div>
-        <div class="stamped-reviews-author stamped-style-color-text">Janet Castens. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
-        <div class="stamped-reviews-location" style="display: none;">United States</div>
-        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
-    </div>
-    <div class="stamped-ratings-wrapper stamped-review-card">
-        <div class="stamped-reviews-image">
-            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/image2.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/image2.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
-        </div>
-        <div class="stamped-reviews-date" data-date="2">12/05/2018</div>
-        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
-        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>Absolutely Beautiful!</span>!</a></div>
-        <div class="stamped-reviews-message stamped-style-color-text"><span>I received it . Thank you . It’s beautiful</span></div>
-        <div class="stamped-reviews-author stamped-style-color-text">Elena Servin. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
-        <div class="stamped-reviews-location" style="display: none;">United States</div>
-        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
-    </div>
-    <div class="stamped-ratings-wrapper stamped-review-card">
-        <div class="stamped-reviews-image">
-            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/Image-scaled.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/Image-scaled.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
-        </div>
-        <div class="stamped-reviews-date" data-date="2">12/05/2018</div>
-        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i></div>
-        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>It is exactly as it looks!</span>!</a></div>
-        <div class="stamped-reviews-message stamped-style-color-text"><span>We got the correct flag. Thank u so much.</span></div>
-        <div class="stamped-reviews-author stamped-style-color-text">Mark Lewis. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
-        <div class="stamped-reviews-location" style="display: none;">United States</div>
-        <div class="stamped-products-reviews-title"><a href="#" class="stamped-review-product style-color-link" tabindex="-1">Flagwix</a></div>
-    </div>
-
-</div>
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript">
