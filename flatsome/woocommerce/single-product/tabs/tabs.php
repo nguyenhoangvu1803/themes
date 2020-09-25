@@ -42,10 +42,6 @@ if ( get_theme_mod( 'product_display' ) == 'accordian' ) {
  */
 $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
-echo "<pre>";
-	print_r($product_tabs);
-echo "</pre>";
-
 $tab_count   = 0;
 $panel_count = 0;
 

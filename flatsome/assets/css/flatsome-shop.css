@@ -103,3 +103,14 @@ table.variations {
 	float: left;
 	max-width: 29%;
 }
+.reviews {
+	color: #333;
+    font-size: 12px;
+}
+.reviews:hover {
+	color: #243a98;
+}
+.star {
+	margin-right: 5px;
+    color: #0E1639;
+}

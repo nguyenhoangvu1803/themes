@@ -24,14 +24,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php the_title(); ?>
 </h1>
 <div style="margin-top:-7px;margin-bottom:5px">
-  <span style="padding-bottom:10px; color: #ffd200;">
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
+  <span class="star">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
   </span>
-  <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews" style="color:#929292; font-size: 13px;">
+  <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews">
     <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
   </a>
 </div>
