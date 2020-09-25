@@ -43,6 +43,10 @@ if ( ! defined( 'ABSPATH' ) ) {
   $(document).ready(function() {
     $("#load-review").click(function(event){
       event.preventDefault();
+      $('ul.product-tabs').find('> li.active').removeClass('active');
+      $('#tab-title-reviews_tab').addClass('active');
+      $('.tab-panels').find('> div.active').removeClass('active');
+      $('#tab-reviews_tab').addClass('active');
       var targetOffset = $('#tab-title-reviews_tab').offset().top - 100;
       $('html, body').animate({scrollTop: targetOffset}, 500);
       if ($(this).attr("data-click") == '0') {
