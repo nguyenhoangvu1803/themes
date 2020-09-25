@@ -31,8 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   <span class="fa fa-star checked"></span>
   <span class="fa fa-star checked"></span>
   </span>
-  <a id="load-review" data-click="0" href="#beforereview" class="reviews middle-of-product-reviews" style="color:#929292; font-size: 13px;">
-    <?php echo do_shortcode('[jgm-review-count]'); ?> Customer Reviews <span class="top-reviews-arrow fa fa-angle-down"></span>
+  <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews" style="color:#929292; font-size: 13px;">
+    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
   </a>
 </div>
 <?php if ( get_theme_mod( 'product_title_divider', 1 ) ) { ?>
