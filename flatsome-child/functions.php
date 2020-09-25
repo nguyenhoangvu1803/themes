@@ -267,8 +267,8 @@ add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
   // Rename the additional information tab
   $tabs['additional_information']['title'] = __( 'Shipping information' );  
-  // Adds the new tab
-  $tabs['reviews'] = array(
+  // Adds reviews tab
+  $tabs['reviews_tab'] = array(
       'title'     => __( 'Reviews', 'woocommerce' ),
       'priority'  => 30,
       'callback'  => 'woo_new_product_tab_content'
