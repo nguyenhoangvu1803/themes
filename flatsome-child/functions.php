@@ -267,9 +267,10 @@ add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
   // Rename the additional information tab
   $tabs['additional_information']['title'] = __( 'Shipping information' );  
+  $reviews_count = get_option('judgeme_widget_all_reviews_count');
   // Adds reviews tab
   $tabs['reviews_tab'] = array(
-      'title'     => __( 'Reviews', 'woocommerce' ),
+      'title'     => __( 'Reviews <span>' . $reviews_count . '</span>', 'woocommerce' ),
       'priority'  => 30,
       'callback'  => 'woo_new_product_tab_content'
   );
