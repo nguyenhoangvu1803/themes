@@ -230,7 +230,7 @@ if( $color_success && $color_success !== Flatsome_Default::COLOR_SUCCESS ){ ?>
 	/* Color !important */
 	[data-text-color="success"]{color: <?php echo $color_success; ?>!important;}
 	/* Background Color */
-	[data-text-bg="success"], [data-icon-label]:after{background-color: <?php echo $color_success; ?>;}
+	[data-text-bg="success"], [data-icon-label]:after, ul.product-tabs li a span{background-color: <?php echo $color_success; ?>;}
 <?php } ?>
 
 <?php
