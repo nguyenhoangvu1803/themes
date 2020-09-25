@@ -136,3 +136,52 @@ ul.product-tabs li a span {
 	margin-bottom: 0;
     margin-right: 1em;
 }
+.product-info .quantity.buttons_added .is-form {
+ 	width: 48px;
+ 	font-size: 20px;
+}
+.product-info .quantity.buttons_added .minus.is-form {
+ 	border-top-right-radius: 0px !important;
+ 	border-bottom-right-radius: 0px !important;
+}
+.product-info .quantity.buttons_added .plus.is-form {
+ 	border-top-left-radius: 0px !important;
+ 	border-bottom-left-radius: 0px !important;
+}
+.product-lightbox .quantity.buttons_added .input-text,
+.product-info .quantity.buttons_added .input-text {
+ 	width:61px;
+ 	max-width:61px;
+ 	margin: 0;
+}
+.product-small.first {
+	margin-left: 1px;
+}
+.product-small.first {
+	margin-right: -1px;
+}
+.product-small .col-inner {
+	border: 1px solid #E5E5E5;
+    border-radius: 3px;
+}
+.product-small .box-text {
+	padding-left: 18px;
+}
+.product-small .product-title {
+	font-weight: 600;
+	font-size: 14px;
+	color: #000;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.product-small .amount {
+	color: #000;
+	font-weight: 400;
+}
+.add-to-cart-quickview a {
+	color: #fff;
+	width: calc(100% - 36px);
+	margin:0 18px 20px;
+	font-size:16px;
+	font-weight:600;
+}
