@@ -278,7 +278,11 @@ function woo_rename_tabs( $tabs ) {
 }
 function woo_new_product_tab_content() {
   // The new tab content
-  echo '<p>Lorem Ipsum</p>';
+  ?>
+    <div id="beforereview">
+        <?php echo do_shortcode("[jgm-all-reviews]"); ?>
+    </div>
+  <?php
 }
 
 function fix_prl_url() {  

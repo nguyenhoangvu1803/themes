@@ -29,15 +29,6 @@ $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ra
 <div id="reviews" class="woocommerce-Reviews row">
 	<div id="comments" class="col large-<?php if ( get_comment_pages_count() == 0 || $tab_style == 'sections' || $tab_style == 'tabs_vertical' ) { echo '12'; } else { echo '7'; } ?>">
 
-
-
-		<div class="container">
-			<div id="beforereview">
-				<?php echo do_shortcode("[jgm-all-reviews]"); ?>
-			</div>
-		</div>
-		
-
 		<h3 class="woocommerce-Reviews-title normal">
 			<?php
 			$count = $product->get_review_count();
