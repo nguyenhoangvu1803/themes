@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   $(document).ready(function() {
     $("#load-review").click(function(event){
       event.preventDefault();
-      var targetOffset = $('#tab-title-reviews_tab').offset().top;
+      var targetOffset = $('#tab-title-reviews_tab').offset().top - 100;
       $('html, body').animate({scrollTop: targetOffset}, 500);
       if ($(this).attr("data-click") == '0') {
         $(this).attr('data-click', '1');
