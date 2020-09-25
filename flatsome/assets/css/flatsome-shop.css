@@ -120,15 +120,17 @@ table.variations {
 ul.product-tabs li a{
 	font-size: 15px;
 	font-weight: 600;
+	line-height: 34px;
 }
 ul.product-tabs li.active a, ul.product-tabs li a:hover{
 	color: #000;
 }
 ul.product-tabs li a span {
 	border-radius: 11.5em;
-    padding: 3px 8px;
+    padding: 0 8px;
     color: #fff;
     margin-left: 7px;
+    line-height: 23px;
 }
 .sticky-add-to-cart--active qty {
 	margin-bottom: 0;
