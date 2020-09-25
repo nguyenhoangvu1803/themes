@@ -265,7 +265,14 @@ function search_by_custom_order_number( $order_id ) {
  */
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
-  $tabs['additional_information']['title'] = __( 'Shipping information' );  // Rename the additional information tab
+  // Rename the additional information tab
+  $tabs['additional_information']['title'] = __( 'Shipping information' );  
+  // Adds the new tab
+  $tabs['reviews'] = array(
+      'title'     => __( 'Reviews', 'woocommerce' ),
+      'priority'  => 30,
+      'callback'  => 'woo_new_product_tab_content'
+  );
   return $tabs;
 }
 
