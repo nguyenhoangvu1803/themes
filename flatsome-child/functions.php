@@ -275,6 +275,10 @@ function woo_rename_tabs( $tabs ) {
   );
   return $tabs;
 }
+function woo_new_product_tab_content() {
+  // The new tab content
+  echo '<p>Lorem Ipsum</p>';
+}
 
 function fix_prl_url() {  
   if ( function_exists( 'woocommerce_prl_add_link_track_param' ) ) {    
