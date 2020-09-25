@@ -38,7 +38,6 @@ $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ra
 		</div>
 		
 
-		<!-- 
 		<h3 class="woocommerce-Reviews-title normal">
 			<?php
 			$count = $product->get_review_count();
@@ -80,7 +79,6 @@ $review_ratings_enabled = fl_woocommerce_version_check( '3.6.0' ) ? wc_review_ra
 		<?php else : ?>
 			<p class="woocommerce-noreviews"><?php esc_html_e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 		<?php endif; ?>
-		 -->
 
 	</div>
 
