@@ -153,6 +153,7 @@ ul.product-tabs li a span {
  	width:61px;
  	max-width:61px;
  	margin: 0;
+ 	height: 55px;
 }
 .product-small.first {
 	margin-left: 1px;
