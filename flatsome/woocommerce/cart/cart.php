@@ -440,6 +440,8 @@ do_action( 'woocommerce_before_cart' ); ?>
     }
 	.stamped-reviews-wrapper{
 		font-size:14px;
+		padding: 20px;
+		border: 1px solid #e5e5e5;
 	}
 	.stamped-reviews-title{
 		font-weight:bold;
@@ -466,7 +468,7 @@ jQuery('[data-date]').each(function() {
 jQuery('.stamped-reviews-wrapper').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000,
      dots: false,
     prevArrow: false,
