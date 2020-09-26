@@ -136,15 +136,15 @@ ul.product-tabs li a span {
 	margin-bottom: 0;
     margin-right: 1em;
 }
-.product-info .quantity.buttons_added .is-form {
+.quantity.buttons_added .is-form {
  	width: 48px;
  	font-size: 20px;
 }
-.product-info .quantity.buttons_added .minus.is-form {
+.quantity.buttons_added .minus.is-form {
  	border-top-right-radius: 0px !important;
  	border-bottom-right-radius: 0px !important;
 }
-.product-info .quantity.buttons_added .plus.is-form {
+.quantity.buttons_added .plus.is-form {
  	border-top-left-radius: 0px !important;
  	border-bottom-left-radius: 0px !important;
 }

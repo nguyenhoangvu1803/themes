@@ -23,7 +23,7 @@ $sidebar_classes = array();
 
 $auto_refresh  = get_theme_mod( 'cart_auto_refresh' );
 $row_classes[] = 'row-large';
-$row_classes[] = 'row-divided';
+// $row_classes[] = 'row-divided';
 
 if ( $auto_refresh ) {
 	$main_classes[] = 'cart-auto-refresh';
@@ -49,7 +49,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead>
 			<tr>
-				<th class="product-name" colspan="3"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<th class="product-name" colspan="2"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
 				<!-- <th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th> -->
