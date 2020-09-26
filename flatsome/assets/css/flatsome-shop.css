@@ -190,6 +190,11 @@ ul.product-tabs li a span {
 .woocommerce .yith-similar-products, .wc-prl-recommendations {
 	margin-bottom: 50px;
 }
-.shop_table th, .shop_table td{
-	border-bottom: none;
+.shop_table tbody tr td:first-child {
+	border-left: 1px solid #e5e5e5;
+    padding-left: 20px;
+}
+.shop_table tbody tr td:first-child {
+	border-right: 1px solid #e5e5e5;
+    padding-right: 15px;
 }
