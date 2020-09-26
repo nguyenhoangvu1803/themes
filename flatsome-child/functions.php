@@ -356,7 +356,7 @@ function sw_prl_add_container_class( $classes, $deployment ) {
 add_filter( 'woocommerce_get_order_item_totals', 'uoy_woocommerce_get_order_item_totals', 10, 3 );
 function uoy_woocommerce_get_order_item_totals( $total_rows, $instance, $tax_display ) {
   echo "<pre>";
-    print_r($total_rows)
+    print_r($total_rows);
   echo "</pre>";
   unset($total_rows['subtotal']  );
   return $total_rows;
