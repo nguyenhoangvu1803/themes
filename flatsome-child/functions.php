@@ -355,15 +355,5 @@ function sw_prl_add_container_class( $classes, $deployment ) {
 
 add_filter( 'woocommerce_cart_item_subtotal', 'uoy_woocommerce_get_order_item_totals', 11, 3 );
 function uoy_woocommerce_get_order_item_totals( $wc, $cart_item, $cart_item_key ) {
-  echo "<pre>";
-    print_r($wc);
-  echo "</pre>";
-  echo "<pre>";
-    print_r($cart_item);
-  echo "</pre>";
-  echo "<pre>";
-    print_r($cart_item_key);
-  echo "</pre>";
-  
-  return $wc;
+  return '';
 }
