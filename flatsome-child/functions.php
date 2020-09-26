@@ -358,6 +358,12 @@ function uoy_woocommerce_get_order_item_totals( $wc, $cart_item, $cart_item_key 
   echo "<pre>";
     print_r($wc);
   echo "</pre>";
+  echo "<pre>";
+    print_r($cart_item);
+  echo "</pre>";
+  echo "<pre>";
+    print_r($cart_item_key);
+  echo "</pre>";
   
   return $wc;
 }
