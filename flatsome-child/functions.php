@@ -353,11 +353,11 @@ function sw_prl_add_container_class( $classes, $deployment ) {
   return $classes;
 }
 
-add_filter( 'woocommerce_get_order_item_totals', 'uoy_woocommerce_get_order_item_totals', 10, 3 );
-function uoy_woocommerce_get_order_item_totals( $total_rows, $instance, $tax_display ) {
+add_filter( 'woocommerce_cart_item_subtotal', 'uoy_woocommerce_get_order_item_totals', 11, 3 );
+function uoy_woocommerce_get_order_item_totals( $wc, $cart_item, $cart_item_key ) {
   echo "<pre>";
-    print_r($total_rows);
+    print_r($wc);
   echo "</pre>";
-  unset($total_rows['subtotal']  );
-  return $total_rows;
+  
+  return $wc;
 }
