@@ -149,7 +149,7 @@ ul.product-tabs li a span {
  	border-bottom-left-radius: 0px !important;
 }
 .product-lightbox .quantity.buttons_added .input-text,
-.product-info .quantity.buttons_added .input-text {
+.quantity.buttons_added .input-text {
  	width:61px;
  	max-width:61px;
  	margin: 0;

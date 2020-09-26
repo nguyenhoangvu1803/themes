@@ -352,3 +352,9 @@ function sw_prl_add_container_class( $classes, $deployment ) {
   }
   return $classes;
 }
+
+add_filter( 'woocommerce_get_order_item_totals', 'uoy_woocommerce_get_order_item_totals' );
+function uoy_woocommerce_get_order_item_totals( $totals ) {
+  unset($totals['cart_subtotal']  );
+  return $totals;
+}
