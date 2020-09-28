@@ -208,6 +208,7 @@ ul.product-tabs li a span {
 .cart-collaterals {
 	background-color: #f7f7fe;
 	border-radius: 3px;
+	padding-bottom: 5px;
 }
 .cart-collaterals > h4 {
 	padding-top: 15px;
@@ -216,8 +217,10 @@ ul.product-tabs li a span {
 }
 .cart-collaterals .shop_table th, 
 .cart-collaterals .cart-coupon-wrapper, 
+.cart-collaterals .coupon, 
 .cart-collaterals > h4 {
 	padding-left: 20px;
+	padding-right: 20px;
 }
 .cart-collaterals .cart_totals > table:first-child {
     display: none;
@@ -243,4 +246,9 @@ ul.product-tabs li a span {
 }
 .cart-collaterals .cart_totals .wc-proceed-to-checkout {
 	padding: 0 20px;
+}
+.wc-proceed-to-checkout .checkout-button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 53px;
 }
