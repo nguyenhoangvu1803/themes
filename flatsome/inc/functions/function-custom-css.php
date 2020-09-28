@@ -221,7 +221,7 @@ $color_success = get_theme_mod( 'color_success' , Flatsome_Default::COLOR_SUCCES
 if( $color_success && $color_success !== Flatsome_Default::COLOR_SUCCESS ){ ?>
 	.success.is-underline:hover,.success.is-outline:hover,
 	.success{background-color: <?php echo $color_success;?>}
-	.success-color, .success.is-link, .success.is-outline{
+	.success-color, .success.is-link, .success.is-outline, .cart-total-custom.order-save, .cart-total-custom.order-save .amount, .cart-total-custom.order-save .amount, .shop_table .order-save th {
 		color: <?php echo $color_success;?>;
 	}
 	.success-border{

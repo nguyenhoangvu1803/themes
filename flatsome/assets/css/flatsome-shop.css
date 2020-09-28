@@ -219,10 +219,24 @@ ul.product-tabs li a span {
 }
 .shop_table th, .shop_table td {
 	border: none;
+	font-weight: 600;
+}
+.shop_table .order-save th, .shop_table .order-save td {
+	font-size: 13px;
+}
+.shop_table .order-save th {
+	font-weight: 500;
+}
+.shop_table .order-save td {
+	font-weight: 600;
 }
 .shop_table th {
 	padding-left: 20px;
 }
 .cart_totals .shop_table .cart-subtotal th, .cart_totals .shop_table .order-total th {
 	color: #505261;
+}
+.cart-total-custom.order-save,
+.cart-total-custom.order-save .amount {
+ color:green !important;
 }
