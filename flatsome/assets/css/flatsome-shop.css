@@ -228,7 +228,8 @@ ul.product-tabs li a span {
 .cart-collaterals .shop_table td {
 	border: none;
 	font-weight: 600;
-	padding: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 .cart-collaterals .shop_table .order-save th, 
 .cart-collaterals .shop_table .order-save td {
