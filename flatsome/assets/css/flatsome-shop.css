@@ -218,11 +218,11 @@ ul.product-tabs li a span {
 .cart-collaterals .cart_totals > table:first-child {
     display: none;
 }
-.cart-collaterals .shop_table th, .shop_table td {
+.cart-collaterals .shop_table th, .cart-collaterals .shop_table td {
 	border: none;
 	font-weight: 600;
 }
-.cart-collaterals .shop_table .order-save th, .shop_table .order-save td {
+.cart-collaterals .shop_table .order-save th, .cart-collaterals .shop_table .order-save td {
 	font-size: 13px;
 }
 .cart-collaterals .shop_table .order-save th {
@@ -234,7 +234,7 @@ ul.product-tabs li a span {
 .cart-collaterals .shop_table th {
 	padding-left: 20px;
 }
-.cart-collaterals .cart_totals .shop_table .cart-subtotal th, .cart_totals .shop_table .order-total th {
+.cart-collaterals .cart_totals .shop_table .cart-subtotal th, .cart-collaterals .cart_totals .shop_table .order-total th {
 	color: #505261;
 }
 .cart-collaterals .cart_totals .wc-proceed-to-checkout {
