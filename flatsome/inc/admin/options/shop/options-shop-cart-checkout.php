@@ -208,6 +208,14 @@ Flatsome_Option::add_field( 'option',  array(
 ));
 
 Flatsome_Option::add_field( 'option',  array(
+  'type'        => 'checkbox',
+  'settings'     => 'hide_massage',
+  'label'       => __( 'Hide message on header', 'flatsome-admin' ),
+  'section'     => 'woocommerce_checkout',
+  'default' => 0
+));
+
+Flatsome_Option::add_field( 'option',  array(
 	'type'        => 'textarea',
 	'settings'     => 'html_checkout_sidebar',
 	'transport' => $transport,
