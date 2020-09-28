@@ -56,6 +56,13 @@ Flatsome_Option::add_field( 'option',  array(
   'default' => 1
 ));
 
+Flatsome_Option::add_field( 'option',  array(
+  'type'        => 'checkbox',
+  'settings'     => 'cart_hide_they_about',
+  'label'       => __( 'Hide they say about', 'flatsome-admin' ),
+  'section'     => 'cart-checkout',
+  'default' => 0
+));
 
 Flatsome_Option::add_field( '', array(
 	'type'     => 'custom',
