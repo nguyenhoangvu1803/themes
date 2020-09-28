@@ -282,49 +282,55 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
-<div class="cart-collaterals large-4 col pb-0">
+<div class="large-4 col pb-0">
+
 	<?php flatsome_sticky_column_open( 'cart_sticky_sidebar' ); ?>
 
-	<div class="cart-sidebar col-inner <?php echo $sidebar_classes; ?>">
-		<?php if ( wc_coupons_enabled() ) { ?>
-		<form class="checkout_coupon mb-0" method="post">
-			<div class="coupon">
-        <h3 class="widget-title togglecoupon"><?php echo get_flatsome_icon( 'icon-tag' ); ?> <?php esc_html_e( 'Have a coupon? Click here', 'woocommerce' ); ?></h3>
-        <div class="cart-coupon-wrapper" style="display: none;">
-					<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="is-form expand" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
+	<div class="cart-collaterals">
+
+		<div class="cart-sidebar col-inner <?php echo $sidebar_classes; ?>">
+			<?php if ( wc_coupons_enabled() ) { ?>
+			<form class="checkout_coupon mb-0" method="post">
+				<div class="coupon">
+	        <h3 class="widget-title togglecoupon"><?php echo get_flatsome_icon( 'icon-tag' ); ?> <?php esc_html_e( 'Have a coupon? Click here', 'woocommerce' ); ?></h3>
+	        <div class="cart-coupon-wrapper" style="display: none;">
+						<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="is-form expand" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
+						<?php do_action( 'woocommerce_cart_coupon' ); ?>
+					</div>
+				</div>
+				<script type="text/javascript">
+					(function($) {
+						$( document ).ready(function() {
+							$('.togglecoupon').click(function(){
+								$('.cart-coupon-wrapper').toggle();
+							});
+						});
+					})(jQuery);
+				</script>
+			</form>
+			<?php } ?>
+			<?php
+				/**
+				 * Cart collaterals hook.
+				 *
+				 * @hooked woocommerce_cross_sell_display
+				 * @hooked woocommerce_cart_totals - 10
+				 */
+				do_action( 'woocommerce_cart_collaterals' );
+			?>
+			<?php if ( wc_coupons_enabled() ) { ?>
+			<form class="checkout_coupon mb-0" method="post">
+				<div class="coupon">
+					<h3 class="widget-title"><?php echo get_flatsome_icon( 'icon-tag' ); ?> <?php esc_html_e( 'Coupon', 'woocommerce' ); ?></h3><input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="is-form expand" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
 					<?php do_action( 'woocommerce_cart_coupon' ); ?>
 				</div>
-			</div>
-			<script type="text/javascript">
-				(function($) {
-					$( document ).ready(function() {
-						$('.togglecoupon').click(function(){
-							$('.cart-coupon-wrapper').toggle();
-						});
-					});
-				})(jQuery);
-			</script>
-		</form>
-		<?php } ?>
-		<?php
-			/**
-			 * Cart collaterals hook.
-			 *
-			 * @hooked woocommerce_cross_sell_display
-			 * @hooked woocommerce_cart_totals - 10
-			 */
-			do_action( 'woocommerce_cart_collaterals' );
-		?>
-		<?php if ( wc_coupons_enabled() ) { ?>
-		<form class="checkout_coupon mb-0" method="post">
-			<div class="coupon">
-				<h3 class="widget-title"><?php echo get_flatsome_icon( 'icon-tag' ); ?> <?php esc_html_e( 'Coupon', 'woocommerce' ); ?></h3><input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="is-form expand" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
-				<?php do_action( 'woocommerce_cart_coupon' ); ?>
-			</div>
-		</form>
-		<?php } ?>
-		<?php do_action( 'flatsome_cart_sidebar' ); ?>
+			</form>
+			<?php } ?>
+		</div>
+		
 	</div>
+
+	<?php do_action( 'flatsome_cart_sidebar' ); ?>
 
 	<?php flatsome_sticky_column_close( 'cart_sticky_sidebar' ); ?>
 </div>

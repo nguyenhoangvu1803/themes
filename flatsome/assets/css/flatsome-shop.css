@@ -205,3 +205,6 @@ ul.product-tabs li a span {
 	height: 55px;
 	line-height: 15px;
 }
+.cart-collaterals .cart-sidebar {
+	background-color: #f7f7fe;
+}
