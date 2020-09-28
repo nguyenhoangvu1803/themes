@@ -216,6 +216,14 @@ Flatsome_Option::add_field( 'option',  array(
 ));
 
 Flatsome_Option::add_field( 'option',  array(
+  'type'        => 'checkbox',
+  'settings'     => 'check_out_nav_step',
+  'label'       => __( 'Hide Nav Step', 'flatsome-admin' ),
+  'section'     => 'woocommerce_checkout',
+  'default' => 0
+));
+
+Flatsome_Option::add_field( 'option',  array(
 	'type'        => 'textarea',
 	'settings'     => 'html_checkout_sidebar',
 	'transport' => $transport,
