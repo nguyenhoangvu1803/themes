@@ -275,9 +275,12 @@ ul.product-tabs li a span {
 .cart-container .woocommerce.row {
 	margin-bottom: 80px;
 }
+.checkout_coupon input[type='submit'].is-form,
+.checkout_coupon input[type='text'] {
+    height: 35px;
+}
 .checkout_coupon input[type='submit'].is-form {
 	border: none;
     color: #fff;
     font-weight: 600;
-    height: 35px;
 }
