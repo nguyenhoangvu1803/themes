@@ -98,6 +98,14 @@ Flatsome_Option::add_field( 'option', array(
 	'default'  => 0,
 ) );
 
+Flatsome_Option::add_field( 'option',  array(
+  'type'        => 'checkbox',
+  'settings'     => 'cart_hide_nav_step',
+  'label'       => __( 'Hide Nav', 'flatsome-admin' ),
+  'section'     => 'cart-checkout',
+  'default' => 0
+));
+
 Flatsome_Option::add_field( '', array(
 	'type'     => 'custom',
 	'settings' => 'html_cart_title',

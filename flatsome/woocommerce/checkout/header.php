@@ -13,6 +13,7 @@
 	$steps = get_theme_mod('cart_steps_numbers', 0);
 ?>
 
+<?php if(!get_theme_mod('cart_hide_nav_step')) { ?>
 <div class="checkout-page-title page-title">
 	<div class="page-title-inner flex-row medium-flex-wrap container">
 	  <div class="flex-col flex-grow medium-text-center">
@@ -35,3 +36,4 @@
 	  </div>
 	</div>
 </div>
+<?php }?>
