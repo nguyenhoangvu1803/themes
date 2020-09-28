@@ -209,6 +209,7 @@ ul.product-tabs li a span {
 	background-color: #f7f7fe;
 	border-radius: 3px;
 	padding-bottom: 5px;
+	margin-bottom: 30px;
 }
 .cart-collaterals > h4 {
 	padding-top: 15px;
@@ -241,7 +242,7 @@ ul.product-tabs li a span {
 .cart-collaterals .shop_table .order-save td {
 	font-weight: 600;
 }
-.cart-collaterals .shop_table .order-regular td {
+.cart-collaterals .shop_table .order-regular th {
 	font-weight: 400;
 }
 .cart-collaterals .shop_table .order-regular .amount {
@@ -260,6 +261,13 @@ ul.product-tabs li a span {
     font-weight: 600;
     line-height: 53px;
 }
-.paypal-button-row {
-	height: 55px;
+.cart-sidebar .checkout_coupon:last-child {
+	display: none;
+}
+.cart-total-custom.order-regular,
+.cart-total-custom.order-regular del {
+	color:#c40000;
+}
+.cart-collaterals .shop_table .order-regular del {
+ 	color:#000;
 }
