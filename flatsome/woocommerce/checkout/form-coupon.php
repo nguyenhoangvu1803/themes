@@ -22,9 +22,11 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 }
 
 ?>
+
 <div class="message-container container medium-text-center">
 <a href="https://flagwix.com/delivery-processing-delays-due-to-covid-19/">Delays in Shipping and COVID-19 Statement</a>
 </div>
+
 <div class="woocommerce-form-coupon-toggle">
 	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'woocommerce' ) . '</a>' ), 'notice' ); ?>
 </div>

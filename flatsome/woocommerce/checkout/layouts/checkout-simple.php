@@ -23,6 +23,9 @@
 
 					<div class="cart-header text-left medium-text-center">
 						<?php get_template_part( 'template-parts/header/partials/element', 'logo' ); ?>
+						<div class="message-container container medium-text-center">
+							<a href="https://flagwix.com/delivery-processing-delays-due-to-covid-19/">Delays in Shipping and COVID-19 Statement</a>
+						</div>
 						<?php wc_get_template( 'checkout/header-small.php' ); ?>
 					</div>
 					<?php wc_print_notices(); ?>
