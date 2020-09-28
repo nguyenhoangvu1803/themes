@@ -41,6 +41,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php wc_print_notices(); ?>
 
+<h2>My Cart</h2>
+
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 <div class="cart-wrapper sm-touch-scroll">
 
