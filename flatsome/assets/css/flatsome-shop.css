@@ -284,3 +284,6 @@ ul.product-tabs li a span {
     color: #fff;
     font-weight: 600;
 }
+.woocommerce-checkout .cart-header .message-container {
+	float: right;
+}
