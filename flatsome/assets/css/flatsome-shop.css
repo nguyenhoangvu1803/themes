@@ -260,8 +260,6 @@ ul.product-tabs li a span {
     font-weight: 600;
     line-height: 53px;
 }
-.paypal-button-row.paypal-button-layout-vertical {
+.paypal-button-row {
 	height: 55px;
-	max-height: 55px;
-	min-height: 55px;
 }
