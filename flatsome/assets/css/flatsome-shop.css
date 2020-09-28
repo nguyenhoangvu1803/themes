@@ -271,3 +271,6 @@ ul.product-tabs li a span {
 .cart-collaterals .shop_table .order-regular del {
  	color:#000;
 }
+.cart-container .woocommerce.row {
+	margin-bottom: 80px;
+}
