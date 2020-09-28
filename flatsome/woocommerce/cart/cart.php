@@ -265,14 +265,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 	    </div>
 
 	    <div class="stamped-ratings-wrapper stamped-review-card">
-	        
-	        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>It is exactly as it looks!</span>!</a></div>
-
 	        <div class="stamped-reviews-image">
 	            <a class="fancybox" rel="group noopener noreferrer" href="https://flagwix.com/wp-content/uploads/2020/08/Image-scaled.jpeg" target="_blank" onclick="return false;" tabindex="-1"><img src="https://flagwix.com/wp-content/uploads/2020/08/Image-scaled.jpeg" style="max-height: 100%; max-width: 100%; width: auto; height: auto; top: 0; bottom: 0; left: 0; right: 0; margin: auto;" scale="0"></a>
 	        </div>
 	        <div class="stamped-reviews-rating stamped-style-color-star"><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><i class="stamped-fa stamped-fa-star"></i><span>5 Stars</span></div>
-	        
+	        <div class="stamped-reviews-title"><a href="#" class="stamped-review-title stamped-style-color-link" tabindex="-1"><span>It is exactly as it looks!</span>!</a></div>
 	        <div class="stamped-reviews-message stamped-style-color-text"><span>We got the correct flag. Thank u so much.</span></div>
 	        <div class="stamped-reviews-author stamped-style-color-text">Mark Lewis. <span class="stamped-verified-label stamped-style-color-verified" data-verified-type="2"></span></div>
 	        <div class="stamped-reviews-location" style="display: none;">United States</div>
@@ -411,7 +408,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		font-size: 18px;
 		font-weight: 600;
 		color: #000;
-		padding: 20px 20px 0 20px;
 	}
 
     .stamped-ratings-wrapper > div:not(.stamped-reviews-first) {
@@ -449,7 +445,7 @@ do_action( 'woocommerce_before_cart' ); ?>
     }
 	.stamped-reviews-container {
 		font-size:14px;
-		padding: 20px;
+		padding: 20px 20px 0 20px;
 		border: 1px solid #e5e5e5;
 		border-radius: 3px;
 	}
