@@ -410,6 +410,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 		color: #000;
 	}
 
+	.stamped-ratings-wrapper {
+		outline: none;
+	}
+
     .stamped-ratings-wrapper > div:not(.stamped-reviews-first) {
         position: relative;
         padding-left: 120px;
