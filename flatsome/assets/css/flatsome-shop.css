@@ -244,6 +244,7 @@ ul.product-tabs li a span {
 }
 .cart-collaterals .shop_table .order-regular th {
 	font-weight: 400;
+	color: #000;
 }
 .cart-collaterals .shop_table .order-regular .amount {
 	color: #000000;
@@ -273,4 +274,10 @@ ul.product-tabs li a span {
 }
 .cart-container .woocommerce.row {
 	margin-bottom: 80px;
+}
+.checkout_coupon input[type='submit'].is-form {
+	border: none;
+    color: #fff;
+    font-weight: 600;
+    height: 35px;
 }
