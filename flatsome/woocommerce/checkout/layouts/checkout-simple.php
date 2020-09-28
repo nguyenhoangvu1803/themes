@@ -24,6 +24,9 @@
 					<div class="cart-header text-left medium-text-center">
 						<div class="card-header-top">
 							<?php get_template_part( 'template-parts/header/partials/element', 'logo' ); ?>
+							<?php 
+								print_r(get_theme_mod('check_out_hide_massage'));
+							?>
 							<?php if(get_theme_mod('check_out_hide_massage')) { ?>
 							<div class="message-container right">
 								<a href="https://flagwix.com/delivery-processing-delays-due-to-covid-19/"><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
