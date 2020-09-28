@@ -212,7 +212,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 </form>
 
-<?php if(get_theme_mod('cart_hide_they_about')) { ?>
+<?php if(!get_theme_mod('cart_hide_they_about')) { ?>
 <div class="stamped-reviews-container">
 
 	<div class="stamped-reviews-title-wrapper">What they say about the products?</div>
@@ -491,7 +491,7 @@ do_action( 'woocommerce_before_cart' ); ?>
   	}
 </style>
 
-<?php if(get_theme_mod('cart_hide_they_about')) { ?>
+<?php if(!get_theme_mod('cart_hide_they_about')) { ?>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript">
 jQuery('.stamped-reviews-wrapper').slick({
