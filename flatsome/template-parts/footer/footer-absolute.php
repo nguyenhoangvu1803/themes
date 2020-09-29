@@ -23,6 +23,7 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
         <?php if(is_checkout()) { ?>
 
           123
+          <?php echo do_shortcode('[ux_payment_icons]');?>
 
           <?php echo $flatsome_absolute_footer_secondary; ?>
 456
