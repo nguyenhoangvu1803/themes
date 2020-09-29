@@ -332,3 +332,6 @@ ul.product-tabs li a span {
 	border-right: none;
 	padding-right: 0;
 }
+.shop_table tfoot th, .shop_table tfoot td {
+	border-bottom: none;
+}
