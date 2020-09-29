@@ -205,7 +205,7 @@ ul.product-tabs li a span {
 	height: 55px;
 	line-height: 15px;
 }
-.cart-collaterals {
+.cart-collaterals, .is-well {
 	background-color: #f7f7fe;
 	border-radius: 3px;
 	padding-bottom: 5px;
@@ -218,7 +218,8 @@ ul.product-tabs li a span {
 }
 .cart-collaterals .shop_table th, 
 .cart-collaterals .cart-coupon-wrapper, 
-.cart-collaterals > h4 {
+.cart-collaterals > h4,
+.is-well > .checkout-sidebar {
 	padding-left: 20px;
 	padding-right: 20px;
 }
