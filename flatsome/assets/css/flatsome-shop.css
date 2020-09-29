@@ -266,11 +266,12 @@ ul.product-tabs li a span {
 .cart-sidebar .checkout_coupon:last-child {
 	display: none;
 }
-.cart-total-custom.order-regular,
-.cart-total-custom.order-regular del {
+.cart-total-custom.order-regular .amount {
 	color:#c40000;
+	opacity: 1;
+	margin-right: 0;
 }
-.cart-collaterals .shop_table .order-regular del {
+.shop_table .order-regular .amount {
  	color:#000;
 }
 .cart-container .woocommerce.row {
