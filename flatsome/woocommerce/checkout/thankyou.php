@@ -64,6 +64,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="large-4 col">
 			<div class="is-well col-inner entry-content">
+				
 				<p class="success-color woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><strong><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong></p>
 
 				<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
