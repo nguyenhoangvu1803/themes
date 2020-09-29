@@ -249,6 +249,7 @@ ul.product-tabs li a span {
 	font-weight: 400;
 }
 .shop_table .order-regular th,
+shop_table .cart-discount th,
 .shop_table .order-regular .amount {
 	color: #000000;
 	font-size: 13px;
