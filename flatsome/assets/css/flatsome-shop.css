@@ -287,3 +287,11 @@ ul.product-tabs li a span {
 .woocommerce-checkout .cart-header .message-container {
 	float: right;
 }
+.woocommerce-billing-fields input::placeholder,
+.woocommerce-billing-fields input::-webkit-input-placeholder,
+.woocommerce-billing-fields input:-ms-input-placeholder,
+.woocommerce-billing-fields textarea::placeholder,
+.woocommerce-billing-fields textarea::-webkit-input-placeholder,
+.woocommerce-billing-fields textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  	color: #9FA4B9;
+}

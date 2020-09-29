@@ -63,6 +63,8 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
 	<div class="row pt-0 <?php echo esc_attr( $row_classes ); ?>">
 		<div class="large-7 col  <?php echo esc_attr( $main_classes ); ?>">
 
+			<h2>Checkout</h2>
+
 			<div style="width:100%;display:table">
 				<div style="font-weight:600;color:#000;">
 					<svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
