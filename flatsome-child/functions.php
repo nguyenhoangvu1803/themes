@@ -361,6 +361,6 @@ function sw_prl_add_container_class( $classes, $deployment ) {
 add_filter( 'woocommerce_thankyou_order_received_text', 'filter_woocommerce_thankyou_order_received_text', 10, 2 ); 
 // define the woocommerce_thankyou_order_received_text callback 
 function filter_woocommerce_thankyou_order_received_text( $var, $order ) { 
-    return '<h4>Order Summary</h4>'; 
+    return 'Order Summary'; 
 }; 
 
