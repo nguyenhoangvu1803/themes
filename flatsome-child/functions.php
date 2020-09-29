@@ -131,6 +131,7 @@ function woo_remove_billing_checkout_fields( $fields ) {
     unset($fields['billing']['billing_email']);
     unset($fields['order']['order_comments']);
   }
+  unset($fields['order']['order_comments']);
   
   return $fields;
 }
@@ -353,3 +354,6 @@ function sw_prl_add_container_class( $classes, $deployment ) {
   return $classes;
 }
 
+
+// Removes Order Notes Title - Additional Information & Notes Field
+// add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
