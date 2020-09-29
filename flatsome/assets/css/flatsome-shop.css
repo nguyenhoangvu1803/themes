@@ -405,3 +405,17 @@ ul.woocommerce-order-overview li {
 	font-size: 18px;
 	color: #000;
 }
+.woocommerce-customer-details address {
+	font-size: 13px;
+}
+.woocommerce-order-details span.amount {
+	font-weight: 500;
+}
+.woocommerce-order-details tfoot th {
+	font-weight: 500;
+	font-size: 14px;
+	color: #000;
+}
+.woocommerce-order-details tfoot th:last-child, .woocommerce-order-details tfoot td:last-child {
+	font-size: 15px;
+}
