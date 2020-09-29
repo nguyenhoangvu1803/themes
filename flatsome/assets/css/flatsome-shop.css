@@ -364,12 +364,6 @@ ul.product-tabs li a span {
 .woocommerce-checkout .copyright-footer {
 	line-height: 33px;
 }
-.notice-order-success {
-	padding: 42px 0;
-    border: 1px solid #eee;
-    border-radius: 3px;
-    font-size: 13px;
-}
 .notice-order-success h4 {
 	margin-bottom: 0;
 }
@@ -390,9 +384,12 @@ ul.woocommerce-order-overview {
 ul.woocommerce-order-overview li {
 	margin-left: 0;
 }
-.woocommerce-order-downloads, .woocommerce-order-details, .woocommerce-customer-details {
+.notice-order-success, .woocommerce-order-downloads, .woocommerce-order-details, .woocommerce-customer-details {
 	border: 1px solid #eee;
 	border-radius: 3px;
 	padding: 25px 38px;
 	margin-bottom: 20px;
 } 
+.notice-order-success {
+	padding: 42px 0;
+}
