@@ -180,7 +180,7 @@ if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ ?>
 
 /* Color */
 .accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary, .breadcrumbs a, .header-nav>li.cart-item>a, ul.product-tabs li a, 
-.fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-color>label[for]:first-child {color: <?php echo $color_primary; ?>;}
+.fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child {color: <?php echo $color_primary; ?>;}
 
 /* Color !important */
 [data-text-color="primary"]{color: <?php echo $color_primary; ?>!important;}
