@@ -379,3 +379,14 @@ ul.product-tabs li a span {
 .woocommerce-order-received .is-well {
 	padding: 20px;
 }
+.woocommerce-notice--success {
+	font-size: 18x;
+	font-weight: 600;
+	color: #000;
+}
+.woocommerce-order-overview {
+	list-style: none;
+}
+.woocommerce-order-overview li {
+	margin-left: 0;
+}
