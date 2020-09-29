@@ -233,26 +233,26 @@ ul.product-tabs li a span {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-.cart-collaterals .shop_table .order-save th, 
-.cart-collaterals .shop_table .order-save td {
+.shop_table .order-save th, 
+.shop_table .order-save td {
 	font-size: 13px;
 }
-.cart-collaterals .shop_table .order-save th {
+.shop_table .order-save th {
 	font-weight: 500;
 }
-.cart-collaterals .shop_table .order-save td {
+.shop_table .order-save td {
 	font-weight: 600;
 }
-.cart-collaterals .shop_table .order-regular th {
+.shop_table .order-regular th {
 	font-weight: 400;
 	color: #000;
 }
-.cart-collaterals .shop_table .order-regular .amount {
+.shop_table .order-regular .amount {
 	color: #000000;
 	font-size: 13px;
 }
-.cart-collaterals .cart_totals .shop_table .cart-subtotal th, 
-.cart-collaterals .cart_totals .shop_table .order-total th {
+.cart_totals .shop_table .cart-subtotal th, 
+.cart_totals .shop_table .order-total th {
 	color: #505261;
 }
 .cart-collaterals .cart_totals .wc-proceed-to-checkout {
