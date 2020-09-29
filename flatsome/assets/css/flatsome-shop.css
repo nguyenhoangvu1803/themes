@@ -390,7 +390,7 @@ ul.woocommerce-order-overview {
 ul.woocommerce-order-overview li {
 	margin-left: 0;
 }
-.woocommerce-order-details, .woocommerce-customer-details {
+.woocommerce-order-downloads, .woocommerce-order-details, .woocommerce-customer-details {
 	border: 1px solid #eee;
 	border-radius: 3px;
 	padding: 25px 38px;
