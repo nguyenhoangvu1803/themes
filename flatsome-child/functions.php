@@ -356,4 +356,4 @@ function sw_prl_add_container_class( $classes, $deployment ) {
 
 
 // Removes Order Notes Title - Additional Information & Notes Field
-// add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
