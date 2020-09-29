@@ -332,6 +332,9 @@ ul.product-tabs li a span {
 	border-right: none;
 	padding-right: 0;
 }
+.woocommerce-checkout .shop_table tbody tr td:last-child a {
+	margin-right: 0;
+}
 .shop_table tfoot th, .shop_table tfoot td {
 	border-bottom: none;
 }
@@ -396,4 +399,9 @@ ul.woocommerce-order-overview li {
 .woocommerce-order-downloads .shop_table tbody tr td,
 .woocommerce-order-downloads .shop_table tbody tr th {
 	padding: 10px;
+}
+.woocommerce-checkout section > h2 {
+	font-weight: 600;
+	font-size: 18px;
+	color: #000;
 }
