@@ -22,7 +22,11 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
             <?php echo do_shortcode($flatsome_footer_right_text); ?>
           </div>
         <?php endif; ?>
-        <?php echo $flatsome_absolute_footer_secondary; ?>
+        <?php 
+          echo '1'.'<br/>';
+          echo $flatsome_absolute_footer_secondary; 
+          echo '2'.'<br/>';
+        ?>
       </div>
     <?php endif; ?>
 
