@@ -100,7 +100,9 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
 
 		</div>
 
-		<div class="large-5 col">
+		<div class="large-1 col"></div>
+
+		<div class="large-4 col">
 			<?php flatsome_sticky_column_open( 'checkout_sticky_sidebar' ); ?>
 
 					<div class="col-inner <?php echo esc_attr( $sidebar_classes ); ?>">
