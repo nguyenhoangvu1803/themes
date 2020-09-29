@@ -236,7 +236,8 @@ ul.product-tabs li a span {
     font-size: 15px;
 }
 .shop_table .order-save th, 
-.shop_table .order-save td {
+.shop_table .order-save td,
+.shop_table .cart-discount td {
 	font-size: 13px;
 }
 .shop_table .order-save th {
