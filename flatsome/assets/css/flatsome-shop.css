@@ -347,12 +347,12 @@ ul.product-tabs li a span {
 	padding-bottom: 20px;
 }
 .checkout-sidebar .shop_table .order-regular td,
-.checkout-sidebar .shop_table .order-regular th,
+.checkout-sidebar .shop_table .order-regular th {
 	padding-top: 0px;
 	padding-bottom: 3x;
 }
 .checkout-sidebar .shop_table .order-save td,
-.checkout-sidebar .shop_table .order-save th,
+.checkout-sidebar .shop_table .order-save th {
 	padding-top: 3px;
 	padding-bottom: 3x;
 }
