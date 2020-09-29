@@ -340,8 +340,11 @@ ul.product-tabs li a span {
 	padding-bottom: 10px;
 }
 .checkout-sidebar .shop_table .cart-subtotal td,
-.checkout-sidebar .shop_table .cart-subtotal th {
+.checkout-sidebar .shop_table .cart-subtotal th,
+.checkout-sidebar .shop_table .cart-total td,
+.checkout-sidebar .shop_table .cart-total th {
 	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .checkout-sidebar .shop_table .cart-discount td,
 .checkout-sidebar .shop_table .cart-discount th {
