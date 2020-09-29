@@ -257,7 +257,7 @@ ul.product-tabs li a span {
 .cart_totals .shop_table .order-total th,
 .checkout-sidebar .shop_table .cart-subtotal th, 
 .checkout-sidebar .shop_table .order-total th,
-.checkout-sidebar .shop_table .cart-discount th {
+.shop_table .cart-discount th {
 	color: #505261;
 }
 .checkout-sidebar .shop_table .cart-subtotal th, 
