@@ -384,9 +384,15 @@ ul.product-tabs li a span {
 	font-weight: 600;
 	color: #000;
 }
-.woocommerce-order-overview {
+ul.woocommerce-order-overview {
 	list-style: none;
 }
-.woocommerce-order-overview li {
+ul.woocommerce-order-overview li {
 	margin-left: 0;
 }
+.woocommerce-order-details, .woocommerce-customer-details {
+	border: 1px solid #eee;
+	border-radius: 3px;
+	padding: 25px 38px;
+	margin-bottom: 20px;
+} 
