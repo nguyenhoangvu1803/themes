@@ -227,7 +227,8 @@ ul.product-tabs li a span {
     display: none;
 }
 .cart-collaterals .shop_table th, 
-.cart-collaterals .shop_table td {
+.cart-collaterals .shop_table td,
+.checkout-sidebar .shop_table th {
 	border: none;
 	font-weight: 600;
 	padding-top: 5px;
