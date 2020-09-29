@@ -305,13 +305,17 @@ ul.product-tabs li a span {
 }
 .woocommerce-checkout .card-header-top .message-container a {
 	line-height: 32px;
+	display: flex;
+    align-items: center;
 }
 .page-checkout-simple #content {
 	padding: 50px 0;
 }
 .checkout-sidebar .shop_table tbody tr td:first-child {
 	border-left: none;
+	padding-left: 0;
 }
 .checkout-sidebar .shop_table tbody tr td:last-child {
 	border-right: none;
+	padding-right: 0;
 }
