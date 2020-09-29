@@ -252,7 +252,9 @@ ul.product-tabs li a span {
 	font-size: 13px;
 }
 .cart_totals .shop_table .cart-subtotal th, 
-.cart_totals .shop_table .order-total th {
+.cart_totals .shop_table .order-total th,
+.checkout-sidebar .shop_table .cart-subtotal th, 
+.checkout-sidebar .shop_table .order-total th {
 	color: #505261;
 }
 .cart-collaterals .cart_totals .wc-proceed-to-checkout {
