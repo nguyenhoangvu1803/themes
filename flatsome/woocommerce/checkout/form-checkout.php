@@ -65,9 +65,9 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
 
 			<h2>Checkout</h2>
 
-			<div style="width:100%;display:table">
+			<div style="width:100%;display:table;margin-bottom:15px;">
 				<div style="font-weight:600;color:#000;">
-					<svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
 					<path d="M21.125 15.9375C19.7437 15.9375 18.6875 14.8813 18.6875 13.5C18.6875 12.1187 19.7437 11.0625 21.125 11.0625C22.5063 11.0625 23.5625 12.1187 23.5625 13.5C23.5625 14.8813 22.5063 15.9375 21.125 15.9375Z" fill="#EB3939"/>
 					<path d="M8.125 15.9375C6.74375 15.9375 5.6875 14.8813 5.6875 13.5C5.6875 12.1187 6.74375 11.0625 8.125 11.0625C9.50625 11.0625 10.5625 12.1187 10.5625 13.5C10.5625 14.8813 9.50625 15.9375 8.125 15.9375Z" fill="#EB3939"/>
 					<path d="M25.8375 8.1375L22.5875 4.075C22.425 3.83125 22.1812 3.75 21.9375 3.75H17.875V1.3125C17.875 0.825 17.55 0.5 17.0625 0.5H4.0625C3.575 0.5 3.25 0.825 3.25 1.3125V2.125H4.0625C4.55 2.125 4.875 2.45 4.875 2.9375C4.875 3.425 4.55 3.75 4.0625 3.75H3.25H2.4375C1.95 3.75 1.625 4.075 1.625 4.5625C1.625 5.05 1.95 5.375 2.4375 5.375H3.25H4.875C5.3625 5.375 5.6875 5.7 5.6875 6.1875C5.6875 6.675 5.3625 7 4.875 7H3.25H0.8125C0.325 7 0 7.325 0 7.8125C0 8.3 0.325 8.625 0.8125 8.625H3.25V13.5C3.25 13.9875 3.575 14.3125 4.0625 14.3125H4.14375C4.0625 14.0688 4.0625 13.7437 4.0625 13.5C4.0625 11.225 5.85 9.4375 8.125 9.4375C10.4 9.4375 12.1875 11.225 12.1875 13.5C12.1875 13.7437 12.1875 14.0688 12.1062 14.3125H17.0625H17.1438C17.0625 14.0688 17.0625 13.7437 17.0625 13.5C17.0625 11.225 18.85 9.4375 21.125 9.4375C23.4 9.4375 25.1875 11.225 25.1875 13.5C25.1875 13.7437 25.1875 14.0688 25.1062 14.3125H25.1875C25.675 14.3125 26 13.9875 26 13.5V8.625C26 8.4625 25.9187 8.3 25.8375 8.1375Z" fill="#EB3939"/>
@@ -76,8 +76,8 @@ if ( flatsome_option( 'facebook_login_checkout' ) && get_option( 'woocommerce_en
 				</div>
 			</div>
 
-			<div id="ct836" style="display:block;background:#fff5d2;padding:10px 20px;border:1px solid #fac444;font-size:14px;color:#2c2c2c;font-weight:bold;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:5px 0px 20px 0px">
-				Your order is reserved for <span id="time">09:43</span> minutes!
+			<div id="ct836" style="display:block;background:#FFF7E1;padding:13px 20px;font-size:14px;color:#000;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; margin:5px 0px 20px 0px">
+				Your order is reserved for <span id="time" style="background:#FFE4BC;border: 1px solid #F0C27C;border-radius:3px;font-weight:500;padding:4px 8px;" >09:43</span> minutes!
 			</div>
 
 			<?php if ( $checkout->get_checkout_fields() ) : ?>
