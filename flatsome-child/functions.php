@@ -108,6 +108,9 @@ function uoy_related_products_args( $args ) {
 	$args['orderby'] = 'sales'; 
 	return $args;
 }
+
+// Removes Order Notes Title - Additional Information & Notes Field
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
 // Add custom Theme Functions here
 add_filter( 'woocommerce_checkout_fields' , 'woo_remove_billing_checkout_fields', 1111 );
 /**
@@ -135,6 +138,7 @@ function woo_remove_billing_checkout_fields( $fields ) {
   
   return $fields;
 }
+
 /**
  * Check if the cart contains virtual/downloadable product only
  *
@@ -355,5 +359,4 @@ function sw_prl_add_container_class( $classes, $deployment ) {
 }
 
 
-// Removes Order Notes Title - Additional Information & Notes Field
-add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
+
