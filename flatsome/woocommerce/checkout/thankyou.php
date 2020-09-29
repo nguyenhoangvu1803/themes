@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
 
 	    <div class="large-7 col">
 
-	    	<div class="notice-order-success">
+	    	<div class="notice-order-success text-center">
 	    		<svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<circle cx="26.5" cy="26.5" r="26.5" fill="#53A42F"/>
 				<path d="M14 26.1538L23.5238 36L39 20" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
