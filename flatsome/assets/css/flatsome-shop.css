@@ -341,8 +341,8 @@ ul.product-tabs li a span {
 }
 .checkout-sidebar .shop_table .cart-subtotal td,
 .checkout-sidebar .shop_table .cart-subtotal th,
-.checkout-sidebar .shop_table .cart-total td,
-.checkout-sidebar .shop_table .cart-total th {
+.checkout-sidebar .shop_table .order-total td,
+.checkout-sidebar .shop_table .order-total th {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
