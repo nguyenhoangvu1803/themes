@@ -324,11 +324,11 @@ ul.product-tabs li a span {
 .page-checkout-simple #content {
 	padding: 50px 0;
 }
-.checkout-sidebar .shop_table tbody tr td:first-child {
+.woocommerce-checkout .shop_table tbody tr td:first-child {
 	border-left: none;
 	padding-left: 0;
 }
-.checkout-sidebar .shop_table tbody tr td:last-child {
+.woocommerce-checkout .shop_table tbody tr td:last-child {
 	border-right: none;
 	padding-right: 0;
 }
@@ -339,25 +339,25 @@ ul.product-tabs li a span {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.checkout-sidebar .shop_table .cart-subtotal td,
-.checkout-sidebar .shop_table .cart-subtotal th,
-.checkout-sidebar .shop_table .order-total td,
-.checkout-sidebar .shop_table .order-total th {
+.woocommerce-checkout .shop_table .cart-subtotal td,
+.woocommerce-checkout .shop_table .cart-subtotal th,
+.woocommerce-checkout .shop_table .order-total td,
+.woocommerce-checkout .shop_table .order-total th {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.checkout-sidebar .shop_table .order-regular td,
-.checkout-sidebar .shop_table .order-regular th {
+.woocommerce-checkout .shop_table .order-regular td,
+.woocommerce-checkout .shop_table .order-regular th {
 	padding-top: 0px;
 	padding-bottom: 3x;
 }
-.checkout-sidebar .shop_table .order-save td,
-.checkout-sidebar .shop_table .order-save th {
+.woocommerce-checkout .shop_table .order-save td,
+.woocommerce-checkout .shop_table .order-save th {
 	padding-top: 3px;
 	padding-bottom: 3x;
 }
-.checkout-sidebar .shop_table .cart-discount td,
-.checkout-sidebar .shop_table .cart-discount th {
+.woocommerce-checkout .shop_table .cart-discount td,
+.woocommerce-checkout .shop_table .cart-discount th {
 	border-top: 1px solid #E1E1F1;
 	border-bottom: 1px solid #E1E1F1;
 }
@@ -392,4 +392,8 @@ ul.woocommerce-order-overview li {
 } 
 .notice-order-success {
 	padding: 42px 0;
+}
+.woocommerce-order-downloads .shop_table tbody tr td,
+.woocommerce-order-downloads .shop_table tbody tr th {
+	padding: 10px;
 }
