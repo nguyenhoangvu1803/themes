@@ -312,6 +312,6 @@ ul.product-tabs li a span {
 .checkout-sidebar .shop_table tbody tr td:first-child {
 	border-left: none;
 }
-.checkout-sidebar.shop_table tbody tr td:last-child {
+.checkout-sidebar .shop_table tbody tr td:last-child {
 	border-right: none;
 }
