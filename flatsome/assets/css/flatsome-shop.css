@@ -337,5 +337,9 @@ ul.product-tabs li a span {
 }
 .shop_table.woocommerce-checkout-review-order-table .cart_item td {
 	padding-top: 10px;
-	padding-bottom: : 10px;
+	padding-bottom: 10px;
+}
+.checkout-sidebar .shop_table .cart-subtotal td,
+.checkout-sidebar .shop_table .cart-subtotal th {
+	padding-top: 20px;
 }
