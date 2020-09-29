@@ -20,11 +20,11 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
     <?php if ( $flatsome_footer_right_text || $flatsome_absolute_footer_secondary ) : ?>
       <div class="footer-secondary pull-right">
 
-        <?php if(is_checkout()) : ?>
+        <?php if(is_checkout()) { ?>
 
           <?php echo $flatsome_absolute_footer_secondary; ?>
 
-        <?php else; ?>
+        <?php } else { ?>
 
           <?php if ( $flatsome_footer_right_text ) : ?>
             <div class="footer-text inline-block small-block">
@@ -33,7 +33,7 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
           <?php endif; ?>
           <?php echo $flatsome_absolute_footer_secondary; ?>
 
-        <?php endif; ?>
+        <?php } ?>
 
       </div>
     <?php endif; ?>
