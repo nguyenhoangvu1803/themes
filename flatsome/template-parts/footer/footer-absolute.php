@@ -22,8 +22,10 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
 
         <?php if(is_checkout()) { ?>
 
-          <?php echo $flatsome_absolute_footer_secondary; ?>
+          123
 
+          <?php echo $flatsome_absolute_footer_secondary; ?>
+456
         <?php } else { ?>
 
           <?php if ( $flatsome_footer_right_text ) : ?>
