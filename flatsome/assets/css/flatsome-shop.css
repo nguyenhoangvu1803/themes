@@ -364,3 +364,15 @@ ul.product-tabs li a span {
 .woocommerce-checkout .copyright-footer {
 	line-height: 33px;
 }
+.notice-order-success {
+	padding: 42px 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 13px;
+}
+.notice-order-success h4 {
+	margin-bottom: 0;
+}
+.notice-order-success span {
+	font-weight: 500;
+}

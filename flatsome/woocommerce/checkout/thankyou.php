@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 
 		do_action( 'woocommerce_before_thankyou', $order->get_id() ); ?>
 
-		<h2>Order Complete</h2>
+		<div class="large-12 col"><h2>Order Complete</h2></div>
 
 		<?php if ( $order->has_status( 'failed' ) ) : ?>
 
@@ -48,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 				<circle cx="26.5" cy="26.5" r="26.5" fill="#53A42F"/>
 				<path d="M14 26.1538L23.5238 36L39 20" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
-				<div>Thank you. Your order has been received.</div>
+				<h4>Thank you. Your order has been received.</h4>
 				<div>A copy of your receipt has been sent to: <span><?php echo $order->get_billing_email(); ?></span></div>
 	    	</div>
 
