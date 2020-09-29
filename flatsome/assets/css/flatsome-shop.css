@@ -416,6 +416,6 @@ ul.woocommerce-order-overview li {
 	font-size: 14px;
 	color: #000;
 }
-.woocommerce-order-details tfoot th:last-child, .woocommerce-order-details tfoot td:last-child {
+.woocommerce-order-details tfoot tr:last-child th, .woocommerce-order-details tfoot tr:last-child td {
 	font-size: 15px;
 }
