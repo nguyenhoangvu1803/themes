@@ -497,6 +497,9 @@ ul.woocommerce-order-overview li {
 	word-break: break-all;
 }
 ul.woocommerce-order-overview li label {
-	min-width: 40%;
-	display: inline-block;
+	min-width: 35%;
+    display: inline-block;
+    color: #505261;
+    font-size: 13px;
+    font-weight: 400;
 }
