@@ -439,7 +439,7 @@ ul.woocommerce-order-overview li {
 .woocommerce-order-details tfoot tr:last-child th, .woocommerce-order-details tfoot tr:last-child td {
 	font-size: 15px;
 }
-.cart_totals tbody .woocommerce-shipping-totals td {
+.woocommerce-shipping-totals th, .woocommerce-shipping-totals td {
 	border-left: none !important;
 	border-right: none !important;
 }
