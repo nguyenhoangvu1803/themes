@@ -62,36 +62,3 @@ input[type='search']::placeholder {
 .account-container .review .review-rating {
 	color: #333;
 }
-form .woocommerce-form-row {
-	position: relative;
-}
-form .woocommerce-form-row > label {
-	position: absolute;
-	top: 8px;
-	left: 13px;
-}
-form .woocommerce-form-row label {
-	color: #818390;
-	font-weight: 600;
-	font-size: 11px;
-	text-transform: uppercase;
-}
-form .woocommerce-form-row input {
-	height: 65px;
-	padding-top: 22px;
-}
-.remember-and-lost {
-	display: inline-block;
-	width: 100%;
-}
-.woocommerce-Button,
-.woocommerce-form .button, 
-.woocommerce-form button, 
-.woocommerce-form input[type='submit'], 
-.woocommerce-form input[type='reset'], 
-.woocommerce-form  input[type='button'] {
-	font-size: 16px;
-	font-weight: 600;
-	width: 100%;
-	padding: 7px 0;
-}
