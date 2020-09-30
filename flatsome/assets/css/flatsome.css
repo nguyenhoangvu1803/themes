@@ -73,3 +73,13 @@ form .form-row-wide input {
 	display: inline-block;
 	width: 100%;
 }
+.woocommerce-form .button, 
+.woocommerce-form button, 
+.woocommerce-form input[type='submit'], 
+.woocommerce-form input[type='reset'], 
+.woocommerce-form  input[type='button'] {
+	font-size: 16px;
+	font-weight: 600;
+	width: 100%;
+	padding: 7px 0;
+}
