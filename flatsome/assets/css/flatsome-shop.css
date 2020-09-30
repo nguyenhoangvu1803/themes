@@ -446,4 +446,11 @@ ul.woocommerce-order-overview li {
 .cart_totals tbody .woocommerce-shipping-totals > td {
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
+	padding-top: 10px;
+}
+.shop_table .shipping__table tbody tr th {
+	padding-left: 0;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
 }
