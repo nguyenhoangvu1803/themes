@@ -138,7 +138,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 						<span class="fa fa-star checked"></span>
 						<span class="fa fa-star checked"></span>
 					</span>
-					<span>
+					<span class="review-rating">
 						<?php echo do_shortcode('[jgm-review-rating]'); ?> Stars
 					</span>
 				</div>
