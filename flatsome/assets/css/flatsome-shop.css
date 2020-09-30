@@ -202,6 +202,12 @@ ul.product-tabs li a span {
 	border-right: 1px solid #e5e5e5;
     padding-right: 15px;
 }
+.cart-collaterals .shop_table tbody tr th:first-child {
+	border-left: none;
+}
+.cart-collaterals .shop_table tbody tr th:last-child {
+	border-right: none;
+}
 .shop_table a.remove, .shop_table a.icon-remove {
 	height: 55px;
 	line-height: 15px;
