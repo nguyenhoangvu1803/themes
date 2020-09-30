@@ -76,7 +76,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<div class="account-register-inner">
 
-				<h3 class="uppercase"><?php esc_html_e( 'Register', 'woocommerce' ); ?></h3>
+				<h3 class="uppercase"><?php esc_html_e( 'Sign Up', 'woocommerce' ); ?></h3>
 
 				<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
