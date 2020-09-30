@@ -443,7 +443,7 @@ ul.woocommerce-order-overview li {
 	border-left: none !important;
 	border-right: none !important;
 }
-.woocommerce-shipping-totals > td {
+.shop_table .woocommerce-shipping-totals > td {
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
 	padding-top: 10px;
