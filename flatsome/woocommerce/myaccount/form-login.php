@@ -66,6 +66,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 				</form>
+
+				<span>100.000+ flags sold in Flagwix last year</span>
+
 			</div>
 
 			<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
@@ -119,6 +122,20 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 					<?php do_action( 'woocommerce_register_form_end' ); ?>
 
 				</form>
+
+				<div>
+					<span class="star">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</span>
+					<label>
+						<?php echo do_shortcode('[jgm-review-rating]'); ?> Stars?>
+					</label>
+				</div>
+				<span>Average product rating on Flagwix</span>
 
 			</div>
 
