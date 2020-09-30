@@ -467,6 +467,7 @@ form .woocommerce-form-row label {
 	font-weight: 600;
 	font-size: 11px;
 	text-transform: uppercase;
+	z-index: 1;
 }
 form .woocommerce-form-row input {
 	height: 65px;
