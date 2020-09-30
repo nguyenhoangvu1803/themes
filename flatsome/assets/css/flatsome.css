@@ -51,10 +51,11 @@ input[type='search']::placeholder {
 	padding: 30px 35px;
 	margin: auto;
 }
+.account-login-inner, .account-register-inner,
 .account-login-inner > h3, .account-register-inner > h3 {
 	margin-bottom: 30px;
 }
-.account-login-inner > span, .account-register-inner > span {
+.account-login-inner .review, .account-register-inner .review {
 	color: #9E9FA7;
 	font-size: 15px;
 }

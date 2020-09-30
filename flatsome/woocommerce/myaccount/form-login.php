@@ -78,7 +78,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 		</div>
 
 		<div class="col-2 large-6 col pb-0">
-			
+
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 			<div class="account-register-inner">
@@ -138,9 +138,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 						<span class="fa fa-star checked"></span>
 						<span class="fa fa-star checked"></span>
 					</span>
-					<label>
+					<span>
 						<?php echo do_shortcode('[jgm-review-rating]'); ?> Stars
-					</label>
+					</span>
 				</div>
 				<span>Average product rating on Flagwix</span>
 			</div>
