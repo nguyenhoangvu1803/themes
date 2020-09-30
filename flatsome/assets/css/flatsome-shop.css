@@ -249,7 +249,9 @@ ul.product-tabs li a span {
     font-size: 15px;
 }
 .cart-collaterals .cart-subtotal th,
-.cart-collaterals .cart-subtotal td {
+.cart-collaterals .cart-subtotal td, 
+.cart-collaterals .order-total th,
+.cart-collaterals .order-total td {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
@@ -436,4 +438,12 @@ ul.woocommerce-order-overview li {
 }
 .woocommerce-order-details tfoot tr:last-child th, .woocommerce-order-details tfoot tr:last-child td {
 	font-size: 15px;
+}
+.cart_totals tbody .woocommerce-shipping-totals td {
+	border-left: none !important;
+	border-right: none !important;
+}
+.cart_totals tbody .woocommerce-shipping-totals > td {
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 }
