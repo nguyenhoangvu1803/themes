@@ -47,3 +47,21 @@ input[type='search']::placeholder {
 .account-login-inner {
 	padding: 30px 35px;
 }
+form .form-row-wide {
+	position: relative;
+}
+form .form-row-wide > label {
+	position: absolute;
+	top: 12px;
+	left: 13px;
+}
+form .form-row-wide label {
+	color: #818390;
+	font-weight: 600;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+form .form-row-wide input {
+	height: 65px;
+	padding: 20px 0.75em 0.5em;
+}
