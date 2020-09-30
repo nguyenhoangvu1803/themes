@@ -69,6 +69,3 @@ form .form-row-wide input {
 	height: 65px;
 	padding-top: 22px;
 }
-form .form-row-wide:focus input {
-	border-color: #243A98;
-}
