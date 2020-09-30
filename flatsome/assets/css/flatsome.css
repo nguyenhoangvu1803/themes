@@ -69,3 +69,7 @@ form .form-row-wide input {
 	height: 65px;
 	padding-top: 22px;
 }
+.remember-and-lost {
+	display: inline-block;
+	width: 100%;
+}
