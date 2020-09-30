@@ -44,7 +44,7 @@ input[type='search']::placeholder {
 .footer-wrapper a:hover {
 	color: #000000;
 }
-.account-login-inner, .account-register-inner {
+.account-login-inner, .account-register-inner, .lost_reset_password {
 	max-width: 468px;
 	border: 1px solid #e5e5e5;
 	border-radius: 3px;
