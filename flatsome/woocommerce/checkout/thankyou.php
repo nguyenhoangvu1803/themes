@@ -42,7 +42,6 @@ defined( 'ABSPATH' ) || exit;
 		<?php else : ?>
 
 	    <div class="large-7 col">
-
 	    	<div class="notice-order-success text-center">
 	    		<svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<circle cx="26.5" cy="26.5" r="26.5" fill="#53A42F"/>
@@ -51,7 +50,6 @@ defined( 'ABSPATH' ) || exit;
 				<h4>Thank you. Your order has been received.</h4>
 				<div>A copy of your receipt has been sent to: <span><?php echo $order->get_billing_email(); ?></span></div>
 	    	</div>
-
 		    <?php
 		    	$get_payment_method = $order->get_payment_method();
 		    	$get_order_id       = $order->get_id();
