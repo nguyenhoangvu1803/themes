@@ -220,15 +220,14 @@ ul.product-tabs li a span {
 }
 .cart-collaterals > h4 {
 	border-bottom: 1px solid #e1e1f1;
+	padding: 15px 0;
+    margin: 0;
 }
 .cart-collaterals .cart-sidebar .widget-title {
 	margin-bottom: 0;
 }
 .cart-collaterals .checkout_coupon {
-	padding-top: 15px;
-    padding-bottom: 10px;
 	border-bottom: 1px solid #e1e1f1;
-	margin-bottom: 0;
 }
 .cart-collaterals .shop_table th, 
 .cart-collaterals .cart-coupon-wrapper, 
@@ -248,6 +247,11 @@ ul.product-tabs li a span {
 	padding-top: 5px;
 	padding-bottom: 5px;
     font-size: 15px;
+}
+.cart-collaterals .cart-subtotal th,
+.cart-collaterals .cart-subtotal td {
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .shop_table .order-save th, 
 .shop_table .order-save td,
