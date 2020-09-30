@@ -397,7 +397,7 @@ ul.product-tabs li a span {
 	padding: 20px;
 }
 .woocommerce-notice--success {
-	font-size: 18x;
+	font-size: 18px;
 	font-weight: 600;
 	color: #000;
 }
@@ -492,4 +492,11 @@ form .woocommerce-form-row input {
 	float: initial;
 	margin-right: 0;
 	width: 100%;
+}
+ul.woocommerce-order-overview li {
+	word-break: break-all;
+}
+ul.woocommerce-order-overview li label {
+	min-width: 40%;
+	display: inline-block;
 }
