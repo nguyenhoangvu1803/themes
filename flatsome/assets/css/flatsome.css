@@ -84,6 +84,7 @@ form .woocommerce-form-row input {
 	display: inline-block;
 	width: 100%;
 }
+.woocommerce-Button,
 .woocommerce-form .button, 
 .woocommerce-form button, 
 .woocommerce-form input[type='submit'], 
