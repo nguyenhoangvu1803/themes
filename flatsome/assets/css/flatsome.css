@@ -62,21 +62,21 @@ input[type='search']::placeholder {
 .account-container .review .review-rating {
 	color: #333;
 }
-form .form-row-wide {
+form .woocommerce-form-row {
 	position: relative;
 }
-form .form-row-wide > label {
+form .woocommerce-form-row > label {
 	position: absolute;
 	top: 8px;
 	left: 13px;
 }
-form .form-row-wide label {
+form .woocommerce-form-row label {
 	color: #818390;
 	font-weight: 600;
 	font-size: 11px;
 	text-transform: uppercase;
 }
-form .form-row-wide input {
+form .woocommerce-form-row input {
 	height: 65px;
 	padding-top: 22px;
 }
