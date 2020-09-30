@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 			<div class="account-login-inner">
 
-				<h3 class="uppercase"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h3>
+				<h3 class="uppercase"><?php esc_html_e( 'Log In', 'woocommerce' ); ?></h3>
 
 				<form class="woocommerce-form woocommerce-form-login login" method="post">
 
@@ -56,11 +56,13 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
 							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
 						</label>
+						<p class="woocommerce-LostPassword lost_password">
+							<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+						</p>
+					</p>
+					<p class="form-row">
 						<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-					</p>
-					<p class="woocommerce-LostPassword lost_password">
-						<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
 					</p>
 
 					<?php do_action( 'woocommerce_login_form_end' ); ?>

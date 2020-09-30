@@ -44,5 +44,6 @@ input[type='search']::placeholder {
 .footer-wrapper a:hover {
 	color: #000000;
 }
-.fl-wrap.fl-is-active>label[for]:first-child{
+.account-login-inner {
+	padding: 30px 35px;
 }
