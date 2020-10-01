@@ -405,17 +405,7 @@ function uoy_custom_css() {
 add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
-if(class_exists('Kirki')) {
-  echo "!!";
-  // Kirki::add_field( $config_id, $args );
-  Kirki::add_field( 'option',  array(
-    'type'        => 'checkbox',
-    'settings'     => 'check_out_hide_massage',
-    'label'       => __( 'Hide message on header', 'flatsome-admin' ),
-    'section'     => 'woocommerce_checkout',
-    'default' => 0
-  ));
-}
+
 
 
 
