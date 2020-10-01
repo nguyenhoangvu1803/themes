@@ -584,6 +584,7 @@ ul.product-tabs li a span {
 .quantity.buttons_added .is-form {
   width:48px;
   font-size:20px;
+  margin: 0;
 }
 
 .quantity.buttons_added .minus.is-form {
@@ -776,6 +777,7 @@ ul.product-tabs li a span {
   font-size:16px;
   font-weight:600;
   line-height:53px;
+  width: 100%;
 }
 
 .cart-sidebar .checkout_coupon:last-child {
@@ -1007,7 +1009,9 @@ form .woocommerce-form-row input {
   height:65px;
   padding-top:22px;
 }
-
+.woocommerce-shipping-totals table {
+  margin-bottom: 0;
+}
 .remember-and-lost, 
 .woocommerce-shipping-totals table tbody > tr > th,
 .woocommerce-shipping-totals table tbody > tr > td {
@@ -1062,6 +1066,8 @@ ul.woocommerce-order-overview li label {
   line-height: 1.5;
 }
 
-
+.footer-wrapper img {
+  width: initial;
+}
 
 
