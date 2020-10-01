@@ -88,5 +88,5 @@
 		do_action( 'woocommerce_after_main_content' );
 		?>
 
-		</div><!-- .large-12  -->
-</div><!-- .row -->
+		</div>
+</div>

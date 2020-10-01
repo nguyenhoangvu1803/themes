@@ -2035,13 +2035,27 @@ if ( ! class_exists( 'Envato_Theme_Setup_Wizard' ) ) {
 				             __( '<p>Find out how to <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" target="_blank">get your purchase code</a> here.</p>' ) .
 				             '<input type="hidden" name="wupdates_pc_theme" value="' . $slug . '" />' .
 				             '<input type="text" id="' . sanitize_title( $slug ) . '_wup_purchase_code" name="' . sanitize_title( $slug ) . '_wup_purchase_code"
-				              value="' . $purchase_code . '" placeholder="Purchase code ( e.g. 9g2b13fa-10aa-2267-883a-9201a94cf9b5 )" style="width:100%; padding:10px;"/><br/><br/>' .
+				              value="' . $purchase_code . '" placeholder="Purchase code ( e.g. 9g2b13fa-10aa-2267-883a-9201a94cf9b5 )" style="width:100%; padding:10px;"/><br/>' .
+				            '<p style="margin-top: 15px">
+  								<input type="checkbox" id="envato-terms" name="terms" onclick="toggleSubmit(this);">
+  								<label for="envato-terms" style="display: inline-block;vertical-align: top;width: 90%;">Confirm that, according to the Envato License Terms, each license entitles one person for a single project. Creating multiple unregistered installations is a copyright violation. <a href="https://themeforest.net/licenses/standard" target="_blank">More info</a>.</label>
+			  				</p>' .
 				             '<p class="envato-setup-actions step">' .
-				              '<input type="submit" class="button button-large button-next button-primary" value="Activate"/>' .
+				              '<input type="submit" id="envato-activate" class="button button-large button-next button-primary disabled" value="Activate"/>' .
 				              '<a href="'.esc_url( $this->get_next_step_link() ).'" class="button button-large button-next">'.__( 'Skip this step', 'envato_setup' ).'</a>'.
  				             '</p>
-				      </form>';
-				  	} else{
+				      	</form>
+				        <script type="text/javascript">
+	                        function toggleSubmit(checkbox){
+	                          var button = document.getElementById("envato-activate");
+						      if(checkbox.checked) {
+						        button.classList.remove("disabled")
+						      } else {
+						        button.classList.add("disabled")
+						      }
+						    }
+                        </script>';
+				  	} else {
 				    echo '<form class="wupdates_purchase_code" action="" method="post">' .
 				             '<input type="hidden" name="wupdates_pc_theme" value="' . $slug . '" />' .
 				             '<input type="text" id="' . sanitize_title( $slug ) . '_wup_purchase_code" name="' . sanitize_title( $slug ) . '_wup_purchase_code"

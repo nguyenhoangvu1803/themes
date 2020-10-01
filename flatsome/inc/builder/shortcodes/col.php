@@ -58,6 +58,7 @@ add_ux_builder_shortcode( 'col', array(
             'type' => 'margins',
             'heading' => 'Padding',
             'full_width' => true,
+            'responsive' => true,
             'min' => 0,
             'max' => 200,
             'step' => 1,
@@ -67,6 +68,7 @@ add_ux_builder_shortcode( 'col', array(
             'type' => 'margins',
             'heading' => 'Margin',
             'full_width' => true,
+            'responsive' => true,
             'min' => -200,
             'max' => 200,
             'step' => 1,
@@ -87,7 +89,14 @@ add_ux_builder_shortcode( 'col', array(
             'position' => 'bottom right',
             'helpers' => require( __DIR__ . '/helpers/colors.php' ),
         ),
-
+	    'bg_radius' => array(
+		    'type'    => 'slider',
+		    'heading' => __( 'Bg Radius' ),
+		    'unit'    => 'px',
+		    'default' => 0,
+		    'max'     => 100,
+		    'min'     => 0,
+	    ),
         'color' => array(
             'type' => 'radio-buttons',
             'heading' => 'Color',
@@ -164,6 +173,7 @@ add_ux_builder_shortcode( 'col', array(
             'max' => 5,
             'min' => 0,
         ),
+	    'border_options' => require( __DIR__ . '/commons/border.php' ),
         'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

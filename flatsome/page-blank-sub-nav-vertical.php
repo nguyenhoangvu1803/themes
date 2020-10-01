@@ -24,13 +24,13 @@ get_header(); ?>
 	echo $string;
 
 	?>
-</div><!-- .large-3 -->
+</div>
 
 <div class="large-9 col">
 	<div class="tabs-inner active">
 			<header class="entry-header">
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header><!-- .entry-header -->
+			</header>
 
 			<div id="content" role="main">
 
@@ -45,10 +45,10 @@ get_header(); ?>
 
 			</div>
 
-	</div><!-- .tabs-inner -->
-	</div><!-- .large-9 -->
-</div><!-- .row -->
-</div><!-- .page-wrapper -->
+	</div>
+	</div>
+</div>
+</div>
 
 <?php do_action( 'flatsome_after_page' ); ?>
 

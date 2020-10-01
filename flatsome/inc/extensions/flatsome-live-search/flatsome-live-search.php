@@ -161,7 +161,17 @@ function flatsome_ajax_search() {
 
 	foreach ( $results as $key => $post ) {
 		if ( is_woocommerce_activated() && ( $post->post_type === 'product' || $post->post_type === 'product_variation' ) ) {
-			$product       = wc_get_product( $post );
+			$product = wc_get_product( $post );
+
+			if ( $product->get_parent_id() ) {
+				$parent_product = wc_get_product( $product->get_parent_id() );
+				$visible        = $parent_product->get_catalog_visibility() === 'visible' || $parent_product->get_catalog_visibility() === 'search';
+				if ( $parent_product->get_status() !== 'publish' || ! $visible ) {
+					unset( $results[ $key ] );
+					continue;
+				}
+			}
+
 			$product_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ) );
 
 			$suggestions[] = array(

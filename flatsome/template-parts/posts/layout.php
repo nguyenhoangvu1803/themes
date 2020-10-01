@@ -17,8 +17,8 @@
 			get_template_part( 'template-parts/posts/archive', get_theme_mod('blog_style', 'normal') );
 		}
 	?>
-	</div> <!-- .large-9 -->
+	</div>
 
-</div><!-- .row -->
+</div>
 
 <?php do_action('flatsome_after_blog');

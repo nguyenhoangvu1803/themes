@@ -10,7 +10,6 @@
 
 	<?php wp_head(); ?>
 </head>
-<!-- loading -->
 
 <body <?php body_class(); ?>>
 
@@ -30,8 +29,8 @@
 					<?php the_content(); ?>
 
 				<?php endwhile; // end of the loop. ?>
-			</div><!-- end .container -->
-		</div><!-- end #content -->
+			</div>
+		</div>
 
 	</div>
 
@@ -39,11 +38,10 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'absolute' ); ?>
 	</div>
 
-</div><!-- #main-content -->
+</div>
 
-</div><!-- #wrapper -->
+</div>
 
-<!-- back to top -->
 <?php wp_footer(); ?>
 
 </body>

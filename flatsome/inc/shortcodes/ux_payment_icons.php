@@ -2,12 +2,22 @@
 
 function ux_payment_icons( $atts ) {
 	extract( shortcode_atts( array(
-		'link'   => '',
-		'target' => '',
-		'rel'    => '',
-		'icons'  => get_theme_mod( 'payment_icons', array( 'visa', 'paypal', 'stripe', 'mastercard', 'cashondelivery' ) ),
-		'custom' => get_theme_mod( 'payment_icons_custom' ),
+		'link'       => '',
+		'target'     => '',
+		'rel'        => '',
+		'icons'      => get_theme_mod( 'payment_icons', array( 'visa', 'paypal', 'stripe', 'mastercard', 'cashondelivery' ) ),
+		'custom'     => get_theme_mod( 'payment_icons_custom' ),
+		'class'      => '',
+		'visibility' => '',
 	), $atts ) );
+
+	$classes = array( 'payment-icons', 'inline-block' );
+
+	if ( $class ) $classes[] = $class;
+
+	if ( $visibility ) $classes[] = $visibility;
+
+	$classes = implode( ' ', $classes );
 
 	$link_atts = array(
 		'target' => $target,
@@ -19,7 +29,7 @@ function ux_payment_icons( $atts ) {
 
 	// Get custom icons if set.
 	if ( ! empty( $custom ) ) {
-		return do_shortcode( '<div class="payment-icons inline-block">' . $link_start . flatsome_get_image( $custom ) . $link_end . '</div>' );
+		return do_shortcode( '<div class="' . $classes . '">' . $link_start . flatsome_get_image( $custom ) . $link_end . '</div>' );
 	} elseif ( empty( $icons ) ) {
 		return false;
 	}
@@ -30,7 +40,7 @@ function ux_payment_icons( $atts ) {
 
 	ob_start();
 
-	echo '<div class="payment-icons inline-block">';
+	echo '<div class="' . esc_attr( $classes ) . '">';
 	echo $link_start; // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 	foreach ( $icons as $key => $value ) {
 		echo '<div class="payment-icon">';

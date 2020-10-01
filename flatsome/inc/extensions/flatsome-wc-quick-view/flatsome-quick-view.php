@@ -12,7 +12,7 @@ function flatsome_lightbox_button() {
 	wp_enqueue_script( 'wc-add-to-cart-variation' );
 
 	global $product;
-	//echo '  <a class="quick-view" data-prod="' . $product->get_id() . '" href="#quick-view">' . __( 'Quick View', 'flatsome' ) . '</a>';
+	// echo '  <a class="quick-view" data-prod="' . $product->get_id() . '" href="#quick-view">' . __( 'Quick View', 'flatsome' ) . '</a>';
 	echo '  <a class="quick-view quick-view-addtocart single_add_to_cart_button button alt" data-prod="' . $product->get_id() . '" href="#quick-view">' . __( 'Add To Cart', 'flatsome' ) . '</a>';
 }
 

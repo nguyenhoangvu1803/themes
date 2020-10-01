@@ -20,8 +20,8 @@
 			echo do_shortcode( '[ux_banner bg_color="#fff" bg_overlay="rgba(255,255,255,.9)" height="100%"] [text_box animate="fadeInUp" text_color="dark"] [ux_image id="' . $logo_url . '" width="70%"] [divider] <p class="lead">' . flatsome_option( 'maintenance_mode_text' ) . '</p> [/text_box] [/ux_banner]' );
 		}
 		?>
-	</main><!-- /#main -->
-</div><!-- /#wrapper -->
+	</main>
+</div>
 </body>
 <?php wp_footer(); ?>
 </html>

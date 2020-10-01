@@ -32,6 +32,6 @@
   	   	<?php _e('Order Complete', 'flatsome'); ?>
   	   </a>
 		 </nav>
-	  </div><!-- .flex-left -->
-	</div><!-- flex-row -->
-</div><!-- .page-title -->
+	  </div>
+	</div>
+</div>

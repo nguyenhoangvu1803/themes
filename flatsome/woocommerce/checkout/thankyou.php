@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 					<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php esc_html_e( 'My account', 'woocommerce' ); ?></a>
 				<?php endif; ?>
 			</p>
-		</div><!-- .order-failed -->
+		</div>
 
 		<?php else : ?>
     <div class="large-7 col">

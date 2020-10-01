@@ -46,6 +46,7 @@ require get_template_directory() . '/inc/helpers/helpers-frontend.php';
 require get_template_directory() . '/inc/helpers/helpers-shortcode.php';
 require get_template_directory() . '/inc/helpers/helpers-grid.php';
 require get_template_directory() . '/inc/helpers/helpers-icons.php';
+if ( is_woocommerce_activated() ) { require get_template_directory() . '/inc/helpers/helpers-woocommerce.php'; }
 
 /**
  * Structure.
@@ -65,6 +66,7 @@ require get_template_directory() . '/inc/helpers/helpers-icons.php';
 
 if(is_admin()){
   require get_template_directory() . '/inc/structure/structure-admin.php';
+  require get_template_directory() . '/inc/admin/gutenberg/class-gutenberg.php';
 }
 
 /**
@@ -107,6 +109,8 @@ require get_template_directory() . '/inc/shortcodes/ux_countdown/ux-countdown.ph
 require get_template_directory() . '/inc/shortcodes/ux_video.php';
 require get_template_directory() . '/inc/shortcodes/ux_nav.php';
 require get_template_directory() . '/inc/shortcodes/ux_payment_icons.php';
+require get_template_directory() . '/inc/shortcodes/ux_stack.php';
+require get_template_directory() . '/inc/shortcodes/ux_text.php';
 
 if(is_portfolio_activated()){
   require get_template_directory() . '/inc/shortcodes/portfolio.php';
@@ -117,9 +121,7 @@ if (is_woocommerce_activated()) {
   require get_template_directory() . '/inc/shortcodes/ux_products_list.php';
   require get_template_directory() . '/inc/shortcodes/product_flip.php';
   require get_template_directory() . '/inc/shortcodes/product_categories.php';
-  if(get_theme_mod('product_layout') == 'custom') {
-    require get_template_directory() . '/inc/shortcodes/custom-product.php';
-  }
+  require get_template_directory() . '/inc/shortcodes/custom-product.php';
 }
 
 
@@ -146,7 +148,7 @@ if ( is_woocommerce_activated() ) {
   require get_template_directory() . '/inc/woocommerce/structure-wc-product-page.php';
   require get_template_directory() . '/inc/woocommerce/structure-wc-product-page-header.php';
   require get_template_directory() . '/inc/woocommerce/structure-wc-single-product.php';
-  if ( get_theme_mod( 'product_layout' ) === 'custom' ) require get_template_directory() . '/inc/woocommerce/structure-wc-single-product-custom.php';
+  require get_template_directory() . '/inc/woocommerce/structure-wc-single-product-custom.php';
   if ( get_theme_mod( 'catalog_mode' ) ) require get_template_directory() . '/inc/woocommerce/structure-wc-catalog-mode.php';
 }
 
@@ -163,7 +165,7 @@ if (is_woocommerce_activated() ) { require get_template_directory() . '/inc/widg
  * Custom Theme Post Types
  */
 require get_template_directory() . '/inc/post-types/post-type-ux-blocks.php';
-require get_template_directory() . '/inc/post-types/post-type-review.php';
+
 if(is_portfolio_activated()){
   require get_template_directory() . '/inc/post-types/post-type-ux-portfolio.php';
 }

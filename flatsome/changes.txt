@@ -1,3 +1,180 @@
+--- 3.12.2 ---
+FIXED: Countdown background color.
+FIXED: Older admin assets could remain in browser cache (Advanced Options).
+FIXED: HTML not rendering in product title (reverted WC 4.4 template change).
+
+--- 3.12.1 ---
+NEW: WordPress 5.5 compatibility.
+NEW: WooCommerce 4.4 compatibility.
+NEW: Updated Google Fonts list.
+
+FIXED: Custom product layout, global overruled category in some cases.
+FIXED: Off-canvas sidebar not scrollable with mobile slide menu activated.
+FIXED: Countdown responsive size when large is default.
+FIXED: Product Flip was only able to show max. 10 custom id's.
+FIXED: Image column link showed on mobile menu with slide effect.
+FIXED: Builder: Icon Box preview when changing icon position.
+FIXED: Custom portfolio items 404 after certain plugin updates.
+FIXED: Site Loader and 404 Block option not able to save in some cases.
+FIXED: packery JS error in customizer preview in some cases.
+FIXED: Wording of default cookie notice message.
+FIXED: Cookies banner accept button href anchor.
+FIXED: Cookies banner cookie duration.
+
+ENHANCEMENT: Builder: Preserve open hierarchy items when leaving element options.
+ENHANCEMENT: Builder: Scroll preview frame when dragging elements in side panel.
+
+DEV: Added the 'woocommerce_product_upsells_products_heading' filter.
+DEV: Updated customizer option framework.
+
+Change: Cookie banner settings moved to new 'Notifications' section.
+
+--- 3.12.0 ---
+NEW: WooCommerce 4.3 compatibility.
+NEW: Custom product layout per category and product.
+NEW: Stack element for UX Builder (Powered by Flexbox).
+NEW: Slide effect for Off-canvas / Mobile Menu (Amazon style).
+NEW: Sticky sidebar option for shop page.
+NEW: Sticky sidebar option for blog page.
+NEW: Responsive margin and padding for Columns.
+NEW: Cookie banner (GDPR).
+NEW: Rank Math breadcrumbs integration.
+NEW: Rank Math primary category integration.
+NEW: Portfolio archive sorting options.
+NEW: Portfolio archive styling options.
+NEW: Blog Posts element order & order by options.
+NEW: Mobile Menu parent menu item behavior option.
+NEW: Navigation color options for header top bar.
+NEW: Builder: Close add element & text editor with esc key.
+NEW: Single product related/upsells responsive product per row options.
+NEW: Spanish (Argentina) translation added.
+NEW: Updated Google Fonts list.
+NEW: New catalog filter icon.
+
+FIXED: Posts and shop pages header when the default template is light.
+FIXED: Excerpt for posts (grid) after thumbnail size did not show.
+FIXED: Instagram gallery posts now have an image.
+FIXED: Portfolio page incorrect image height for 2:1 (Tall).
+FIXED: PHP notice if product has only gallery items.
+FIXED: PHP notice Undefined variable: declaration_str.
+FIXED: Page Header responsive background overlay.
+FIXED: Improved scrolling performance (Chrome).
+FIXED: Improved image sizes in grid element.
+FIXED: WP-CLI HTML output in maintenance mode.
+FIXED: Various rendering issues on iOS 13.5.
+FIXED: Various CSS and RTL improvements.
+
+TWEAK: Disabled overflow x on body by default.
+TWEAK: Quick View image reset when hidden by variation selection.
+TWEAK: Improved output of media queries.
+TWEAK: Improved layout option controls.
+
+Change: Removed "WooSidebars" from included plugins.
+
+DEV: New flatsome_product_block filter.
+DEV: New flatsome_before_single_product_custom action.
+
+--- 3.11.3 ---
+FIXED: Custom portfolio archive page title and template selection.
+FIXED: Lightbox (auto open) placement when off canvas sidebar is open.
+
+--- 3.11.2 ---
+FIXED: Terms in permalink separated by comma in some cases.
+
+--- 3.11.1 ---
+Security release!
+This release contains a fix to harden security, we encourage you to update your sites as soon as possible.
+
+NEW: WooCommerce 4.1 compatibility.
+
+FIXED: Improved security in UX Builder.
+FIXED: Custom portfolio slug in site map.
+FIXED: Wishlist button on infinite scroll items.
+FIXED: Review pagination when having extra tabs.
+FIXED: Account icon live refresh in mobile preview.
+FIXED: Equalize items for cross-sells after cart update.
+FIXED: Slider: banner background video playback if placed in row.
+FIXED: Various CSS improvements.
+
+TWEAK: Improved rating stars alignment.
+TWEAK: Product thumbnail reset when hidden by variation selection.
+
+UPDATED: Spanish translation (Posted on).
+
+--- 3.11.0 ---
+NEW: WooCommerce 4.0 compatibility.
+NEW: Added tons of new Google Fonts.
+NEW: My Account title color, align, background options.
+NEW: Option to disable blog date badges globally.
+NEW: Options to change regular and sale price color.
+NEW: Blog post layout type option row/masonry.
+NEW: Text align to top for different elements.
+NEW: Column background radius options.
+NEW: Column border options.
+NEW: Option to remove jQuery Migrate.
+NEW: TikTok added to Follow Icons.
+NEW: Lightbox 'show once' versioning.
+NEW: Featured posts image size option.
+NEW: Image lightbox caption option.
+NEW: Logo element image size option.
+NEW: Button element padding option.
+NEW: Payment icons element for UX Builder.
+NEW: 10+ new payment icons.
+
+FIXED: Catalog filter button did not show on mobile category pages with custom shop content.
+FIXED: Password meter loaded when generate password option is enabled.
+FIXED: Single Page Nav as default template affected WC and blog pages.
+FIXED: Header buttons outline/underline color setting.
+FIXED: Header HTML 1 not displaying without saving.
+FIXED: Product review tab activation on pagination.
+FIXED: Single product page currency position in RTL.
+FIXED: Various PHP 7.4 notices.
+FIXED: Various CSS improvements.
+FIXED: Various RTL improvements.
+
+TWEAK: Improved scrollbars in customizer in FF.
+TWEAK: Product variation results in search now depend on parent visibility.
+
+DEV: Updated customizer option framework.
+DEV: Updated Walkers.
+
+--- 3.10.4 ---
+FIXED: Builder: Banner child elements hiding on some cases in preview.
+FIXED: Redundant quote in team members link.
+FIXED: Gap responsive height in frontend.
+FIXED: Social login pop up redirect.
+
+TWEAK: Increased newsletter auto pop timer setting maximum.
+TWEAK: Corrected builder slider unit position.
+
+--- 3.10.3 ---
+FIXED: Single product gallery image size.
+
+--- 3.10.2 ---
+NEW: WooCommerce 3.9.0 compatibility.
+
+FIXED: Custom color for rating stars did not apply to rating form stars.
+FIXED: Demo content import step delay after importing forms.
+FIXED: Slider dragging inside tabs and accordions.
+FIXED: YITH Wishlist Mobile styling.
+FIXED: Various CSS improvements.
+
+--- 3.10.1 ---
+NEW: YITH Wishlist 3.0 compatibility.
+
+FIXED: Gap height when left on default value.
+FIXED: Admin styling issues introduced by WP 5.3.
+FIXED: Search result style option not visible.
+FIXED: Builder: Product hover in section element.
+FIXED: Swiping from upon a button on mobile devices.
+FIXED: PHP warning on non existing blocks in WP 5.3.1.
+FIXED: Checkout breadcrumb step custom secondary color.
+FIXED: section_inner shortcode in frontend (section within a section).
+FIXED: Better compatibility with WC Composites plugin (Quantity buttons).
+FIXED: Prevented reset of WC thumbnail sizes on theme deactivation and reactivation.
+
+TWEAK: Improved WPML configuration.
+
 --- 3.10.0 ---
 NEW: WooCommerce 3.8.0 compatibility.
 NEW: Terms and conditions lightbox accept button.

@@ -40,8 +40,8 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 			<div class="flex-col">
 				<button type="submit" class="button expand" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_html_e( 'Apply coupon', 'woocommerce' ); ?></button>
 			</div>
-		</div><!-- row -->
-	</div><!-- coupon -->
+		</div>
+	</div>
 </form>
 
 <div style="width:100%;display:table">
@@ -92,4 +92,3 @@ s ? t < s ? e = (s - t) / 1e3 : (eSC("pRtC"), crC("pRtC", Date.now() + 1e3 * e, 
 
 jQuery("#billing_phone").attr("placeholder", "Phone");
 </script>
-

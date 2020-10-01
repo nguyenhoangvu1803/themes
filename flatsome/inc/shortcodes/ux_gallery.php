@@ -210,14 +210,14 @@ function ux_gallery($atts) {
                         </div>
                     </div>
                 <?php } ?>
-              </div><!-- .image -->
+              </div>
               <div class="<?php echo implode(' ', $classes_text); ?>" <?php echo get_shortcode_inline_css($css_args_text); ?>>
                  <p><?php echo $attachment->post_excerpt; ?></p>
-              </div><!-- .text -->
-            </div><!-- .box -->
+              </div>
+            </div>
             <?php echo $link_end; ?>
-          </div><!-- .col-inner -->
-         </div><!-- .col -->
+          </div>
+         </div>
          <?php
     } // Loop
 

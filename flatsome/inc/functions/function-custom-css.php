@@ -45,6 +45,12 @@ if($content_bg){ ?>
 <?php } ?>
 
 <?php
+$cookie_notice_bg_color = get_theme_mod( 'cookie_notice_bg_color' );
+if ( $cookie_notice_bg_color ) { ?>
+	.flatsome-cookies {background-color: <?php echo $cookie_notice_bg_color; ?>}
+<?php } ?>
+
+<?php
 $header_height = get_theme_mod('header_height', 90); ?>
 .header-main{height: <?php echo $header_height; ?>px}
 #logo img{max-height: <?php echo $header_height; ?>px}
@@ -197,7 +203,7 @@ if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ ?>
 $color_secondary = get_theme_mod('color_secondary', Flatsome_Default::COLOR_SECONDARY);
 if( $color_secondary && $color_secondary !== Flatsome_Default::COLOR_SECONDARY ){ ?>
 	/* Background Color */
-	[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:  <?php echo $color_secondary; ?>; }
+	[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button, .current .breadcrumb-step{ background-color:  <?php echo $color_secondary; ?>; }
 	[data-text-bg="secondary"]{background-color: <?php echo $color_secondary; ?>;}
 	/* Color */
 	.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: <?php echo $color_secondary ;?>}
@@ -284,9 +290,11 @@ if(get_theme_mod('color_texts')){
 // Type Navigations
 if(!empty($type_nav['font-family'])) {
 	echo '.nav > li > a {font-family:  "'.$type_nav['font-family'].'", sans-serif;}';
+	echo '.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family:  "'.$type_nav['font-family'].'", sans-serif;}';
 }
 if(!empty($type_nav['variant'])) {
 	echo '.nav > li > a {font-weight: '.intval($type_nav['variant']).';}';
+	echo '.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: '.intval($type_nav['variant']).';}';
 }
 // Type Headings
 if(!empty($type_headings['font-family'])) {
@@ -326,6 +334,31 @@ echo '.alt-font{font-weight: '.intval($type_alt['variant']).'!important;}';
 }
 
 ?>
+
+<?php if(get_theme_mod('type_nav_top_color')){ ?>
+.header:not(.transparent) .top-bar-nav > li > a {
+color: <?php echo get_theme_mod('type_nav_top_color'); ?>;
+}
+<?php } ?>
+<?php if(get_theme_mod('type_nav_top_color_hover')) { ?>
+.header:not(.transparent) .top-bar-nav.nav > li > a:hover,
+.header:not(.transparent) .top-bar-nav.nav > li.active > a,
+.header:not(.transparent) .top-bar-nav.nav > li.current > a,
+.header:not(.transparent) .top-bar-nav.nav > li > a.active,
+.header:not(.transparent) .top-bar-nav.nav > li > a.current{
+	color: <?php echo get_theme_mod('type_nav_top_color_hover'); ?>;
+}
+.top-bar-nav.nav-line-bottom > li > a:before,
+.top-bar-nav.nav-line-grow > li > a:before,
+.top-bar-nav.nav-line > li > a:before,
+.top-bar-nav.nav-box > li > a:hover,
+.top-bar-nav.nav-box > li.active > a,
+.top-bar-nav.nav-pills > li > a:hover,
+.top-bar-nav.nav-pills > li.active > a{
+color:#FFF!important;
+background-color: <?php echo get_theme_mod('type_nav_top_color_hover'); ?>;
+}
+<?php } ?>
 
 <?php if(get_theme_mod('type_nav_color')){ ?>
 .header:not(.transparent) .header-nav.nav > li > a {
@@ -427,7 +460,15 @@ background-color: <?php echo get_theme_mod('header_shop_bg_color') ?>;}
 <?php } ?>
 
 <?php if(get_theme_mod('color_review')) { ?>
-	.star-rating span:before,.star-rating:before, .woocommerce-page .star-rating:before{color: <?php echo get_theme_mod('color_review'); ?>}
+	.star-rating span:before,.star-rating:before, .woocommerce-page .star-rating:before, .stars a:hover:after, .stars a.active:after{color: <?php echo get_theme_mod('color_review'); ?>}
+<?php } ?>
+
+<?php if ( is_woocommerce_activated() && get_theme_mod( 'color_regular_price' ) ) { ?>
+.price del, .product_list_widget del, del .woocommerce-Price-amount { color: <?php echo get_theme_mod( 'color_regular_price' ); ?>; }
+<?php } ?>
+
+<?php if ( is_woocommerce_activated() && get_theme_mod( 'color_sale_price' ) ) { ?>
+ins .woocommerce-Price-amount { color: <?php echo get_theme_mod( 'color_sale_price' ); ?>; }
 <?php } ?>
 
 <?php if(is_woocommerce_activated() && get_theme_mod('header_shop_bg_image')){ ?>

@@ -47,7 +47,7 @@ Flatsome_Option::add_field( '', array(
 Flatsome_Option::add_field( 'option', array(
 	'type'            => 'checkbox',
 	'settings'        => 'flatsome_lightbox_multi_gallery',
-	'label'           => __( 'Use multiple galleries on a page', 'flatsome-admin' ) . ' (NEW)',
+	'label'           => __( 'Use multiple galleries on a page', 'flatsome-admin' ),
 	'description'     => __( 'When enabled, lightbox galleries on a page are treated separately, else combined in one gallery.', 'flatsome-admin' ),
 	'section'         => 'lightbox',
 	'default'         => 0,

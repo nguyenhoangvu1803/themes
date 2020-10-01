@@ -62,7 +62,7 @@ Flatsome_Option::add_field( '', array(
 	'settings' => 'cart_steps_title',
 	'label'    => '',
 	'section'  => 'cart-checkout',
-	'default'  => '<div class="options-title-divider">Steps (NEW)</div>',
+	'default'  => '<div class="options-title-divider">Steps</div>',
 ) );
 
 Flatsome_Option::add_field( 'option', array(
@@ -144,7 +144,7 @@ Flatsome_Option::add_field( 'option', array(
 ));
 
 
-if( is_nextend_facebook_login() ){
+if ( is_nextend_facebook_login() || is_nextend_google_login() ) {
 	Flatsome_Option::add_field( 'option',  array(
 		'type'        => 'checkbox',
 		'settings'     => 'facebook_login_checkout',
@@ -157,7 +157,7 @@ if( is_nextend_facebook_login() ){
 Flatsome_Option::add_field( 'option', array(
 	'type'     => 'radio-buttonset',
 	'settings' => 'checkout_terms_and_conditions',
-	'label'    => __( 'Terms and conditions link style', 'flatsome-admin' ) . ' (NEW)',
+	'label'    => __( 'Terms and conditions link style', 'flatsome-admin' ),
 	'section'  => 'woocommerce_checkout',
 	'default'  => '',
 	'choices'  => array(
@@ -171,7 +171,7 @@ Flatsome_Option::add_field( 'option', array(
 	'type'            => 'checkbox',
 	'settings'        => 'terms_and_conditions_lightbox_buttons',
 	'transport'       => $transport,
-	'label'           => __( 'Terms and conditions "Agree" button', 'flatsome-admin' ) . ' (NEW)',
+	'label'           => __( 'Terms and conditions "Agree" button', 'flatsome-admin' ),
 	'section'         => 'woocommerce_checkout',
 	'default'         => 1,
 	'active_callback' => array(

@@ -267,7 +267,7 @@ function ux_products($atts, $content = null, $tag) {
 
 	            	$classes_col = array('col');
 
-      					$out_of_stock = get_post_meta(get_the_ID(), '_stock_status',true) == 'outofstock';
+      					$out_of_stock = ! $product->is_in_stock();
       					if($out_of_stock) $classes[] = 'out-of-stock';
 
 	            	if($type == 'grid'){
@@ -307,7 +307,7 @@ function ux_products($atts, $content = null, $tag) {
 									</div>
 								<?php } ?>
 								<?php if($out_of_stock) { ?><div class="out-of-stock-label"><?php _e( 'Out of stock', 'woocommerce' ); ?></div><?php }?>
-							</div><!-- box-image -->
+							</div>
 
 							<div class="box-text <?php echo implode(' ', $classes_text); ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
 								<?php
@@ -330,13 +330,12 @@ function ux_products($atts, $content = null, $tag) {
 									do_action( 'flatsome_product_box_after' );
 
 								?>
-							</div><!-- box-text -->
-						</div><!-- box -->
-						</div><!-- .col-inner -->
-					</div><!-- col -->
+							</div>
+						</div>
+						</div>
+					</div>
 					<?php } ?>
 	            <?php endwhile; // end of the loop. ?>
-
 	        <?php
 
 	        endif;

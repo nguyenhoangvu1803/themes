@@ -12,17 +12,13 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.6.0
+ * @version 4.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 $qty_start = '<input type="button" value="-" class="minus button is-form">';
 $qty_end   = '<input type="button" value="+" class="plus button is-form">';
-
-if ( empty( $max_value ) ) {
-	$max_value = 9999;
-}
 
 if ( $max_value && $min_value === $max_value ) {
 	?>
@@ -31,16 +27,17 @@ if ( $max_value && $min_value === $max_value ) {
 	</div>
 	<?php
 } else {
-		/* translators: %s: Quantity. */
-		$label = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'woocommerce' ), wp_strip_all_tags( $args['product_name'] ) ) : __( 'Quantity', 'woocommerce' );
-		// Add wrapper classes
-		$wrapper_classes = array('quantity','buttons_added');
-		if(get_theme_mod('product_info_form')) {
-			$wrapper_classes[] = 'form-'.get_theme_mod('product_info_form','normal');
-		}
+	/* translators: %s: Quantity. */
+	$label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'woocommerce' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'woocommerce' );
+	// Add wrapper classes.
+	$wrapper_classes = array( 'quantity', 'buttons_added' );
+	if ( get_theme_mod( 'product_info_form' ) ) {
+		$wrapper_classes[] = 'form-' . get_theme_mod( 'product_info_form', 'normal' );
+	}
 	?>
-	<div class="<?php echo implode(' ',	$wrapper_classes);?>">
+	<div class="<?php echo implode( ' ', $wrapper_classes ); ?>">
 		<?php echo $qty_start; ?>
+		<?php do_action( 'woocommerce_before_quantity_input_field' ); ?>
 		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
 		<input
 			type="number"
@@ -53,7 +50,9 @@ if ( $max_value && $min_value === $max_value ) {
 			value="<?php echo esc_attr( $input_value ); ?>"
 			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ); ?>"
 			size="4"
+			placeholder="<?php echo fl_woocommerce_version_check( '4.0.0' ) ? esc_attr( $placeholder ) : ''; ?>"
 			inputmode="<?php echo esc_attr( $inputmode ); ?>" />
+		<?php do_action( 'woocommerce_after_quantity_input_field' ); ?>
 		<?php echo $qty_end; ?>
 	</div>
 	<?php

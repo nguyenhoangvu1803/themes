@@ -13,7 +13,7 @@
 		echo do_shortcode( '[share]' );
 		echo '</div>';
 	} ?>
-</div><!-- .entry-content2 -->
+</div>
 
 <?php if ( get_theme_mod( 'blog_single_footer_meta', 1 ) ) : ?>
 	<footer class="entry-meta text-<?php echo get_theme_mod( 'blog_posts_title_align', 'center' ); ?>">
@@ -34,7 +34,7 @@
 
 		printf( $meta_text, $category_list, $tag_list, get_permalink(), the_title_attribute( 'echo=0' ) );
 		?>
-	</footer><!-- .entry-meta -->
+	</footer>
 <?php endif; ?>
 
 <?php if ( get_theme_mod( 'blog_author_box', 1 ) ) : ?>
@@ -47,13 +47,13 @@
 					echo get_avatar( $user, 90 );
 					?>
 				</div>
-			</div><!-- .flex-col -->
+			</div>
 			<div class="flex-col flex-grow">
 				<h5 class="author-name uppercase pt-half">
 					<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
 				</h5>
 				<p class="author-desc small"><?php echo esc_html( get_the_author_meta( 'user_description' ) ); ?></p>
-			</div><!-- .flex-col -->
+			</div>
 		</div>
 	</div>
 <?php endif; ?>

@@ -103,6 +103,7 @@ global $title, $hook_suffix, $current_screen, $wp_locale, $pagenow,
     }
     .wp-editor-tools .wp-media-buttons .dashicons {
       display: inline-block;
+      margin-top: 10px;
       margin-right: 5px;
       width: 18px;
       height: 18px;
@@ -182,6 +183,13 @@ global $title, $hook_suffix, $current_screen, $wp_locale, $pagenow,
       }
     }, false);
 
+    document.addEventListener('keydown', function (event) {
+      if (event.keyCode === 27) {
+        parent.postMessage({ source: source, type: 'hide' }, '*');
+        event.preventDefault();
+      }
+    });
+
     function onTextAreaChange (event) {
       parent.postMessage({
         source: source,
@@ -192,6 +200,11 @@ global $title, $hook_suffix, $current_screen, $wp_locale, $pagenow,
 
     function onEditorChange (event) {
       var content = editor.getContent();
+
+      if (event.type === 'keyup' && event.keyCode === 27) {
+        parent.postMessage({ source: source, type: 'hide' }, '*');
+        return;
+      }
 
       if (content === prevContent) {
         return;

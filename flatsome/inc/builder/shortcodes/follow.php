@@ -42,6 +42,7 @@ add_ux_builder_shortcode( 'follow', array(
         ),
         'facebook' => array( 'type' => 'textfield','heading' => 'Facebook', 'default' => ''),
         'instagram' => array( 'type' => 'textfield','heading' => 'Instagram', 'default' => ''),
+        'tiktok' => array( 'type' => 'textfield','heading' => 'TikTok', 'default' => ''),
         'snapchat' => array( 'type' => 'image', 'heading' => __( 'SnapChat' )),
         'twitter' => array( 'type' => 'textfield','heading' => 'Twitter', 'default' => ''),
         'linkedin' => array( 'type' => 'textfield','heading' => 'Linkedin', 'default' => ''),

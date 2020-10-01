@@ -5,12 +5,7 @@
       $logo_width = get_theme_mod('logo_width', 200);
       $site_title = esc_attr( get_bloginfo( 'name', 'display' ) );
       if(get_theme_mod('site_logo_sticky')) echo '<img width="'.$logo_width.'" height="'.$logo_height.'" src="'.get_theme_mod('site_logo_sticky').'" class="header-logo-sticky" alt="'.$site_title.'"/>';
-       echo '<img width="'.$logo_width.'" height="'.$logo_height.'" src="'.flatsome_option('site_logo').'" class="header_logo header-logo" alt="'.$site_title.'"/>';
-      //if(strpos($_SERVER['REQUEST_URI'], 'checkout') !== false){
-      //  echo '<img width="510" height="75" src="https://blockofgear.com/wp-content/uploads/2019/10/Checkout_2.png" class="header_logo header-logo" alt="'.$site_title.'"/>';
-      //} else {
-      //  echo '<img width="'.$logo_width.'" height="'.$logo_height.'" src="'.flatsome_option('site_logo').'" class="header_logo header-logo" alt="'.$site_title.'"/>';
-      //}
+      echo '<img width="'.$logo_width.'" height="'.$logo_height.'" src="'.flatsome_option('site_logo').'" class="header_logo header-logo" alt="'.$site_title.'"/>';
       if(!get_theme_mod('site_logo_dark')) echo '<img  width="'.$logo_width.'" height="'.$logo_height.'" src="'.flatsome_option('site_logo').'" class="header-logo-dark" alt="'.$site_title.'"/>';
       if(get_theme_mod('site_logo_dark')) echo '<img  width="'.$logo_width.'" height="'.$logo_height.'" src="'.get_theme_mod('site_logo_dark').'" class="header-logo-dark" alt="'.$site_title.'"/>';
     } else {

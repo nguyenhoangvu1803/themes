@@ -92,7 +92,7 @@ Flatsome_Option::add_field( 'option', array(
 Flatsome_Option::add_field( 'option', array(
 	'type'     => 'checkbox',
 	'settings' => 'sticky_hide_on_scroll',
-	'label'    => __( 'Hide sticky when scrolling down', 'flatsome-admin' ) . ' (NEW)',
+	'label'    => __( 'Hide sticky when scrolling down', 'flatsome-admin' ),
 	'section'  => 'header_sticky',
 	'default'  => 0,
 ) );

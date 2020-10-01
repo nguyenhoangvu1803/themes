@@ -10,7 +10,7 @@ add_action( 'wp_enqueue_scripts', 'flatsome_countdown_shortcode_scripts' );
 
 // Register Shortcode
 function ux_countdown_shortcode( $atts ){
-    extract( shortcode_atts( array(
+    $atts = shortcode_atts( array(
       '_id' => 'timer-'.rand(),
       'before' => '',
       'after' => '',
@@ -18,9 +18,12 @@ function ux_countdown_shortcode( $atts ){
       'month' => '12',
       'day' => '31',
       'color' => 'dark',
+      'bg_color' => '',
+      'bg_color__md' => '',
+      'bg_color__sm' => '',
       'time' => '18:00',
       'style' => 'clock',
-      'size' => '200',
+      'size' => '300',
       'size__md' => '',
       'size__sm' => '',
       't_hour' => 'hour',
@@ -36,7 +39,9 @@ function ux_countdown_shortcode( $atts ){
       't_week_p' => '',
       't_sec_p' => '',
 
-    ), $atts ) );
+    ), $atts );
+
+    extract( $atts );
 
     wp_enqueue_style('flatsome-countdown-style');
     wp_enqueue_script('flatsome-countdown-script');

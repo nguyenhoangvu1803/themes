@@ -31,15 +31,6 @@ if ( ! function_exists( 'of_options' ) ) {
 			$of_pages[ $of_page->ID ] = $of_page->post_title;
 		}
 
-		// Access the Blocks via an Array.
-		$of_blocks     = array( false => '-- None --' );
-		$of_blocks_obj = flatsome_get_post_type_items( 'blocks' );
-		if ( $of_blocks_obj ) {
-			foreach ( $of_blocks_obj as $of_block ) {
-				$of_blocks[ $of_block->post_name ] = $of_block->post_title;
-			}
-		}
-
 		// Set the Options Array.
 		global $of_options;
 		$of_options = array();
@@ -122,7 +113,12 @@ if ( ! function_exists( 'of_options' ) ) {
 		$of_options[] = array(
 			'name' => 'Performance',
 			'type' => 'heading',
-			'desc' => ' <strong>Use with caution! Disable if you have plugin compatibility problems.</strong>',
+		);
+
+		$of_options[] = array(
+			'name' => '',
+			'type' => 'info',
+			'desc' => '<p style="font-size:14px">Use with caution! Disable if you have plugin compatibility problems.</p>',
 		);
 
 		$of_options[] = array(
@@ -174,6 +170,14 @@ if ( ! function_exists( 'of_options' ) ) {
 		);
 
 		$of_options[] = array(
+			'name' => 'Disable jQuery Migrate',
+			'type' => 'checkbox',
+			'id'   => 'jquery_migrate',
+			'std'  => 0,
+			'desc' => 'Remove jQuery Migrate. Most up-to-date front-end code and plugins don’t require jquery-migrate.min.js. More often than not, keeping this - simply adds unnecessary load to your site. (for < WP 5.5)',
+		);
+
+		$of_options[] = array(
 			'name' => 'Site Loader',
 			'type' => 'heading',
 		);
@@ -183,9 +187,9 @@ if ( ! function_exists( 'of_options' ) ) {
 			'id'      => 'site_loader',
 			'desc'    => 'Enable Site Loader overlay when loading the site.',
 			'type'    => 'select',
-			'std'     => 0,
+			'std'     => '',
 			'options' => array(
-				0      => 'Disabled',
+				''     => 'Disabled',
 				'home' => 'Enable on homepage',
 				'all'  => 'Enable on all pages',
 			),
@@ -217,14 +221,14 @@ if ( ! function_exists( 'of_options' ) ) {
 		$of_options[] = array(
 			'name' => 'Live Search',
 			'id'   => 'live_search',
-			'desc' => 'Enable live search for products and pages.',
+			'desc' => 'Enable live search for products, pages and posts.',
 			'std'  => 1,
 			'type' => 'checkbox',
 		);
 
 		$of_options[] = array(
 			'name' => 'Search placeholder',
-			'desc' => 'Change the search field placeholder',
+			'desc' => 'Change the search field placeholder.',
 			'id'   => 'search_placeholder',
 			'type' => 'text',
 		);
@@ -234,9 +238,22 @@ if ( ! function_exists( 'of_options' ) ) {
 			$of_options[] = array(
 				'name' => 'Show Blog and pages in search results',
 				'id'   => 'search_result',
-				'desc' => 'Enable blog and pages in search results',
+				'desc' => 'Enable blog and pages in search results.',
 				'std'  => 1,
 				'type' => 'checkbox',
+			);
+
+			$of_options[] = array(
+				'name'    => 'Posts and pages list style',
+				'id'      => 'search_result_style',
+				'desc'    => 'Display results as row, masonry or slider style.',
+				'type'    => 'select',
+				'std'     => 'slider',
+				'options' => array(
+					'row'     => 'Row',
+					'masonry' => 'Masonry',
+					'slider'  => 'Slider',
+				),
 			);
 
 			$of_options[] = array(
@@ -342,7 +359,7 @@ if ( ! function_exists( 'of_options' ) ) {
 			'desc'    => 'Replace 404 page content with a Custom Block that you can edit in the Page Builder.',
 			'std'     => 0,
 			'type'    => 'select',
-			'options' => $of_blocks,
+			'options' => flatsome_get_block_list_by_id( array( 'option_none' => '-- None --' ) ),
 		);
 
 		if ( is_woocommerce_activated() ) {
@@ -559,7 +576,15 @@ if ( ! function_exists( 'of_options' ) ) {
 			$of_options[] = array(
 				'name' => 'Yoast Primary Category',
 				'id'   => 'wpseo_primary_term',
-				'desc' => 'Use Yoast primary category on product category pages and elements.',
+				'desc' => 'Use on product category pages and elements.',
+				'std'  => 0,
+				'type' => 'checkbox',
+			);
+
+			$of_options[] = array(
+				'name' => '',
+				'id'   => 'wpseo_manages_product_layout_priority',
+				'desc' => 'Manage custom product layout priority.',
 				'std'  => 0,
 				'type' => 'checkbox',
 			);
@@ -567,7 +592,7 @@ if ( ! function_exists( 'of_options' ) ) {
 			$of_options[] = array(
 				'name'  => 'Yoast Breadcrumbs',
 				'id'    => 'wpseo_breadcrumb',
-				'desc'  => 'Use Yoast breadcrumbs on product category pages, single product pages and elements.',
+				'desc'  => 'Use on product category pages, single product pages and elements.',
 				'std'   => 0,
 				'folds' => 1,
 				'type'  => 'checkbox',
@@ -579,6 +604,33 @@ if ( ! function_exists( 'of_options' ) ) {
 				'desc' => 'Remove the last static crumb on single product pages (product title).',
 				'std'  => 1,
 				'fold' => 'wpseo_breadcrumb',
+				'type' => 'checkbox',
+			);
+		}
+
+		// Rank Math options.
+		if ( class_exists( 'RankMath' ) ) {
+			$of_options[] = array(
+				'name' => 'Rank Math Primary Category',
+				'id'   => 'rank_math_primary_term',
+				'desc' => 'Use on product category pages and elements.',
+				'std'  => 0,
+				'type' => 'checkbox',
+			);
+
+			$of_options[] = array(
+				'name' => '',
+				'id'   => 'rank_math_manages_product_layout_priority',
+				'desc' => 'Manage custom product layout priority.',
+				'std'  => 0,
+				'type' => 'checkbox',
+			);
+
+			$of_options[] = array(
+				'name' => 'Rank Math Breadcrumbs',
+				'id'   => 'rank_math_breadcrumb',
+				'desc' => 'Use on product category pages, single product pages and elements.',
+				'std'  => 0,
 				'type' => 'checkbox',
 			);
 		}

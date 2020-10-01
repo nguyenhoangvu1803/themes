@@ -3,7 +3,7 @@
  * Single variation cart button
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 3.4.0
  */
 
@@ -18,11 +18,13 @@ global $product;
 	<?php
 	do_action( 'woocommerce_before_add_to_cart_quantity' );
 
-	woocommerce_quantity_input( array(
-		'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-		'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-		'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-	) );
+	woocommerce_quantity_input(
+		array(
+			'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+			'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+			'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+		)
+	);
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
@@ -142,8 +144,8 @@ global $product;
   </div>
   <div>This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: bold;">Get it before it's gone!</span></div>
   <div>
-  <img  alt="credit cards" src="https://assets.blockofgear.com/wp-content/uploads/2019/12/13014947/checkout-opt.png">
-  <img src="https://homewix.com/wp-content/uploads/2020/02/product.jpg">
+  <img  alt="credit cards" src="https://flagwix.com/wp-content/uploads/2020/09/checkout-opt.png">
+  <img src="https://flagwix.com/wp-content/uploads/2020/09/product.jpg">
   </div>
   <script>
 		function getRandomInt(max) {

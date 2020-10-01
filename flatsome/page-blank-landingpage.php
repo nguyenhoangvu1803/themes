@@ -24,9 +24,9 @@ Template name: Page - No Header / No Footer
 		<?php the_content(); ?>
 	<?php endwhile; // end of the loop. ?>
 
-	</div><!-- #main -->
+	</div>
 
-</div><!-- #wrapper -->
+</div>
 <?php do_action( 'flatsome_after_page' ); ?>
 
 <?php wp_footer(); ?>

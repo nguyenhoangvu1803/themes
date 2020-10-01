@@ -2,9 +2,11 @@
 
 // [gap]
 function flatsome_gap_shortcode( $atts, $content = null ) {
-	extract( shortcode_atts( array(
+	extract( $atts = shortcode_atts( array(
 		'_id'        => 'gap-' . rand(),
 		'height'     => '30px',
+		'height__sm' => '',
+		'height__md' => '',
 		'class'      => '',
 		'visibility' => '',
 	), $atts ) );

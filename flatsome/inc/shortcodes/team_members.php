@@ -13,6 +13,7 @@ function flatsome_team_member($atts, $content = null){
       'facebook' => '',
       'pinterest' => '',
       'instagram' => '',
+      'tiktok' => '',
       'snapchat' => '',
       'youtube' => '',
       'email' => '',
@@ -71,8 +72,8 @@ function flatsome_team_member($atts, $content = null){
     if($depth) $classes_box[] = 'box-shadow-'.$depth;
     if($depth_hover) $classes_box[] = 'box-shadow-'.$depth_hover.'-hover';
 
-    $link_start = '<a href="'.$link.'"' . flatsome_parse_target_rel( $link_atts ) . '">';
-    $link_end = '</a>';
+	$link_start = '<a href="' . $link . '"' . flatsome_parse_target_rel( $link_atts ) . '>';
+	$link_end   = '</a>';
 
     if($style) $classes_box[] = 'box-'.$style;
     if($style == 'overlay') $classes_box[] = 'dark';
@@ -117,7 +118,7 @@ function flatsome_team_member($atts, $content = null){
               <?php echo flatsome_get_image($img, $image_size); ?>
               <?php if($image_overlay) { ?><div class="overlay" style="background-color:<?php echo $image_overlay; ?>"></div><?php } ?>
            </div>
-          </div><!-- box-image -->
+          </div>
          <?php if($link) echo $link_end; ?>
 
           <div class="box-text <?php echo implode(' ', $classes_text); ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
@@ -128,11 +129,11 @@ function flatsome_team_member($atts, $content = null){
                       <?php echo $title; ?>
                     </span>
                   </h4>
-                 <?php echo do_shortcode('[follow style="'.$icon_style.'" facebook="'.$facebook.'" twitter="'.$twitter.'" snapchat="'.$snapchat.'" email="'.$email.'" phone="'.$phone.'" pinterest="'.$pinterest.'" youtube="'.$youtube.'" instagram="'.$instagram.'" linkedin="'.$linkedin.'"]'); ?>
+                 <?php echo do_shortcode('[follow style="'.$icon_style.'" facebook="'.$facebook.'" twitter="'.$twitter.'" snapchat="'.$snapchat.'" email="'.$email.'" phone="'.$phone.'" pinterest="'.$pinterest.'" youtube="'.$youtube.'" instagram="'.$instagram.'" tiktok="'.$tiktok.'" linkedin="'.$linkedin.'"]'); ?>
                  <?php if($style  !== 'overlay' && $style  !== 'shade') echo do_shortcode($content); ?>
-                </div><!-- box-text-inner -->
-          </div><!-- box-text -->
-    </div><!-- .box  -->
+                </div>
+          </div>
+    </div>
 
     <?php if($style  == 'overlay' || $style  == 'shade') echo '<div class="team-member-content pt-half text-'.$text_align.'">'.$content.'</div>'; ?>
 

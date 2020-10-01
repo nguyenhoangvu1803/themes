@@ -158,7 +158,7 @@ function flatsome_shortcode_map($atts, $content=null, $code) {
           );
           echo ux_builder_element_style_tag($_id, $args, $atts);
         ?>
-    </div><!-- .map -->
+    </div>
 
 	<?php
 	$content = ob_get_contents();

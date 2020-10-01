@@ -6,7 +6,7 @@
 	<?php if($icon_style) { ?></div><?php } ?>
 	<ul class="nav-dropdown <?php flatsome_dropdown_classes(); ?>">
 	 	<?php get_template_part('template-parts/header/partials/element-search-form'); ?>
-	</ul><!-- .nav-dropdown -->
+	</ul>
 </li>
 <?php } else if(get_theme_mod('header_search_style') == 'lightbox') { ?>
 <li class="header-search header-search-lightbox has-icon">

@@ -47,6 +47,7 @@ add_action( 'woocommerce_share', 'flatsome_product_share',  10 );
 
 /* Remove Product Description Heading */
 function flatsome_remove_product_description_heading($heading){
+
      return $heading = '';
 }
 add_filter('woocommerce_product_description_heading','flatsome_remove_product_description_heading');
@@ -57,43 +58,6 @@ function flatsome_remove_product_information_heading($heading){
      return $heading = '';
 }
 add_filter('woocommerce_product_additional_information_heading','flatsome_remove_product_information_heading');
-
-
-// Add Extra Product Images to Product Slider ( FOR WC 2.X ONLY)
-if(!function_exists('flatsome_add_extra_product_images')) {
-    function flatsome_add_extra_product_images(){
-        global $post;
-
-        $_pf = new WC_Product_Factory();
-
-        $_product = $_pf->get_product(get_the_ID());
-
-        $image_size = 'shop_single';
-
-        if(flatsome_option('product_layout') == 'gallery-wide' && is_product()){
-          $image_size = 'large';
-        }
-
-        $attachment_ids = $_product->get_gallery_image_ids();
-
-        if ( $attachment_ids ) {
-            $loop = 0;
-            $columns = apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
-
-            foreach ( $attachment_ids as $attachment_id ) {
-
-                $image_title  = esc_attr( get_the_title( $attachment_id ) );
-                $image_caption  = get_post( $attachment_id )->post_excerpt;
-                $image_link   = wp_get_attachment_url( $attachment_id );
-                $image =  wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', $image_size ), array('title' => $image_title,'alt' => $image_title) );
-                echo apply_filters( 'woocommerce_single_product_image_html',sprintf( '<div class="slide"><a href="%s" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a></div>', $image_link, $image_caption, $image ), $attachment_id);
-            }
-        }
-    }
-}
-
-add_action('flatsome_single_product_images','flatsome_add_extra_product_images');
-
 
 // Move Sale Flash to another hook
 remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash',10);
@@ -259,7 +223,6 @@ function flatsome_product_top_content(){
 }
 
 add_action('flatsome_before_product_page','flatsome_product_top_content', 10);
-
 
 // Add Custom HTML to bottom of product page
 function flatsome_product_bottom_content(){

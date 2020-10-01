@@ -254,13 +254,31 @@ function flatsome_pages_in_search_results(){
 
       wp_reset_query();
 
-      if(!empty($posts) || !empty($pages)){
-          $list_type = get_theme_mod( 'search_result_style', 'slider' );
-          if(!empty($posts)) echo '<hr/><h4 class="uppercase">'.__('Posts found','flatsome').'</h4>'.do_shortcode('[blog_posts columns="3" columns__md="3" columns__sm="2" type="'.$list_type.'" image_height="16-9" ids="'.implode(',',$posts).'"]');
-          if(!empty($pages)) echo '<hr/><h4 class="uppercase">'.__('Pages found','flatsome').'</h4>'.do_shortcode('[ux_pages columns="3" columns__md="3" columns__sm="2" type="'.$list_type.'" image_height="16-9" ids="'.implode(',',$pages).'"]');
-      }
+		if ( ! empty( $posts ) ) {
+			echo '<hr/><h4 class="uppercase">' . esc_html__( 'Posts found', 'flatsome' ) . '</h4>';
+			echo flatsome_apply_shortcode( 'blog_posts', array(
+				'columns'      => '3',
+				'columns__md'  => '3',
+				'columns__sm'  => '2',
+				'type'         => get_theme_mod( 'search_result_style', 'slider' ),
+				'image_height' => '56.25%',
+				'show_date'    => get_theme_mod( 'blog_badge', 1 ) ? 'true' : 'false',
+				'ids'          => implode( ',', $posts ),
+			) );
+		}
 
-    ?>
+		if ( ! empty( $pages ) ) {
+			echo '<hr/><h4 class="uppercase">' . esc_html__( 'Pages found', 'flatsome' ) . '</h4>';
+			echo flatsome_apply_shortcode( 'ux_pages', array(
+				'columns'      => '3',
+				'columns__md'  => '3',
+				'columns__sm'  => '2',
+				'type'         => get_theme_mod( 'search_result_style', 'slider' ),
+				'image_height' => '56.25%',
+				'ids'          => implode( ',', $pages ),
+			) );
+		}
+		?>
     <?php endif; ?>
 
     <?php
@@ -366,7 +384,10 @@ function flatsome_account_login_lightbox(){
   if ( !is_user_logged_in() && get_theme_mod('account_login_style','lightbox') == 'lightbox' && !is_checkout() && !is_account_page() ) {
     $is_facebook_login = is_nextend_facebook_login();
     $is_google_login = is_nextend_google_login();
-    wp_enqueue_script( 'wc-password-strength-meter' );
+
+	if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) {
+		wp_enqueue_script( 'wc-password-strength-meter' );
+	}
 
     ?>
     <div id="login-form-popup" class="lightbox-content mfp-hide">
@@ -452,3 +473,94 @@ function flatsome_filter_shortcode_atts_products( $attrs ) {
 }
 
 add_filter( 'shortcode_atts_products', 'flatsome_filter_shortcode_atts_products' );
+
+/**
+ * Flatsome Payment Icons List.
+ *
+ * Returns a list of Flatsome Payment Icons.
+ *
+ * @return array Payment Icons list.
+ */
+function flatsome_get_payment_icons_list() {
+	return apply_filters( 'flatsome_payment_icons', array(
+		'amazon'          => __( 'Amazon', 'flatsome-admin' ),
+		'americanexpress' => __( 'American Express', 'flatsome-admin' ),
+		'applepay'        => __( 'Apple Pay', 'flatsome-admin' ),
+		'afterpay'        => __( 'AfterPay', 'flatsome-admin' ),
+		'afterpay-2'      => __( 'AfterPay 2', 'flatsome-admin' ),
+		'alipay'          => __( 'Alipay', 'flatsome-admin' ),
+		'atm'             => __( 'Atm', 'flatsome-admin' ),
+		'bancontact'      => __( 'Bancontact', 'flatsome-admin' ),
+		'bankomat'        => __( 'Bankomat', 'flatsome-admin' ),
+		'banktransfer'    => __( 'Bank Transfer', 'flatsome-admin' ),
+		'belfius'         => __( 'Belfius', 'flatsome-admin' ),
+		'bitcoin'         => __( 'BitCoin', 'flatsome-admin' ),
+		'braintree'       => __( 'Braintree', 'flatsome-admin' ),
+		'cartasi'         => __( 'CartaSi', 'flatsome-admin' ),
+		'cashcloud'       => __( 'CashCloud', 'flatsome-admin' ),
+		'cashondelivery'  => __( 'Cash On Delivery', 'flatsome-admin' ),
+		'cashonpickup'    => __( 'Cash on Pickup', 'flatsome-admin' ),
+		'cbc'             => __( 'CBC', 'flatsome-admin' ),
+		'cirrus'          => __( 'Cirrus', 'flatsome-admin' ),
+		'clickandbuy'     => __( 'Click and Buy', 'flatsome-admin' ),
+		'creditcard'      => __( 'Credit Card', 'flatsome-admin' ),
+		'creditcard2'     => __( 'Credit Card 2', 'flatsome-admin' ),
+		'dancard'         => __( 'DanKort', 'flatsome-admin' ),
+		'dinnersclub'     => __( 'Dinners Club', 'flatsome-admin' ),
+		'discover'        => __( 'Discover', 'flatsome-admin' ),
+		'elo'             => __( 'Elo', 'flatsome-admin' ),
+		'eps'             => __( 'Eps', 'flatsome-admin' ),
+		'facture'         => __( 'Facture', 'flatsome-admin' ),
+		'fattura'         => __( 'Fattura', 'flatsome-admin' ),
+		'flattr'          => __( 'Flattr', 'flatsome-admin' ),
+		'giropay'         => __( 'GiroPay', 'flatsome-admin' ),
+		'googlepay'       => __( 'Google Pay', 'flatsome-admin' ),
+		'googlewallet'    => __( 'Google Wallet', 'flatsome-admin' ), // Deprecated, changed to Google Pay.
+		'hiper'           => __( 'Hiper', 'flatsome-admin' ),
+		'ideal'           => __( 'IDeal', 'flatsome-admin' ),
+		'interac'         => __( 'Interac', 'flatsome-admin' ),
+		'invoice'         => __( 'Invoice', 'flatsome-admin' ),
+		'jcb'             => __( 'JCB', 'flatsome-admin' ),
+		'kbc'             => __( 'KBC', 'flatsome-admin' ),
+		'klarna'          => __( 'Klarna', 'flatsome-admin' ),
+		'maestro'         => __( 'Maestro', 'flatsome-admin' ),
+		'mastercard'      => __( 'MasterCard', 'flatsome-admin' ),
+		'mastercard-2'    => __( 'MasterCard 2', 'flatsome-admin' ),
+		'mir'             => __( 'Mir', 'flatsome-admin' ),
+		'moip'            => __( 'Moip', 'flatsome-admin' ),
+		'mollie'          => __( 'Mollie', 'flatsome-admin' ),
+		'ogone'           => __( 'Ogone', 'flatsome-admin' ),
+		'paybox'          => __( 'Paybox', 'flatsome-admin' ),
+		'paylife'         => __( 'Paylife', 'flatsome-admin' ),
+		'paymill'         => __( 'PayMill', 'flatsome-admin' ),
+		'paypal'          => __( 'PayPal', 'flatsome-admin' ),
+		'paypal-2'        => __( 'PayPal 2', 'flatsome-admin' ),
+		'paysafe'         => __( 'PaySafe', 'flatsome-admin' ),
+		'payshop'         => __( 'PayShop', 'flatsome-admin' ),
+		'paytm'           => __( 'Paytm', 'flatsome-admin' ),
+		'payu'            => __( 'PayU', 'flatsome-admin' ),
+		'postepay'        => __( 'Postepay', 'flatsome-admin' ),
+		'quick'           => __( 'Quick', 'flatsome-admin' ),
+		'rechung'         => __( 'Rechung', 'flatsome-admin' ),
+		'ripple'          => __( 'Ripple', 'flatsome-admin' ),
+		'rupay'           => __( 'RuPay', 'flatsome-admin' ),
+		'sage'            => __( 'Sage', 'flatsome-admin' ),
+		'sepa'            => __( 'Sepa', 'flatsome-admin' ),
+		'six'             => __( 'Six', 'flatsome-admin' ),
+		'skrill'          => __( 'Skrill', 'flatsome-admin' ),
+		'sofort'          => __( 'Sofort', 'flatsome-admin' ),
+		'square'          => __( 'Square', 'flatsome-admin' ),
+		'stripe'          => __( 'Stripe', 'flatsome-admin' ),
+		'swish'           => __( 'Swish (SE)', 'flatsome-admin' ),
+		'truste'          => __( 'Truste', 'flatsome-admin' ),
+		'twint'           => __( 'Twint', 'flatsome-admin' ),
+		'unionpay'        => __( 'UnionPay', 'flatsome-admin' ),
+		'verisign'        => __( 'VeriSign', 'flatsome-admin' ),
+		'vipps'           => __( 'Vipps', 'flatsome-admin' ),
+		'visa'            => __( 'Visa', 'flatsome-admin' ),
+		'visa1'           => __( 'Visa 2', 'flatsome-admin' ),
+		'visaelectron'    => __( 'Visa Electron', 'flatsome-admin' ),
+		'westernunion'    => __( 'Western Union', 'flatsome-admin' ),
+		'wirecard'        => __( 'Wirecard', 'flatsome-admin' ),
+	) );
+}
