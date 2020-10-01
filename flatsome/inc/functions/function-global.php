@@ -120,12 +120,7 @@ function flatsome_get_block_id( $post_id ) {
 
   // Get post ID if using post_name as id attribute.
   if ( ! is_numeric( $post_id ) ) {
-    $post_id = $wpdb->get_var(
-      $wpdb->prepare(
-        "SELECT ID FROM $wpdb->posts WHERE post_type = 'blocks' AND post_name = %s",
-        $post_id
-      )
-    );
+    $post_id = $wpdb->get_var( "SELECT ID FROM $wpdb->posts WHERE post_type = 'blocks' AND post_name = '$post_id'" );
   }
 
   // Polylang support.
@@ -143,52 +138,4 @@ function flatsome_get_block_id( $post_id ) {
   }
 
   return $post_id;
-}
-
-/**
- * Retrieve a list of blocks.
- *
- * @param array|string $args Optional. Array or string of arguments.
- *
- * @return array|false List of blocks matching defaults or `$args`.
- */
-function flatsome_get_block_list_by_id( $args = '' ) {
-
-	$defaults = array(
-		'option_none' => '',
-	);
-
-	$parsed_args = wp_parse_args( $args, $defaults );
-
-	$blocks = array();
-
-	if ( $parsed_args['option_none'] ) {
-		$blocks = array( 0 => $parsed_args['option_none'] );
-	}
-	$posts = flatsome_get_post_type_items( 'blocks' );
-	if ( $posts ) {
-		foreach ( $posts as $value ) {
-			$blocks[ $value->ID ] = $value->post_title;
-		}
-	}
-
-	return $blocks;
-}
-
-/**
- * Calls a shortcode function by its tag name.
- *
- * @param string $tag     The shortcode of the function to be called.
- * @param array  $atts    The attributes to pass to the shortcode function (optional).
- * @param array  $content The content of the shortcode (optional).
- *
- * @return bool|string If a shortcode tag doesn't exist => false, if exists => the result of the shortcode.
- */
-function flatsome_apply_shortcode( $tag, $atts = array(), $content = null ) {
-
-	global $shortcode_tags;
-
-	if ( ! isset( $shortcode_tags[ $tag ] ) ) return false;
-
-	return call_user_func( $shortcode_tags[ $tag ], $atts, $content, $tag );
 }

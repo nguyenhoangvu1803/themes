@@ -2,7 +2,7 @@
   global $ux_builder_styles, $ux_builder_scripts;
 
   $editing = ux_builder( 'editing-post' );
-  $title = __( 'UX Builder', 'ux-builder' );
+  $title = __( 'UX Builder', 'uxbuilder' );
 
   if ( $editing ) $title .= ' &raquo; ' . $editing->post()->post_title;
 

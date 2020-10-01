@@ -50,8 +50,6 @@ jQuery(document).ready(function () {
       img.outerHTML = img.outerHTML
     })
 
-    // Load fragments and init_handling_after_ajax for new items.
-    jQuery(document).trigger('yith_wcwl_reload_fragments')
     // Trigger resize for product box equalizer.
     window.dispatchEvent(new Event('resize'))
 

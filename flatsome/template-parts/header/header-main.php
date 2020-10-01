@@ -1,5 +1,5 @@
 <div id="masthead" class="header-main <?php header_inner_class('main'); ?>">
-      <div class="header-inner flex-row container items-end <?php flatsome_logo_position(); ?>" role="navigation">
+      <div class="header-inner flex-row container <?php flatsome_logo_position(); ?>" role="navigation">
 
           <!-- Logo -->
           <div id="logo" class="flex-col logo">
@@ -35,9 +35,10 @@
             </ul>
           </div>
 
-      </div>
+      </div><!-- .header-inner -->
      
       <?php if(get_theme_mod('header_divider', 1)) { ?>
+      <!-- Header divider -->
       <div class="container"><div class="top-divider full-width"></div></div>
       <?php }?>
-</div>
+</div><!-- .header-main -->

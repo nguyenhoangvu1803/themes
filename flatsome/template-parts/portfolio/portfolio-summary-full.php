@@ -11,7 +11,7 @@
 					<?php echo do_shortcode( '[share style="small"]' ) ?>
 				</div>
 			<?php endif; ?>
-		</div>
+		</div><!-- .large-4 -->
 	<?php } ?>
 	<div class="col col-fit pb-0">
 		<?php the_excerpt();?>
@@ -27,5 +27,5 @@
 				<?php echo do_shortcode('[share]')?>
 			</div>
 		<?php } ?>
-	</div>
-</div>
+	</div><!-- .large-6 -->
+</div><!-- .row -->

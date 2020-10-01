@@ -32,7 +32,7 @@ if ( ! empty( $tabs ) ) : ?>
 			<div class="accordion-inner">
 					<?php call_user_func( $tab['callback'], $key, $tab ) ?>
 			</div>
-		</div>
+		</div><!-- accordion-item -->
 		<?php endforeach; ?>
 	</div>
 </div>

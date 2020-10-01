@@ -32,7 +32,6 @@ return array(
 	'icon-shopping-cart'   => 'Shopping Cart',
 	'icon-star'            => 'Star',
 	'icon-star-o'          => 'Star Outline',
-	'icon-tiktok'          => 'TikTok',
 	'icon-twitter'         => 'Twitter',
 	'icon-user'            => 'User',
 	'icon-user-o'          => 'User Outline',

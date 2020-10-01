@@ -40,30 +40,13 @@
     }
 
     if ( empty( $purchase_code ) ) {
-    echo '<form class="wupdates_purchase_code" action="" method="post" onsubmit="return validateTerms(this);">' .
+    echo '<form class="wupdates_purchase_code" action="" method="post">' .
              __( '<p>Enter your purchase code and <strong>hit return/enter</strong>. Find out how to <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-" target="_blank">get your purchase code</a>.</p>' ) .
              '<input type="hidden" name="wupdates_pc_theme" value="' . $slug . '" />' .
              '<input type="text" id="' . sanitize_title( $slug ) . '_wup_purchase_code" name="' . sanitize_title( $slug ) . '_wup_purchase_code"
-              value="' . $purchase_code . '" placeholder="Purchase code ( e.g. 9g2b13fa-10aa-2267-883a-9201a94cf9b5 )" style="width:100%; padding:10px;"/><br/>
-              <p>
-  				<input type="checkbox" id="envato-terms" name="terms" onclick="removeColor(this);">
-  				<label for="envato-terms" style="display: inline-block;vertical-align: top;width: 90%;margin-top: 2px;font-size: 14px">Confirm that, according to the Envato License Terms, each license entitles one person for a single project. Creating multiple unregistered installations is a copyright violation. <a href="https://themeforest.net/licenses/standard" target="_blank">More info</a>.</label>
-			  </p>
-              <input type="submit" class="button button-large button-primary" value="Activate"/>
-      </form>
-      <script type="text/javascript">
-		  function validateTerms(form){
-		    if(!form.terms.checked) {
-		      form.terms.parentNode.style.color = "#dc3232";
-		      return false;
-		    }
-		    return true;
-		  }
-		  function removeColor(input) {
-		    input.parentNode.style.removeProperty("color");
-		  }
-	  </script>';
-  	} else {
+              value="' . $purchase_code . '" placeholder="Purchase code ( e.g. 9g2b13fa-10aa-2267-883a-9201a94cf9b5 )" style="width:100%; padding:10px;"/><br/><br/><input type="submit" class="button button-large button-primary" value="Activate"/>
+      </form>';
+  	} else{
     echo '<form class="wupdates_purchase_code" action="" method="post">' .
              '<input type="hidden" name="wupdates_pc_theme" value="' . $slug . '" />' .
              '<input type="text" id="' . sanitize_title( $slug ) . '_wup_purchase_code" name="' . sanitize_title( $slug ) . '_wup_purchase_code"

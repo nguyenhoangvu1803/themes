@@ -74,4 +74,4 @@
 	?>
 	</div>
 	</div>
-</header>
+</header><!-- .page-header -->

@@ -24,7 +24,7 @@
 if(flatsome_option('custom_cart_icon')) { ?>
   <span class="image-icon header-cart-icon" data-icon-label="<?php echo WC()->cart->cart_contents_count; ?>">
     <img class="cart-img-icon" alt="<?php _e('Cart', 'woocommerce'); ?>" src="<?php echo do_shortcode(flatsome_option('custom_cart_icon')); ?>"/>
-  </span>
+  </span><!-- .cart-img-inner -->
 <?php }
 else { ?>
   <?php if(!$icon_style) { ?>

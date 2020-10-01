@@ -1,4 +1,5 @@
 <div class="row content-row row-divided row-large row-reverse">
+
 	<div id="product-sidebar" class="col large-3 hide-for-medium shop-sidebar <?php flatsome_sidebar_classes(); ?>">
 		<?php
 			do_action('flatsome_before_product_sidebar');
@@ -13,7 +14,7 @@
 				dynamic_sidebar('shop-sidebar');
 			}
 		?>
-	</div>
+	</div><!-- col large-3 -->
 
 	<div class="col large-9">
 		<div class="product-main">
@@ -48,9 +49,9 @@
 					do_action( 'woocommerce_single_product_summary' );
 				?>
 
-			</div>
-		</div>
-		</div>
+			</div><!-- .summary -->
+		</div><!-- .row -->
+		</div><!-- .product-main -->
 		<div class="product-footer">
 			<?php
 					/**
@@ -63,5 +64,7 @@
 					do_action( 'woocommerce_after_single_product_summary' );
 				?>
 		</div>
-  </div>
-</div>
+	
+    </div><!-- col large-9 -->
+
+</div><!-- .row -->

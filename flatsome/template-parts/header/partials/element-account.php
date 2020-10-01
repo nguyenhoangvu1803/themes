@@ -30,7 +30,7 @@
     echo get_flatsome_icon('icon-user');
    } ?>
 
-</a>
+</a><!-- .account-link -->
 
 <?php } else { ?>
 <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"
@@ -48,7 +48,7 @@
         echo get_flatsome_icon('icon-user');
     } ?>
 
-</a>
+</a><!-- .account-login-link -->
 <?php } ?>
 
 <?php if($icon_style && $icon_style !== 'image' && $icon_style !== 'plain') echo '</div>'; ?>

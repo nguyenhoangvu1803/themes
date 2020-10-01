@@ -37,8 +37,6 @@ function shortcode_latest_from_blog($atts, $content = null, $tag) {
 		'excerpt' => 'visible',
 		'excerpt_length' => 15,
 		'offset' => '',
-		'orderby' => 'date',
-		'order' => 'DESC',
 
 		// Read more
 		'readmore' => '',
@@ -170,9 +168,7 @@ function shortcode_latest_from_blog($atts, $content = null, $tag) {
 		'offset' => $offset,
 		'cat' => $cat,
 		'posts_per_page' => $posts,
-		'ignore_sticky_posts' => true,
-		'orderby'             => $orderby,
-		'order'               => $order,
+		'ignore_sticky_posts' => true
 	);
 
 	// Added for Flatsome v2 fallback
@@ -205,8 +201,7 @@ get_flatsome_repeater_start($repeater);
 
 while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 
-			$col_class    = array( 'post-item' );
-			$show_excerpt = $excerpt;
+			$col_class = array('post-item');
 
 			if(get_post_format() == 'video') $col_class[] = 'has-post-icon';
 
@@ -224,7 +219,7 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 	        if($grid[$current]['size']) $image_size = $grid[$current]['size'];
 
 	        // Hide excerpt for small sizes
-	        if($grid[$current]['size'] == 'thumbnail') $show_excerpt = 'false';
+	        if($grid[$current]['size'] == 'thumbnail') $excerpt = 'false';
 	    }
 
 		?>
@@ -246,7 +241,7 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
   				                </div>
   				            </div>
   						<?php } ?>
-  					</div>
+  					</div><!-- .box-image -->
           <?php } ?>
 					<div class="box-text <?php echo $classes_text; ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
 					<div class="box-text-inner blog-post-inner">
@@ -265,8 +260,8 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 					<h5 class="post-title is-<?php echo $title_size; ?> <?php echo $title_style;?>"><?php the_title(); ?></h5>
 					<?php if((!has_post_thumbnail() && $show_date !== 'false') || $show_date == 'text') {?><div class="post-meta is-small op-8"><?php echo get_the_date(); ?></div><?php } ?>
 					<div class="is-divider"></div>
-					<?php if($show_excerpt !== 'false') { ?>
-					<p class="from_the_blog_excerpt <?php if($show_excerpt !== 'visible'){ echo 'show-on-hover hover-'.$show_excerpt; } ?>"><?php
+					<?php if($excerpt !== 'false') { ?>
+					<p class="from_the_blog_excerpt <?php if($excerpt !== 'visible'){ echo 'show-on-hover hover-'.$excerpt; } ?>"><?php
 					  $the_excerpt  = get_the_excerpt();
 					  $excerpt_more = apply_filters( 'excerpt_more', ' [...]' );
 					  echo flatsome_string_limit_words($the_excerpt, $excerpt_length) . $excerpt_more;
@@ -292,8 +287,8 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 
 					<?php do_action('flatsome_blog_post_after'); ?>
 
-					</div>
-					</div>
+					</div><!-- .box-text-inner -->
+					</div><!-- .box-text -->
 					<?php if(has_post_thumbnail() && ($show_date == 'badge' || $show_date == 'true')) {?>
 					<?php if(!$badge_style) $badge_style = get_theme_mod('blog_badge_style', 'outline'); ?>
 						<div class="badge absolute top post-date badge-<?php echo $badge_style; ?>">
@@ -303,10 +298,10 @@ while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 							</div>
 						</div>
 					<?php } ?>
-				</div>
-				</a>
-			</div>
-		</div>
+				</div><!-- .box -->
+				</a><!-- .link -->
+			</div><!-- .col-inner -->
+		</div><!-- .col -->
 <?php endwhile;
 wp_reset_query();
 

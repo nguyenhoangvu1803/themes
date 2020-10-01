@@ -13,7 +13,6 @@
 	$steps = get_theme_mod('cart_steps_numbers', 0);
 ?>
 
-<?php if(!get_theme_mod('cart_hide_nav_step')) { ?>
 <div class="checkout-page-title page-title">
 	<div class="page-title-inner flex-row medium-flex-wrap container">
 	  <div class="flex-col flex-grow medium-text-center">
@@ -33,7 +32,6 @@
   	   	<?php _e('Order Complete', 'flatsome'); ?>
   	   </a>
 		 </nav>
-	  </div>
-	</div>
-</div>
-<?php }?>
+	  </div><!-- .flex-left -->
+	</div><!-- flex-row -->
+</div><!-- .page-title -->

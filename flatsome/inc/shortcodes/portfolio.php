@@ -76,6 +76,9 @@ function flatsome_portfolio_shortcode($atts, $content = null, $tag) {
   // Fix old
   if($tag == 'featured_items_slider') $type = 'slider';
 
+  // Fix order
+  if($orderby == 'menu_order') $order = 'asc';
+
   // Set Classes
   $classes_box = array('portfolio-box','box','has-hover');
   $classes_image = array();
@@ -256,7 +259,7 @@ get_flatsome_repeater_start($repeater);
                 <?php if($image_overlay) { ?><div class="overlay" style="background-color:<?php echo $image_overlay; ?>"></div><?php } ?>
                 <?php if($style == 'shade'){ ?><div class="shade"></div><?php } ?>
                 </div>
-            </div>
+            </div><!-- box-image -->
             <div class="<?php echo implode(' ', $classes_text); ?>" <?php echo get_shortcode_inline_css( $css_args ); ?>>
                   <div class="box-text-inner">
                       <h6 class="uppercase portfolio-box-title"><?php the_title(); ?></h6>
@@ -265,12 +268,12 @@ get_flatsome_repeater_start($repeater);
                          <?php  echo strip_tags( get_the_term_list( get_the_ID(), 'featured_item_category', "",", " ) );?>
                         </span>
                       </p>
-                  </div>
-            </div>
-           </div>
+                  </div><!-- box-text-inner -->
+            </div><!-- box-text -->
+           </div><!-- .box  -->
            </a>
-           </div>
-           </div>
+           </div><!-- .col-inner -->
+           </div><!-- .col -->
           <?php
           endwhile;
           endif;

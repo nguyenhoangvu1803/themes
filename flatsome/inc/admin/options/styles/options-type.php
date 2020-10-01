@@ -21,7 +21,7 @@ Flatsome_Option::add_field( 'option',
 	array(
 		'type'            => 'select',
 		'settings'        => 'googlefonts_font_display',
-		'label'           => __( 'Google Fonts font-display type', 'flatsome-admin' ),
+		'label'           => __( 'Google Fonts font-display type', 'flatsome-admin' ) . ' (NEW)',
 		'description'     => 'Choose how Google Fonts will be loaded.',
 		'tooltip'         => '<ul>
 								<li><span style="font-weight: bold">block</span> flash of invisible text until the font loads</li>
@@ -100,6 +100,7 @@ Flatsome_Option::add_field( '',
 				'value'    => false,
 			),
 		),
+
 	)
 );
 

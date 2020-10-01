@@ -30,11 +30,11 @@ global $product;
 	do_action( 'woocommerce_before_single_product' );
 
 	if ( post_password_required() ) {
-		echo get_the_password_form(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo get_the_password_form(); // WPCS: XSS ok.
 		return;
 	}
 	?>
-</div>
+</div><!-- /.container -->
 <div id="product-<?php the_ID(); ?>" <?php fl_woocommerce_version_check( '3.4.0' ) ? wc_product_class( '', $product ) : post_class(); ?>>
 	<?php
 	// Get product page layout.

@@ -16,16 +16,16 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php flatsome_posted_on(); ?>
-		</div>
+		</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header>
+	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
-	</div>
+	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
 		<?php flatsome_entry_footer(); ?>
-	</footer>
-</article>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
 

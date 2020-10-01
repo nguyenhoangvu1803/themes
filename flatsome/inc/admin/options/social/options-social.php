@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
  * Add our controls.
@@ -142,15 +142,6 @@ Flatsome_Option::add_field( 'option',  array(
 	'default'     => '',
 ));
 
-Flatsome_Option::add_field( 'option', array(
-	'type'      => 'text',
-	'settings'  => 'follow_tiktok',
-	'label'     => __( 'TikTok', 'flatsome-admin' ),
-	'transport' => $transport,
-	'section'   => 'follow',
-	'default'   => '',
-) );
-
 Flatsome_Option::add_field( 'option',  array(
 	'type'        => 'text',
 	'settings'     => 'follow_linkedin',
@@ -245,7 +236,7 @@ function flatsome_refresh_social( WP_Customize_Manager $wp_customize ) {
 
 	  $wp_customize->selective_refresh->add_partial( 'follow_icons', array(
 	    'selector' => '.follow-icons',
-	    'settings' => array('follow_linkedin','follow_flickr','follow_email','follow_phone','follow_style','follow_facebook','follow_twitter','follow_instagram','follow_tiktok','follow_rss','follow_vk','follow_youtube','follow_pinterest','follow_snapchat','follow_500px'),
+	    'settings' => array('follow_linkedin','follow_flickr','follow_email','follow_phone','follow_style','follow_facebook','follow_twitter','follow_instagram','follow_rss','follow_vk','follow_youtube','follow_pinterest','follow_snapchat','follow_500px'),
 	    'container_inclusive' => true,
 	    'render_callback' => function() {
 	        return do_shortcode('[follow defaults="true" style="'.flatsome_option('follow_style').'"]');

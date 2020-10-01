@@ -18,7 +18,7 @@ if(function_exists('is_shop') && is_shop()) {
 
 $optionUrl_panel = get_admin_url().'customize.php?url='.$permalink.'&autofocus%5Bpanel%5D=';
 $optionUrl_section = get_admin_url().'customize.php?url='.$permalink.'&autofocus%5Bsection%5D=';
-$icon_style = 'font: normal 20px/1 \'dashicons\';-webkit-font-smoothing: antialiased;padding-right: 4px;margin-top:3px;';
+$icon_style = 'font-size:20px; -webkit-font-smoothing: antialiased; font-weight:400!important; padding-right:4px; font-family:dashicons!important;margin-top:-2px;';
 $flatsome_icon = '<svg style="width:20px; margin-top:-4px; height:20px;vertical-align:middle;" width="184px" height="186px" viewBox="0 0 184 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch --> <title>Logo-white</title> <desc>Created with Sketch.</desc> <defs></defs> <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Logo-white" fill="#FFFFFF"> <g id="Group"> <path d="M92.6963305,153.35517 L69.6726254,130.331465 L92.6963305,107.30776 L92.6963305,66.7055226 L49.3715069,110.030346 L32.472925,93.1317642 L92.6963305,32.9083587 L92.6963305,0.803652143 L0.106126393,93.3938562 L92.6963305,185.98406 L92.6963305,153.35517 Z" id="Combined-Shape"></path> </g> <g id="Group" opacity="0.502623601" transform="translate(136.800003, 93.000000) scale(-1, 1) translate(-136.800003, -93.000000) translate(90.300003, 0.000000)"> <path d="M92.6963305,153.35517 L69.6726254,130.331465 L92.6963305,107.30776 L92.6963305,66.7055226 L49.3715069,110.030346 L32.472925,93.1317642 L92.6963305,32.9083587 L92.6963305,0.803652143 L0.106126393,93.3938562 L92.6963305,185.98406 L92.6963305,153.35517 Z" opacity="0.387068563"></path> </g> </g> </g> </svg>';
 
 $wp_admin_bar->add_menu( array(
@@ -213,7 +213,7 @@ if(is_woocommerce_activated()) {
   $wp_admin_bar->add_menu( array(
    'parent' => 'theme_options',
    'id' => 'options_shop',
-   'title' => '<span class="dashicons dashicons-cart" style="'.$icon_style.'"></span>&nbsp;WooCommerce',
+   'title' => '<span class="dashicons dashicons-cart" style="'.$icon_style.'"></span>WooCommerce',
    'href' =>  $optionUrl_panel.'woocommerce'
   ));
 
@@ -354,13 +354,6 @@ $wp_admin_bar->add_menu( array(
  'title' => '<span class="dashicons dashicons-share" style="'.$icon_style.'"></span> Share',
  'href' =>  $optionUrl_section.'share'
 ));
-
-	$wp_admin_bar->add_menu( array(
-		'parent' => 'theme_options',
-		'id'     => 'options_notifications',
-		'title'  => '<span class="dashicons dashicons-testimonial" style="' . $icon_style . '"></span> Notifications',
-		'href'   => $optionUrl_section . 'notifications',
-	) );
 
 
 $wp_admin_bar->add_menu( array(

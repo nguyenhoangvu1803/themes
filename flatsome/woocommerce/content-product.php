@@ -20,18 +20,12 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 
 // Ensure visibility.
-if ( fl_woocommerce_version_check( '4.4.0' ) ) {
-	if ( empty( $product ) || false === wc_get_loop_product_visibility( $product->get_id() ) || ! $product->is_visible() ) {
-		return;
-	}
-} else {
-	if ( empty( $product ) || ! $product->is_visible() ) {
-		return;
-	}
+if ( empty( $product ) || ! $product->is_visible() ) {
+	return;
 }
 
 // Check stock status.
-$out_of_stock = ! $product->is_in_stock();
+$out_of_stock = get_post_meta( $post->ID, '_stock_status', true ) == 'outofstock';
 
 // Extra post classes.
 $classes   = array();
@@ -67,10 +61,9 @@ if ( $out_of_stock ) $classes[] = 'out-of-stock';
 				<?php do_action( 'flatsome_product_box_tools_bottom' ); ?>
 			</div>
 			<div class="image-tools <?php echo flatsome_product_box_actions_class(); ?>">
-				
 			</div>
 			<?php if ( $out_of_stock ) { ?><div class="out-of-stock-label"><?php _e( 'Out of stock', 'woocommerce' ); ?></div><?php } ?>
-		</div>
+		</div><!-- box-image -->
 
 		<div class="box-text <?php echo flatsome_product_box_text_class(); ?>">
 			<?php
@@ -88,11 +81,11 @@ if ( $out_of_stock ) $classes[] = 'out-of-stock';
 				do_action( 'flatsome_product_box_after' );
 
 			?>
-		</div>
-	</div>
+		</div><!-- box-text -->
+	</div><!-- box -->
 	<div class="add-to-cart-quickview">
 		<?php do_action( 'flatsome_product_box_actions' ); ?>
 	</div>
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-	</div>
-</div>
+	</div><!-- .col-inner -->
+</div><!-- col -->

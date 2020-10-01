@@ -112,18 +112,6 @@ add_ux_builder_shortcode( 'ux_image', array(
                 'true'  => array( 'title' => 'On'),
             ),
         ),
-
-		'lightbox_caption'    => array(
-			'type'       => 'radio-buttons',
-			'heading'    => __( 'Caption on Lightbox' ),
-			'conditions' => 'lightbox == "true"',
-			'default'    => '',
-			'options'    => array(
-				''     => array( 'title' => 'Off' ),
-				'true' => array( 'title' => 'On' ),
-			),
-		),
-
         'image_overlay' => array(
             'type' => 'colorpicker',
             'heading' => __( 'Image Overlay' ),

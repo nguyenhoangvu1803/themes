@@ -154,7 +154,7 @@ function get_flatsome_repeater_start( $atts ) {
     <div class="large-12 col">
       <h3 class="section-title"><span><?php echo $atts['title']; ?></span></h3>
     </div>
-  </div>
+  </div><!-- end .title -->
   <?php } ?>
 
   <?php if($atts['type'] == 'slider') { // Slider grid ?>
@@ -249,7 +249,7 @@ function flatsome_get_image_url($id, $size = 'large'){
         return $id;
     } else {
         $image = wp_get_attachment_image_src($id, $size);
-        $image = $image ? $image[0] : '';
+        $image = $image[0];
         return $image;
     }
 }

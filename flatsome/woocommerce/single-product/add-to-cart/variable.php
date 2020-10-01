@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
+ * @package WooCommerce/Templates
  * @version 3.5.5
  */
 
@@ -38,13 +38,11 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></td>
 						<td class="value">
 							<?php
-								wc_dropdown_variation_attribute_options(
-									array(
-										'options'   => $options,
-										'attribute' => $attribute_name,
-										'product'   => $product,
-									)
-								);
+								wc_dropdown_variation_attribute_options( array(
+									'options'   => $options,
+									'attribute' => $attribute_name,
+									'product'   => $product,
+								) );
 								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
 							?>
 						</td>
@@ -54,7 +52,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		</table>
 
 		<div class="single_variation_wrap">
-      <div class="font-size: 13px; color: #828282;">This is the best offer you've ever seen, <span style="font-weight: 700; color: #000;">only this <?php echo date('F'); ?></span></div>
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.
@@ -148,9 +145,6 @@ jQuery(function ($) {
       if ($title.text().toLowerCase().includes("flag")) {
         select.val('house-flag-29-5-x-39-5').trigger('change');
       }
-
-      var input = container.find(":radio:checked");
-      select.val(input.val()).trigger('change');
       
     });
   } else {
@@ -185,7 +179,6 @@ jQuery(function ($) {
 
       container.find(":radio + span").mousedown(
         function (e) {
-          console.log($(this));
           var $span = $(this);
           var $radio = $($span.prev());
           if ($radio.is(':checked')) {
@@ -206,14 +199,12 @@ jQuery(function ($) {
       if ($title.text().toLowerCase().includes("flag")) {
         select.val('house-flag-29-5-x-39-5').trigger('change');
       }
-
-      var input = container.find(":radio:checked");
-      select.val(input.val()).trigger('change');
     });
   }
 
 
 });
 </script>
+
 <?php
 do_action( 'woocommerce_after_add_to_cart_form' );

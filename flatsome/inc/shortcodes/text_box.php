@@ -99,7 +99,7 @@ function flatsome_text_box( $atts, $content = null ){
               <div class="<?php echo $classes_text; ?>">
                   <?php echo flatsome_contentfix($content); ?>
               </div>
-           </div>
+           </div><!-- text-box-inner -->
        <?php if($animate) echo '</div>'; ?>
        <?php if($parallax) echo '</div>'; ?>
        <?php if($hover) echo '</div>'; ?>
@@ -146,7 +146,7 @@ function flatsome_text_box( $atts, $content = null ){
           );
           echo ux_builder_element_style_tag( $id, $args, $atts);
         ?>
-    </div>
+    </div><!-- text-box -->
  <?php
   $content = ob_get_contents();
   ob_end_clean();

@@ -28,9 +28,9 @@ if ( ! current_user_can( 'edit_posts' ) ) die;
 		<?php the_content(); ?>
 	<?php endwhile; // end of the loop. ?>
 
-	</div>
+	</div><!-- #main -->
 
-</div>
+</div><!-- #wrapper -->
 <?php do_action( 'flatsome_after_page' ); ?>
 
 <?php wp_footer(); ?>

@@ -11,62 +11,52 @@
  * the readme will list any important changes.
  *
  * @see       https://docs.woocommerce.com/document/template-structure/
+ * @author    WooThemes
  * @package   WooCommerce/Templates
- * @version     3.9.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+  exit;
 }
 
-// Get Type.
-$type = get_theme_mod( 'related_products', 'slider' );
-if ( $type == 'hidden' ) return;
-if ( $type == 'grid' ) $type = 'row';
+// Get Type
+$type = get_theme_mod('related_products', 'slider');
+if($type == 'hidden') return;
+if($type == 'grid') $type = 'row';
 
-$repater['type']         = $type;
-$repater['columns']      = get_theme_mod( 'related_products_pr_row', 4 );
-$repater['columns__md']  = get_theme_mod( 'related_products_pr_row_tablet', 3 );
-$repater['columns__sm']  = get_theme_mod( 'related_products_pr_row_mobile', 2 );
-$repater['class']        = get_theme_mod( 'equalize_product_box' ) ? 'equalize-box' : '';
+$repater['type'] = $type;
+$repater['columns'] = get_theme_mod('related_products_pr_row', 4);
+$repater['class'] = get_theme_mod( 'equalize_product_box' ) ? 'equalize-box' : '';
 $repater['slider_style'] = 'reveal';
-$repater['row_spacing']  = 'small';
+$repater['row_spacing'] = 'small';
 
 
 if ( $related_products ) : ?>
 
-	<div class="related related-products-wrapper product-section">
+  <div class="related related-products-wrapper product-section">
 
-		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
+    <h3 class="product-section-title container-width product-section-title-related pt-half pb-half uppercase">
+      <?php esc_html_e( 'Related products', 'woocommerce' ); ?>
+    </h3>
 
-		if ( $heading ) :
-			?>
-			<h3 class="product-section-title container-width product-section-title-related pt-half pb-half uppercase">
-				<?php echo esc_html( $heading ); ?>
-			</h3>
-		<?php endif; ?>
+      <?php get_flatsome_repeater_start($repater); ?>
 
+      <?php foreach ( $related_products as $related_product ) : ?>
 
-	<?php get_flatsome_repeater_start( $repater ); ?>
+        <?php
+          $post_object = get_post( $related_product->get_id() );
 
-		<?php foreach ( $related_products as $related_product ) : ?>
+          setup_postdata( $GLOBALS['post'] =& $post_object );
 
-					<?php
-					$post_object = get_post( $related_product->get_id() );
+          wc_get_template_part( 'content', 'product' ); ?>
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+      <?php endforeach; ?>
 
-					wc_get_template_part( 'content', 'product' );
-					?>
+      <?php get_flatsome_repeater_end($repater); ?>
 
-		<?php endforeach; ?>
+  </div>
 
-		<?php get_flatsome_repeater_end( $repater ); ?>
-
-	</div>
-
-	<?php
-endif;
+<?php endif;
 
 wp_reset_postdata();

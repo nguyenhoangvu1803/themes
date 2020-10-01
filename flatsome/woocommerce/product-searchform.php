@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 				echo '</select>';
 				?>
-			</div>
+			</div><!-- .flex-col -->
 		<?php } ?>
 		<?php
 		$placeholder = __( 'Search', 'woocommerce' ) . '&hellip;';
@@ -52,11 +52,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$placeholder = get_theme_mod( 'search_placeholder' );
 		}
 		?>
-		<div class="flex-col">
-			<button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>" class="ux-search-submit submit-button secondary button icon mb-0">
-				<?php echo get_flatsome_icon( 'icon-search' ); ?>
-			</button>
-		</div>
 		<div class="flex-col flex-grow">
 			<label class="screen-reader-text" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php esc_html_e( 'Search for:', 'woocommerce' ); ?></label>
 			<input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field mb-0" placeholder="<?php echo esc_attr( $placeholder ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
@@ -64,7 +59,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( defined( 'ICL_LANGUAGE_CODE' ) ): ?>
 				<input type="hidden" name="lang" value="<?php echo ICL_LANGUAGE_CODE; ?>" />
 			<?php endif ?>
-		</div>
-	</div>
+		</div><!-- .flex-col -->
+		<div class="flex-col">
+			<button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>" class="ux-search-submit submit-button secondary button icon mb-0">
+				<?php echo get_flatsome_icon( 'icon-search' ); ?>
+			</button>
+		</div><!-- .flex-col -->
+	</div><!-- .flex-row -->
 	<div class="live-search-results text-left z-top"></div>
 </form>

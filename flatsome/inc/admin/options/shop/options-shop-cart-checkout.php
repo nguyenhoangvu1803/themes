@@ -56,20 +56,13 @@ Flatsome_Option::add_field( 'option',  array(
   'default' => 1
 ));
 
-Flatsome_Option::add_field( 'option',  array(
-  'type'        => 'checkbox',
-  'settings'     => 'cart_hide_they_about',
-  'label'       => __( 'Hide they say about', 'flatsome-admin' ),
-  'section'     => 'cart-checkout',
-  'default' => 0
-));
 
 Flatsome_Option::add_field( '', array(
 	'type'     => 'custom',
 	'settings' => 'cart_steps_title',
 	'label'    => '',
 	'section'  => 'cart-checkout',
-	'default'  => '<div class="options-title-divider">Steps</div>',
+	'default'  => '<div class="options-title-divider">Steps (NEW)</div>',
 ) );
 
 Flatsome_Option::add_field( 'option', array(
@@ -104,14 +97,6 @@ Flatsome_Option::add_field( 'option', array(
 	'section'  => 'cart-checkout',
 	'default'  => 0,
 ) );
-
-Flatsome_Option::add_field( 'option',  array(
-  'type'        => 'checkbox',
-  'settings'     => 'cart_hide_nav_step',
-  'label'       => __( 'Hide Nav', 'flatsome-admin' ),
-  'section'     => 'cart-checkout',
-  'default' => 0
-));
 
 Flatsome_Option::add_field( '', array(
 	'type'     => 'custom',
@@ -159,7 +144,7 @@ Flatsome_Option::add_field( 'option', array(
 ));
 
 
-if ( is_nextend_facebook_login() || is_nextend_google_login() ) {
+if( is_nextend_facebook_login() ){
 	Flatsome_Option::add_field( 'option',  array(
 		'type'        => 'checkbox',
 		'settings'     => 'facebook_login_checkout',
@@ -172,7 +157,7 @@ if ( is_nextend_facebook_login() || is_nextend_google_login() ) {
 Flatsome_Option::add_field( 'option', array(
 	'type'     => 'radio-buttonset',
 	'settings' => 'checkout_terms_and_conditions',
-	'label'    => __( 'Terms and conditions link style', 'flatsome-admin' ),
+	'label'    => __( 'Terms and conditions link style', 'flatsome-admin' ) . ' (NEW)',
 	'section'  => 'woocommerce_checkout',
 	'default'  => '',
 	'choices'  => array(
@@ -186,7 +171,7 @@ Flatsome_Option::add_field( 'option', array(
 	'type'            => 'checkbox',
 	'settings'        => 'terms_and_conditions_lightbox_buttons',
 	'transport'       => $transport,
-	'label'           => __( 'Terms and conditions "Agree" button', 'flatsome-admin' ),
+	'label'           => __( 'Terms and conditions "Agree" button', 'flatsome-admin' ) . ' (NEW)',
 	'section'         => 'woocommerce_checkout',
 	'default'         => 1,
 	'active_callback' => array(
@@ -218,22 +203,6 @@ Flatsome_Option::add_field( 'option',  array(
   'type'        => 'checkbox',
   'settings'     => 'checkout_sticky_sidebar',
   'label'       => __( 'Sticky sidebar', 'flatsome-admin' ),
-  'section'     => 'woocommerce_checkout',
-  'default' => 0
-));
-
-Flatsome_Option::add_field( 'option',  array(
-  'type'        => 'checkbox',
-  'settings'     => 'check_out_hide_massage',
-  'label'       => __( 'Hide message on header', 'flatsome-admin' ),
-  'section'     => 'woocommerce_checkout',
-  'default' => 0
-));
-
-Flatsome_Option::add_field( 'option',  array(
-  'type'        => 'checkbox',
-  'settings'     => 'check_out_nav_step',
-  'label'       => __( 'Hide Nav Step', 'flatsome-admin' ),
   'section'     => 'woocommerce_checkout',
   'default' => 0
 ));

@@ -17,6 +17,7 @@ class FL_LazyLoad_Images {
     add_filter( 'the_content', array( __CLASS__, 'add_image_placeholders' ), 9999 );
     add_filter( 'post_thumbnail_html', array( __CLASS__, 'add_image_placeholders' ), 11 );
     add_filter( 'get_avatar', array( __CLASS__, 'add_image_placeholders' ), 11 );
+    add_filter( 'woocommerce_single_product_image_html', array( __CLASS__, 'add_image_placeholders' ), 9999 );
     add_filter( 'flatsome_woocommerce_get_alt_product_thumbnail', array( __CLASS__, 'add_image_placeholders' ), 11 );
     add_filter( 'flatsome_lazy_load_images', array( __CLASS__, 'add_image_placeholders' ), 9999 );
     add_filter( 'flatsome_woocommerce_single_product_extra_images', array( __CLASS__, 'add_image_placeholders' ), 9999 );

@@ -39,8 +39,7 @@ function flatsome_header_nav( $nav, $walker = false ) {
 	$default_template               = get_theme_mod( 'pages_template', 'default' );
 	$is_single_nav_template         = ! empty( $page_template ) && strpos( $page_template, 'single-page-nav' ) !== false;
 	$is_single_nav_default_template = ( empty( $page_template ) || $page_template == 'default' ) && strpos( $default_template, 'single-page-nav' ) !== false;
-	$is_woo_page                    = is_woocommerce_activated() ? is_cart() || is_checkout() || is_account_page() : false;
-	$needs_single_nav_helper        = ( $is_single_nav_template || $is_single_nav_default_template ) && $nav == 'primary' && is_page() && ! $is_woo_page;
+	$needs_single_nav_helper        = ( $is_single_nav_template || $is_single_nav_default_template ) && $nav == 'primary';
 
 	// Add single page nav helper.
 	if ( $needs_single_nav_helper ) { ?>
@@ -110,23 +109,14 @@ function flatsome_header_elements( $options, $type = '' ) {
  * @return void
  */
 function flatsome_get_header_html_element( $value ) {
-	$mod = array(
-		'name'    => '',
-		'default' => '',
-	);
+	$html = '';
 
-	if ( $value == 'html' ) {
-		$mod['name']    = 'topbar_left';
-		$mod['default'] = '<strong class="uppercase">Add anything here or just remove it...</strong>';
-	}
-	if ( $value == 'html-2' ) $mod['name'] = 'topbar_right';
-	if ( $value == 'html-3' ) $mod['name'] = 'top_right_text';
-	if ( $value == 'html-4' ) $mod['name'] = 'nav_position_text_top';
-	if ( $value == 'html-5' ) $mod['name'] = 'nav_position_text';
-
-	if ( get_theme_mod( $mod['name'], $mod['default'] ) ) {
-		echo '<li class="html custom html_' . $mod['name'] . '">' . do_shortcode( get_theme_mod( $mod['name'], $mod['default'] ) ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	}
+	if ($value == 'html') $html   = 'topbar_left';
+	if ($value == 'html-2') $html = 'topbar_right';
+	if ($value == 'html-3') $html = 'top_right_text';
+	if ($value == 'html-4') $html = 'nav_position_text_top';
+	if ($value == 'html-5') $html = 'nav_position_text';
+	if (get_theme_mod( $html )) echo '<li class="html custom html_' . $html . '">' . do_shortcode( get_theme_mod( $html ) ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -156,201 +146,94 @@ class FlatsomeNavDropdown extends Walker_Nav_Menu {
 	}
 
 	/**
-	 * Starts the list before the elements are added.
+	 * Start Level.
 	 *
-	 * @since 3.0.0
+	 * @param string $output Element output.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   wp_nav_menu() arguments.
 	 *
-	 * @see Walker::start_lvl()
-	 *
-	 * @param string   $output Used to append additional content (passed by reference).
-	 * @param int      $depth  Depth of menu item. Used for padding.
-	 * @param stdClass $args   An object of wp_nav_menu() arguments.
+	 * @return void
 	 */
-	public function start_lvl( &$output, $depth = 0, $args = null ) {
-		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-			$t = '';
-			$n = '';
-		} else {
-			$t = "\t";
-			$n = "\n";
-		}
-		$indent = str_repeat( $t, $depth );
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$display_depth = ( $depth + 1 );
 
-		// Default class.
-		$classes = array( 'sub-menu' );
-
-		$display_depth = $depth + 1;
-		if ( $display_depth == '1' ) {
-			$classes[] = 'nav-dropdown';
-		} else {
-			$classes[] = 'nav-column';
-		}
+		if ( $display_depth == '1' ) {$class_names[] = 'nav-dropdown';
+		} else { $class_names[] = 'nav-column';}
 
 		// Add Dropdown Styles.
-		$classes[] = 'nav-dropdown-' . get_theme_mod( 'dropdown_style', 'default' );
-		if ( get_theme_mod( 'dropdown_text' ) == 'dark' ) {
-			$classes[] = 'dark';
-		}
-		if ( get_theme_mod( 'dropdown_text_style' ) == 'uppercase' ) {
-			$classes[] = 'dropdown-uppercase';
-		}
+		$class_names[] = 'nav-dropdown-' . get_theme_mod( 'dropdown_style', 'default' );
+		if ( get_theme_mod( 'dropdown_text' ) == 'dark' ) {$class_names[] = 'dark';}
+		if ( get_theme_mod( 'dropdown_text_style' ) == 'uppercase' ) {$class_names[] = 'dropdown-uppercase';}
 
-		/**
-		 * Filters the CSS class(es) applied to a menu list element.
-		 *
-		 * @since 4.8.0
-		 *
-		 * @param string[] $classes Array of the CSS classes that are applied to the menu `<ul>` element.
-		 * @param stdClass $args    An object of `wp_nav_menu()` arguments.
-		 * @param int      $depth   Depth of menu item. Used for padding.
-		 */
-		$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+		$class_names = implode( ' ', $class_names );
 
-		$output .= "{$n}{$indent}<ul$class_names>{$n}";
+		$indent  = str_repeat( "\t", $depth );
+		$output .= "\n$indent<ul class='" . $class_names . "'>\n";
+	}
+
+	/**
+	 * End Level.
+	 *
+	 * @param string $output Element output.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   wp_nav_menu() arguments.
+	 *
+	 * @return void
+	 */
+	public function end_lvl( &$output, $depth = 1, $args = array() ) {
+		$indent  = str_repeat( "\t", $depth );
+		$output .= "$indent</ul>\n";
 	}
 
 	/**
 	 * Starts the element output.
 	 *
-	 * @since 3.0.0
-	 * @since 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
+	 * @param string $output Element output.
+	 * @param object $item   Menu item data object.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   wp_nav_menu() arguments.
+	 * @param int    $id     Current item ID.
 	 *
-	 * @see Walker::start_el()
-	 *
-	 * @param string   $output Used to append additional content (passed by reference).
-	 * @param WP_Post  $item   Menu item data object.
-	 * @param int      $depth  Depth of menu item. Used for padding.
-	 * @param stdClass $args   An object of wp_nav_menu() arguments.
-	 * @param int      $id     Current item ID.
+	 * @return void
 	 */
-	public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-			$t = '';
-			$n = '';
-		} else {
-			$t = "\t";
-			$n = "\n";
-		}
-		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
-		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'menu-item-' . $item->ID;
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+		$class_names = $value = ''; // phpcs:ignore
+
+		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
 		// Set Active Class.
 		if ( in_array( 'current-menu-ancestor', $classes, true ) || in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {
 			$classes[] = 'active';
 		}
 
-		if ( $item->has_children && $depth == 0 ) {
-			$classes[] = 'has-dropdown';
-		}
-		if ( $item->has_children && $depth == 1 ) {
-			$classes[] = 'nav-dropdown-col';
-		}
+		$classes[] = ' menu-item-' . $item->ID;
+
+		if ( $item->has_children && $depth == 0 ) { $classes[] = 'has-dropdown';}
+		if ( $item->has_children && $depth == 1 ) { $classes[] = 'nav-dropdown-col';}
+
+		$menu_icon = '';
 
 		// Add flatsome Icons.
-		$menu_icon = '';
 		if ( strpos( $classes[0], 'icon-' ) !== false ) {
 			$menu_icon  = get_flatsome_icon( $classes[0] );
 			$classes[0] = 'has-icon-left';
 		}
 
-		/**
-		 * Filters the arguments for a single nav menu item.
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param stdClass $args  An object of wp_nav_menu() arguments.
-		 * @param WP_Post  $item  Menu item data object.
-		 * @param int      $depth Depth of menu item. Used for padding.
-		 */
-		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+		$class_names = ' class="' . esc_attr( $class_names ) . '"';
 
-		/**
-		 * Filters the CSS classes applied to a menu item's list item element.
-		 *
-		 * @since 3.0.0
-		 * @since 4.1.0 The `$depth` parameter was added.
-		 *
-		 * @param string[] $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
-		 * @param WP_Post  $item    The current menu item.
-		 * @param stdClass $args    An object of wp_nav_menu() arguments.
-		 * @param int      $depth   Depth of menu item. Used for padding.
-		 */
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-
-		/**
-		 * Filters the ID applied to a menu item's list item element.
-		 *
-		 * @since 3.0.1
-		 * @since 4.1.0 The `$depth` parameter was added.
-		 *
-		 * @param string   $menu_id The ID that is applied to the menu item's `<li>` element.
-		 * @param WP_Post  $item    The current menu item.
-		 * @param stdClass $args    An object of wp_nav_menu() arguments.
-		 * @param int      $depth   Depth of menu item. Used for padding.
-		 */
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 
-		$output .= $indent . '<li' . $id . $class_names . '>';
+		$output .= $indent . '<li' . $id . $value . $class_names . '>';
 
-		$atts           = array();
-		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-		if ( '_blank' === $item->target && empty( $item->xfn ) ) {
-			$atts['rel'] = 'noopener noreferrer';
-		} else {
-			$atts['rel'] = $item->xfn;
-		}
-		$atts['href']         = ! empty( $item->url ) ? $item->url : '';
-		$atts['aria-current'] = $item->current ? 'page' : '';
-
-		/**
-		 * Filters the HTML attributes applied to a menu item's anchor element.
-		 *
-		 * @since 3.6.0
-		 * @since 4.1.0 The `$depth` parameter was added.
-		 *
-		 * @param array $atts {
-		 *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
-		 *
-		 *     @type string $title        Title attribute.
-		 *     @type string $target       Target attribute.
-		 *     @type string $rel          The rel attribute.
-		 *     @type string $href         The href attribute.
-		 *     @type string $aria_current The aria-current attribute.
-		 * }
-		 * @param WP_Post  $item  The current menu item.
-		 * @param stdClass $args  An object of wp_nav_menu() arguments.
-		 * @param int      $depth Depth of menu item. Used for padding.
-		 */
-		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
-
-		$attributes = '';
-		foreach ( $atts as $attr => $value ) {
-			if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
-				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-				$attributes .= ' ' . $attr . '="' . $value . '"';
-			}
-		}
-
-		/** This filter is documented in wp-includes/post-template.php */
-		$title = apply_filters( 'the_title', $item->title, $item->ID );
-
-		/**
-		 * Filters a menu item's title.
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param string   $title The menu item's title.
-		 * @param WP_Post  $item  The current menu item.
-		 * @param stdClass $args  An object of wp_nav_menu() arguments.
-		 * @param int      $depth Depth of menu item. Used for padding.
-		 */
-		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+		$attributes  = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
+		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
+		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
+		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 
 		// Check if menu item is in main menu.
 		if ( $depth == 0 ) {
@@ -368,41 +251,23 @@ class FlatsomeNavDropdown extends Walker_Nav_Menu {
 			$item_output = '<div class="category-images-preview">Loading</div>';
 
 		} else {
+
 			// Normal Items.
 			$item_output  = $args->before;
 			$item_output .= '<a' . $attributes . '>';
 
-			// Add menu icon.
-			if ( $menu_icon ) {
-				$item_output .= $menu_icon;
-			}
-
-			$item_output .= $args->link_before . $title . $args->link_after;
+			// Add menu.
+			if ($menu_icon) $item_output .= $menu_icon;
+			$item_output                 .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 
 			// Add down arrow.
 			$icon = '';
-			if ( $item->has_children && $depth == 0 ) {
-				$icon = get_flatsome_icon( 'icon-angle-down' );
-			}
+			if ($item->has_children && $depth == 0) $icon = get_flatsome_icon( 'icon-angle-down' );
 
 			$item_output .= $icon . '</a>';
 			$item_output .= $args->after;
 		}
 
-		/**
-		 * Filters a menu item's starting output.
-		 *
-		 * The menu item's starting output only includes `$args->before`, the opening `<a>`,
-		 * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
-		 * no filter for modifying the opening and closing `<li>` for a menu item.
-		 *
-		 * @since 3.0.0
-		 *
-		 * @param string   $item_output The menu item's starting HTML output.
-		 * @param WP_Post  $item        Menu item data object.
-		 * @param int      $depth       Depth of menu item. Used for padding.
-		 * @param stdClass $args        An object of wp_nav_menu() arguments.
-		 */
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
@@ -436,73 +301,53 @@ class FlatsomeNavSidebar extends Walker_Nav_Menu {
 	}
 
 	/**
-	 * Starts the list before the elements are added.
+	 * Start Level.
 	 *
-	 * @since 3.0.0
+	 * @param string $output Element output.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   wp_nav_menu() arguments.
 	 *
-	 * @see Walker::start_lvl()
-	 *
-	 * @param string   $output Used to append additional content (passed by reference).
-	 * @param int      $depth  Depth of menu item. Used for padding.
-	 * @param stdClass $args   An object of wp_nav_menu() arguments.
+	 * @return void
 	 */
-	public function start_lvl( &$output, $depth = 0, $args = null ) {
-		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-			$t = '';
-			$n = '';
-		} else {
-			$t = "\t";
-			$n = "\n";
-		}
-		$indent = str_repeat( $t, $depth );
-
-		// Default class.
-		$classes = array( 'sub-menu' );
-
-		$display_depth = $depth + 1; // because it counts the first submenu as 0.
-		$classes[]     = 'nav-sidebar-ul';
-		if ( $display_depth == '1' ) {
-			$classes[] = 'children';
-		}
-
-		/**
-		 * Filters the CSS class(es) applied to a menu list element.
-		 *
-		 * @since 4.8.0
-		 *
-		 * @param string[] $classes Array of the CSS classes that are applied to the menu `<ul>` element.
-		 * @param stdClass $args    An object of `wp_nav_menu()` arguments.
-		 * @param int      $depth   Depth of menu item. Used for padding.
-		 */
-		$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-
-		$output .= "{$n}{$indent}<ul$class_names>{$n}";
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$display_depth = ( $depth + 1 ); // because it counts the first submenu as 0.
+		$class_names   = '';
+		$class_names   = 'nav-sidebar-ul';
+		if ( $display_depth == '1' ) {$class_names = 'children';}
+		$indent  = str_repeat( "\t", $depth );
+		$output .= "\n$indent<ul class=" . $class_names . ">\n";
 	}
 
 	/**
-	 * Starts the element output.
+	 * End Level.
 	 *
-	 * @since 3.0.0
-	 * @since 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
+	 * @param string $output Element output.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   wp_nav_menu() arguments.
 	 *
-	 * @see Walker::start_el()
-	 *
-	 * @param string   $output Used to append additional content (passed by reference).
-	 * @param WP_Post  $item   Menu item data object.
-	 * @param int      $depth  Depth of menu item. Used for padding.
-	 * @param stdClass $args   An object of wp_nav_menu() arguments.
-	 * @param int      $id     Current item ID.
+	 * @return void
 	 */
-	public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-			$t = '';
-			$n = '';
-		} else {
-			$t = "\t";
-			$n = "\n";
-		}
-		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
+	public function end_lvl( &$output, $depth = 1, $args = array() ) {
+		$indent  = str_repeat( "\t", $depth );
+		$output .= "$indent</ul>\n";
+	}
+
+	/**
+	 * XXX.
+	 *
+	 * @param string $output Element output.
+	 * @param object $item   Menu item data object.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   wp_nav_menu() arguments.
+	 * @param int    $id     Current item ID.
+	 *
+	 * @return void
+	 */
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		// Most of this code is copied from original Walker_Nav_Menu.
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+		$class_names = $value = ''; // phpcs:ignore
 
 		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
@@ -514,122 +359,35 @@ class FlatsomeNavSidebar extends Walker_Nav_Menu {
 			$classes[0] = '';
 		}
 
-		/**
-		 * Filters the arguments for a single nav menu item.
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param stdClass $args  An object of wp_nav_menu() arguments.
-		 * @param WP_Post  $item  Menu item data object.
-		 * @param int      $depth Depth of menu item. Used for padding.
-		 */
-		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+		$class_names = ' class="' . esc_attr( $class_names ) . '"';
 
-		/**
-		 * Filters the CSS classes applied to a menu item's list item element.
-		 *
-		 * @since 3.0.0
-		 * @since 4.1.0 The `$depth` parameter was added.
-		 *
-		 * @param string[] $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
-		 * @param WP_Post  $item    The current menu item.
-		 * @param stdClass $args    An object of wp_nav_menu() arguments.
-		 * @param int      $depth   Depth of menu item. Used for padding.
-		 */
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
+		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 
-		/**
-		 * Filters the ID applied to a menu item's list item element.
-		 *
-		 * @since 3.0.1
-		 * @since 4.1.0 The `$depth` parameter was added.
-		 *
-		 * @param string   $menu_id The ID that is applied to the menu item's `<li>` element.
-		 * @param WP_Post  $item    The current menu item.
-		 * @param stdClass $args    An object of wp_nav_menu() arguments.
-		 * @param int      $depth   Depth of menu item. Used for padding.
-		 */
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
-		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+		$output .= $indent . '<li' . $id . $value . $class_names . '>';
 
-		$output .= $indent . '<li' . $id . $class_names . '>';
+		$attributes  = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
+		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
+		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
+		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 
-		$atts           = array();
-		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-		if ( '_blank' === $item->target && empty( $item->xfn ) ) {
-			$atts['rel'] = 'noopener noreferrer';
-		} else {
-			$atts['rel'] = $item->xfn;
-		}
-		$atts['href']         = ! empty( $item->url ) ? $item->url : '';
-		$atts['aria-current'] = $item->current ? 'page' : '';
-
-		/**
-		 * Filters the HTML attributes applied to a menu item's anchor element.
-		 *
-		 * @since 3.6.0
-		 * @since 4.1.0 The `$depth` parameter was added.
-		 *
-		 * @param array $atts {
-		 *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
-		 *
-		 *     @type string $title        Title attribute.
-		 *     @type string $target       Target attribute.
-		 *     @type string $rel          The rel attribute.
-		 *     @type string $href         The href attribute.
-		 *     @type string $aria_current The aria-current attribute.
-		 * }
-		 * @param WP_Post  $item  The current menu item.
-		 * @param stdClass $args  An object of wp_nav_menu() arguments.
-		 * @param int      $depth Depth of menu item. Used for padding.
-		 */
-		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
-
-		$attributes = '';
-		foreach ( $atts as $attr => $value ) {
-			if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
-				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-				$attributes .= ' ' . $attr . '="' . $value . '"';
-			}
+		// Check if menu item is in main menu.
+		if ( $depth == 0 ) {
+			// These lines adds your custom class and attribute.
+			$attributes .= ' class="nav-top-link"';
 		}
 
-		/** This filter is documented in wp-includes/post-template.php */
-		$title = apply_filters( 'the_title', $item->title, $item->ID );
-
-		/**
-		 * Filters a menu item's title.
-		 *
-		 * @since 4.4.0
-		 *
-		 * @param string   $title The menu item's title.
-		 * @param WP_Post  $item  The current menu item.
-		 * @param stdClass $args  An object of wp_nav_menu() arguments.
-		 * @param int      $depth Depth of menu item. Used for padding.
-		 */
-		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
-
+		// Normal Items.
 		$item_output  = $args->before;
 		$item_output .= '<a' . $attributes . '>';
-		$item_output .= $args->link_before . $title . $args->link_after;
+
+		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+
 		$item_output .= '</a>';
+
 		$item_output .= $args->after;
 
-		/**
-		 * Filters a menu item's starting output.
-		 *
-		 * The menu item's starting output only includes `$args->before`, the opening `<a>`,
-		 * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
-		 * no filter for modifying the opening and closing `<li>` for a menu item.
-		 *
-		 * @since 3.0.0
-		 *
-		 * @param string   $item_output The menu item's starting HTML output.
-		 * @param WP_Post  $item        Menu item data object.
-		 * @param int      $depth       Depth of menu item. Used for padding.
-		 * @param stdClass $args        An object of wp_nav_menu() arguments.
-		 */
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
@@ -825,7 +583,7 @@ function header_inner_class( $position ) {
 	$page_template             = get_post_meta( get_the_ID(), '_wp_page_template', true );
 	$default_template          = get_theme_mod( 'pages_template', 'default' );
 	$is_light_template         = ! empty( $page_template ) && strpos( $page_template, 'light' ) !== false;
-	$is_light_default_template = is_page() && ( empty( $page_template ) || $page_template == 'default' ) && strpos( $default_template, 'light' ) !== false;
+	$is_light_default_template = ( empty( $page_template ) || $page_template == 'default' ) && strpos( $default_template, 'light' ) !== false;
 	$needs_dark_nav            = ( $is_light_template || $is_light_default_template ) && $position !== 'top';
 
 	if ( $needs_dark_nav && get_theme_mod( 'header_color', 'light' ) !== 'dark' ) {
@@ -907,23 +665,10 @@ function flatsome_body_classes( $classes ) {
 	if (get_theme_mod( 'dropdown_arrow', 1 )) $classes[]              = 'nav-dropdown-has-arrow';
 	if (get_theme_mod( 'parallax_mobile', 0 )) $classes[]             = 'parallax-mobile';
 
-	if (
-		'center' != get_theme_mod( 'mobile_overlay' ) &&
-		'slide' == get_theme_mod( 'mobile_submenu_effect' )
-	) {
-		$levels    = get_theme_mod( 'mobile_submenu_levels', '1' );
-		$classes[] = 'mobile-submenu-slide';
-		$classes[] = 'mobile-submenu-slide-levels-' . $levels;
-	}
-
-	if ( 'toggle' === get_theme_mod( 'mobile_submenu_parent_behavior' ) ) {
-		$classes[] = 'mobile-submenu-toggle';
-	}
-
 	// Add the selected page template classes if Default Template is selected.
 	$page_template    = get_post_meta( get_the_ID(), '_wp_page_template', true );
 	$default_template = get_theme_mod( 'pages_template', 'default' );
-	if ( is_page() && ( empty( $page_template ) || $page_template == 'default' ) && $default_template !== 'default' ) {
+	if ( ( empty( $page_template ) || $page_template == 'default' ) && $default_template !== 'default' ) {
 		$classes[] = 'page-template-' . $default_template;
 		$classes[] = 'page-template-' . $default_template . '-php';
 	}
@@ -1033,7 +778,7 @@ function flatsome_html_after_header() {
 }
 add_action( 'flatsome_after_header', 'flatsome_html_after_header', 1 );
 
-if ( get_theme_mod( 'site_loader' ) ) {
+if ( get_theme_mod( 'site_loader', 0 ) ) {
 	/**
 	 * Page loader.
 	 *

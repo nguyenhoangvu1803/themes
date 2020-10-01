@@ -5,5 +5,5 @@
 	 	<div class="flex-col flex-grow">
 	 		<?php flatsome_breadcrumb( 'page-breadcrumbs' ); ?>
 	 	</div>
-	</div>
-</div>
+	</div><!-- flex-row -->
+</div><!-- .page-title -->

@@ -12,8 +12,8 @@
 			}
 		?>
 		<?php get_template_part( 'template-parts/posts/content', 'single' ); ?>
-	</div>
-</article>
+	</div><!-- .article-inner -->
+</article><!-- #-<?php the_ID(); ?> -->
 
 <?php endwhile; ?>
 

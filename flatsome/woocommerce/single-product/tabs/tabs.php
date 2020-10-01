@@ -72,7 +72,7 @@ if ( ! empty( $product_tabs ) ) : ?>
 			<?php endforeach; ?>
 
 			<?php do_action( 'woocommerce_product_after_tabs' ); ?>
-		</div>
-	</div>
+		</div><!-- .tab-panels -->
+	</div><!-- .tabbed-content -->
 
 <?php endif; ?>

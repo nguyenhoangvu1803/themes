@@ -3,7 +3,7 @@
  * Single variation cart button
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
+ * @package WooCommerce/Templates
  * @version 3.4.0
  */
 
@@ -11,20 +11,18 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 ?>
-
+<div style="font-size: 0.88em;">This is the best offer you've ever seen, <span style="font-weight: 700;">only this <?php echo date('F'); ?></span></div>
 <div class="woocommerce-variation-add-to-cart variations_button">
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 	<?php
 	do_action( 'woocommerce_before_add_to_cart_quantity' );
 
-	woocommerce_quantity_input(
-		array(
-			'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-			'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-			'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-		)
-	);
+	woocommerce_quantity_input( array(
+		'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+		'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+		'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+	) );
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
@@ -39,14 +37,113 @@ global $product;
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <?php $pieces = rand(5, 15); ?>
-  <div class="flag-body" style="font-size: 15px;color: #000;">
-    <img src="<?php echo get_template_directory_uri() . '/assets/img/almost.svg';?>" alt="" /><span style="font-weight: 400;">Almost gone.</span> <span style="font-weight: 500;">There are only <?php  echo rand(2, 5); ?> left.</span>
+	<style>
+	.flag {
+    display: table;
+    width: 100%;
+    margin-bottom: -15px;
+  }
+    .vertical-align-top {
+    vertical-align: top;
+  }
+    .flag-body,.flag-img {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+#hourglass {
+  opacity: 1;
+  color: #6a1b9a;
+  font-size: 3rem;
+}
+#hourglass i {
+  opacity: 0;
+  animation: hourglass 4.8s ease-in infinite, hourglass-spin 4.8s ease-out infinite;
+}
+#hourglass > i:nth-child(1) {
+  /* color: #ffc400; */
+  color:#53b802;
+  animation-delay: 0s, 0s;
+}
+#hourglass > i:nth-child(2) {
+  color: #53b802;
+  animation-delay: 1.2s, 0s;
+}
+#hourglass > i:nth-child(3) {
+  color: #53b802;
+  animation-delay: 2.4s, 0s;
+}
+#hourglass > i:nth-child(4) {
+  color: #53b802;
+  animation-delay: 3.6s, 0s;
+}
+#hourglass > i:nth-child(4) {
+  animation: hourglass-end 4.8s ease-in infinite, hourglass-spin 4.8s ease-out infinite;
+}
+#hourglass > i:nth-child(5) {
+  color: #53b802;
+  opacity: 1;
+  animation: hourglass-spin 4.8s ease-out infinite;
+}
+
+.fa-hourglass-o:before {
+    color: #bbbec4;
+}
+
+@keyframes hourglass {
+  0% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 0.9;
+  }
+  26% {
+    opacity: 0;
+  }
+}
+@keyframes hourglass-end {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hourglass-spin {
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+	</style>
+  <div id="hourglasswraper" class="flag">
+    <div class="flag-img">
+      	<div id="hourglass" class="fa-stack fa-4x">
+          <i class="fa fa-stack-1x fa-hourglass-start"></i>
+          <i class="fa fa-stack-1x fa-hourglass-half"></i>
+          <i class="fa fa-stack-1x fa-hourglass-end"></i>
+          <i class="fa fa-stack-1x fa-hourglass-end"></i>
+          <i class="fa fa-stack-1x fa-hourglass-o"></i>
+        </div>
+    </div>
+    <?php $pieces = rand(5, 15); ?>
+    <div class="flag-body">
+      <span style="font-weight: bold">Almost gone.</span> There are only <?php  echo rand(2, 5); ?> left.
+    </div>
   </div>
-  <div style="font-size: 13px;color: #4F4F4F;margin-bottom: 20px;">This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: 500;color: #000;">Get it before it's gone!</span></div>
+  <div>This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: bold;">Get it before it's gone!</span></div>
   <div>
-  <img style="margin-bottom: 22px;" alt="credit cards" src="https://149.28.149.209/wp-content/uploads/2020/09/guaranteed-safe-checkout-single.png">
-  <img src="https://149.28.149.209/wp-content/uploads/2020/09/4-step.png" alt="">
+  <img  alt="credit cards" src="https://assets.blockofgear.com/wp-content/uploads/2019/12/13014947/checkout-opt.png">
+  <img src="https://homewix.com/wp-content/uploads/2020/02/product.jpg">
   </div>
   <script>
 		function getRandomInt(max) {

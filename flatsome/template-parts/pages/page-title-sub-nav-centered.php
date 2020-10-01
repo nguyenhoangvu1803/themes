@@ -11,5 +11,5 @@
 	 		<?php get_flatsome_subnav(); ?>
 	 	</div>
 
-	</div>
-</div>
+	</div><!-- flex-row -->
+</div><!-- .page-title -->

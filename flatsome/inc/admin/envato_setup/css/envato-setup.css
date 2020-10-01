@@ -444,13 +444,7 @@ body {
     padding: .5em 1em;
     line-height: 1em;
     margin-right: .5em;
-    height: auto;
-    box-shadow: none;
-}
-
-.envato-setup .envato-setup-actions .button.disabled {
-    pointer-events: none;
-    opacity: .5;
+    height: auto
 }
 
 .envato-setup .envato-setup-actions .button-primary {

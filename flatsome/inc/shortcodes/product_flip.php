@@ -66,7 +66,6 @@ function ux_product_flip($atts, $content = null, $tag) {
         'post__in' => $ids,
         'post_type' => 'product',
         'numberposts' => -1,
-		'posts_per_page' => -1,
         'orderby' => 'post__in',
         'ignore_sticky_posts' => true,
       );

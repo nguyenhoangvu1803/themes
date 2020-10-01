@@ -37,7 +37,7 @@
 if(get_theme_mod('custom_cart_icon')) { ?>
   <span class="image-icon header-cart-icon" data-icon-label="<?php echo WC()->cart->cart_contents_count; ?>">
     <img class="cart-img-icon" alt="<?php _e('Cart', 'woocommerce'); ?>" src="<?php echo do_shortcode(get_theme_mod('custom_cart_icon')); ?>"/>
-  </span>
+  </span><!-- .cart-img-inner -->
 <?php }
 else { ?>
   <?php if(!$icon_style) { ?>
@@ -64,7 +64,7 @@ else { ?>
       echo '<li class="html">'.do_shortcode($custom_cart_content).'</li>';
       }
     ?>
- </ul>
+ </ul><!-- .nav-dropdown -->
 <?php }  ?>
 
 <?php if($cart_style == 'off-canvas') { ?>

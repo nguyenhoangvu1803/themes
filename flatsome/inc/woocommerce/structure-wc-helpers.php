@@ -155,20 +155,25 @@ function ux_maybe_add_category_args( $query_args, $category, $operator ) {
 }
 
 global $pagenow;
-if ( ! get_theme_mod( 'activated_before' ) && is_admin() && isset( $_GET['activated'] ) && $pagenow == 'themes.php' ) {
+if ( is_admin() && isset( $_GET['activated'] ) && $pagenow == 'themes.php' ) {
 	/**
 	 * Set Default WooCommerce Image sizes upon theme activation.
 	 */
 	function flatsome_woocommerce_image_dimensions() {
-		$single  = array(
-			'width'  => '510',
-			'height' => '600',
-			'crop'   => 1,
+		$single = array(
+			'width'  => '510', // px
+			'height' => '600', // px
+			'crop'   => 1    // true
 		);
 		$catalog = array(
-			'width'  => '247',
-			'height' => '300',
-			'crop'   => 1,
+			'width'  => '247', // px
+			'height' => '300', // px
+			'crop'   => 1    // true
+		);
+		$thumbnail = array(
+			'width'  => '114', // px
+			'height' => '130', // px
+			'crop'   => 1    // true
 		);
 
 		update_option( 'woocommerce_single_image_width', $single['width'] );
@@ -176,18 +181,7 @@ if ( ! get_theme_mod( 'activated_before' ) && is_admin() && isset( $_GET['activa
 		update_option( 'woocommerce_thumbnail_cropping', 'custom' );
 		update_option( 'woocommerce_thumbnail_cropping_custom_width', 5 );
 		update_option( 'woocommerce_thumbnail_cropping_custom_height', 6 );
-	}
 
+	}
 	add_action( 'init', 'flatsome_woocommerce_image_dimensions', 1 );
-
-	/**
-	 * Set a theme mod to retrieve first activation state from.
-	 */
-	function flatsome_first_activation_state() {
-		if ( ! get_theme_mod( 'activated_before' ) ) {
-			set_theme_mod( 'activated_before', true );
-		}
-	}
-
-	add_action( 'shutdown', 'flatsome_first_activation_state' );
 }

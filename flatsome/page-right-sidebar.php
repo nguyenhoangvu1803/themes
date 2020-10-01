@@ -14,7 +14,7 @@ get_header(); ?>
 		<?php if(get_theme_mod('default_title', 0)){ ?>
 			<header class="entry-header">
 				<h1 class="entry-title mb uppercase"><?php the_title(); ?></h1>
-			</header>
+			</header><!-- .entry-header -->
 		<?php } ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -24,15 +24,15 @@ get_header(); ?>
 						comments_template(); } ?>
 
 		<?php endwhile; // end of the loop. ?>
-	</div>
-</div>
+	</div><!-- .page-inner -->
+</div><!-- .#content large-9 left -->
 
 <div class="large-3 col">
 	<?php get_sidebar(); ?>
-</div>
+</div><!-- .sidebar -->
 
-</div>
-</div>
+</div><!-- .row -->
+</div><!-- .page-right-sidebar container -->
 
 <?php do_action( 'flatsome_after_page' ); ?>
 

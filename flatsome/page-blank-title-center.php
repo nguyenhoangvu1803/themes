@@ -27,8 +27,8 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 
 
-</div>
-</div>
+</div><!-- #content -->
+</div><!-- .row -->
 
 <?php do_action( 'flatsome_after_page' ); ?>
 

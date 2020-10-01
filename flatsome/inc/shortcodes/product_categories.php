@@ -216,7 +216,7 @@ function ux_product_categories($atts, $content = null, $tag) {
                   <?php if($image_overlay){ ?><div class="overlay" style="background-color: <?php echo $image_overlay;?>"></div><?php } ?>
                   <?php if($style == 'shade'){ ?><div class="shade"></div><?php } ?>
                   </div>
-                </div>
+                </div><!-- box-image -->
                 <div class="box-text <?php echo implode(' ', $classes_text); ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
                   <div class="box-text-inner">
                       <h5 class="uppercase header-title">
@@ -237,12 +237,12 @@ function ux_product_categories($atts, $content = null, $tag) {
                         do_action( 'woocommerce_after_subcategory_title', $category );
                       ?>
 
-                  </div>
-                </div>
-                </div>
+                  </div><!-- .box-text-inner -->
+                </div><!-- .box-text -->
+                </div><!-- .box -->
             <?php do_action( 'woocommerce_after_subcategory', $category ); ?>
-            </div>
-            </div>
+            </div><!-- .col-inner -->
+            </div><!-- .col -->
         <?php
       }
     }
