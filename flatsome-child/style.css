@@ -975,6 +975,7 @@ ul.woocommerce-order-overview li {
   border-top:1px solid #e5e5e5;
   border-bottom:1px solid #e5e5e5;
   padding-top:10px;
+  padding-bottom:10px;
 }
 
 .shop_table .shipping__table tbody tr th {
@@ -1019,9 +1020,11 @@ form .woocommerce-form-row input {
 }
 ul.woocommerce-shipping-methods {
   list-style: none;
+  margin-bottom: 0;
 }
 ul.woocommerce-shipping-methods li {
   margin-left: 0;
+  margin-bottom: 0;
 }
 .woocommerce-Button,
 .woocommerce-form .button,
