@@ -364,3 +364,44 @@ function filter_woocommerce_thankyou_order_received_text( $var, $order ) {
     return 'Order Summary'; 
 }; 
 
+/* CUSTOM CSS */
+function uoy_custom_css() {
+  ob_start();
+?>
+  <style id="uoy-custom-css" type="text/css">
+
+      <?php
+        $color_primary = get_theme_mod('color_primary', Flatsome_Default::COLOR_PRIMARY );
+        if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ 
+      ?>
+          /* COLOR */
+          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password {color: <?php echo $color_primary; ?>;}
+
+          /* BACKGROUND-COLOR */
+          .checkout_coupon input[type='submit'].is-form {background-color: <?php echo $color_primary; ?>;}
+
+          /* BORDER COLOR */
+          .flex-control-thumbs li img.flex-active, .fl-wrap.fl-is-active > input, .fl-wrap.fl-is-active > textarea, .fl-wrap.fl-has-focus > input , .fl-wrap.fl-has-focus > textarea, form .woocommerce-form-row:hover input  {border-color: <?php echo $color_primary; ?>;}
+      <?php } ?>
+
+      <?php
+        $color_success = get_theme_mod( 'color_success' , Flatsome_Default::COLOR_SUCCESS );
+        if( $color_success && $color_success !== Flatsome_Default::COLOR_SUCCESS ){ 
+      ?>
+          /* COLOR */
+          .cart-total-custom.order-save, .cart-total-custom.order-save .amount, .cart-total-custom.order-save .amount, .shop_table .order-save th {
+            color: <?php echo $color_success;?>;
+          }
+
+          /* BACKGROUND-COLOR */
+          [data-icon-label]:after, ul.product-tabs li a span{background-color: <?php echo $color_success; ?>;}
+      <?php }?>
+
+  </style>
+<?php
+  $buffer = ob_get_clean();
+  echo flatsome_minify_css($buffer);
+}
+add_action( 'wp_head', 'uoy_custom_css', 100 );
+
+
