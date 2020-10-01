@@ -1007,11 +1007,22 @@ form .woocommerce-form-row input {
   padding-top:22px;
 }
 
-.remember-and-lost {
+.remember-and-lost, 
+.woocommerce-shipping-totals table tbody > tr > th,
+.woocommerce-shipping-totals table tbody > tr > td {
   display:inline-block;
   width:100%;
 }
-
+.woocommerce-shipping-totals table tbody > tr > th,
+.woocommerce-shipping-totals table tbody > tr > td {
+  padding-left: 0;
+}
+ul.woocommerce-shipping-methods {
+  list-style: none;
+}
+ul.woocommerce-shipping-methods li {
+  margin-left: 0;
+}
 .woocommerce-Button,
 .woocommerce-form .button,
 .woocommerce-form button,
@@ -1042,6 +1053,11 @@ ul.woocommerce-order-overview li label {
   font-weight:400;
 }
 
+.uppercase, h6, th, span.widget-title {
+  letter-spacing: 0;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
 
 
 
