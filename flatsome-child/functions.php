@@ -408,7 +408,7 @@ add_action( 'wp_head', 'uoy_custom_css', 101 );
 function themeslug_customize_register( $wp_customize ) {
   // Do stuff with $wp_customize, the WP_Customize_Manager object.
   $wp_customize->add_control( 'custom_theme_css', array(
-  'label' => __( 'TEST' ),
+  'label' => __( 'TEST 1' ),
   'type' => 'checkbox',
   'section' => 'test',
 ) );
