@@ -415,6 +415,12 @@ function themeslug_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'themeslug_customize_register' );
 
+if( class_exists('Flatsome_Option') ) {
+  echo "HAVE";
+} else {
+  echo "NO";
+}
+
 
 
 
