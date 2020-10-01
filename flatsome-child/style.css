@@ -1081,7 +1081,5 @@ form.searchform  button {
   transform: translateY(-50%);
 }
 
-.woocommerce-variation-add-to-cart button[type="submit"] {
-  width: 100%;
-}
+
 
