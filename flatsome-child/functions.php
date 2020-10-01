@@ -394,7 +394,7 @@ function uoy_custom_css() {
           }
 
           /* BACKGROUND-COLOR */
-          [data-icon-label]:after, ul.product-tabs li a span{background-color: <?php echo $color_success; ?>;}
+          [data-icon-label]:after, ul.product-tabs li a span{background-color: <?php echo $color_success; !important?>;}
       <?php }?>
 
   </style>
