@@ -402,6 +402,6 @@ function uoy_custom_css() {
   $buffer = ob_get_clean();
   echo flatsome_minify_css($buffer);
 }
-add_action( 'wp_head', 'uoy_custom_css', 100 );
+add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
