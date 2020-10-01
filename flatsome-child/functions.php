@@ -375,7 +375,7 @@ function uoy_custom_css() {
         if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ 
       ?>
           /* COLOR */
-          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password {color: <?php echo $color_primary; ?>;}
+          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .header-nav>li.cart-item>a {color: <?php echo $color_primary; ?>;}
 
           /* BACKGROUND-COLOR */
           .checkout_coupon input[type='submit'].is-form {background-color: <?php echo $color_primary; ?>;}
