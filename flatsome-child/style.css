@@ -1066,7 +1066,7 @@ ul.woocommerce-order-overview li label {
   width: initial;
 }
 
-.header-main > header-inner {
+.header-main > .header-inner {
   align-items: flex-end;
 }
 
