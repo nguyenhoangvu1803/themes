@@ -90,7 +90,7 @@ select,
 }
 
 .form-flat .button.icon {
-  color:#BDBDBD;
+  color:#BDBDBD !important;
 }
 
 .fl-labels .fl-wrap label[for]:first-child {
@@ -234,10 +234,6 @@ input[type='search']::placeholder {
   font-weight:500;
   line-height:20px;
   padding:0 10px;
-}
-
-.ux-search-box .flex-row .flex-col:first-child {
-  margin-left:20px;
 }
 
 .breadcrumbs a:last-child {
@@ -1070,4 +1066,17 @@ ul.woocommerce-order-overview li label {
   width: initial;
 }
 
+.header-main > header-inner {
+  align-items: flex-end;
+}
 
+.form-flat input:not([type="submit"]), .form-flat textarea, .form-flat select {
+  background: #fff;
+}
+
+form.searchform  button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
