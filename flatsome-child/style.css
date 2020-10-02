@@ -1258,5 +1258,21 @@ ul.nav li.has-dropdown.current-dropdown:before {
     justify-content: initial;
   }
 
+  .off-canvas-center .mfp-content .searchform {
+    max-width: initial;
+  }
+
+  .off-canvas-center .nav-sidebar.nav-vertical>li>a {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .off-canvas-center .nav-sidebar.nav-vertical>li a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+  }
+
 }
 
