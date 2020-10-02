@@ -1231,12 +1231,12 @@ li.has-dropdown.current-dropdown > .nav-dropdown:after {
   visibility: visible;
 }
 
-ul.nav-right > li.current-dropdown:last-child > .nav-dropdown {
+ul.nav-right > li.has-dropdown:last-child > .nav-dropdown {
   left: 50%;
   transform: translateX(-50%);
 }
 
-ul.nav-right > li.has-dropdown.current-dropdown:last-child > .nav-dropdown:after {
+ul.nav-right > li.has-dropdown:last-child > .nav-dropdown:after {
   left: 50%;
   transform: translate(-50%,-50%) rotate(45deg);
 }
