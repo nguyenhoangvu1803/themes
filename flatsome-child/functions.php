@@ -405,21 +405,7 @@ function uoy_custom_css() {
 add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
-function themeslug_customize_register( $wp_customize ) {
-  // Do stuff with $wp_customize, the WP_Customize_Manager object.
-  $wp_customize->add_control( 'custom_theme_css', array(
-  'label' => __( 'TEST 1' ),
-  'type' => 'checkbox',
-  'section' => 'test',
-) );
-}
-add_action( 'customize_register', 'themeslug_customize_register' );
 
-if( class_exists('Flatsome_Option') ) {
-  echo "HAVE";
-} else {
-  echo "NO";
-}
 
 
 
