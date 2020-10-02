@@ -88,25 +88,6 @@ select,
 	color:#000;
 	box-shadow:none;
 }
-input[type='email']:hover,nput[type='email']:focus,
-input[type='date']:hover,input[type='date']:focus,
-input[type='search']:hover,input[type='search']:focus,
-input[type='number']:hover,input[type='number']:focus,
-input[type='text']:hover,input[type='text']:focus,
-input[type='tel']:hover,input[type='tel']:focus,
-input[type='url']:hover,input[type='url']:focus,
-input[type='password']:hover,input[type='password']:focus,
-textarea:hover,textarea:focus,
-select:hover,select:focus,
-.select-resize-ghost:hover,.select-resize-ghost:focus,
-.select2-container .select2-choice:hover,.select2-container .select2-choice:focus,
-.select2-container .select2-selection:hover,.select2-container .select2-selection:focus {
-  height:42px;
-  font-size:15px;
-  border-radius:3px;
-  color:#000;
-  box-shadow:none;
-}
 
 .form-flat .button.icon {
   color:#BDBDBD !important;
