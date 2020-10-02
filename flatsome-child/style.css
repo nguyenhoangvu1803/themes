@@ -300,8 +300,12 @@ form.checkout h3 {
   text-transform:capitalize;
 }
 
-.page-checkout-simple, form.lost_reset_password {
+.page-checkout-simple {
   padding:0;
+}
+
+form.lost_reset_password {
+  padding: 30px 35px;
 }
 
 .message-container a {
