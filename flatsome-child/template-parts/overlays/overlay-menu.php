@@ -29,7 +29,7 @@ if (
 }
 ?>
 <div id="main-menu" class="<?php echo esc_attr( implode( ' ', $flatsome_mobile_sidebar_classes ) ); ?>"<?php echo $flatsome_levels ? ' data-levels="' . esc_attr( $flatsome_levels ) . '"' : ''; ?>>
-	<div class="sidebar-menu no-scrollbar <?php if ( $flatsome_mobile_overlay == 'center') echo 'text-center'; ?>">
+	<div class="sidebar-menu no-scrollbar">
 		<ul class="<?php echo esc_attr( implode( ' ', $flatsome_nav_classes ) ); ?>">
 			<?php flatsome_header_elements( 'mobile_sidebar', 'sidebar' ); ?>
 		</ul>
