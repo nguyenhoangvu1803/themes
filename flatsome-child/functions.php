@@ -375,7 +375,7 @@ function uoy_custom_css() {
         if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ 
       ?>
           /* COLOR */
-          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .lost_password a, .header-nav>li.cart-item>a 
+          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .lost_password a, .nav-right>li.cart-item>a 
           {color: <?php echo $color_primary; ?>;}
 
           /* BACKGROUND-COLOR */

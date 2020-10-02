@@ -1233,6 +1233,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
   opacity: 1;
 }
 
+.nav>li>a>i.icon-menu,
+.nav>li>a>i.icon-search {
+  color: #505261;
+}
 
 
 
