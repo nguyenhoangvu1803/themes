@@ -602,6 +602,10 @@ ul.product-tabs li a span {
   margin: 0;
 }
 
+.quantity.buttons_added .is-form:hover {
+  background-color: #fff;
+}
+
 .quantity.buttons_added .minus.is-form {
   border-top-right-radius:0 !important;
   border-bottom-right-radius:0 !important;
@@ -1100,5 +1104,9 @@ form.searchform  button {
   transform: translateY(-50%);
 }
 
-
+.flex-viewport {
+  -webkit-box-shadow: 0px 5px 20px rgba(10, 19, 60, 0.15);
+  -moz-box-shadow: 0px 5px 20px rgba(10, 19, 60, 0.15);
+  box-shadow: 0px 5px 20px rgba(10, 19, 60, 0.15);
+}
 
