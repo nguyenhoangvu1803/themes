@@ -1269,10 +1269,8 @@ ul.nav li.has-dropdown.current-dropdown:before {
   }
 
   .off-canvas-center .nav-sidebar.nav-vertical>li .toggle {
-    top: 50%;
+    top: 10px;
     right: 10px;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
   }
 
   .off-canvas-center .nav-sidebar.nav-vertical>li a {
