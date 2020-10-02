@@ -1208,38 +1208,27 @@ input[type="checkbox"]:checked:before {
   border-bottom: none;
 }
 
-/*.nav-dropdown-has-arrow li.has-dropdown:after, .nav-dropdown-has-arrow li.has-dropdown:before {
-  opacity: 0 !important;
-}*/
 
-li.has-dropdown:before {
+
+ul.nav li.has-dropdown:before {
   width: 17px;
   height: 17px;
   border: 1px solid #E5E5E5;
-  top: 31px;
+  top: 100%;
   z-index: 9997;
   background: #fff;
   border-bottom: none;
   border-right: none;
   border-radius: 4px;
   position: absolute;
-  top: 0;
   transform: translateY(-50%) rotate(45deg);
   opacity: 0;
 }
 
-li.has-dropdown.current-dropdown:before {
+ul.nav li.has-dropdown.current-dropdown:before {
   opacity: 1;
 }
 
-/*ul.nav-right > li.has-dropdown:last-child > .nav-dropdown,
-ul.nav-right > li.has-dropdown:hover:last-child > .nav-dropdown {
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-ul.nav-right > li.has-dropdown:last-child > .nav-dropdown:after {
-  left: 50%;
-  transform: translate(-50%,-50%) rotate(45deg);
-}*/
+
 
