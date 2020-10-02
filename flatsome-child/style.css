@@ -1071,6 +1071,9 @@ input.shipping_method:before {
 input.shipping_method:checked:before {
     opacity: 1;
 }
+label.shipping__list_label {
+  font-size: 14px;
+}
 .woocommerce-Button,
 .woocommerce-form .button,
 .woocommerce-form button,
