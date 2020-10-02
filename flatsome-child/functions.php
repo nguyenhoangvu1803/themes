@@ -420,7 +420,7 @@ function uoy_custom_css() {
 add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
-
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
 
 
 
