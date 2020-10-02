@@ -1242,16 +1242,21 @@ ul.nav li.has-dropdown.current-dropdown:before {
 
 @media only screen and (max-width: 768px) {
 
-li.current-dropdown>.nav-dropdown, 
-.next-prev-thumbs li.has-dropdown:hover>.nav-dropdown, 
-.no-js li.has-dropdown:hover>.nav-dropdown {
-    right: -20px;
-    left: initial;
-}
+  li.current-dropdown>.nav-dropdown, 
+  .next-prev-thumbs li.has-dropdown:hover>.nav-dropdown, 
+  .no-js li.has-dropdown:hover>.nav-dropdown {
+      right: -20px;
+      left: initial;
+  }
 
-.nav .searchform .flex-col {
-  max-width: 100%;
-}
+  .nav .searchform .flex-col {
+    max-width: 100%;
+  }
+
+  .text-center .flex-row {
+    -ms-flex-pack: initial;
+    justify-content: initial;
+  }
 
 }
 
