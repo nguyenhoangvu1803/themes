@@ -1244,6 +1244,11 @@ ul.nav li.has-dropdown.current-dropdown:before {
   opacity: 1;
 }
 
+.footer-wrapper ul.menu>li+li, 
+.footer-wrapper .widget>ul>li+li {
+  border-top: none;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 768px) {
