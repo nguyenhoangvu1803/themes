@@ -1241,7 +1241,7 @@ ul.nav li.has-dropdown.current-dropdown:before {
 [data-icon-label]:after {
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 18px;
   width: 18px;
   height: 18px;
 }
@@ -1334,6 +1334,12 @@ ul.nav li.has-dropdown.current-dropdown:before {
   .header-main .header-inner {
     padding-left: 21px;
     padding-right: 21px;
+  }
+
+  [data-icon-label]:after {
+    line-height: 23px;
+    width: 23px;
+    height: 23px;
   }
 
 }
