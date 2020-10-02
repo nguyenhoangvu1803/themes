@@ -24,6 +24,9 @@ body {
 b, strong {
   	color:#000;
 }
+label {
+  color: #333;
+}
 .nav-dropdown-has-arrow li.has-dropdown:after {
 	border-color:rgba(221,221,221,0);
 }
@@ -1129,6 +1132,12 @@ form.searchform  button {
 .woocommerce-form__input-checkbox {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.remember-and-lost label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 input[type="checkbox"] {
