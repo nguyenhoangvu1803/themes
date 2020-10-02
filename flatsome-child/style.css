@@ -1263,8 +1263,8 @@ ul.nav li.has-dropdown.current-dropdown:before {
   }
 
   .off-canvas-center .nav-sidebar.nav-vertical>li>a {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 
   .off-canvas-center .nav-sidebar.nav-vertical>li a {
@@ -1272,6 +1272,14 @@ ul.nav li.has-dropdown.current-dropdown:before {
     font-size: 14px;
     line-height: 17px;
     color: #333333;
+  }
+
+  .nav-sidebar.nav-vertical>li.menu-item.active, .nav-sidebar.nav-vertical>li.menu-item:hover {
+    background: #F7F7FE;
+  }
+
+  .off-canvas-center .mfp-content {
+    max-width: initial;
   }
 
 }
