@@ -4,6 +4,9 @@
 
     	<div class="product-gallery large-<?php echo flatsome_option('product_image_width'); ?> col">
     	<?php
+            
+            wc_get_template( 'single-product/title.php' ); 
+
     		/**
     		 * woocommerce_before_single_product_summary hook
     		 *
