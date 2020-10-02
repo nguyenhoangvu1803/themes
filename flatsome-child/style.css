@@ -1366,6 +1366,14 @@ ul.nav li.has-dropdown.current-dropdown:before {
     display: block;
   }
 
+  .product-gallery .title-on-mobi {
+    margin-bottom: 20px;
+  }
+
+  .product-title {
+    font-size: 22px;
+  }
+
   .single-product .product-info .product-title,
   .single-product .product-info .product-star {
     display: none;
@@ -1375,11 +1383,17 @@ ul.nav li.has-dropdown.current-dropdown:before {
 
 /* Mobile */ 
 @media only screen and (max-width: 549px) {
+
   .small-nav-collapse>li {
     width: initial;
     margin: 0 !important;
     padding: 0 10px;
     text-align: center;
   }
+
+  .product-title {
+    font-size: 18px;
+  }
+
 }
 

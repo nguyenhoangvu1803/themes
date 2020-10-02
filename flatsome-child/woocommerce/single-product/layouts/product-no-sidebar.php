@@ -4,7 +4,7 @@
 
     	<div class="product-gallery large-<?php echo flatsome_option('product_image_width'); ?> col">
 
-            <div class="title-on-mobi hide-for-large">
+            <div class="title-on-mobi">
                 <?php wc_get_template( 'single-product/title.php' ); ?>
             </div>
         	
