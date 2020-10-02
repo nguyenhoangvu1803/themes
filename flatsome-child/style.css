@@ -1323,5 +1323,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
     opacity: 1 !important;
   }
 
+  .header-main .header-inner {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
 }
 
