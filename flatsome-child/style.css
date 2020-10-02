@@ -1205,4 +1205,21 @@ input[type="checkbox"]:checked:before {
 
 .nav-dropdown-default .nav-column li>a, .nav-dropdown.nav-dropdown-default>li>a {
   margin: 0;
+  border-bottom: none;
 }
+
+.nav-dropdown-has-arrow li.has-dropdown:before {
+  transition: opacity .25s;
+  opacity: 1;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #E5E5E5;
+  transform: rotate(45deg);
+  top: 31px;
+  z-index: 9997;
+  background: #fff;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 4px;
+}
+
