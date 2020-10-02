@@ -375,13 +375,28 @@ function uoy_custom_css() {
         if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ 
       ?>
           /* COLOR */
-          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .header-nav>li.cart-item>a {color: <?php echo $color_primary; ?>;}
+          .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .header-nav>li.cart-item>a 
+          {color: <?php echo $color_primary; ?>;}
 
           /* BACKGROUND-COLOR */
-          .checkout_coupon input[type='submit'].is-form {background-color: <?php echo $color_primary; ?>;}
+          .checkout_coupon input[type='submit'].is-form {background-color: 
+          <?php echo $color_primary; ?>;}
 
           /* BORDER COLOR */
-          .flex-control-thumbs li img.flex-active, .fl-wrap.fl-is-active > input, .fl-wrap.fl-is-active > textarea, .fl-wrap.fl-has-focus > input , .fl-wrap.fl-has-focus > textarea, form .woocommerce-form-row:hover input  {border-color: <?php echo $color_primary; ?>;}
+          .flex-control-thumbs li img.flex-active, .fl-wrap.fl-is-active > input, .fl-wrap.fl-is-active > textarea, .fl-wrap.fl-has-focus > input , .fl-wrap.fl-has-focus > textarea, form .woocommerce-form-row:hover input, input[type='email']:hover,nput[type='email']:focus,
+          input[type='date']:hover,input[type='date']:focus,
+          input[type='search']:hover,input[type='search']:focus,
+          input[type='number']:hover,input[type='number']:focus,
+          input[type='text']:hover,input[type='text']:focus,
+          input[type='tel']:hover,input[type='tel']:focus,
+          input[type='url']:hover,input[type='url']:focus,
+          input[type='password']:hover,input[type='password']:focus,
+          textarea:hover,textarea:focus,
+          select:hover,select:focus,
+          .select-resize-ghost:hover,.select-resize-ghost:focus,
+          .select2-container .select2-choice:hover,.select2-container .select2-choice:focus,
+          .select2-container .select2-selection:hover,.select2-container .select2-selection:focus
+          {border-color: <?php echo $color_primary; ?>;}
       <?php } ?>
 
       <?php
