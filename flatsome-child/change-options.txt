@@ -5,3 +5,5 @@ Change:
 *. Header Mobi settings
 
 *. Option Custom Css
+
+*. Cart -> Custom Content
