@@ -1244,6 +1244,7 @@ ul.nav li.has-dropdown.current-dropdown:before {
   line-height: 18px;
   width: 18px;
   height: 18px;
+  opacity: 1;
 }
 
 /* Mobile */
@@ -1340,6 +1341,8 @@ ul.nav li.has-dropdown.current-dropdown:before {
     line-height: 23px;
     width: 23px;
     height: 23px;
+    top: -12px;
+    right: -15px;
   }
 
 }
