@@ -1111,3 +1111,8 @@ form.searchform  button {
   box-shadow: 0px 5px 20px rgba(10, 19, 60, 0.15);
 }
 
+.yith-similar-products > h2, .wc-prl-recommendations > .wc-prl-title {
+  text-transform: capitalize;
+}
+
+
