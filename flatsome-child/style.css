@@ -1268,6 +1268,13 @@ ul.nav li.has-dropdown.current-dropdown:before {
     padding-left: 25px;
   }
 
+  .off-canvas-center .nav-sidebar.nav-vertical>li .toggle {
+    top: 50%;
+    right: 10px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
   .off-canvas-center .nav-sidebar.nav-vertical>li a {
     font-weight: 500;
     font-size: 14px;
