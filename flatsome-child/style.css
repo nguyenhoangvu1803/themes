@@ -1056,7 +1056,7 @@ input.shipping_method {
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
-    transform: color .3s, border .3s, background .3s, opacity .3s;
+    transition: color .3s, border .3s, background .3s, opacity .3s;
 }
 input.shipping_method:before {
     content: '\2714';
@@ -1069,7 +1069,7 @@ input.shipping_method:before {
     text-align: center;
     opacity: 0;
 }
-input.shipping_method:check:before {
+input.shipping_method:checked:before {
     opacity: 1;
 }
 .woocommerce-Button,
