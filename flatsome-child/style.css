@@ -1112,8 +1112,10 @@ ul.woocommerce-order-overview li label {
   width: initial;
 }
 
+@media only screen and (min-width: 769px) {
 .header-main > .header-inner {
   align-items: flex-end;
+}
 }
 
 .form-flat input:not([type="submit"]), .form-flat textarea, .form-flat select {
