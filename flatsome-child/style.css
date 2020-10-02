@@ -1212,7 +1212,7 @@ input[type="checkbox"]:checked:before {
   opacity: 0 !important;
 }
 
-.nav-dropdown-has-arrow li.has-dropdown > .sub-menu:after {
+li.has-dropdown > .sub-menu:after {
   width: 17px;
   height: 17px;
   border: 1px solid #E5E5E5;
@@ -1227,7 +1227,7 @@ input[type="checkbox"]:checked:before {
   transform: translateY(-50%) rotate(45deg);
 }
 
-.nav-dropdown-has-arrow li.has-dropdown.current-dropdown > .sub-menu:after {
+li.has-dropdown.current-dropdown > .sub-menu:after {
   visibility: visible;
 }
 
