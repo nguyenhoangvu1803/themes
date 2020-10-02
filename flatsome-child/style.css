@@ -1262,7 +1262,8 @@ ul.nav li.has-dropdown.current-dropdown:before {
     max-width: initial;
   }
 
-  .off-canvas-center .nav-sidebar.nav-vertical>li>a {
+  .off-canvas-center .nav-sidebar.nav-vertical>li>a,
+  .nav-anim > .search-form {
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -1280,6 +1281,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
 
   .off-canvas-center .mfp-content {
     max-width: initial;
+  }
+
+  .mfp-bg.off-canvas-center:not(.dark) {
+    opacity: 1;
   }
 
 }
