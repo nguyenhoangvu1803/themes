@@ -272,6 +272,12 @@ input[type='search']::placeholder {
   margin:auto;
 }
 
+.woocommerce-checkout .woocommerce > .woocommerce-form-login,
+.woocommerce-checkout .woocommerce > .woocommerce-form-coupon {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .account-login-inner,
 .account-register-inner,
 .account-login-inner > h3,
