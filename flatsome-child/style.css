@@ -262,7 +262,8 @@ input[type='search']::placeholder {
 
 .account-login-inner,
 .account-register-inner,
-.lost_reset_password {
+.lost_reset_password,
+.woocommerce-form-login {
   max-width:468px;
   border:1px solid #e5e5e5;
   border-radius:3px;
@@ -1140,7 +1141,7 @@ form.searchform  button {
 }
 
 .remember-and-lost label,
-.woocommerce-shipping-fields .woocommerce-form__label {
+.woocommerce-form__label {
   font-weight: 500 !important;
   font-size: 13px;
   line-height: 1.6;
@@ -1173,5 +1174,10 @@ input[type="checkbox"]:before {
 
 input[type="checkbox"]:checked:before {
   opacity: 1;
+}
+
+.woocommerce-checkout .woocommerce-form-login .woocommerce-form__label-for-checkbox {
+  line-height: 1.6;
+  margin-bottom: 17px;
 }
 
