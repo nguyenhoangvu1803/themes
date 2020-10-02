@@ -542,7 +542,7 @@ table.variations {
 }
 
 @media screen and (min-width:550px) {
-  .sticky-add-to-cart>.single_add_to_cart_button,
+  .sticky-add-to-cart:not(.sticky-add-to-cart--active)>.single_add_to_cart_button,
   .woocommerce-variation-add-to-cart>.single_add_to_cart_button,
   .quick_buy_container .wc_quick_buy_button {
     width:calc(100% - 29% - 15px);
