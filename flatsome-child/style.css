@@ -232,13 +232,10 @@ input[type='search']::placeholder {
 .header-button {
   font-size:12px;
   font-weight:500;
-}
-
-.header-button a {
-  font-size:12px;
-  font-weight:500;
-  line-height:20px;
-  padding:0 10px;
+  letter-spacing: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  line-height: 20px
 }
 
 .breadcrumbs a:last-child {
