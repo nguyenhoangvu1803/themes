@@ -1050,6 +1050,28 @@ ul.woocommerce-shipping-methods li {
   margin-left: 0;
   margin-bottom: 0;
 }
+input.shipping_method {
+    width: 21px;
+    height: 21px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    transform: color .3s, border .3s, background .3s, opacity .3s;
+}
+input.shipping_method:before {
+    content: '\2714';
+    width: 21px;
+    height: 21px;
+    background: #000;
+    color: #fff;
+    border-radius: 12px;
+    display: inline-block;
+    text-align: center;
+    opacity: 0;
+}
+input.shipping_method:check:before {
+    opacity: 1;
+}
 .woocommerce-Button,
 .woocommerce-form .button,
 .woocommerce-form button,
