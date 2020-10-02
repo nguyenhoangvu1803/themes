@@ -1115,4 +1115,7 @@ form.searchform  button {
   text-transform: capitalize;
 }
 
-
+.single_variation_wrap .flag-body {
+  display: flex;
+  align-items: center;
+}

@@ -41,7 +41,7 @@ global $product;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <?php $pieces = rand(5, 15); ?>
   <div class="flag-body" style="font-size: 15px;color: #000;">
-    <svg width="39" height="20" viewBox="0 0 39 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="39" height="20" viewBox="0 0 39 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
 	<path d="M16.3586 2.13796C16.7393 0.869005 17.9073 0 19.2321 0H34.9679C36.9775 0 38.4188 1.93721 37.8414 3.86204L33.6414 17.862C33.2607 19.131 32.0927 20 30.7679 20H15.0321C13.0225 20 11.5812 18.0628 12.1586 16.138L16.3586 2.13796Z" fill="#53A42F"/>
 	<path d="M25.5 5L23 12H28.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
 	<line x1="11.25" y1="3.75" x2="0.75" y2="3.75" stroke="#53A42F" stroke-width="1.5" stroke-linecap="round"/>
