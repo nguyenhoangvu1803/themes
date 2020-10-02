@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <h1 class="product-title product_title entry-title">
 	<?php the_title(); ?>
 </h1>
-<div style="margin-top:-7px;margin-bottom:5px">
+<div class="hide-for-medium" style="margin-top:-7px;margin-bottom:5px">
   <span class="star">
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>

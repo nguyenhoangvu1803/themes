@@ -1356,6 +1356,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
     text-align: left !important;
   }
 
+  .single-product .product-info .product-title {
+    display: none important;
+  }
+
 }
 
 /* Mobile */ 
