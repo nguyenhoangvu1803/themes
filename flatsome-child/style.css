@@ -1221,5 +1221,10 @@ input[type="checkbox"]:checked:before {
   border-bottom: none;
   border-right: none;
   border-radius: 4px;
+  opacity: 0;
+}
+
+.nav-dropdown-has-arrow li.has-dropdown.current-dropdown:before {
+  opacity: 1;
 }
 
