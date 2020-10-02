@@ -1056,7 +1056,6 @@ input.shipping_method {
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
-    transition: color .3s, border .3s, background .3s, opacity .3s;
 }
 input.shipping_method:before {
     content: '\2714';
