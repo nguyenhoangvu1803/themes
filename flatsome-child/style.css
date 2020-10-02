@@ -604,6 +604,7 @@ ul.product-tabs li a span {
 
 .quantity.buttons_added .is-form:hover {
   background-color: #fff;
+  box-shadow: none;
 }
 
 .quantity.buttons_added .minus.is-form {
