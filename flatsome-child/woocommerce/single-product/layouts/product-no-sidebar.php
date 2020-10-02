@@ -3,18 +3,21 @@
     <div class="row content-row mb-0">
 
     	<div class="product-gallery large-<?php echo flatsome_option('product_image_width'); ?> col">
-    	<?php
-            
-            wc_get_template( 'single-product/title.php' ); 
 
-    		/**
-    		 * woocommerce_before_single_product_summary hook
-    		 *
-    		 * @hooked woocommerce_show_product_sale_flash - 10
-    		 * @hooked woocommerce_show_product_images - 20
-    		 */
-    		do_action( 'woocommerce_before_single_product_summary' );
-    	?>
+            <div class="title-on-mobi hide-for-large">
+                <?php wc_get_template( 'single-product/title.php' ); ?>
+            </div>
+        	
+            <?php
+        		/**
+        		 * woocommerce_before_single_product_summary hook
+        		 *
+        		 * @hooked woocommerce_show_product_sale_flash - 10
+        		 * @hooked woocommerce_show_product_images - 20
+        		 */
+        		do_action( 'woocommerce_before_single_product_summary' );
+        	?>
+
     	</div>
 
     	<div class="product-info summary col-fit col entry-summary <?php flatsome_product_summary_classes();?>">
