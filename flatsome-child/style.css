@@ -1286,6 +1286,8 @@ ul.nav li.has-dropdown.current-dropdown:before {
 
   .off-canvas-center .mfp-content {
     max-width: initial;
+    padding-top: 0;
+    vertical-align: top;
   }
 
   .mfp-bg.off-canvas-center:not(.dark) {
@@ -1310,11 +1312,15 @@ ul.nav li.has-dropdown.current-dropdown:before {
   }
 
   .nav-anim.nav-vertical>li.header-search-form {
-    border: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
   }
 
   .nav-anim.nav-vertical>li.header-search-form > .header-search-form-wrapper {
     padding-bottom: 20px;
+  }
+
+  .has-off-canvas .current-lightbox-clicked {
+    opacity: 1 !important;
   }
 
 }
