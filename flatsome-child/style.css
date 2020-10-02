@@ -1209,8 +1209,6 @@ input[type="checkbox"]:checked:before {
 }
 
 .nav-dropdown-has-arrow li.has-dropdown:before {
-  transition: opacity .25s;
-  opacity: 1;
   width: 17px;
   height: 17px;
   border: 1px solid #E5E5E5;
