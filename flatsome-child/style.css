@@ -1120,9 +1120,15 @@ form.searchform  button {
   text-transform: capitalize;
 }
 
-.single_variation_wrap .flag-body {
+.single_variation_wrap .flag-body,
+.remember-and-lost > .woocommerce-form__label-for-checkbox  {
   display: flex;
   align-items: center;
+}
+
+.woocommerce-form__input-checkbox {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 input[type="checkbox"] {
