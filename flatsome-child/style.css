@@ -38,6 +38,8 @@ label {
 .nav-dropdown>li>a,
 .nav-column>li>a {
   color:#9E9FA7;
+  font-weight: 500;
+  font-size: 14px;
  }
 
 .nav-line-bottom>li>a:before,
@@ -1193,3 +1195,14 @@ input[type="checkbox"]:checked:before {
   align-items: center;
 }
 
+.nav-dropdown {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.nav-dropdown-default .nav-column li>a, .nav-dropdown.nav-dropdown-default>li>a {
+  margin: 0;
+}
