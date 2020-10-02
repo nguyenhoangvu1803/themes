@@ -1337,12 +1337,17 @@ ul.nav li.has-dropdown.current-dropdown:before {
     padding-right: 21px;
   }
 
+  i[data-icon-label]:after {
+    background: #FF9E45 !important;
+  }
+
   [data-icon-label]:after {
     line-height: 23px;
     width: 23px;
     height: 23px;
     top: -12px;
     right: -15px;
+    color: #000;
   }
 
 }
