@@ -1244,7 +1244,7 @@ ul.nav li.has-dropdown.current-dropdown:before {
   opacity: 1;
 }
 
-/* Mobile */
+/* Tablet & Mobile */
 
 @media only screen and (max-width: 768px) {
 
@@ -1347,5 +1347,19 @@ ul.nav li.has-dropdown.current-dropdown:before {
     color: #000;
   }
 
+  .product-page-title .medium-text-center {
+    text-align: left !important;
+  }
+
+}
+
+/* Mobile */ 
+@media only screen and (max-width: 549px) {
+  .small-nav-collapse>li {
+    width: initial;
+    margin: 0 !important;
+    padding: 0 10px;
+    text-align: center;
+  }
 }
 
