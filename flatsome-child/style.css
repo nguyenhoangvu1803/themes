@@ -1188,3 +1188,8 @@ input[type="checkbox"]:checked:before {
   margin-bottom: 17px;
 }
 
+.content-center {
+  display: flex;
+  align-items: center;
+}
+
