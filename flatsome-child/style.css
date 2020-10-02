@@ -1140,7 +1140,7 @@ form.searchform  button {
 
 .remember-and-lost label,
 .woocommerce-shipping-fields .woocommerce-form__label {
-  font-weight: 500;
+  font-weight: 500 !important;
   font-size: 13px;
   line-height: 1.6;
 }
