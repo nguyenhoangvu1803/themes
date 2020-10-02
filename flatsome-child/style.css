@@ -1304,7 +1304,7 @@ ul.nav li.has-dropdown.current-dropdown:before {
 
   .mfp-bg.main-menu-overlay,
   .mfp-wrap.off-canvas {
-    top: 92px;
+    top: 92px !important;
   }
 
   .off-canvas .sidebar-menu {
