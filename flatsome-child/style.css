@@ -1292,5 +1292,13 @@ ul.nav li.has-dropdown.current-dropdown:before {
     opacity: 1;
   }
 
+  .nav-anim.nav-vertical>li.html {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .nav-anim.nav-vertical>.html_topbar_right {
+    display: none;
+  }
+
 }
 
