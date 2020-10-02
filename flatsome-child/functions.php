@@ -420,11 +420,6 @@ function uoy_custom_css() {
 add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
-add_filter( 'woocommerce_product_variation_title_include_attributes', 'custom_product_variation_title', 10, 2 );
-function custom_product_variation_title($should_include_attributes, $product){
-    $should_include_attributes = false;
-    return $should_include_attributes;
-}
 
 
 
