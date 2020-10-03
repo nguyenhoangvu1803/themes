@@ -215,7 +215,7 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
     // $currency_symbol = get_woocommerce_currency_symbol();
     // $saved = $regular_price - $sale_price;
     $percentage = ( $regular_price - $sale_price ) / $regular_price * 100;
-    $html = "<div style='font-size:13px; color: #828282;'>The best offer you've ever seen, <span style='font-weight: 500; color: #000000'>only this" . date('F') . ".</span></div>";
+    $html = "<div style='font-size:13px; color: #828282; font-weight: 400;'>The best offer you've ever seen, <span style='font-weight: 500; color: #000000'>only this" . date('F') . ".</span></div>";
     return $html . '
         <ins>' . wc_price( $sale_price ) . '</ins>
         <del>' . wc_price( $regular_price ) . '</del>
