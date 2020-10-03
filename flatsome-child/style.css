@@ -1422,7 +1422,7 @@ ul.nav li.has-dropdown.current-dropdown:before {
   }
 
   .nav-small.nav>li.html {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
   }
 
@@ -1449,5 +1449,12 @@ ul.nav li.has-dropdown.current-dropdown:before {
     padding-right: 20px;
   }
 
+}
+
+/* Mobile Small */
+@media only screen and (max-width: 375px) {
+  .nav-small.nav>li.html {
+    font-size: 11px;
+  }
 }
 
