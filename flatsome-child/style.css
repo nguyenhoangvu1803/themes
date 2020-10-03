@@ -1433,6 +1433,11 @@ ul.nav li.has-dropdown.current-dropdown:before {
     padding-right: 5px;
   }
 
+  .small-nav-collapse>li{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   .small-nav-collapse>li>a {
     font-size: 12px;
   }
