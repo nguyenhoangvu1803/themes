@@ -1254,6 +1254,18 @@ ul.nav li.has-dropdown.current-dropdown:before {
   display: none;
 }
 
+.best-offer {
+  font-size:13px; 
+  font-weight: 400;
+  color: #828282;
+  margin-bottom: 10px;
+}
+
+.best-offer span {
+  font-weight: 500; 
+  color: #000000
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 768px) {

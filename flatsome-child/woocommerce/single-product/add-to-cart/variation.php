@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 <script type="text/template" id="tmpl-variation-template">
 	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
 	<div class="woocommerce-variation-price">
-		<div style="font-size:13px; color: #828282;">The best offer you've ever seen, <span style="font-weight: 500; color: #000000">only this <?php echo date('F'); ?>.</span></div>
+		<div class="best-offer">The best offer you've ever seen, <span>only this <?php echo date('F'); ?>.</span></div>
 		{{{ data.variation.price_html }}}
 	</div>
 	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
