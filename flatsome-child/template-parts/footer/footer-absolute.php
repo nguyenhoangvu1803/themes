@@ -12,7 +12,7 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
 
 ?>
 
-<div class="absolute-footer <?php echo flatsome_option('footer_bottom_text'); ?> medium-text-center <?php echo $align;?>">
+<div class="absolute-footer <?php echo flatsome_option('footer_bottom_text'); ?> medium-text-center <?php echo $align;?> hide-for-small">
   <div class="container clearfix">
 
     <?php if ( $flatsome_footer_right_text || $flatsome_absolute_footer_secondary ) : ?>
