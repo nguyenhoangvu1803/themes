@@ -1451,10 +1451,4 @@ ul.nav li.has-dropdown.current-dropdown:before {
 
 }
 
-/* Mobile Small */
-@media only screen and (max-width: 375px) {
-  .nav-small.nav>li.html {
-    font-size: 11px;
-  }
-}
 
