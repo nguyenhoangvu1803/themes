@@ -1266,6 +1266,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
   color: #000000
 }
 
+img.size-full.alignnone {
+  margin-bottom: 0;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 768px) {
