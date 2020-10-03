@@ -1437,5 +1437,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
     padding-right: 5px;
   }
 
+  .tab-panels {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
 }
 
