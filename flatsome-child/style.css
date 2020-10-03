@@ -262,7 +262,7 @@ input[type='search']::placeholder {
 .account-login-inner,
 .account-register-inner,
 .lost_reset_password,
-.woocommerce-form-login,
+.woocommerce-checkout .woocommerce-form-login,
 form.woocommerce-form-coupon {
   max-width:468px;
   border:1px solid #e5e5e5;
