@@ -1428,5 +1428,10 @@ ul.nav li.has-dropdown.current-dropdown:before {
     width: calc(100% - 144px - 16px);
   }
 
+  .button, button, input[type='submit'], input[type='reset'], input[type='button'] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
 }
 
