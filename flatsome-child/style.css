@@ -1379,6 +1379,11 @@ ul.nav li.has-dropdown.current-dropdown:before {
     display: none;
   }
 
+  .woocommerce-product-gallery .flex-viewport {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
 }
 
 /* Mobile */ 
