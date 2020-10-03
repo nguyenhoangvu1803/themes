@@ -1415,6 +1415,11 @@ ul.nav li.has-dropdown.current-dropdown:before {
     max-width:144px;
   }
 
+  .nav-small.nav>li.html {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
   .sticky-add-to-cart:not(.sticky-add-to-cart--active)>.single_add_to_cart_button,
   .woocommerce-variation-add-to-cart>.single_add_to_cart_button,
   .quick_buy_container .wc_quick_buy_button {
