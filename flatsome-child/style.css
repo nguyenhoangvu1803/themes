@@ -1404,8 +1404,12 @@ ul.nav li.has-dropdown.current-dropdown:before {
   .small-nav-collapse>li {
     width: initial;
     margin: 0 !important;
-    padding: 0 10px;
+    padding: 0 5px;
     text-align: center;
+  }
+
+  ul.small-nav-collapse>li>a {
+    font-size: 12px;
   }
 
   .product-title {
@@ -1431,15 +1435,6 @@ ul.nav li.has-dropdown.current-dropdown:before {
   .button, button, input[type='submit'], input[type='reset'], input[type='button'] {
     padding-left: 5px;
     padding-right: 5px;
-  }
-
-  .small-nav-collapse>li{
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .small-nav-collapse>li>a {
-    font-size: 12px;
   }
 
 }
