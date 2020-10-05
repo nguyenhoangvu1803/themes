@@ -1489,7 +1489,7 @@ img.size-full.alignnone {
     float: left;
   }
 
-  .footer-style > .col:first-child .col-inner {
+  .footer-style > .col:first-child > .col-inner {
     border: 1px solid #E1E3F0;
   }
 
