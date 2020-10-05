@@ -52,8 +52,8 @@ global $product;
   </div>
   <div style="font-size: 13px;color: #4F4F4F;margin-bottom: 20px;">This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: 500;color: #000;">Get it before it's gone!</span></div>
   <div class="text-center">
-  <img style="margin-bottom: 22px;" alt="credit cards" src="https://149.28.149.209/wp-content/uploads/2020/09/guaranteed-safe-checkout-single.png">
-  <img src="https://149.28.149.209/wp-content/uploads/2020/09/4-step.png" alt="">
+  	<img style="margin-bottom: 22px;" alt="credit cards" src="https://149.28.149.209/wp-content/uploads/2020/09/guaranteed-safe-checkout-single.png">
+  	<img src="https://149.28.149.209/wp-content/uploads/2020/09/4-step.png" alt="">
   </div>
   <script>
 		function getRandomInt(max) {
