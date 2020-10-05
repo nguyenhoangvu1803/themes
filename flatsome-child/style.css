@@ -1571,3 +1571,8 @@ img.size-full.alignnone {
   }
 
 }
+@media only screen and (max-width: 375px) {
+  .add-to-cart-quickview a {
+    font-size: 14px;
+  }
+}
