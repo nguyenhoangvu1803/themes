@@ -40,12 +40,8 @@ global $product;
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	
-
-
 	<?php if ( is_active_sidebar( 'after-add-to-card-custom-content' ) ) { ?>
 	    <div class="sidebar-after-add-to-card-custom-content">
-	        <?php //dynamic_sidebar('after-add-to-card-custom-content'); ?>
 	        <?php 
 				ob_start();
 				dynamic_sidebar( 'after-add-to-card-custom-content' ); 
@@ -62,25 +58,6 @@ global $product;
 	    </div>
 	<?php } ?>
 
-
-
-
-  <?php $pieces = rand(5, 15); ?>
-  <div class="flag-body" style="font-size: 15px;color: #000;">
-    <svg width="39" height="20" viewBox="0 0 39 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
-	<path d="M16.3586 2.13796C16.7393 0.869005 17.9073 0 19.2321 0H34.9679C36.9775 0 38.4188 1.93721 37.8414 3.86204L33.6414 17.862C33.2607 19.131 32.0927 20 30.7679 20H15.0321C13.0225 20 11.5812 18.0628 12.1586 16.138L16.3586 2.13796Z" fill="#53A42F"/>
-	<path d="M25.5 5L23 12H28.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-	<line x1="11.25" y1="3.75" x2="0.75" y2="3.75" stroke="#53A42F" stroke-width="1.5" stroke-linecap="round"/>
-	<line x1="9.25" y1="9.75" x2="0.75" y2="9.75" stroke="#53A42F" stroke-width="1.5" stroke-linecap="round"/>
-	<line x1="7.25" y1="15.75" x2="0.75" y2="15.75" stroke="#53A42F" stroke-width="1.5" stroke-linecap="round"/>
-	</svg>
-	Almost gone. <span style="font-weight: 500;">There are only <?php  echo rand(2, 5); ?> left.</span>
-  </div>
-  <div style="font-size: 13px;color: #4F4F4F;margin-bottom: 20px;">This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: 500;color: #000;">Get it before it's gone!</span></div>
-  <div class="text-center">
-  	<img style="margin-bottom: 22px;" alt="credit cards" src="https://149.28.149.209/wp-content/uploads/2020/09/guaranteed-safe-checkout-single.png">
-  	<img src="https://149.28.149.209/wp-content/uploads/2020/09/4-step.png" alt="">
-  </div>
   <script>
 		function getRandomInt(max) {
 		return Math.floor(Math.random() * Math.floor(max));
