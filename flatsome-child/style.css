@@ -1550,4 +1550,17 @@ img.size-full.alignnone {
     border-bottom: none;
   }
 
+  .woocommerce-checkout .card-header-top > .container > a {
+    float: left;
+  }
+
+  .woocommerce-checkout .card-header-top .message-container a {
+    float: right;
+    color: #505261;
+  }
+
+  .woocommerce-checkout .card-header-top .message-container a svg {
+    display: none;
+  }
+
 }
