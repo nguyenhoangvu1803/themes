@@ -463,15 +463,12 @@ span.amount {
   left:13px;
   font-size: 16px;
   line-height: 17px;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAYAAADpeqZqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABCSURBVHgBldBBCgAgCETRjtpN9OYTYkJEo/YXLpS3cYxmAATe/AWObGT6AhrLSFpgH/QFKWCwBATWgMAaHDD9prUAvK+yESiA41cAAAAASUVORK5CYII=');
+  background: transparent;
 }
 
 .radioSelectContainer > label > input:checked + span:before {
-  content:'\2714';
-  border-color:#000;
-  background:#000;
-  color:#fff;
-  text-align:center;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADoSURBVHgBtZWBDYQgDEWbm8QRHMERbgPZREdwE93A20A3cYReeykGSHuC3P3kYwLlpVKsALY68kTeyAcZ5bnJfAsFasirQK48S/xX9UFWuT5knwnECvfaK5dmqGXchNC5Eui9emD7I6B396DBwQ0NwwCICM65dOnJw1aaDQHRi6DpOvPiAnGQEqgCx3G0ChZPevHmG0DvOFMO1sAFwEM90xRcADzPdNIWQ3ABEIX36UZ4Bc4Ess/utVpBV7ch8QKBGvjDt89ylVAHhhzc66cmMDyKJRP4gozOH4qryNdjh/gftct8Z218A1BzrcExbsfNAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
 }
 
 .radioSelectContainer > label > span:hover {
