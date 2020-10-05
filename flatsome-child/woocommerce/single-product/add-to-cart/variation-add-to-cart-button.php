@@ -39,6 +39,13 @@ global $product;
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<?php if ( is_active_sidebar( 'after-add-to-card-custom-content' ) ) { ?>
+	    <div class="sidebar-after-add-to-card-custom-content">
+	        <?php dynamic_sidebar('after-add-to-card-custom-content'); ?>
+	    </div>
+	<?php } ?>
+
   <?php $pieces = rand(5, 15); ?>
   <div class="flag-body" style="font-size: 15px;color: #000;">
     <svg width="39" height="20" viewBox="0 0 39 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
@@ -48,7 +55,7 @@ global $product;
 	<line x1="9.25" y1="9.75" x2="0.75" y2="9.75" stroke="#53A42F" stroke-width="1.5" stroke-linecap="round"/>
 	<line x1="7.25" y1="15.75" x2="0.75" y2="15.75" stroke="#53A42F" stroke-width="1.5" stroke-linecap="round"/>
 	</svg>
-	Almost gone.</span> <span style="font-weight: 500;">There are only <?php  echo rand(2, 5); ?> left.</span>
+	Almost gone. <span style="font-weight: 500;">There are only <?php  echo rand(2, 5); ?> left.</span>
   </div>
   <div style="font-size: 13px;color: #4F4F4F;margin-bottom: 20px;">This <?php echo date('F'); ?>, we only do <?php echo $pieces; ?> pieces of this limited edition. <span style="font-weight: 500;color: #000;">Get it before it's gone!</span></div>
   <div class="text-center">
