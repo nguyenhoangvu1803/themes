@@ -51,6 +51,12 @@ global $product;
 				dynamic_sidebar( 'after-add-to-card-custom-content' ); 
 				$output = ob_get_contents();
 				ob_end_clean();
+				$replace = array(
+					'{{rand_only}}' => rand(2, 5),
+					'{{date}}' => date('F'),
+					'{{pieces}}' => rand(5, 15)
+				);
+				$output = str_replace( array_keys( $replace ), $replace, $output );
 				echo $output;
 	        ?>
 	    </div>
