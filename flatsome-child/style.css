@@ -1588,7 +1588,8 @@ img.size-full.alignnone {
     padding-right: 0;
   }
 
-  .woocommerce-order-received .woocommerce-order-details .shop_table tbody tr td:first-child {
+  .woocommerce-order-received .woocommerce-order-details .shop_table tr th:first-child,
+  .woocommerce-order-received .woocommerce-order-details .shop_table tr td:first-child {
     padding-left: 15px;
   }
 
