@@ -1480,7 +1480,7 @@ img.size-full.alignnone {
   }
 
   .footer-style > .col {
-    padding-left: 3px;
+    padding-left: 30px;
     padding-right: 30px;
   }
 
@@ -1490,7 +1490,7 @@ img.size-full.alignnone {
   }
 
   .footer-style > .col:first-child > .col-inner {
-    border: 1px solid #E1E3F0;
+    border-bottom: 1px solid #E1E3F0;
   }
 
 }
