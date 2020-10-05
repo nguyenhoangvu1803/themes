@@ -420,7 +420,22 @@ function uoy_custom_css() {
 add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
-require get_theme_file_path() . '/widget/after-add-to-card-custom-content.php';
+// Add Sidebar Area
+function uoy_sidebar_init() {
+
+  register_sidebar( array(
+    'name'          => __( 'After Add To Card Custom Content', 'flatsome' ),
+    'id'            => 'after-add-to-card-custom-content',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<span class="widget-title after-add-to-card-custom-content">',
+    'after_title'   => '</span><div class="is-divider small"></div>',
+  ) );
+
+
+}
+
+add_action( 'widgets_init', 'uoy_sidebar_init' );
 
 
 // add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
