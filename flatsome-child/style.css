@@ -318,7 +318,7 @@ form.lost_reset_password {
 }
 
 .message-container .widget,
-.message-container a, {
+.message-container a {
   margin:0;
 }
 
