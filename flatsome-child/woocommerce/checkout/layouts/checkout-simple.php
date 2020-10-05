@@ -25,7 +25,9 @@
 						<?php get_template_part( 'template-parts/header/partials/element', 'logo' ); ?>
 						<?php if(!get_theme_mod('check_out_hide_massage')) { ?>
 							<?php if ( is_active_sidebar( 'header-right-checkout' ) ) { ?>
-							    <?php dynamic_sidebar( 'header-right-checkout' ); ?>
+								<div class="message-container right">
+								    <?php dynamic_sidebar( 'header-right-checkout' ); ?>
+								</div>
 							<?php } ?>
 						<?php }?>
 					</div>

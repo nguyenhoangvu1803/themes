@@ -321,6 +321,10 @@ form.lost_reset_password {
   margin:0;
 }
 
+.message-container a img {
+  margin-right: 7px;
+}
+
 .woocommerce-variation-price {
 	border: none;
 }
