@@ -1471,7 +1471,7 @@ img.size-full.alignnone {
 
 }
 
-@media only (min-width: 550px) and (max-width: 849px) { 
+@media screen and (min-width: 550px) and (max-width: 849px) { 
   .medium-text-center .pull-left {
     float: left;
   }
