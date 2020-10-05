@@ -1429,6 +1429,14 @@ img.size-full.alignnone {
     border-top: 1px solid #e5e5e5;
   }
 
+  .cart-collaterals .checkout_coupon {
+    border-bottom: none;
+  }
+
+  .cart-collaterals .shop_table tbody tr td:last-child {
+    border-right: none;
+  }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 849px) { 
