@@ -1506,7 +1506,7 @@ img.size-full.alignnone {
     overflow-x: initial;
   }
 
-  .shop_table tbody tr th:first-child, .shop_table tbody tr td:first-child {
+  .shop_table > tbody > tr > th:first-child, .shop_table > tbody > tr > td:first-child {
     padding-left: 12px;
   }
 
