@@ -461,6 +461,8 @@ span.amount {
   border-radius:100%;
   position:absolute;
   left:13px;
+  font-size: 16px;
+  line-height: 17px;
 }
 
 .radioSelectContainer > label > input:checked + span:before {

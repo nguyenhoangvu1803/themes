@@ -434,7 +434,6 @@ function uoy_sidebar_init() {
 
 
 }
-
 add_action( 'widgets_init', 'uoy_sidebar_init' );
 
 
