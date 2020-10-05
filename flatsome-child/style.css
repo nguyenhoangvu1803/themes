@@ -1506,11 +1506,18 @@ img.size-full.alignnone {
     overflow-x: initial;
   }
 
-  .shop_table_responsive .product-quantity,
-  .shop_table_responsive .product-remove {
+  .shop_table tbody tr th:first-child, .shop_table tbody tr td:first-child {
+    padding-left: 12px;
+  }
+
+  .shop_table_responsive .product-quantity {
     padding-left: 0;
     padding-right: 0;
   }
 
+  .shop_table .product-remove a {
+    top: 5px;
+    transform: translateX(-100%);
+  }
 
 }
