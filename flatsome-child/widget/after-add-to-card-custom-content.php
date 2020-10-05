@@ -68,5 +68,5 @@ class After_Add_To_Card_Custom_Content extends WP_Widget {
     }
  
 }
-$my_widget = new My_Widget();
+$widget_custom_content_after_add_to_card = new After_Add_To_Card_Custom_Content();
 ?>
