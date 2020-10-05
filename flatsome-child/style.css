@@ -1583,7 +1583,18 @@ img.size-full.alignnone {
     font-size: 12px;
   }
 
+  .woocommerce-order-received .woocommerce-order-details {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .woocommerce-order-received .woocommerce-order-details .shop_table tbody tr td:first-child {
+    padding-left: 15px;
+  }
+
+
 }
+
 @media only screen and (max-width: 375px) {
   .add-to-cart-quickview a {
     font-size: 14px;
