@@ -1506,4 +1506,10 @@ img.size-full.alignnone {
     overflow-x: initial;
   }
 
+  .shop_table_responsive .product-quantity {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 157px;
+  }
+
 }
