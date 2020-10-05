@@ -1535,8 +1535,11 @@ img.size-full.alignnone {
     padding-left: 80px;
   }
 
-  .shop_table .shipping__table tbody tr th {
+  .shop_table .shipping__table tbody tr th,
+  .shop_table .shipping__table tbody tr td {
     padding-left: 0;
+    border-top: none;
+    border-bottom: none;
   }
 
 }
