@@ -1535,4 +1535,9 @@ img.size-full.alignnone {
     padding-left: 80px;
   }
 
+  .cart-collaterals .shop_table tbody tr th:first-child {
+    padding-left: 0;
+    border: none;
+  }
+
 }
