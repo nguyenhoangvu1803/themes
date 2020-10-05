@@ -1411,6 +1411,11 @@ img.size-full.alignnone {
     margin-right: -15px;
   }
 
+  .footer-style > .col {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
 }
 
 /* Mobile */ 
@@ -1466,4 +1471,12 @@ img.size-full.alignnone {
 
 }
 
+@media only (min-width: 550px) and (max-width: 849px) { 
+  .medium-text-center .pull-left {
+    float: left;
+  }
 
+  .medium-text-center .pull-right {
+    float: right;
+  }
+}
