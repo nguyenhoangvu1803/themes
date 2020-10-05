@@ -40,11 +40,24 @@ global $product;
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	
+
+
 	<?php if ( is_active_sidebar( 'after-add-to-card-custom-content' ) ) { ?>
 	    <div class="sidebar-after-add-to-card-custom-content">
-	        <?php dynamic_sidebar('after-add-to-card-custom-content'); ?>
+	        <?php //dynamic_sidebar('after-add-to-card-custom-content'); ?>
+	        <?php 
+				ob_start();
+				dynamic_sidebar( 'homepage-infobox' ); 
+				$output = ob_get_contents();
+				ob_end_clean();
+				echo $output;
+	        ?>
 	    </div>
 	<?php } ?>
+
+
+
 
   <?php $pieces = rand(5, 15); ?>
   <div class="flag-body" style="font-size: 15px;color: #000;">
