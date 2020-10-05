@@ -1285,6 +1285,10 @@ img.size-full.alignnone {
   padding: 0;
 }
 
+.background-section {
+  background: linear-gradient(180deg, #F7F7FE 0%, #F7F7FF 100%);
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
