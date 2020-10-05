@@ -48,7 +48,7 @@ global $product;
 	        <?php //dynamic_sidebar('after-add-to-card-custom-content'); ?>
 	        <?php 
 				ob_start();
-				dynamic_sidebar( 'homepage-infobox' ); 
+				dynamic_sidebar( 'after-add-to-card-custom-content' ); 
 				$output = ob_get_contents();
 				ob_end_clean();
 				echo $output;
