@@ -22,7 +22,7 @@
 			<?php get_template_part( 'template-parts/header/partials/element', 'logo' ); ?>
 
 			<?php if ( is_active_sidebar( 'header-right-checkout' ) ) { ?>
-			    <?php dynamic_sidebar( 'after-add-to-card-custom-content' ); ?>
+			    <?php dynamic_sidebar( 'header-right-checkout' ); ?>
 			<?php } ?>
 
 		</div>
