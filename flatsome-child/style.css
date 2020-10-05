@@ -1516,8 +1516,8 @@ img.size-full.alignnone {
   }
 
   .shop_table .product-remove a {
-    top: 5px;
-    transform: translateX(-100%);
+    top: 3px;
+    left: -7px;
   }
 
 }
