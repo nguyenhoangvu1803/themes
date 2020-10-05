@@ -43,6 +43,21 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <h2>My Cart</h2>
 
+<script>
+	function readCookie(name) {
+		var nameEQ = encodeURIComponent(name) + "=";
+		var ca = document.cookie.split(';');
+		for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ')
+						c = c.substring(1, c.length);
+				if (c.indexOf(nameEQ) === 0)
+						return decodeURIComponent(c.substring(nameEQ.length, c.length));
+		}
+		return null;
+	}
+</script>
+
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 <div class="cart-wrapper sm-touch-scroll">
 
@@ -60,20 +75,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		</thead>
 		<tbody>
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
-			<script>
-				function readCookie(name) {
-					var nameEQ = encodeURIComponent(name) + "=";
-					var ca = document.cookie.split(';');
-					for (var i = 0; i < ca.length; i++) {
-							var c = ca[i];
-							while (c.charAt(0) === ' ')
-									c = c.substring(1, c.length);
-							if (c.indexOf(nameEQ) === 0)
-									return decodeURIComponent(c.substring(nameEQ.length, c.length));
-					}
-					return null;
-				}
-			</script>
 			<?php
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
