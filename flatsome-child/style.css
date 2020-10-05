@@ -317,7 +317,8 @@ form.lost_reset_password {
   padding: 30px 35px;
 }
 
-.message-container a {
+.message-container .widget,
+.message-container a, {
   margin:0;
 }
 
