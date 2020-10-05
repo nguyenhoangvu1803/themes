@@ -1424,8 +1424,8 @@ img.size-full.alignnone {
     font-size: 20px;
   }
 
-  .shop_table tbody tr:first-child th, 
-  .shop_table tbody tr:first-child td {
+  .shop_table > tbody > tr:first-child > th, 
+  .shop_table > tbody > tr:first-child > td {
     border-top: 1px solid #e5e5e5;
   }
 
