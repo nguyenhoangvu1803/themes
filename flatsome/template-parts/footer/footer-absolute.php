@@ -12,6 +12,12 @@ $flatsome_footer_right_text = trim( get_theme_mod( 'footer_right_text' ) );
 
 ?>
 
+<div class="section-content relative">
+    <div>
+      asdasldj;alsd;laksd
+    </div>
+</div>
+
 <div class="absolute-footer <?php echo flatsome_option('footer_bottom_text'); ?> medium-text-center <?php echo $align;?>">
   <div class="container clearfix">
 
