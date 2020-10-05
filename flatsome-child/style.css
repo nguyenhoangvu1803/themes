@@ -1506,10 +1506,11 @@ img.size-full.alignnone {
     overflow-x: initial;
   }
 
-  .shop_table_responsive .product-quantity {
+  .shop_table_responsive .product-quantity,
+  .shop_table_responsive .product-remove {
     padding-left: 0;
     padding-right: 0;
-    max-width: 157px;
   }
+
 
 }
