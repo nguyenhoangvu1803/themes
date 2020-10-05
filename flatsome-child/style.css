@@ -1088,6 +1088,7 @@ ul.woocommerce-order-overview li {
   word-break:break-all;
   margin-left:0;
   margin-bottom: 0;
+  font-size: 13px;
 }
 
 ul.woocommerce-order-overview li label {
