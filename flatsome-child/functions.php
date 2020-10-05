@@ -420,6 +420,9 @@ function uoy_custom_css() {
 add_action( 'wp_head', 'uoy_custom_css', 101 );
 
 
+require get_template_directory() . '/widget/after-add-to-card-custom-content.php';
+
+
 // add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
 
 
