@@ -1524,11 +1524,14 @@ img.size-full.alignnone {
     margin-bottom: 30px;
   }
 
-  .stamped-reviews-image {
+  .stamped-reviews-wrapper .stamped-reviews-image {
     width: 60px;
   }
 
-  .stamped-ratings-wrapper > div:not(.stamped-reviews-first) {
+  .stamped-reviews-wrapper .stamped-ratings-wrapper .stamped-reviews-rating,
+  .stamped-reviews-wrapper .stamped-ratings-wrapper .stamped-reviews-message,
+  .stamped-reviews-wrapper .stamped-ratings-wrapper .stamped-reviews-author,
+  .stamped-reviews-wrapper .stamped-ratings-wrapper .stamped-reviews-title {
     padding-left: 80px;
   }
 
