@@ -1520,4 +1520,8 @@ img.size-full.alignnone {
     left: -7px;
   }
 
+  .shop_table, .stamped-reviews-container {
+    margin-bottom: 30px;
+  }
+
 }
