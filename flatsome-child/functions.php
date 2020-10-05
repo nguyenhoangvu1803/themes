@@ -429,9 +429,17 @@ function uoy_sidebar_init() {
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<span class="widget-title after-add-to-card-custom-content">',
-    'after_title'   => '</span><div class="is-divider small"></div>',
+    'after_title'   => '</span>',
   ) );
 
+  register_sidebar( array(
+    'name'          => __( 'Header Right Checkout', 'flatsome' ),
+    'id'            => 'header-right-checkout',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<span class="widget-title header-right-checkout">',
+    'after_title'   => '</span>',
+  ) );
 
 }
 add_action( 'widgets_init', 'uoy_sidebar_init', 11 , 1 );

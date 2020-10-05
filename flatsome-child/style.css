@@ -1565,4 +1565,9 @@ img.size-full.alignnone {
     display: none;
   }
 
+  .notice-order-success, .woocommerce-order-downloads, .woocommerce-order-details, .woocommerce-customer-details {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
 }
