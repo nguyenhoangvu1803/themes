@@ -1416,6 +1416,10 @@ img.size-full.alignnone {
     padding-right: 40px;
   }
 
+  .footer-style > .col:first-child > .col-inner {
+    border-bottom: 1px solid #E1E3F0;
+  }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 849px) { 
@@ -1487,10 +1491,6 @@ img.size-full.alignnone {
   .menu-social > li {
     width: 50%;
     float: left;
-  }
-
-  .footer-style > .col:first-child > .col-inner {
-    border-bottom: 1px solid #E1E3F0;
   }
 
 }
