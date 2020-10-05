@@ -1172,13 +1172,12 @@ input[type="checkbox"]:before {
   left: 0;
   width: 21px;
   height: 21px;
-  background: #000;
-  opacity: 0;
-  border-radius: 3px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACASURBVHgB7ZWxCoAgFEWflkN9QuDgUBD9/680FLT0AUGDDTZ0H74vUNs8cB6ocL2TKopM0EFD6QR4wlVhLLDlhRyk0sMRPhrDwj0zkPFSzGlp6akMXMxo+oEaWkNraA0tGvpSfP5K0MHQSPAAb7kgFS42w0vJBn8plvIac6EDbh/C2BRT4BkXuwAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
 }
 
 input[type="checkbox"]:checked:before {
-  opacity: 1;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAClSURBVHgB5dVBEsIgDAXQX12580gehZvADXTrjhvKDWKisGgJo9F00emfSYeh4XVDAXgncj246I+S9dfqvQbkWGmqXzjDL2WqumsOWCE7QGOMICKEENT35m3DILUwqvXMJ6Rp0NiBKaVR33yiRRb/CPaoNGuwAexRDTaCOrqEjeAYXcIGkD7++20f5pzxbbZ1oBT4phz5ceK6wC/3NrjB545Kgj0BMF86lrPdqrEAAAAASUVORK5CYII=');
 }
 
 .woocommerce-checkout .woocommerce-form-login .woocommerce-form__label-for-checkbox {
