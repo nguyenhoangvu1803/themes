@@ -1570,6 +1570,19 @@ img.size-full.alignnone {
     padding-right: 15px;
   }
 
+  .notice-order-success {
+    font-size: 13px;
+  }
+
+  .notice-order-success h4 {
+    font-size: 15px;
+  }
+
+  .woocommerce-table--order-downloads th, 
+  .woocommerce-table--order-downloads td {
+    font-size: 12px;
+  }
+
 }
 @media only screen and (max-width: 375px) {
   .add-to-cart-quickview a {
