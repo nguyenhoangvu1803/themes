@@ -1524,4 +1524,12 @@ img.size-full.alignnone {
     margin-bottom: 30px;
   }
 
+  .stamped-reviews-image {
+    width: 60px;
+  }
+
+  .stamped-ratings-wrapper > div:not(.stamped-reviews-first) {
+    padding-left: 80px;
+  }
+
 }
