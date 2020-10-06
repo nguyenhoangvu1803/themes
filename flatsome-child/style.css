@@ -1566,10 +1566,12 @@ del span.amount {
   height: 28px;
   border-radius: 100% !important;
   background: transparent;
+  line-height: 28px;
 }
 
 .accordion .active .toggle {
-  color: #243A98;
+  background: #243A98;
+  color: #fff;
 }
 
 /* Tablet & Mobile */
