@@ -447,12 +447,4 @@ add_action( 'widgets_init', 'uoy_sidebar_init', 11 , 1 );
 
 // add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
 
-function filter_woocommerce_get_price_html( $price, $instance ) { 
-    // make filter magic happen here... 
-    print_r($price); 
-    return $price . $instance;
-}; 
-         
-// add the filter 
-add_filter( 'woocommerce_get_price_html', 'filter_woocommerce_get_price_html', 10, 2 ); 
 
