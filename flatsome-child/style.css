@@ -1382,6 +1382,21 @@ del span.amount {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
+.box.box-text-bottom .box-text-inner,
+.box.box-text-bottom .box-text-inner * {
+  color: #000;
+  font-size: 15px;
+}
+
+.box.box-text-bottom:hover .box-image a > div:before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.box.box-text-bottom:hover .box-text-inner,
+.box.box-text-bottom:hover .box-text-inner * {
+  color: #243A98;
+}
+
 .veteran-overlay .box-image a > div:after {
   content: '';
   width: 100%;
