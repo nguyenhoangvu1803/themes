@@ -1489,7 +1489,7 @@ del span.amount {
 }
 
 .testimonial-box .star-rating {
-  width: 80px;
+  width: 120px;
   font-size: 14px;
 }
 
@@ -1497,6 +1497,26 @@ del span.amount {
 .testimonial-box .star-rating span:before {
   color: #FFC209;
   letter-spacing: 2px;
+}
+
+.testimonial-box .star-rating:after {
+  content: '5 Star';
+  position: absolute;
+  right: 0;
+  font-family: Inter;
+  color: #333;
+  font-size: 12px;
+  top: 1px;
+}
+
+.testimonial-box .testimonial-image {
+  border-radius: 3px !important;
+}
+
+.testimonial-box .testimonial-name,
+.testimonial-box .testimonial-company {
+  color: #828282;
+  font-weight: 500;
 }
 
 /* Tablet & Mobile */
