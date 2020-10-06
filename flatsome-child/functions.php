@@ -450,6 +450,7 @@ add_action( 'widgets_init', 'uoy_sidebar_init', 11 , 1 );
 function filter_woocommerce_get_price_html( $price, $instance ) { 
     // make filter magic happen here... 
     print_r($price); 
+    return $price . $instance;
 }; 
          
 // add the filter 
