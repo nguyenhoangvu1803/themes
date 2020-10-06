@@ -16,7 +16,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="row row-collapse align-middle flip-slide" style="width:100%">
-      <div class="large-6 col flip-page-one">
+      <div class="small-12 medium-6 large-6 col flip-page-one">
       <div class="featured-product col-inner">
         <a href="<?php the_permalink(); ?>">
               <div class="product-image relative">
@@ -28,7 +28,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
         </a>
       </div>
       </div>
-     <div class="large-6 col flip-page-two">
+     <div class="small-12 medium-6 large-6 col flip-page-two">
       <div class="product-info col-inner inner-padding">
           <?php // woocommerce_template_single_meta(); ?>
 
@@ -47,7 +47,9 @@ global $product, $woocommerce_loop, $flatsome_opt;
               <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
             </a>
           </div>
-          <?php woocommerce_template_single_excerpt(); ?>
+          <div class="hide-for-medium">
+            <?php woocommerce_template_single_excerpt(); ?>
+          </div>
           <?php woocommerce_template_single_price();?>
           <a href="<?php the_permalink(); ?>" class="button"><?php _e( 'Add to Cart', 'woocommerce' ); ?></a>
        </div>
