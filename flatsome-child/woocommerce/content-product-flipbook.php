@@ -11,10 +11,7 @@
 
 global $product, $woocommerce_loop, $flatsome_opt;
 
-/* PRODUCT QUICK VIEW HOOKS */
-// add_action( 'woocommerce_single_product_flipbook_summary', 'woocommerce_template_single_price', 10 );
-// add_action( 'woocommerce_single_product_flipbook_summary', 'woocommerce_template_single_excerpt', 20 );
-// add_action( 'woocommerce_single_product_flipbook_summary', 'woocommerce_template_single_meta', 40 );
+/* CUSTOM FLATSOME FLIPBOOK TEMPLATE  */
 
 ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,25 +30,23 @@ global $product, $woocommerce_loop, $flatsome_opt;
         </div>
        <div class="large-6 col flip-page-two">
         <div class="product-info col-inner inner-padding">
-              <?php woocommerce_template_single_meta(); ?>
-              <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-              <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
-                <span class="star">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                </span>
-                <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews">
-                  <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
-                </a>
-              </div>
-              <?php woocommerce_template_single_excerpt(); ?>
-              <!-- <div class="is-divider medium"></div> -->
-              <?php // do_action( 'woocommerce_single_product_flipbook_summary' ); ?>
-              <?php woocommerce_template_single_price();?>
-              <a href="<?php the_permalink(); ?>" class="button"><?php _e( 'Add to Cart', 'woocommerce' ); ?></a>
+            <?php woocommerce_template_single_meta(); ?>
+            <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+              <span class="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </span>
+              <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews">
+                <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
+              </a>
+            </div>
+            <?php woocommerce_template_single_excerpt(); ?>
+            <?php woocommerce_template_single_price();?>
+            <a href="<?php the_permalink(); ?>" class="button"><?php _e( 'Add to Cart', 'woocommerce' ); ?></a>
          </div>
         </div>
 </div>
