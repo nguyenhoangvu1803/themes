@@ -16,7 +16,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="row row-collapse align-middle flip-slide" style="width:100%">
-      <div class="small-12 medium-6 large-6 col flip-page-one">
+      <div class="small-12 medium-5 large-6 col flip-page-one">
       <div class="featured-product col-inner">
         <a href="<?php the_permalink(); ?>">
               <div class="product-image relative">
@@ -28,7 +28,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
         </a>
       </div>
       </div>
-     <div class="small-12 medium-6 large-6 col flip-page-two">
+     <div class="small-12 medium-7 large-6 col flip-page-two">
       <div class="product-info col-inner inner-padding">
           <?php // woocommerce_template_single_meta(); ?>
 
