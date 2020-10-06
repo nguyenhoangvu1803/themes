@@ -1519,6 +1519,13 @@ del span.amount {
   font-weight: 500;
 }
 
+.testimonial-box .testimonial-company:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADSSURBVHgBlZLRDYIwEIavlQFwA0ZgA+Ik6gb6aHhoJSHx0REcATdghI5QJxAHAPxPCyGEaPsnhf/S+3ptr4IWpLWO8VPOH5dyxAxIhBBbjANChqnve4txhjWYNyNYFMXT+Zj8ZDlXOsAXYiX8YbChQPH2GXxRuB4MGgqXkSgbDIKpZBRFVSBkuS0yz3Ou6A27nn5ulbqu29O3P38hVLuNIIIG8OYXzJBSSg/xajB1XTdZlt1h13hy6YThPp8AXaYLiaXVy7JM27a9umPssCM7z3kDYnpbD3E3LPMAAAAASUVORK5CYII=');
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
