@@ -17,6 +17,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
 // add_action( 'woocommerce_single_product_flipbook_summary', 'woocommerce_template_single_meta', 40 );
 
 ?>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <div class="row row-collapse align-middle flip-slide" style="width:100%">
         <div class="large-6 col flip-page-one">
         <div class="featured-product col-inner">
