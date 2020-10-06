@@ -1537,6 +1537,33 @@ del span.amount {
   margin-bottom: -1px;
 }
 
+.accordion {
+  color: #333;
+}
+
+.accordion .accordion-item {
+  background: #F7F7FE;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.accordion .accordion-item a {
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.accordion .accordion-item a.active {
+  font-weight: 600;
+}
+
+.accordion .toggle {
+  right: 0;
+  left: initial;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
