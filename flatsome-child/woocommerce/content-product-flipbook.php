@@ -34,6 +34,18 @@ global $product, $woocommerce_loop, $flatsome_opt;
         <div class="product-info col-inner inner-padding">
               <?php woocommerce_template_single_meta(); ?>
               <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+              <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+                <span class="star">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </span>
+                <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews">
+                  <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
+                </a>
+              </div>
               <?php woocommerce_template_single_excerpt(); ?>
               <!-- <div class="is-divider medium"></div> -->
               <?php // do_action( 'woocommerce_single_product_flipbook_summary' ); ?>
