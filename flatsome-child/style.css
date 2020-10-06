@@ -852,6 +852,7 @@ ul.product-tabs li a span {
 
 .woocommerce-checkout .card-header-top .message-container a {
   line-height:32px;
+  display: -webkit-flex; /* Safari */
   display:flex;
   align-items:center;
 }
@@ -1140,6 +1141,7 @@ form.searchform  button {
 .single_variation_wrap .flag-body,
 .remember-and-lost > .woocommerce-form__label-for-checkbox,
 .woocommerce-form__label  {
+  display: -webkit-flex; /* Safari */
   display: flex;
   align-items: center;
 }
@@ -1190,6 +1192,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .content-center {
+  display: -webkit-flex; /* Safari */
   display: flex;
   align-items: center;
 }
@@ -1287,6 +1290,19 @@ img.size-full.alignnone {
 
 .background-section {
   background: linear-gradient(180deg, #F7F7FE 0%, #F7F7FF 100%);
+}
+
+.product-info .price-wrapper > .price {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+
+.product-info .price-wrapper > .price del {
+  order: 2;
+}
+
+.product-info .price-wrapper > .price ins {
+  order: 1;
 }
 
 /* Tablet & Mobile */
