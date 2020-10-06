@@ -35,7 +35,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
             <?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">', '</span>' ); ?>
 
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-            <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+            <div class="product-star" style="margin-top:-7px;margin-bottom:20px">
               <span class="star">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>

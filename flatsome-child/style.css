@@ -1310,6 +1310,35 @@ del span.amount {
   opacity: 1;
 }
 
+.product-info .posted_in a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.product-info .entry-title {
+  font-weight: 500;
+}
+
+.product-info .product-short-description {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.product-info .price-wrapper {
+  margin-bottom: 30px;
+}
+
+.product-info .button {
+  padding: 7.5px 67px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
