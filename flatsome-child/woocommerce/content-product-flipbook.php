@@ -30,7 +30,10 @@ global $product, $woocommerce_loop, $flatsome_opt;
         </div>
        <div class="large-6 col flip-page-two">
         <div class="product-info col-inner inner-padding">
-            <?php woocommerce_template_single_meta(); ?>
+            <?php // woocommerce_template_single_meta(); ?>
+
+            <?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">', '</span>' ); ?>
+
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
               <span class="star">
