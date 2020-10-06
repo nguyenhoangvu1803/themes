@@ -1303,6 +1303,11 @@ img.size-full.alignnone {
 
 .product-info .price-wrapper > .price ins {
   order: 1;
+  margin-right: 7px;
+}
+
+del span.amount {
+  opacity: 1;
 }
 
 /* Tablet & Mobile */
