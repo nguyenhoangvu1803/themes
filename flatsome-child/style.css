@@ -1529,6 +1529,14 @@ del span.amount {
     border-right: none;
   }
 
+  .flickity-prev-next-button.previous {
+    left: -2%;
+  }
+
+  .flickity-prev-next-button.next {
+    right: -2%;
+  }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 849px) { 
@@ -1693,6 +1701,18 @@ del span.amount {
 
   .woocommerce-order-received .is-well {
     padding: 15px;
+  }
+
+  .flickity-prev-next-button {
+    display: none;
+  }
+
+  .product-info .entry-title {
+    font-size: 18px;
+  }
+
+  .product-info .button {
+    width: 100%;
   }
 
 }
