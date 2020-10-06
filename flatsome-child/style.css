@@ -1365,6 +1365,10 @@ del span.amount {
   display: none;
 }
 
+.box-shadow, .row-box-shadow-2 .col-inner, .row-box-shadow-2-hover .col-inner:hover, .box-shadow-2, .box-shadow-2-hover:hover {
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
