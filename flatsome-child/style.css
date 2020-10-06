@@ -1361,6 +1361,10 @@ del span.amount {
   color: #243A98;
 }
 
+.flickity-page-dots {
+  display: none;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
