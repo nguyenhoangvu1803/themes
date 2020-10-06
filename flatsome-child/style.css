@@ -1509,7 +1509,7 @@ del span.amount {
   top: 1px;
 }
 
-.testimonial-box .testimonial-image {
+.testimonial-box .testimonial-image, .testimonial-box .testimonial-image img {
   border-radius: 3px !important;
 }
 
