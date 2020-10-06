@@ -1481,6 +1481,11 @@ del span.amount {
   padding: 20px;
 }
 
+.slider-wrapper .col {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
