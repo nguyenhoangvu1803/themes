@@ -1341,10 +1341,6 @@ del span.amount {
 
 .flickity-prev-next-button {
   width: 30px;
-}
-
-.slider-show-nav .flickity-prev-next-button, 
-.slider:hover .flickity-prev-next-button {
   opacity: 1;
 }
 
