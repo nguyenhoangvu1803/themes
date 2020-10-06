@@ -1551,6 +1551,7 @@ del span.amount {
   color: #000;
   font-size: 17px;
   font-weight: 400;
+  border-top: none;
 }
 
 .accordion .accordion-item a.active {
