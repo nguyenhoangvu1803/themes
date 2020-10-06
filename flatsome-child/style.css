@@ -1478,6 +1478,26 @@ del span.amount {
   padding-left: 0;
 }
 
+.slider-wrapper .col-inner {
+  overflow: hidden;
+}
+
+.testimonial-box .testimonial-text {
+  font-style: initial !important;
+  line-height: 1.5;
+  color: #000;
+}
+
+.testimonial-box .star-rating {
+  width: 80px;
+  font-size: 14px;
+}
+
+.testimonial-box .star-rating:before {
+  color: #FFC209;
+  letter-spacing: 2px;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
