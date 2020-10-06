@@ -1339,18 +1339,20 @@ del span.amount {
   font-weight: 600;
 }
 
-.slider-show-nav .flickity-prev-next-button, 
-.slider:hover .flickity-prev-next-button {
-  opacity: 1;
-  left: -60px;
+.flickity-prev-next-button {
   width: 30px;
 }
 
-.flickity-prev-next-button .previous {
+.slider-show-nav .flickity-prev-next-button, 
+.slider:hover .flickity-prev-next-button {
+  opacity: 1;
+}
+
+.flickity-prev-next-button.previous {
   left: -6%;
 }
 
-.flickity-prev-next-button .next {
+.flickity-prev-next-button.next {
   right: -6%;
 }
 
