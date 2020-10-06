@@ -1560,8 +1560,16 @@ del span.amount {
 .accordion .toggle {
   right: 0;
   left: initial;
-  top: 50%;
+  top: 50% !important;
   transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 100% !important;
+  background: transparent;
+}
+
+.accordion .active .toggle {
+  color: #243A98;
 }
 
 /* Tablet & Mobile */
