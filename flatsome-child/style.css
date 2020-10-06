@@ -1473,14 +1473,6 @@ del span.amount {
   background-position: center;
 }
 
-.testimonial-box {
-  background: #FFFFFF;
-  border: 1px solid #E5E5E5;
-  box-sizing: border-box;
-  border-radius: 3px;
-  padding: 20px;
-}
-
 .slider-wrapper .col {
   padding-right: 0;
   padding-left: 0;
