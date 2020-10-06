@@ -1493,6 +1493,7 @@ del span.amount {
   font-size: 14px;
 }
 
+.testimonial-box .star-rating:before,
 .testimonial-box .star-rating span:before {
   color: #FFC209;
   letter-spacing: 2px;
