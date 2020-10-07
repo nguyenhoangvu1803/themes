@@ -1639,16 +1639,18 @@ del span.amount {
   font-size: 18px;
 }
 
-.blog-post-inner button {
+.blog-post-inner button.is-large {
   font-weight: 600;
   font-size: 15px;
-  line-height: 150%;
+  line-height: 15px;
 }
 
 .blog-post-inner button:after {
   content: '';
   width: 17px;
   height: 10px;
+  display: inline-block;
+  margin-left: 3px;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAYAAABSfLWiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACRSURBVHgBtZExCoNAEEX/bDxAsA2p4iHCXiEEco50niB7hHQxVS4Re630EHZaCx5Ax1UQZbtZ8MEMzMC84g8gILp+X1O5ewUJhA6KjSs6QEDb/MvwfCMrM+HpPs25WDKL6jRzRXTRyQ8eEPhh+xH9EAdgJviwXMlSXZm/pBOO9MfAh90EASSowebJcVU839v1CHn/MvkMlDi+AAAAAElFTkSuQmCC');
 }
 
