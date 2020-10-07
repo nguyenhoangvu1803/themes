@@ -2032,6 +2032,11 @@ input[type='button']:hover {
     margin-bottom: 0;
   }
 
+  .accordion .accordion-item a,
+  .accordion .accordion-item .accordion-inner {
+    font-size: 13px;
+  }
+
 }
 
 @media only screen and (max-width: 375px) {
