@@ -2029,6 +2029,10 @@ input[type='button']:hover {
     padding-right: 15px;
   }
 
+  .product-info a {
+    margin-bottom: 0;
+  }
+
 }
 
 @media only screen and (max-width: 375px) {
