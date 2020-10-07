@@ -2046,6 +2046,10 @@ input[type='button']:hover {
     max-width: 60px;
   }
 
+  .shop_table td.product-thumbnail {
+    width: 82px;
+  }
+
 }
 
 @media only screen and (max-width: 375px) {
