@@ -447,4 +447,7 @@ add_action( 'widgets_init', 'uoy_sidebar_init', 11 , 1 );
 
 // add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
 
-
+function uoy_excerpt_more( $more ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'uoy_excerpt_more' );
