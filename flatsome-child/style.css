@@ -2040,14 +2040,12 @@ input[type='button']:hover {
   }
 
   .testimonial-box .testimonial-image, 
-  .testimonial-box .testimonial-image img,
-  .shop_table td.product-thumbnail,
-  .shop_table td.product-thumbnail img {
+  .testimonial-box .testimonial-image img {
     max-width: 60px;
   }
 
   .shop_table td.product-thumbnail {
-    width: 82px;
+    width: 80px;
   }
 
 }
