@@ -433,7 +433,8 @@ span.amount {
 	display: block;
 }
 
-.woocommerce img {
+.woocommerce img,
+.box-image img {
   border-radius:3px;
 }
 
