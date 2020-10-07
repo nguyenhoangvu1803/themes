@@ -1425,6 +1425,10 @@ del span.amount {
   color: #243A98;
 }
 
+.box-text {
+  padding-top: 25px;
+}
+
 .veteran-overlay .box-image a > div:after {
   content: '';
   width: 100%;
