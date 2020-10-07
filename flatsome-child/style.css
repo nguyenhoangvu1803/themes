@@ -1869,11 +1869,13 @@ input[type='button']:hover {
     text-align: center;
   }
 
-  ul.small-nav-collapse>li>a {
+  ul.small-nav-collapse>li>a,
+  .nav-small.nav>li.html {
     font-size: 12px;
   }
 
-  .product-title {
+  .product-title,
+  .product-info .entry-title {
     font-size: 18px;
   }
 
@@ -1883,7 +1885,6 @@ input[type='button']:hover {
   }
 
   .nav-small.nav>li.html {
-    font-size: 12px;
     font-weight: 500;
   }
 
@@ -1980,10 +1981,6 @@ input[type='button']:hover {
     padding-right: 15px;
   }
 
-  .notice-order-success {
-    font-size: 13px;
-  }
-
   .notice-order-success h4 {
     font-size: 15px;
   }
@@ -2017,10 +2014,6 @@ input[type='button']:hover {
     display: none;
   }
 
-  .product-info .entry-title {
-    font-size: 18px;
-  }
-
   .product-info .button {
     width: 100%;
   }
@@ -2037,12 +2030,12 @@ input[type='button']:hover {
     margin-bottom: 0;
   }
 
+  .testimonial-box .testimonial-name, 
+  .testimonial-box .testimonial-company,
   .accordion .accordion-item a,
-  .accordion .accordion-item .accordion-inner {
-    font-size: 13px;
-  }
-
-  .testimonial-box .testimonial-name, .testimonial-box .testimonial-company {
+  .accordion .accordion-item .accordion-inner,
+  .stamped-reviews-container,
+  .notice-order-success {
     font-size: 13px;
   }
 
