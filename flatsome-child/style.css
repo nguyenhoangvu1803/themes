@@ -641,8 +641,13 @@ ul.product-tabs li a span {
 }
 
 .product-small .box-text,
-.product-small .add-to-cart-quickview {
-  padding:0 18px 12px;
+.product-small .add-to-cart-quickview  {
+  padding-left:18px;
+  padding-right:18px;
+}
+
+.product-small .box-text {
+  padding-bottom:12px;
 }
 
 .product-small .add-to-cart-quickview a {
@@ -666,11 +671,13 @@ ul.product-tabs li a span {
 }
 
 .default-padding-col .product-small .col-inner {
-  padding: 18px 18px 0 18px;
+  padding: 18px;
 }
 
-.default-padding-col .product-small .box-text {
+.default-padding-col .product-small .box-text,
+.default-padding-col .product-small .add-to-cart-quickview {
   padding-left: 0;
+  padding-right: 0;
 }
 
 .add-to-cart-quickview a {
