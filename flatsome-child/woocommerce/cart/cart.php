@@ -455,7 +455,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	}
 	.stamped-verified-label:after {
         content: ' \e904  Verified Buyer';
-        font-family: 'Inter';
+        font-family: 'stamped-font', 'Open Sans';
         word-spacing: -5px;
         font-weight: normal;
     }
