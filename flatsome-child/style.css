@@ -503,7 +503,8 @@ ins span {
 
 .price del,
 .product_list_widget del,
-del .woocommerce-Price-amount {
+del .woocommerce-Price-amount,
+.product-small ins span {
   font-size:18px;
 }
 
