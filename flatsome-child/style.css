@@ -1834,6 +1834,14 @@ input[type='button']:hover {
     display: none;
   }
 
+  .blog-post-inner .from_the_blog_excerpt  {
+    font-size: 13px;
+  }
+
+  .blog-post-inner button.is-large {
+    font-size: 14px;
+  }
+
 }
 
 @media screen and (min-width: 550px) and (max-width: 849px) { 
