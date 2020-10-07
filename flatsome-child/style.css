@@ -2039,7 +2039,9 @@ input[type='button']:hover {
     font-size: 13px !important;
   }
 
-  .testimonial-box .testimonial-image, .testimonial-box .testimonial-image img {
+  .testimonial-box .testimonial-image, 
+  .testimonial-box .testimonial-image img,
+  .shop_table td.product-thumbnail {
     max-width: 60px;
   }
 
