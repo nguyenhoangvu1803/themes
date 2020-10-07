@@ -2037,6 +2037,14 @@ input[type='button']:hover {
     font-size: 13px;
   }
 
+  .testimonial-box .testimonial-name, .testimonial-box .testimonial-company {
+    font-size: 13px;
+  }
+
+  .testimonial-box .testimonial-image, .testimonial-box .testimonial-image img {
+    max-width: 60px;
+  }
+
 }
 
 @media only screen and (max-width: 375px) {
