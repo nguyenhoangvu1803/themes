@@ -1654,6 +1654,14 @@ del span.amount {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAYAAABSfLWiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACRSURBVHgBtZExCoNAEEX/bDxAsA2p4iHCXiEEco50niB7hHQxVS4Re630EHZaCx5Ax1UQZbtZ8MEMzMC84g8gILp+X1O5ewUJhA6KjSs6QEDb/MvwfCMrM+HpPs25WDKL6jRzRXTRyQ8eEPhh+xH9EAdgJviwXMlSXZm/pBOO9MfAh90EASSowebJcVU839v1CHn/MvkMlDi+AAAAAElFTkSuQmCC');
 }
 
+.dark .button.is-form:hover, 
+.button:hover, 
+input[type='submit']:hover, 
+input[type='reset']:hover, 
+input[type='button']:hover {
+  box-shadow: 0px 4px 10px rgba(36, 58, 152, 0.3);
+}
+
 
 
 /* Tablet & Mobile */
