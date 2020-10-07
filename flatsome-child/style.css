@@ -534,6 +534,10 @@ table.variations {
   margin-bottom: 25px;
 }
 
+.single-product table.variations {
+  margin-bottom: 0;
+}
+
 .sticky-add-to-cart>.single_add_to_cart_button,
 .woocommerce-variation-add-to-cart>.single_add_to_cart_button,
 .quick_buy_container .wc_quick_buy_button {
