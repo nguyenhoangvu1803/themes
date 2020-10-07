@@ -1606,10 +1606,12 @@ del span.amount {
   font-size: 17px;
   font-weight: 400;
   border-top: none;
+  background: transparent;
 }
 
 .accordion .accordion-item a.active {
   font-weight: 600;
+  border: 1px solid #EEEEEE;
 }
 
 .accordion .toggle {
