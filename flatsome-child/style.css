@@ -1637,6 +1637,7 @@ del span.amount {
 
 .blog-post-inner .post-title.is-large {
   font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .blog-post-inner button.is-large {
