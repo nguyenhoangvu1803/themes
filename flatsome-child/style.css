@@ -601,7 +601,8 @@ ul.product-tabs li a span {
 .quantity.buttons_added .is-form {
   width:48px;
   font-size:20px;
-  margin: 0;
+  margin:0;
+  padding:0;
 }
 
 .quantity.buttons_added .is-form:hover {
