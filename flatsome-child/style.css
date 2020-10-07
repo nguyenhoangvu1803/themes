@@ -1611,7 +1611,7 @@ del span.amount {
 
 .accordion .accordion-item a.active {
   font-weight: 600;
-  border: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
 }
 
 .accordion .toggle {
