@@ -638,6 +638,7 @@ ul.product-tabs li a span {
   border:1px solid #E5E5E5;
   border-radius:3px;
   background: #fff;
+  padding-bottom: 18px;
 }
 
 .product-small .box-text,
@@ -648,6 +649,7 @@ ul.product-tabs li a span {
 
 .product-small .box-text {
   padding-bottom:12px;
+  padding-top: 10px;
 }
 
 .product-small .add-to-cart-quickview a {
