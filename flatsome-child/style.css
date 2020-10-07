@@ -1573,6 +1573,7 @@ del span.amount {
 .accordion .active .toggle {
   background: #243A98;
   color: #fff;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 /* Tablet & Mobile */
