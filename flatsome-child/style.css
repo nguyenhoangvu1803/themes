@@ -2020,6 +2020,10 @@ input[type='button']:hover {
     width: 100%;
   }
 
+  .h2,h2 {
+    font-size: 18px;
+  }
+
 }
 
 @media only screen and (max-width: 375px) {
