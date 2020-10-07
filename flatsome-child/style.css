@@ -2036,7 +2036,7 @@ input[type='button']:hover {
   .accordion .accordion-item .accordion-inner,
   .stamped-reviews-container,
   .notice-order-success {
-    font-size: 13px;
+    font-size: 13px !important;
   }
 
   .testimonial-box .testimonial-image, .testimonial-box .testimonial-image img {
