@@ -2041,7 +2041,8 @@ input[type='button']:hover {
 
   .testimonial-box .testimonial-image, 
   .testimonial-box .testimonial-image img,
-  .shop_table td.product-thumbnail {
+  .shop_table td.product-thumbnail,
+  .shop_table td.product-thumbnail img {
     max-width: 60px;
   }
 
