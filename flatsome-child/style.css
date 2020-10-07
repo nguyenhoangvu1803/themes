@@ -1350,10 +1350,14 @@ del span.amount {
 
 .flickity-prev-next-button.previous {
   left: -4%;
+  -ms-transform: translateX(0) !important;
+  transform: translateX(0) !important;
 }
 
 .flickity-prev-next-button.next {
   right: -4%;
+  -ms-transform: translateX(0) !important;
+  transform: translateX(0) !important;
 }
 
 .flipContainer .flickity-prev-next-button.previous {
@@ -1362,6 +1366,12 @@ del span.amount {
 
 .flipContainer .flickity-prev-next-button.next {
   right: -6%;
+}
+
+.slider-show-nav .flickity-prev-next-button, 
+.slider:hover .flickity-prev-next-button {
+  -ms-transform: translateX(0) !important;
+  transform: translateX(0) !important;
 }
 
 .slider .flickity-prev-next-button svg, 
