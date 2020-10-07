@@ -637,11 +637,17 @@ ul.product-tabs li a span {
 .product-small .col-inner {
   border:1px solid #E5E5E5;
   border-radius:3px;
+  background: #fff;
 }
 
-.product-small .box-text {
-  padding-left:18px;
-  padding-bottom:12px;
+.product-small .box-text,
+.product-small .add-to-cart-quickview {
+  padding:0 18px 12px;
+}
+
+.product-small .add-to-cart-quickview a {
+  margin: 0;
+  width: 100%;
 }
 
 .product-small .product-title {
@@ -657,6 +663,14 @@ ul.product-tabs li a span {
   color:#000;
   font-weight:400;
   font-size: 14px;
+}
+
+.default-padding-col .product-small .col-inner {
+  padding: 18px 18px 0 18px;
+}
+
+.default-padding-col .product-small .box-text {
+  padding-left: 0;
 }
 
 .add-to-cart-quickview a {
