@@ -1436,8 +1436,7 @@ del span.amount {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
-.box.box-text-bottom .box-text-inner,
-.box.box-text-bottom .box-text-inner * {
+.box.box-text-bottom .box-text-inner {
   color: #000;
   font-size: 15px;
 }
