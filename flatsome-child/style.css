@@ -1881,7 +1881,7 @@ input[type='button']:hover {
 
   .buttons_added {
     float:left;
-    max-width:144px;
+    max-width:144px !important;
   }
 
   .nav-small.nav>li.html {
