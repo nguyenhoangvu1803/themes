@@ -503,8 +503,7 @@ ins span {
 
 .price del,
 .product_list_widget del,
-del .woocommerce-Price-amount,
-.product-small ins span {
+del .woocommerce-Price-amount {
   font-size:18px;
 }
 
@@ -653,9 +652,11 @@ ul.product-tabs li a span {
   margin-bottom:15px;
 }
 
-.product-small .amount {
+.product-small .amount,
+.product-small ins span {
   color:#000;
   font-weight:400;
+  font-size: 14px;
 }
 
 .add-to-cart-quickview a {
