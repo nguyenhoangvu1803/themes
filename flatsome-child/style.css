@@ -1669,7 +1669,9 @@ input[type='button']:hover {
   box-shadow: 0px 4px 10px rgba(36, 58, 152, 0.3);
 }
 
-
+.product-type-variable .product-summary > .price-wrapper {
+  display: none;
+}
 
 /* Tablet & Mobile */
 
