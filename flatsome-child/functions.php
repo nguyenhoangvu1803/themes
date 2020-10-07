@@ -379,8 +379,8 @@ function uoy_custom_css() {
           {color: <?php echo $color_primary; ?>;}
 
           /* BACKGROUND-COLOR */
-          .checkout_coupon input[type='submit'].is-form {background-color: 
-          <?php echo $color_primary; ?>;}
+          .checkout_coupon input[type='submit'].is-form, .slider .flickity-prev-next-button:hover svg
+          {background-color: <?php echo $color_primary; ?>;}
 
           /* BORDER COLOR */
           .flex-control-thumbs li img.flex-active, .fl-wrap.fl-is-active > input, .fl-wrap.fl-is-active > textarea, .fl-wrap.fl-has-focus > input , .fl-wrap.fl-has-focus > textarea, form .woocommerce-form-row:hover input, input[type='email']:hover,nput[type='email']:focus,
