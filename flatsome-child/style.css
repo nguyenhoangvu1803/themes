@@ -167,11 +167,11 @@ td {
 }
 
 .h5,h5 {
-  font-size:17px;
+  font-size:16px;
 }
 
 .h6,h6 {
-  font-size:16px;
+  font-size:15px;
 }
 
 .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
@@ -1438,7 +1438,6 @@ del span.amount {
 }
 
 .box.box-text-bottom .box-text-inner {
-  color: #000;
   font-size: 15px;
 }
 
@@ -1631,6 +1630,12 @@ del span.amount {
   color: #fff;
   transform: translateY(-50%) rotate(180deg);
 }
+
+.blog-post-inner .is-divider {
+  display: none;
+}
+
+
 
 /* Tablet & Mobile */
 
