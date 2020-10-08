@@ -5,7 +5,19 @@
     	<div class="product-gallery large-<?php echo flatsome_option('product_image_width'); ?> col">
 
             <div class="title-on-mobi">
-                <?php wc_get_template( 'single-product/title.php' ); ?>
+                <?php // wc_get_template( 'single-product/title.php' ); ?>
+                <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+                  <span class="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </span>
+                  <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews">
+                    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
+                  </a>
+                </div>
             </div>
         	
             <?php
