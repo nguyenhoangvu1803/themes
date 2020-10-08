@@ -197,7 +197,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
-			<!-- <tr>
+			<tr>
 				<td colspan="6" class="actions clear">
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
@@ -206,7 +206,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php fl_woocommerce_version_check( '3.4.0' ) ? wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ) : wp_nonce_field( 'woocommerce-cart' ); ?>
 				</td>
-			</tr> -->
+			</tr>
 
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 		</tbody>
