@@ -1718,6 +1718,10 @@ input[type='button']:hover {
   display: block;
 }
 
+.tabbed-content .nav-vertical .tab a {
+  font-size: 13px;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
