@@ -1722,6 +1722,12 @@ input[type='button']:hover {
   font-size: 13px;
 }
 
+.woocommerce-cart .shop_table tbody tr:last-child td.actions {
+  border: none;
+  padding-left: 0;
+  padding-top: 20px;
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
