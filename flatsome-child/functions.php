@@ -210,7 +210,7 @@ add_filter( 'woocommerce_format_sale_price', 'woocommerce_custom_sales_price', 1
 function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
   global $product;
 
-  $variations = $product->get_variation_attributes();
+  $variations = WC_Product_Variable::get_available_variations();
   $count      = count( $variations );
 
   // Just for variable products on single product pages
