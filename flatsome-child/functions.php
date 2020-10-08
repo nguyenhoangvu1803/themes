@@ -216,8 +216,9 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
     // $saved = $regular_price - $sale_price;
     $percentage = ( $regular_price - $sale_price ) / $regular_price * 100;
     return '
-        <ins>' . wc_price( $sale_price ) . '</ins>
-        <del>' . wc_price( $regular_price ) . '</del>
+    '. $price .'
+        <ins>' . wc_price( $sale_price ) . ' ' . $sale_price . '</ins>
+        <del>' . wc_price( $regular_price ) . ' ' . $regular_price . '</del>
         <span class="product_saving_amount"> You saved ' . round($percentage) . '% this time</span>
     ';
   }
