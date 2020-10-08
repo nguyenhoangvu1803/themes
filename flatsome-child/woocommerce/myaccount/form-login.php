@@ -139,7 +139,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 						<span class="fa fa-star checked"></span>
 					</span>
 					<span class="review-rating">
-						<?php echo do_shortcode('[jgm-review-rating]'); ?> Stars
+						5 Stars
 					</span>
 				</div>
 				<span>Average product rating on Flagwix</span>
