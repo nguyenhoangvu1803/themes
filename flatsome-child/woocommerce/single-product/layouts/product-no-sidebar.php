@@ -5,7 +5,6 @@
     	<div class="product-gallery large-<?php echo flatsome_option('product_image_width'); ?> col">
 
             <div class="title-on-mobi">
-                <?php // wc_get_template( 'single-product/title.php' ); ?>
                 <div class="product-star" style="margin-top:-7px;margin-bottom:5px">
                   <span class="star">
                     <span class="fa fa-star checked"></span>
