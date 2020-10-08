@@ -215,7 +215,8 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
     // $currency_symbol = get_woocommerce_currency_symbol();
     // $saved = $regular_price - $sale_price;
     $percentage = ( $regular_price - $sale_price ) / $regular_price * 100;
-    return $product->get_available_variations();
+    $available_variations = $product->get_available_variations();
+    return $available_variations;
     return '
     '. $price .'
         <ins>' . wc_price( $sale_price ) . ' ' . $sale_price . '</ins>
