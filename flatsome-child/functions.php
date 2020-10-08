@@ -217,10 +217,10 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
     $percentage = ( strip_tags($regular_price) - strip_tags($sale_price) ) / strip_tags($regular_price) * 100;
     // $available_variations = $product->get_available_variations();
     // return $available_variations;
-    $variations = $product->get_available_variations();
-    $count      = count( $variations );
+    // $variations = $product->get_available_variations();
+    // $count      = count( $variations );
     return '
-    '. $count . strip_tags($price) . strip_tags($regular_price) . strip_tags($sale_price) . '
+    ' . strip_tags($price) . strip_tags($regular_price) . strip_tags($sale_price) . '
         <ins>' . wc_price( strip_tags($sale_price) ) . '</ins>
         <del>' . wc_price( strip_tags($regular_price) ) . '</del>
         <span class="product_saving_amount"> You saved ' . round($percentage) . '% this time</span>
