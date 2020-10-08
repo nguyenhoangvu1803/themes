@@ -49,13 +49,13 @@ function orders_list_column_payment_title( $column, $post_id ){
 }
 
 //add_filter( 'woocommerce_cart_shipping_method_full_label', 'bbloomer_remove_shipping_label', 9999, 2 );
-   
+
 function bbloomer_remove_shipping_label( $label, $method ) {
     $new_label = preg_replace( '/^.+:/', '', $label );
     return $new_label;
 }
 /**
- * Hide shipping rates when free shipping is available, but keep "Local pickup" 
+ * Hide shipping rates when free shipping is available, but keep "Local pickup"
  * Updated to support WooCommerce 2.6 Shipping Zones
  */
 
@@ -86,9 +86,9 @@ function hide_shipping_when_free_is_available( $rates, $package ) {
 // add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available', 10, 2 );
 
 // Disable WooCommerce Ajax Cart Fragments Everywhere
-add_action( 'wp_enqueue_scripts', 'uoymedia_disable_woocommerce_cart_fragments', 11 ); 
-function uoymedia_disable_woocommerce_cart_fragments() { 
-  wp_dequeue_script( 'wc-cart-fragments' ); 
+add_action( 'wp_enqueue_scripts', 'uoymedia_disable_woocommerce_cart_fragments', 11 );
+function uoymedia_disable_woocommerce_cart_fragments() {
+  wp_dequeue_script( 'wc-cart-fragments' );
 }
 
 // disable_scripts_styles
@@ -105,7 +105,7 @@ add_action('wp_enqueue_scripts', 'uoymedia_disable_scripts_styles', 100);
 // Order related by sale
 add_filter( 'woocommerce_output_related_products_args', 'uoy_related_products_args', 20 );
 function uoy_related_products_args( $args ) {
-	$args['orderby'] = 'sales'; 
+	$args['orderby'] = 'sales';
 	return $args;
 }
 
@@ -119,7 +119,7 @@ add_filter( 'woocommerce_checkout_fields' , 'woo_remove_billing_checkout_fields'
  * @return $fields array
 */
 function woo_remove_billing_checkout_fields( $fields ) {
-  
+
   if( woo_cart_virtual_downloadable_product_only() == true ) {
     unset($fields['billing']['billing_first_name']);
     unset($fields['billing']['billing_last_name']);
@@ -135,7 +135,7 @@ function woo_remove_billing_checkout_fields( $fields ) {
     unset($fields['order']['order_comments']);
   }
   unset($fields['order']['order_comments']);
-  
+
   return $fields;
 }
 
@@ -145,7 +145,7 @@ function woo_remove_billing_checkout_fields( $fields ) {
  * @return bool
 */
 function woo_cart_virtual_downloadable_product_only() {
-  
+
   global $woocommerce;
   // By default, virtual/downloadable product only
   $virtual_downloadable_products_only = true;
@@ -182,7 +182,7 @@ function uoymedia_wc_discount_total() {
       $discount_total += $discount;
     }
   }
-          
+
   if ( $discount_total > 0 ) {
   echo '<tr class="cart-total-custom order-regular">
   <th>'. __( 'Regular Price', 'woocommerce' ) .'</th>
@@ -201,7 +201,7 @@ function uoymedia_wc_discount_total() {
 add_action( 'woocommerce_cart_totals_after_order_total', 'uoymedia_wc_discount_total', 99);
 add_action( 'woocommerce_review_order_after_order_total', 'uoymedia_wc_discount_total', 99);
 // add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
- 
+
 function woo_custom_cart_button_text() {
   return __('Buy It Now', 'woocommerce');
 }
@@ -215,7 +215,6 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
     // $currency_symbol = get_woocommerce_currency_symbol();
     // $saved = $regular_price - $sale_price;
     $percentage = ( $regular_price - $sale_price ) / $regular_price * 100;
-
     return '
         <ins>' . wc_price( $sale_price ) . '</ins>
         <del>' . wc_price( $regular_price ) . '</del>
@@ -237,9 +236,9 @@ function filter_dropdown_option_html( $html, $args ) {
 }
 
 add_action( 'woocommerce_before_add_to_cart_quantity', 'uoy_echo_qty_front_add_cart' );
- 
+
 function uoy_echo_qty_front_add_cart() {
- echo '<div class="qty">Quantity: </div>'; 
+ echo '<div class="qty">Quantity: </div>';
 }
 
 add_filter('woocommerce_show_variation_price',      function() { return TRUE;});
@@ -251,7 +250,7 @@ function get_post_id_by_meta_key_and_value( $key, $value ) {
 	$meta = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM ".$wpdb->postmeta." WHERE meta_key=%s AND meta_value=%s", $key, $value ) );
 	if (is_array( $meta ) && !empty( $meta ) && isset( $meta[0]) ) {
 		$meta = $meta[0];
-	}		
+	}
 	if ( is_object( $meta ) ) {
 		return $meta->post_id;
 	}
@@ -266,13 +265,13 @@ function search_by_custom_order_number( $order_id ) {
 	return $order_id;
 }
 
-/** 
+/**
  * Change the Description tab link text for single products
  */
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
   // Rename the additional information tab
-  $tabs['additional_information']['title'] = __( 'Shipping information' );  
+  $tabs['additional_information']['title'] = __( 'Shipping information' );
   $reviews_count = get_option('judgeme_widget_all_reviews_count');
   // Adds reviews tab
   $tabs['reviews_tab'] = array(
@@ -291,62 +290,62 @@ function woo_new_product_tab_content() {
   <?php
 }
 
-function fix_prl_url() {  
-  if ( function_exists( 'woocommerce_prl_add_link_track_param' ) ) {    
-    add_filter( 'post_type_link', 'woocommerce_prl_add_link_track_param' ); 
+function fix_prl_url() {
+  if ( function_exists( 'woocommerce_prl_add_link_track_param' ) ) {
+    add_filter( 'post_type_link', 'woocommerce_prl_add_link_track_param' );
   }
 }
 add_action( 'init', 'fix_prl_url' );
 
 add_filter( 'woocommerce_prl_locations', 'sw_wc_prl_add_custom_homepage_location' );
-function sw_wc_prl_add_custom_homepage_location( $locations ) { 
-  class WC_PRL_Location_Homepage extends WC_PRL_Location {  
+function sw_wc_prl_add_custom_homepage_location( $locations ) {
+  class WC_PRL_Location_Homepage extends WC_PRL_Location {
     /*
      *
-     * Constructor.    
-     */   
-    public function __construct() {   
-      $this->id       = 'homepage';     
-      $this->title    = __( 'Homepage', 'woocommerce-product-recommendations' );   
-      $this->defaults = array(  
-          'engine_type' => array( 'cart' ),       
-          'priority'    => 10,        
-          'args_number' => 0      
+     * Constructor.
+     */
+    public function __construct() {
+      $this->id       = 'homepage';
+      $this->title    = __( 'Homepage', 'woocommerce-product-recommendations' );
+      $this->defaults = array(
+          'engine_type' => array( 'cart' ),
+          'priority'    => 10,
+          'args_number' => 0
       );
-      parent::__construct();    
-    } 
+      parent::__construct();
+    }
     /*
      *
-     * Check if the current location page is active.     
+     * Check if the current location page is active.
      *
      * @return boolean
      */
-    public function is_active() {     
-      return is_front_page();   
-    }   
+    public function is_active() {
+      return is_front_page();
+    }
     /*
      *
      * Setup all supported hooks based on the location id.
      *
      * @return void
      */
-    protected function setup_hooks() {   
+    protected function setup_hooks() {
 
-        $this->hooks = array( 
+        $this->hooks = array(
 
           'loop_end' => array(
 
               'id' => 'on_home_page', // Unique location ID.
               'label'    => __( 'Page On Front', 'woocommerce-product-recommendations' ), // Label to show in UI.
-              'priority' => 10    
+              'priority' => 10
 
           )
 
-        );    
-    } 
-  } 
+        );
+    }
+  }
 
-  array_unshift( $locations, 'WC_PRL_Location_Homepage');  
+  array_unshift( $locations, 'WC_PRL_Location_Homepage');
   return $locations;
 
 }
@@ -359,11 +358,11 @@ function sw_prl_add_container_class( $classes, $deployment ) {
   return $classes;
 }
 
-add_filter( 'woocommerce_thankyou_order_received_text', 'filter_woocommerce_thankyou_order_received_text', 10, 2 ); 
-// define the woocommerce_thankyou_order_received_text callback 
-function filter_woocommerce_thankyou_order_received_text( $var, $order ) { 
-    return 'Order Summary'; 
-}; 
+add_filter( 'woocommerce_thankyou_order_received_text', 'filter_woocommerce_thankyou_order_received_text', 10, 2 );
+// define the woocommerce_thankyou_order_received_text callback
+function filter_woocommerce_thankyou_order_received_text( $var, $order ) {
+    return 'Order Summary';
+};
 
 /* CUSTOM CSS */
 function uoy_custom_css() {
@@ -373,10 +372,10 @@ function uoy_custom_css() {
 
       <?php
         $color_primary = get_theme_mod('color_primary', Flatsome_Default::COLOR_PRIMARY );
-        if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){ 
+        if($color_primary && $color_primary !== Flatsome_Default::COLOR_PRIMARY){
       ?>
           /* COLOR */
-          .color-primary, .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .lost_password a, .nav-right>li.cart-item>a, .product-info .posted_in a 
+          .color-primary, .fl-wrap.fl-is-active>label[for]:first-child, .fl-wrap.fl-has-focus>label[for]:first-child, form .woocommerce-form-row:hover label, a.lost_password, .lost_password a, .nav-right>li.cart-item>a, .product-info .posted_in a
           {color: <?php echo $color_primary; ?>;}
 
           /* BACKGROUND-COLOR */
@@ -402,7 +401,7 @@ function uoy_custom_css() {
 
       <?php
         $color_success = get_theme_mod( 'color_success' , Flatsome_Default::COLOR_SUCCESS );
-        if( $color_success && $color_success !== Flatsome_Default::COLOR_SUCCESS ){ 
+        if( $color_success && $color_success !== Flatsome_Default::COLOR_SUCCESS ){
       ?>
           /* COLOR */
           .cart-total-custom.order-save, .cart-total-custom.order-save .amount, .cart-total-custom.order-save .amount, .shop_table .order-save th {
@@ -452,3 +451,5 @@ function uoy_excerpt_more( $more ) {
     return '...';
 }
 add_filter( 'excerpt_more', 'uoy_excerpt_more', 11, 1 );
+
+require 'inc/myaccount.php';

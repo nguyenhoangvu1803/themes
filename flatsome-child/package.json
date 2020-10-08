@@ -1,0 +1,32 @@
+{
+  "name": "Flagwix",
+  "description": "Flagwix",
+  "version": "1.0.0",
+  "homepage": "Flagwix.com",
+  "authors": [
+    "Flagwix <Flagwix@Flagwix.com>"
+  ],
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.3.5",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.4",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^3.2.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-wait": "0.0.2",
+    "imagesloaded": "^4.1.4",
+    "jshint": "^2.9.5",
+    "node-sass": "^4.9.0",
+    "popper.js": "^1.14.3"
+  }
+}
