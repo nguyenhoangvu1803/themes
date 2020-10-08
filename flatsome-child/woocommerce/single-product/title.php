@@ -43,7 +43,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   $(document).ready(function() {
     $("#load-review").click(function(event){
       event.preventDefault();
-      console.log(1);
       $('ul.product-tabs').find('> li.active').removeClass('active');
       $('#tab-title-reviews_tab').addClass('active');
       $('.tab-panels').find('> div.active').removeClass('active');
