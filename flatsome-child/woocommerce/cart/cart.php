@@ -219,7 +219,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php if(!get_theme_mod('cart_hide_they_about')) { ?>
 <div class="stamped-reviews-container">
 
-	<div class="stamped-reviews-title-wrapper">What they say about the products?</div>
+	<div class="stamped-reviews-title-wrapper"><a href="https://flagwix.com/happy/" alt="Happy Customers">What they say about the products?</a></div>
 
 	<div class="stamped-reviews-wrapper">
 	    
