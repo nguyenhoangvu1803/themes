@@ -218,7 +218,7 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
     // $available_variations = $product->get_available_variations();
     // return $available_variations;
     return '
-    '. $price .'
+    '. strip_tags($price) .'
         <ins>' . wc_price( $sale_price ) . ' ' . $sale_price . '</ins>
         <del>' . wc_price( $regular_price ) . ' ' . $regular_price . '</del>
         <span class="product_saving_amount"> You saved ' . round($percentage) . '% this time</span>
