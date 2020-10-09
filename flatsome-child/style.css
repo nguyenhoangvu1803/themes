@@ -2107,7 +2107,7 @@ input[type='button']:hover {
   }
 
   .shop_table td.product-thumbnail {
-    width: 80px;
+    min-width: 80px;
   }
 
   .radioSelectContainer > label {
@@ -2125,6 +2125,7 @@ input[type='button']:hover {
 
   .woocommerce-cart .shop_table .cart_item td.product-name {
     border-right: 1px solid #e5e5e5;
+    width: 100%;
   }
 
   .woocommerce-cart .shop_table .cart_item td.product-quantity {
