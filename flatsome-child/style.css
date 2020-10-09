@@ -973,7 +973,8 @@ ul.woocommerce-order-overview {
 
 .woocommerce-checkout.woocommerce-order-received .myaccount__page__list,
 .woocommerce-checkout.woocommerce-order-received .myaccountorder__address {
-  display: block;
+  display: inline-block;
+  width: 100%;
 }
 
 .notice-order-success,
