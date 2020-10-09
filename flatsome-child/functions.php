@@ -212,24 +212,23 @@ function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
 
   // $variations = WC_Product_Variable::get_available_variations();
   // $count      = count( $variations );
-  $count = 0;
-  if(class_exists('WC_Product_Variable')) {
-    $count = 1;
-  }
+  // $count = 0;
+  // if(class_exists('WC_Product_Variable')) {
+  //   $count = 1;
+  // }
 
   // Just for variable products on single product pages
-  if( $product instanceof WC_Product && $product->is_type('variable') && is_product() ) {
+  if( $product instanceof WC_Product && $product->is_type('variable') && is_product() && is_numeric($regular_price) && is_numeric($sale_price) ) {
     // $currency_symbol = get_woocommerce_currency_symbol();
     // $saved = $regular_price - $sale_price;
-    $percentage = ( strip_tags($regular_price) - strip_tags($sale_price) ) / strip_tags($regular_price) * 100;
+    $percentage = ($regular_price - $sale_price ) / $regular_price * 100;
     // $available_variations = $product->get_available_variations();
     // return $available_variations;
     // $variations = $product->get_available_variations();
     // $count      = count( $variations );
     return '
-    ' . $count . strip_tags($price) . strip_tags($regular_price) . strip_tags($sale_price) . '
-        <ins>' . wc_price( strip_tags($sale_price) ) . '</ins>
-        <del>' . wc_price( strip_tags($regular_price) ) . '</del>
+        <ins>' . wc_price( $sale_price ) . '</ins>
+        <del>' . wc_price( $regular_price ) . '</del>
         <span class="product_saving_amount"> You saved ' . round($percentage) . '% this time</span>
     ';
   }
