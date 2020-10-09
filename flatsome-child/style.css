@@ -971,8 +971,8 @@ ul.woocommerce-order-overview {
   list-style:none;
 }
 
-.woocommerce-order-received .myaccount__page__list,
-.woocommerce-order-received .myaccountorder__address {
+.woocommerce-checkout.woocommerce-order-received .myaccount__page__list,
+.woocommerce-checkout.woocommerce-order-received .myaccountorder__address {
   display: block;
 }
 
@@ -980,31 +980,31 @@ ul.woocommerce-order-overview {
 .woocommerce-order-downloads,
 .woocommerce-order-details,
 .woocommerce-customer-details,
-.woocommerce-order-received .myaccount__page__list,
-.woocommerce-order-received .myaccountorder__address  {
+.woocommerce-checkout.woocommerce-order-received .myaccount__page__list.myaccountorder__address,
+.woocommerce-checkout.woocommerce-order-received .myaccountorder__address  {
   border:1px solid #eee;
   border-radius:3px;
   padding:25px 38px;
   margin-bottom:20px;
 }
 
-.woocommerce-order-received .woocommerce-table--order-details,
-.woocommerce-order-received .myaccount__page__list--title,
-.woocommerce-order-received .myaccount__page__list--column
-.woocommerce-order-received .myaccount__page__list--column address {
+.woocommerce-checkout.woocommerce-order-received .woocommerce-table--order-details,
+.woocommerce-checkout.woocommerce-order-received .myaccount__page__list--title,
+.woocommerce-checkout.woocommerce-order-received .myaccount__page__list--column,
+.woocommerce-checkout.woocommerce-order-received .myaccount__page__list--column address {
   width: 100%;
 }
 
-.woocommerce-order-received .myaccountorder__address .myaccount__page__list--column .myaccount__page__list {
+.woocommerce-checkout.woocommerce-order-received .myaccountorder__address .myaccount__page__list--column .myaccount__page__list {
   width: 40%;
   float: left;
 }
 
-.woocommerce-order-received .myaccount__page__list--title {
+.woocommerce-checkout.woocommerce-order-received .myaccount__page__list--title {
   margin-bottom: 15px;
 }
 
-.woocommerce-order-received .myaccountorder__address .myaccount__page--small-title {
+.woocommerce-checkout.woocommerce-order-received .myaccountorder__address .myaccount__page--small-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -1012,7 +1012,7 @@ ul.woocommerce-order-overview {
   color: #9FA4B9;
 }
 
-.woocommerce-order-received .myaccountorder__address address {
+.woocommerce-checkout.woocommerce-order-received .myaccountorder__address address {
   font-weight: normal;
   font-size: 13px;
   line-height: 19px;

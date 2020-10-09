@@ -210,22 +210,11 @@ add_filter( 'woocommerce_format_sale_price', 'woocommerce_custom_sales_price', 1
 function woocommerce_custom_sales_price( $price, $regular_price, $sale_price ) {
   global $product;
 
-  // $variations = WC_Product_Variable::get_available_variations();
-  // $count      = count( $variations );
-  // $count = 0;
-  // if(class_exists('WC_Product_Variable')) {
-  //   $count = 1;
-  // }
-
   // Just for variable products on single product pages
   if( $product instanceof WC_Product && $product->is_type('variable') && is_product() && is_numeric($regular_price) && is_numeric($sale_price) ) {
     // $currency_symbol = get_woocommerce_currency_symbol();
     // $saved = $regular_price - $sale_price;
     $percentage = ($regular_price - $sale_price ) / $regular_price * 100;
-    // $available_variations = $product->get_available_variations();
-    // return $available_variations;
-    // $variations = $product->get_available_variations();
-    // $count      = count( $variations );
     return '
         <ins>' . wc_price( $sale_price ) . '</ins>
         <del>' . wc_price( $regular_price ) . '</del>
