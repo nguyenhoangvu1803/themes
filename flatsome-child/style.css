@@ -2137,8 +2137,8 @@ input[type='button']:hover {
 
   .woocommerce-cart .shop_table .cart_item td.product-quantity {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 2px;
+    top: 1px;
     border: none;
   }
 
