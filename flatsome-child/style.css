@@ -2114,6 +2114,34 @@ input[type='button']:hover {
     width: 100%;
   }
 
+  .woocommerce-cart .shop_table tr.cart_item {
+    position: relative;
+    display: block;
+  }
+
+  .woocommerce-cart .shop_table .cart_item td {
+    padding-bottom: 80px;
+  }
+
+  .woocommerce-cart .shop_table .cart_item td.product-name {
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .woocommerce-cart .shop_table .cart_item td.product-quantity {
+    position: absolute;
+    border: none;
+    padding: 0;
+    bottom: 20px;
+    left: 90px;
+  }
+
+  .woocommerce-cart .shop_table .cart_item td.product-quantity {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+  }
+
 }
 
 @media only screen and (max-width: 375px) {
