@@ -995,9 +995,14 @@ ul.woocommerce-order-overview {
   width: 100%;
 }
 
-.woocommerce-checkout.woocommerce-order-received .myaccountorder__address .myaccount__page__list--column .myaccount__page__list {
+.woocommerce-checkout.woocommerce-order-received .myaccountorder__address .myaccount__page__list--column > section {
   width: 40%;
   float: left;
+}
+
+.woocommerce-account.woocommerce-view-order .myaccountorder__address .myaccount__page__list--column > section > div {
+  display: inline-block;
+  width: 100%;
 }
 
 .woocommerce-checkout.woocommerce-order-received .myaccount__page__list--title {
