@@ -1734,6 +1734,12 @@ input[type='button']:hover {
   padding-top: 20px;
 }
 
+@media only screen and (min-width: 850px) {
+  .col-remove-padding-desktop {
+    padding-bottom: 0;
+  }
+}
+
 /* Tablet & Mobile */
 
 @media only screen and (max-width: 849px) {
