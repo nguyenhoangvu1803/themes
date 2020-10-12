@@ -1735,7 +1735,7 @@ input[type='button']:hover {
 }
 
 @media only screen and (min-width: 850px) {
-  .col-remove-padding-desktop {
+  .col-remove-padding-desktop > .col {
     padding-bottom: 0;
   }
 }
