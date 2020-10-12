@@ -280,6 +280,7 @@ function woo_rename_tabs( $tabs ) {
       'priority'  => 30,
       'callback'  => 'woo_new_product_tab_content'
   );
+  print_r($tabs);
   return $tabs;
 }
 function woo_content_shipping_information() {
