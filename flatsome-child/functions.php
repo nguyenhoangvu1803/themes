@@ -276,7 +276,7 @@ function woo_rename_tabs( $tabs ) {
   $reviews_count = get_option('judgeme_widget_all_reviews_count');
   // Adds reviews tab
   $tabs['reviews_tab'] = array(
-      'title'     => __( 'Reviews <span>' . $reviews_count['all_reviews_count'] . '</span>', 'woocommerce' ),
+      'title'     => __( 'Reviews <span>' . $reviews_count['all_reviews_count'] . '</span><div class="product-star"><span class="star"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></span></div>', 'woocommerce' ),
       'priority'  => 30,
       'callback'  => 'woo_new_product_tab_content'
   );
