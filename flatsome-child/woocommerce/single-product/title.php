@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
   </span>
-  <a id="load-review" data-click="0" href="#tab-title-reviews_tab" class="reviews middle-of-product-reviews">
+  <a data-click="0" href="#tab-title-reviews_tab" class="load-review reviews middle-of-product-reviews">
     <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
   </a>
 </div>
@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <script>
   var $ = jQuery;
   $(document).ready(function() {
-    $("#load-review").click(function(event){
+    $(".load-review").click(function(event){
       event.preventDefault();
       $('ul.product-tabs').find('> li.active').removeClass('active');
       $('#tab-title-reviews_tab').addClass('active');
@@ -60,8 +60,8 @@ if ( ! defined( 'ABSPATH' ) ) {
       }
     });
     $('.woocommerce-tabs').waypoint(function(direction) {
-      if ($("#load-review").attr("data-click") == '0') {
-        $("#load-review").attr('data-click', '1');
+      if ($(".load-review").attr("data-click") == '0') {
+        $(".load-review").attr('data-click', '1');
         $('<link/>', {
           rel: 'stylesheet',
           type: 'text/css',

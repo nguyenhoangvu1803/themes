@@ -13,7 +13,7 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                   </span>
-                  <a class="reviews middle-of-product-reviews">
+                  <a data-click="0" href="#tab-title-reviews_tab" class="load-review reviews middle-of-product-reviews">
                     <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
                   </a>
                 </div>
