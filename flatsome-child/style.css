@@ -1561,7 +1561,7 @@ input[type="submit"]:hover {
     	z-index: 9998 !important;
     }
     .mfp-wrap.off-canvas {
-        z-index: 9998 !important;
+        z-index: 9999 !important;
     }
     .off-canvas .sidebar-menu {
         padding-top: 10px;
