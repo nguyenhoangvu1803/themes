@@ -59,7 +59,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
       }
     });
-    $('.reviews_tab_tab').on('click', function () {
+    $('li.reviews_tab_tab > a').click(function(event){
+      event.preventDefault();
       console.log(1)
     })
   });
