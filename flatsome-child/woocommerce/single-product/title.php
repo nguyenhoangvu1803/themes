@@ -62,8 +62,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     $('li.reviews_tab_tab > a').click(function(event){
       event.preventDefault();
       console.log(1)
-      if ($(this).attr("data-click") == '0') {
-        $(this).attr('data-click', '1');
+      if ($(".load-review").attr("data-click") == '0') {
+        $(".load-review").attr('data-click', '1');
         $('<link/>', {
           rel: 'stylesheet',
           type: 'text/css',
