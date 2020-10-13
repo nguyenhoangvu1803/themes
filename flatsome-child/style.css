@@ -1488,6 +1488,14 @@ input[type="submit"]:hover {
     padding-left: 0;
     padding-top: 20px;
 }
+.flag-body:before {
+    content: '';
+    width: 39px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAMAAAA5k9QEAAAABGdBTUEAALGPC/xhBQAAAG9QTFRFAAAAUJ8wUKcwWJ8wUKMsVKMwUqItUqUwUqQuVKQwUqMuUqQuUaMuU6MuUqUvU6MuU6QvUqMuUqQvUqUvU6QvU6QvU6QvXao8aK9JabBJc7VWfrtjlMZ9n8yKvtyxyeK+yeO+yuK+1OjL6fPl////idtUFQAAABZ0Uk5TABAgIEBAYGBwcICPkJCfoL/A39/f72juj8kAAACySURBVCiRdZLZFoIwDESDW7GiuFB3RYH//0YotSQm6bz15J5OpxMArtydmdxGQAArTnlZye01zgFUeDoOWKZhnjN2kqG21/qC3E7YlnH06m7IGcFNYduG+GYcW8TJvXsidhDXFXH0prY5kLw+LZ7amtjOgOT1b53HyYPanmRnaNt4ha8p0mV8Ruwb3rjkWLIMJnUHfmVUJG2pcqEMg2lBbN4oUYbOyTLApm3/tZU7vw6THljbKdjGl7jlAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+}
 .guaranteed-safe-checkout-single:before {
     content: '';
     width: 100%;
