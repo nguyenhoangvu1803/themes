@@ -1533,6 +1533,7 @@ input[type="submit"]:hover {
         max-width: initial;
         padding-top: 0;
         vertical-align: top;
+        background: #fff;
     }
     .mfp-bg.off-canvas-center:not(.dark) {
         opacity: 1;
