@@ -494,7 +494,9 @@ ul.product-tabs li > a {
     line-height: 34px;
 }
 ul.product-tabs li > a:hover,
-ul.product-tabs li.active > a {
+ul.product-tabs li.active > a,
+ul.product-tabs li > a:hover .star,
+ul.product-tabs li.active > a .star {
     color: #000;
 }
 ul.product-tabs li > a > span {
