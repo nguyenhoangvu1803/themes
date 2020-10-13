@@ -1001,7 +1001,7 @@ th {
     line-height: 1.5;
 }
 .footer-wrapper img {
-    width: initial;
+    width: inherit;
 }
 @media only screen and (min-width: 769px) {
     .header-main > .header-inner {
