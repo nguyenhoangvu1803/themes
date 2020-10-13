@@ -1834,6 +1834,9 @@ input[type="submit"]:hover {
         top: 1px;
         border: none;
     }
+    .ux-search-box .flex-row .flex-col:first-child {
+    	margin-left: 0;
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
