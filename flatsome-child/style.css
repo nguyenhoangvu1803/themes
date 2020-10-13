@@ -1553,11 +1553,13 @@ input[type="submit"]:hover {
     .nav-anim.nav-vertical > .html_topbar_right {
         display: none;
     }
+    /*
     .mfp-bg.main-menu-overlay,
     .mfp-wrap.off-canvas {
     	height: 100%;
         top: 92px !important;
     }
+    */
     .off-canvas .sidebar-menu {
         padding-top: 10px;
     }
