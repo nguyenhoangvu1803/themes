@@ -27,7 +27,7 @@ label {
 .nav-line-bottom > li > a:before,
 .nav-line-grow > li > a:before,
 .nav-line > li > a:before,
-.tabs.nav-line > li > a:before, {
+.tabs.nav-line > li > a:before {
     top: initial;
     bottom: -1px;
     background-color: #000;
