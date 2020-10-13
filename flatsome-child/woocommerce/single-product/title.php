@@ -59,18 +59,18 @@ if ( ! defined( 'ABSPATH' ) ) {
         $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
       }
     });
-    $('.woocommerce-tabs').waypoint(function(direction) {
-      if ($(".load-review").attr("data-click") == '0') {
-        $(".load-review").attr('data-click', '1');
-        $('<link/>', {
-          rel: 'stylesheet',
-          type: 'text/css',
-          href: 'https://cdn.judge.me/judgeme_widget_v2.css'
-        }).appendTo('head');
-        $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
-      }
-    }, {
-      offset: '25%'
-    });
+    // $('.woocommerce-tabs').waypoint(function(direction) {
+    //   if ($(".load-review").attr("data-click") == '0') {
+    //     $(".load-review").attr('data-click', '1');
+    //     $('<link/>', {
+    //       rel: 'stylesheet',
+    //       type: 'text/css',
+    //       href: 'https://cdn.judge.me/judgeme_widget_v2.css'
+    //     }).appendTo('head');
+    //     $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
+    //   }
+    // }, {
+    //   offset: '25%'
+    // });
   });
 </script>
