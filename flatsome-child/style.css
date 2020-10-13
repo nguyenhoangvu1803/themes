@@ -1889,4 +1889,10 @@ input[type="submit"]:hover {
     .add-to-cart-quickview a {
         font-size: 14px;
     }
+    .guaranteed-safe-checkout-single:before {
+        height: 110px;
+    }
+    .four-step:before {
+        height: 105px;
+    }
 }
