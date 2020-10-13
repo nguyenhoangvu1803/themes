@@ -59,5 +59,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
       }
     });
+    $('.reviews_tab_tab').on('click', function () {
+      console.log(1)
+    })
   });
 </script>
