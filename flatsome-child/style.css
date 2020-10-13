@@ -1689,6 +1689,12 @@ input[type="submit"]:hover {
     .blog-post-inner button.is-large {
         font-size: 14px;
     }
+    .guaranteed-safe-checkout-single:before {
+        height: 213px;
+    }
+    .guaranteed-safe-checkout-single:before {
+        height: 166px;
+    }
 }
 @media screen and (min-width: 550px) and (max-width: 849px) {
     .medium-text-center .pull-left {
