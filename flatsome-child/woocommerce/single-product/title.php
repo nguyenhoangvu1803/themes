@@ -62,6 +62,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     $('li.reviews_tab_tab > a').click(function(event){
       event.preventDefault();
       console.log(1)
+      if ($(this).attr("data-click") == '0') {
+        $(this).attr('data-click', '1');
+        $('<link/>', {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://cdn.judge.me/judgeme_widget_v2.css'
+        }).appendTo('head');
+        $.getScript("https://cdn.judge.me/judgeme_widget_v2.js");
+      }
     })
   });
 </script>
