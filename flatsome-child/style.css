@@ -26,7 +26,8 @@ label {
 }
 .nav-line-bottom > li > a:before,
 .nav-line-grow > li > a:before,
-.nav-line > li > a:before {
+.nav-line > li > a:before,
+.tabs.nav-line > li > a:before, {
     top: initial;
     bottom: -1px;
     background-color: #000;
@@ -502,6 +503,15 @@ ul.product-tabs li > a > span {
     color: #fff;
     margin-left: 7px;
     line-height: 23px;
+}
+ul.product-tabs li.reviews_tab_tab > a {
+    position: relative;
+}
+ul.product-tabs li.reviews_tab_tab > a > .product-star {
+    position: absolute;
+    bottom: -6px;
+    font-size: 11px;
+    letter-spacing: 3px;
 }
 .sticky-add-to-cart--active .qty {
     margin-bottom: 0;
