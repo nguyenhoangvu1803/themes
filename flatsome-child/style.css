@@ -1559,6 +1559,8 @@ input[type="submit"]:hover {
     }
     .mfp-bg.main-menu-overlay {
     	z-index: 9998 !important;
+    	right: 0;
+    	bottom: 0;
     }
     .mfp-wrap.off-canvas {
         z-index: 9999 !important;
