@@ -487,16 +487,16 @@ table.variations {
 .product-tabs {
     border-bottom: 1px solid #e5e5e5;
 }
-ul.product-tabs li a {
+ul.product-tabs li > a {
     font-size: 15px;
     font-weight: 600;
     line-height: 34px;
 }
-ul.product-tabs li a:hover,
-ul.product-tabs li.active a {
+ul.product-tabs li > a:hover,
+ul.product-tabs li.active > a {
     color: #000;
 }
-ul.product-tabs li a span {
+ul.product-tabs li > a > span {
     border-radius: 11.5em;
     padding: 0 8px;
     color: #fff;
