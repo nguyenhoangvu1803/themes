@@ -1692,7 +1692,7 @@ input[type="submit"]:hover {
     .guaranteed-safe-checkout-single:before {
         height: 213px;
     }
-    .guaranteed-safe-checkout-single:before {
+    .four-step:before {
         height: 166px;
     }
 }
