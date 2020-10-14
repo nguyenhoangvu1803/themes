@@ -461,5 +461,33 @@ add_filter( 'excerpt_more', 'uoy_excerpt_more', 11, 1 );
 
 require 'inc/myaccount.php';
 
-
+// Remove coupon on top checkout
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+
+// define the woocommerce_review_order_before_order_total callback 
+function action_woocommerce_review_order_before_order_total(  ) { 
+  ?>
+    <?php if ( wc_coupons_enabled() ) { ?>
+    <form class="checkout_coupon mb-0" method="post">
+      <div class="coupon">
+        <h3 class="widget-title togglecoupon"><?php echo get_flatsome_icon( 'icon-tag' ); ?> <?php esc_html_e( 'Have a coupon? Click here', 'woocommerce' ); ?></h3>
+        <div class="cart-coupon-wrapper" style="display: none;">
+          <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="is-form expand" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
+          <?php do_action( 'woocommerce_cart_coupon' ); ?>
+        </div>
+      </div>
+      <script type="text/javascript">
+        (function($) {
+          $( document ).ready(function() {
+            $('.togglecoupon').click(function(){
+              $('.cart-coupon-wrapper').toggle();
+            });
+          });
+        })(jQuery);
+      </script>
+    </form>
+    <?php } ?>
+  <?php
+}; 
+// add the action 
+add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 10, 0 ); 
