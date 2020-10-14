@@ -494,3 +494,13 @@ function action_woocommerce_review_order_before_order_total(  ) {
   <?php
 }; 
 add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 11, 0 ); 
+
+//Only show products in the front-end search results
+function search_filter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'product');
+        $query->set( 'wc_query', 'product_query' );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','search_filter');
