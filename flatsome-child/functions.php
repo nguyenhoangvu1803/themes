@@ -473,4 +473,4 @@ function action_woocommerce_review_order_before_order_total(  ) {
   <?php
 }; 
 // add the action 
-add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 10, 0 ); 
+add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 11, 1 ); 
