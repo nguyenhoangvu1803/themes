@@ -601,6 +601,9 @@ ul.product-tabs li.reviews_tab_tab > a > .product-star {
     padding-left: 0;
     padding-right: 0;
 }
+.product-small.box-overlay .box-image .overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.54%, rgba(0, 0, 0, 0.5) 100%);
+}
 .add-to-cart-quickview a {
     color: #fff;
     width: calc(100% - 36px);
