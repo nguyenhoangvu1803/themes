@@ -616,6 +616,11 @@ ul.product-tabs li.reviews_tab_tab > a > .product-star {
 .product-small.box-overlay .price-wrapper {
     padding-right: 105px;
 }
+.product-small.box-overlay.dark .product-title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
 
 .add-to-cart-quickview a {
     color: #fff;
