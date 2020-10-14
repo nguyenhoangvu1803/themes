@@ -467,10 +467,10 @@ remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_
 // define the woocommerce_review_order_before_order_total callback 
 function action_woocommerce_review_order_before_order_total(  ) { 
   ?>
-    <?php if ( wc_coupons_enabled() ) { ?>
+    <?php //if ( wc_coupons_enabled() ) { ?>
     123456
-    <?php } ?>
+    <?php //} ?>
   <?php
 }; 
 // add the action 
-add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 11, 1 ); 
+add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 11, 0 ); 
