@@ -460,3 +460,6 @@ function uoy_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'uoy_excerpt_more', 11, 1 );
 
 require 'inc/myaccount.php';
+
+
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
