@@ -1587,6 +1587,7 @@ blockquote {
     text-align: center;
     font-weight: 300;
     line-height: 45px;
+    font-style: inherit;
 }
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
