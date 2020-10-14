@@ -352,7 +352,8 @@ span.amount {
 .cart-discount th {
     padding: 0;
 }
-.cart-sidebar .widget-title {
+.cart-sidebar .widget-title,
+.widget-title.togglecoupon {
     border-bottom: none;
     font-size: 15px;
     padding-left: 20px;

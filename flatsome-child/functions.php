@@ -464,7 +464,7 @@ require 'inc/myaccount.php';
 // Remove coupon on top checkout
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 
-// define the woocommerce_review_order_before_order_total callback 
+// Add Coupon to the woocommerce_review_order_before_order_total action
 function action_woocommerce_review_order_before_order_total(  ) { 
   ?>
     <?php if ( wc_coupons_enabled() ) { ?>
@@ -493,5 +493,4 @@ function action_woocommerce_review_order_before_order_total(  ) {
     <?php } ?>
   <?php
 }; 
-// add the action 
 add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 11, 0 ); 
