@@ -468,7 +468,10 @@ remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_
 function action_woocommerce_review_order_before_order_total(  ) { 
   ?>
     <?php //if ( wc_coupons_enabled() ) { ?>
-    123456
+      <tr class="order-total">
+        <th>TH</th>
+        <td>123456</td>
+      </tr>
     <?php //} ?>
   <?php
 }; 
