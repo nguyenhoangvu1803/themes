@@ -363,6 +363,14 @@ span.amount {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+.checkout.woocommerce-checkout .widget-title.togglecoupon {
+    padding-left: 0;
+    text-align: left;
+}
+.checkout.woocommerce-checkout .coupon_checkout > td {
+    border-bottom: 1px solid #ececec;
+    padding: 0;
+}
 .variations td {
     display: block;
 }
