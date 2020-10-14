@@ -1038,7 +1038,7 @@ th {
     background: #fff;
 }
 form.searchform button {
-    position: absolute;
+    position: absolute !important;
     left: 10px;
     top: 50%;
     -ms-transform: translateY(-50%);
