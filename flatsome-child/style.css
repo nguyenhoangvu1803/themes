@@ -621,7 +621,9 @@ ul.product-tabs li.reviews_tab_tab > a > .product-star {
     color: #fff;
     margin-bottom: 5px;
 }
-
+.product-small.box-overlay.dark .amount, .product-small.box-overlay.dark ins span{
+    color: #fff;
+}
 .add-to-cart-quickview a {
     color: #fff;
     width: calc(100% - 36px);
