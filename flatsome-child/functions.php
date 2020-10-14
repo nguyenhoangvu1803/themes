@@ -495,7 +495,7 @@ function action_woocommerce_review_order_before_order_total(  ) {
 }; 
 add_action( 'woocommerce_review_order_before_order_total', 'action_woocommerce_review_order_before_order_total', 11, 0 ); 
 
-//Only show products in the front-end search results
+// Only show products in the front-end search results
 function search_filter($query) {
     if ($query->is_search) {
         $query->set('post_type', 'product');
