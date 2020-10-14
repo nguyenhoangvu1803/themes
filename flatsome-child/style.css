@@ -1580,6 +1580,13 @@ input[type="submit"]:hover {
 .logo-footer {
     max-width: 78px;
 }
+blockquote {
+    border-left: none;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    font-weight: 300;
+}
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
