@@ -55,7 +55,7 @@ do_action( 'wc_quick_view_before_single_product' );
 						<li class="nav-cell">
 							<?php
 								$image_id  = get_post_thumbnail_id( $post->ID );
-								$image     = wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' ) );
+								$image     = wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_70x70' ) );
 								$image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
 								$image     = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '" class="attachment-woocommerce_thumbnail" />';
 
@@ -68,7 +68,7 @@ do_action( 'wc_quick_view_before_single_product' );
 					foreach ( $attachment_ids as $attachment_id ) {
 						$classes     = array( '' );
 						$image_class = esc_attr( implode( ' ', $classes ) );
-						$image       = wp_get_attachment_image_src( $attachment_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' ) );
+						$image       = wp_get_attachment_image_src( $attachment_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_70x70' ) );
 						$image_alt   = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
 						$image       = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '"  class="attachment-woocommerce_thumbnail" />';
 
