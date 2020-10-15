@@ -501,7 +501,7 @@ function include_custom_slide_flickity() {
 }
 add_action('wp_enqueue_scripts', 'include_custom_slide_flickity');
 
-
+// Add pagination to product header title 
 if ( ! function_exists( 'add_pagination_category_title' ) ) {
   /**
    * Add Pagination
@@ -511,3 +511,15 @@ if ( ! function_exists( 'add_pagination_category_title' ) ) {
   }
 }
 add_action( 'flatsome_category_title_alt', 'add_pagination_category_title', 25 );
+
+// Add show result to before pagination shop category end loop 
+if ( ! function_exists( 'add_result_count_to_shop_end_loop' ) ) {
+  /**
+   * Add Result count
+   */
+  function add_pagination_category_title () {
+    wc_get_template_part( 'loop/result-count' );
+  }
+}
+add_action( 'woocommerce_after_shop_loop', 'add_result_count_to_shop_end_loop', 1 );
+
