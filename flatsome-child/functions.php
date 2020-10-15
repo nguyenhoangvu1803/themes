@@ -506,8 +506,10 @@ if ( ! function_exists( 'add_pagination_category_title' ) ) {
   /**
    * Add Pagination
    */
-  ?>
-    12345
-  <?php
+  function add_pagination_category_title () {
+    ?>
+      12345
+    <?php
+  }
 }
 add_action( 'flatsome_category_title', 'add_pagination_category_title', 15 );
