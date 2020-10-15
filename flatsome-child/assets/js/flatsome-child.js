@@ -1,3 +1,3 @@
 jQuery(document).ready(function($) {
-	$('.slider').flickity('select', 3);
+	$('.product-lightbox .product-gallery .slider').flickity('select', 3);
 })
