@@ -513,5 +513,5 @@ if ( ! function_exists( 'add_pagination_category_title' ) ) {
 add_action( 'flatsome_category_title_alt', 'add_pagination_category_title', 25 );
 
 // Add show result to before pagination shop category end loop 
-add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 5 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 25 );
 
