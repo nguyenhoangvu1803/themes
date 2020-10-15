@@ -512,4 +512,4 @@ if ( ! function_exists( 'add_pagination_category_title' ) ) {
     <?php
   }
 }
-add_action( 'flatsome_category_title', 'add_pagination_category_title', 15 );
+add_action( 'flatsome_category_title_alt', 'add_pagination_category_title', 25 );
