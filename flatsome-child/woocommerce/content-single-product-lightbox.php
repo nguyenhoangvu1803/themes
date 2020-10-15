@@ -8,33 +8,12 @@
 defined( 'ABSPATH' ) || exit;
 
 global $post, $product;
-$post_thumbnail_id = $product->get_image_id();
 
 do_action( 'wc_quick_view_before_single_product' );
 ?>
 <div class="product-quick-view-container">
 	<div class="row row-collapse mb-0 product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="product-gallery large-6 col">
-
-			<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
-				<figure class="woocommerce-product-gallery__wrapper">
-					<?php
-					if ( $product->get_image_id() ) {
-						$html  = flatsome_wc_get_gallery_image_html( $post_thumbnail_id, true );
-					} else {
-						$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-						$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-						$html .= '</div>';
-					}
-
-					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
-					do_action( 'woocommerce_product_thumbnails' );
-					?>
-				</figure>
-			</div>
-
-			<!--
 			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
 				<?php if ( has_post_thumbnail() ) :
 
@@ -66,7 +45,6 @@ do_action( 'wc_quick_view_before_single_product' );
 				endif;
 				?>
 			</div>
-		-->
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
 		</div>
