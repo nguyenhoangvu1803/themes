@@ -15,17 +15,6 @@ do_action( 'wc_quick_view_before_single_product' );
 	<div class="row row-collapse mb-0 product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="product-gallery large-6 col">
 			sdfslkdf
-
-			<?php
-        		/**
-        		 * woocommerce_before_single_product_summary hook
-        		 *
-        		 * @hooked woocommerce_show_product_sale_flash - 10
-        		 * @hooked woocommerce_show_product_images - 20
-        		 */
-        		do_action( 'woocommerce_before_single_product_summary' );
-        	?>
-        	<!--
 			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
 				<?php if ( has_post_thumbnail() ) :
 
@@ -57,7 +46,6 @@ do_action( 'wc_quick_view_before_single_product' );
 				endif;
 				?>
 			</div>
-			-->
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
 		</div>
