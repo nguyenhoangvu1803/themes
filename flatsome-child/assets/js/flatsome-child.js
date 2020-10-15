@@ -4,6 +4,12 @@ jQuery(document).ready(function($) {
 
 	console.log(2);
 
+	$(document).on('click', '.nav-cell', function(e) {
+	  var index = $( e.currentTarget ).index();
+	  console.log(index);
+	  console.log(3);
+	});
+
 	$carouselNav.on( 'click', '.nav-cell', function( event ) {
 		console.log(1);
 	  	var index = $( event.currentTarget ).index();
