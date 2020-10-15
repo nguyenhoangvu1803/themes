@@ -1623,6 +1623,10 @@ blockquote {
 .mfp-ready > .mfp-close {
     display: none;
 }
+.off-canvas .nav-vertical li li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
