@@ -30,9 +30,9 @@ do_action( 'wc_quick_view_before_single_product' );
 				    <span class="fa fa-star checked"></span>
 				    <span class="fa fa-star checked"></span>
 				  </span>
-				  <a data-click="0" href="#" class="load-review reviews middle-of-product-reviews">
+				  <span data-click="0" href="#" class="load-review reviews middle-of-product-reviews">
 				    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
-				  </a>
+				  </span>
 				</div>
 			</div>
 			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
@@ -113,9 +113,9 @@ do_action( 'wc_quick_view_before_single_product' );
 					    <span class="fa fa-star checked"></span>
 					    <span class="fa fa-star checked"></span>
 					  </span>
-					  <a data-click="0" href="#" class="load-review reviews middle-of-product-reviews">
+					  <span class="load-review reviews middle-of-product-reviews">
 					    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
-					  </a>
+					  </span>
 					</div>
 				</div>
 				<?php do_action( 'woocommerce_single_product_lightbox_summary' ); ?>
