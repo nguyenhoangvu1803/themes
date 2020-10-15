@@ -1611,6 +1611,9 @@ blockquote {
 .product-lightbox-inner {
     padding: 0 30px;
 }
+.lightbox-content {
+    max-width: 1136px;
+}
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
