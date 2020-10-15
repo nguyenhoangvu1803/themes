@@ -309,6 +309,9 @@ span.amount {
 .flex-control-thumbs {
     margin: 13px -5px 0 -5px;
 }
+.slider-nav {
+    display: flex;
+}
 .flex-control-thumbs li,
 .slider-nav li {
     width: initial;
@@ -316,6 +319,7 @@ span.amount {
     border-radius: 3px;
     max-width: 80px;
     margin-bottom: 0;
+    list-style: none;
 }
 .flex-control-thumbs li img,
 .slider-nav li img {
