@@ -57,7 +57,9 @@ do_action( 'wc_quick_view_before_single_product' );
 			</div>
 
 			<script type="text/javascript">
-				$('.slider').flickity();
+				$(document).ready(function() {
+					$('.slider').flickity('select', 3);
+				})
 			</script>
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
