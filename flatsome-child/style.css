@@ -1277,6 +1277,22 @@ del span.amount {
     width: 30px;
     opacity: 1;
 }
+.flipContainer .flickity-prev-next-button.previous {
+    left: -4%;
+    -ms-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+}
+.flipContainer .flickity-prev-next-button.next {
+    right: -4%;
+    -ms-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+}
+.flipContainer .flickity-prev-next-button.previous {
+    left: -6%;
+}
+.flipContainer .flickity-prev-next-button.next {
+    right: -6%;
+}
 .slider .flickity-prev-next-button .arrow,
 .slider .flickity-prev-next-button svg {
     border-radius: 3px;
