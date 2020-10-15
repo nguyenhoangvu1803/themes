@@ -1267,9 +1267,6 @@ del span.amount {
     font-size: 16px;
     font-weight: 600;
 }
-.product-lightbox.lightbox-content {
-    padding: 30px;
-}
 .product-lightbox-inner .single_add_to_cart_button.button,
 .product-lightbox-inner .woocommerce-grouped-product-list a.button {
     padding: 0 10px;
@@ -1613,6 +1610,10 @@ blockquote {
 }
 .lightbox-content {
     max-width: 1136px;
+}
+.product-quick-head {
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
 }
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
@@ -2006,7 +2007,7 @@ blockquote {
         font-size: 22px;
         line-height: 33px;
     }
-    .product-lightbox.lightbox-content {
+    .inner-padding {
         padding: 15px;
     }
 }
