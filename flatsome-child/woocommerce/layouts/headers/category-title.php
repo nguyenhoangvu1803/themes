@@ -3,7 +3,7 @@
 	  <div class="flex-col flex-grow medium-text-center">
 	  	<?php do_action('flatsome_category_title') ;?>
 	  </div>
-	  <div class="flex-col medium-text-center">
+	  <div class="flex-wrap medium-text-center">
 	  	<?php do_action('flatsome_category_title_alt') ;?>
 	  </div>
 	</div>

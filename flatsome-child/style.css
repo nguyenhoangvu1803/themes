@@ -1667,6 +1667,11 @@ blockquote {
 .woocommerce-ordering select {
     height: 45px;
 }
+.page-title-inner.container .container {
+    max-width: inherit;
+    width: inherit;
+    display: inline-block;
+}
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
