@@ -1627,6 +1627,35 @@ blockquote {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.woocommerce-pagination {
+    border: 1px solid #EEEEEE;
+    border-radius: 3px;
+    padding: 7px 5px;
+}
+.woocommerce-pagination ul li a, 
+.woocommerce-pagination ul li span {
+    border: none !important;
+    min-width: inherit;
+    height: inherit;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #243A98;
+}
+.woocommerce-pagination .nav-pagination > li > .current {
+    border: none !important;
+    background-color: #F7F7FE;
+    color: #000;
+    line-height: 31px;
+    width: 31px;
+    vertical-align: middle;
+}
+.woocommerce-pagination ul li span .page-number.dots {
+    color: #9E9FA7;
+}
+.woocommerce-pagination .nav-pagination > li > a:hover {
+    color: #000;
+} 
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
