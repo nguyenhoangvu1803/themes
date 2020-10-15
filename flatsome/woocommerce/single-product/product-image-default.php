@@ -33,7 +33,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="product-gallery-default has-hover relative">12345
+<div class="product-gallery-default has-hover relative">
 
 <?php do_action('flatsome_sale_flash'); ?>
 
@@ -54,7 +54,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 
-		do_action( 'woocommerce_product_thumbnails' );
+		//do_action( 'woocommerce_product_thumbnails' );
 		?>
 	</figure>
 </div>
