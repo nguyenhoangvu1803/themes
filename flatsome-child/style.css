@@ -1609,11 +1609,16 @@ blockquote {
     padding: 0 30px;
 }
 .lightbox-content {
-    max-width: 1136px;
+    max-width: 1110px;
 }
 .product-quick-head {
     display: flex;
     border-bottom: 1px solid #EEEEEE;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.mfp-content .product-quick-head .mfp-close {
+    position: inherit;
 }
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
@@ -2007,7 +2012,7 @@ blockquote {
         font-size: 22px;
         line-height: 33px;
     }
-    .inner-padding {
+    .inner-padding, .product-quick-head {
         padding: 15px;
     }
 }
