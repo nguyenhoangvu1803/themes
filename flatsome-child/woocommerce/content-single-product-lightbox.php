@@ -46,8 +46,7 @@ do_action( 'wc_quick_view_before_single_product' );
 				?>
 			</div>
 
-			<div class="slider-nav"
-			  data-flickity='{ "asNavFor": ".slider", "contain": true, "pageDots": false }'>
+			<div class="slider-nav" data-flickity='{ "asNavFor": ".slider", "contain": true, "pageDots": false }'>
 			  <div class="carousel-cell">1</div>
 			  <div class="carousel-cell">2</div>
 			  <div class="carousel-cell">3</div>
