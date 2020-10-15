@@ -57,7 +57,7 @@ do_action( 'wc_quick_view_before_single_product' );
 			</div>
 
 			<script type="text/javascript">
-				$(document).ready(function() {
+				jQuery(document).ready(function($) {
 					$('.slider').flickity('select', 3);
 				})
 			</script>
