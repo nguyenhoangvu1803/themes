@@ -1278,12 +1278,10 @@ del span.amount {
     opacity: 1;
 }
 .flickity-prev-next-button.previous {
-    left: -4%;
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
 }
 .flickity-prev-next-button.next {
-    right: -4%;
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
 }
