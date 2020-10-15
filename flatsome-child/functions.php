@@ -517,7 +517,7 @@ if ( ! function_exists( 'add_result_count_to_shop_end_loop' ) ) {
   /**
    * Add Result count
    */
-  function add_pagination_category_title () {
+  function add_result_count_to_shop_end_loop () {
     wc_get_template_part( 'loop/result-count' );
   }
 }
