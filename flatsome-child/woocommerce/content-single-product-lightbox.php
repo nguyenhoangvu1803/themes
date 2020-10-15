@@ -47,13 +47,13 @@ do_action( 'wc_quick_view_before_single_product' );
 			</div>
 
 			<div class="slider-nav">
-			  <div class="carousel-cell">1</div>
-			  <div class="carousel-cell">2</div>
-			  <div class="carousel-cell">3</div>
-			  <div class="carousel-cell">4</div>
-			  <div class="carousel-cell">5</div>
-			  <div class="carousel-cell">6</div>
-			  <div class="carousel-cell">7</div>
+			  <div class="nav-cell">1</div>
+			  <div class="nav-cell">2</div>
+			  <div class="nav-cell">3</div>
+			  <div class="nav-cell">4</div>
+			  <div class="nav-cell">5</div>
+			  <div class="nav-cell">6</div>
+			  <div class="nav-cell">7</div>
 			</div>
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
