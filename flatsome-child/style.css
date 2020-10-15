@@ -1266,6 +1266,9 @@ del span.amount {
     font-size: 16px;
     font-weight: 600;
 }
+.product-lightbox.lightbox-content {
+    padding: 30px;
+}
 .product-lightbox-inner .single_add_to_cart_button.button,
 .product-lightbox-inner .woocommerce-grouped-product-list a.button {
     padding: 0 10px;
@@ -1994,6 +1997,9 @@ blockquote {
     blockquote {
         font-size: 22px;
         line-height: 33px;
+    }
+    .product-lightbox.lightbox-content {
+        padding: 15px;
     }
 }
 @media only screen and (max-width: 375px) {
