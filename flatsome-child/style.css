@@ -1102,6 +1102,7 @@ form.searchform button {
 }
 .product-lightbox-inner .single_variation_wrap .flag-body {
     display: inline-block;
+    width: 100%;
 }
 .woocommerce-form__input-checkbox {
     margin-top: 0;
