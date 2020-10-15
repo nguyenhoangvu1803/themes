@@ -52,6 +52,21 @@ do_action( 'wc_quick_view_before_single_product' );
 			  	<?php 
 					$attachment_ids = $product->get_gallery_image_ids();
 
+					if ( has_post_thumbnail() ) :
+						?>
+						<div class="nav-cell">
+							<?php
+								$image_id  = get_post_thumbnail_id( $post->ID );
+								$image     = wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_' . $image_size ) );
+								$image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+								$image     = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '" class="attachment-woocommerce_thumbnail" />';
+
+								echo $image;
+							?>
+						</div>
+						<?php
+					endif;
+
 					foreach ( $attachment_ids as $attachment_id ) {
 						$classes     = array( '' );
 						$image_class = esc_attr( implode( ' ', $classes ) );
