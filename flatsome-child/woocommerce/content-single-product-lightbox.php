@@ -20,6 +20,21 @@ do_action( 'wc_quick_view_before_single_product' );
 	</div>
 	<div class="row row-collapse mb-0 product inner-padding" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="product-gallery large-6 col">
+			<div class="show-for-medium">
+				<a class="plain" href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
+				<div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+				  <span class="star">
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				  </span>
+				  <a data-click="0" href="#" class="load-review reviews middle-of-product-reviews">
+				    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
+				  </a>
+				</div>
+			</div>
 			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
 				<?php if ( has_post_thumbnail() ) :
 
@@ -88,18 +103,20 @@ do_action( 'wc_quick_view_before_single_product' );
 
 		<div class="product-info product-summary summary large-6 col entry-summary">
 			<div class="product-lightbox-inner">
-				<a class="plain" href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
-				<div class="product-star" style="margin-top:-7px;margin-bottom:5px">
-				  <span class="star">
-				    <span class="fa fa-star checked"></span>
-				    <span class="fa fa-star checked"></span>
-				    <span class="fa fa-star checked"></span>
-				    <span class="fa fa-star checked"></span>
-				    <span class="fa fa-star checked"></span>
-				  </span>
-				  <a data-click="0" href="#" class="load-review reviews middle-of-product-reviews">
-				    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
-				  </a>
+				<div class="hide-for-medium">
+					<a class="plain" href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
+					<div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+					  <span class="star">
+					    <span class="fa fa-star checked"></span>
+					    <span class="fa fa-star checked"></span>
+					    <span class="fa fa-star checked"></span>
+					    <span class="fa fa-star checked"></span>
+					    <span class="fa fa-star checked"></span>
+					  </span>
+					  <a data-click="0" href="#" class="load-review reviews middle-of-product-reviews">
+					    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
+					  </a>
+					</div>
 				</div>
 				<?php do_action( 'woocommerce_single_product_lightbox_summary' ); ?>
 			</div>
