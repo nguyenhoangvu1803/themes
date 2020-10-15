@@ -14,14 +14,7 @@ do_action( 'wc_quick_view_before_single_product' );
 <div class="product-quick-view-container">
 	<div class="row row-collapse mb-0 product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="product-gallery large-6 col">
-			<div class="slider slider-show-nav product-gallery-slider main-images mb-0" data-flickity-options='{
-				"cellAlign": "center",
-				"wrapAround": true,
-				"percentPosition": true,
-				"imagesLoaded": true,
-				"pageDots": true,
-				"contain": true
-			}'>
+			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
 				<?php if ( has_post_thumbnail() ) :
 
 					$image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
@@ -53,7 +46,7 @@ do_action( 'wc_quick_view_before_single_product' );
 				?>
 			</div>
 
-			<div class="slider-nav" data-flickity='{ "asNavFor": ".slider", "contain": true, "pageDots": false }'>
+			<div class="slider-nav">
 			  <div class="carousel-cell">1</div>
 			  <div class="carousel-cell">2</div>
 			  <div class="carousel-cell">3</div>
@@ -62,6 +55,10 @@ do_action( 'wc_quick_view_before_single_product' );
 			  <div class="carousel-cell">6</div>
 			  <div class="carousel-cell">7</div>
 			</div>
+
+			<script type="text/javascript">
+				$('.slider').flickity();
+			</script>
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
 		</div>
