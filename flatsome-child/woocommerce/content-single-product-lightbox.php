@@ -24,7 +24,7 @@ do_action( 'wc_quick_view_before_single_product' );
 					) );
 
 					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="slide first">%s</div>', $image ), $post->ID ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-						echo '123';
+
 					// Additional images.
 					$attachment_ids = $product->get_gallery_image_ids();
 					if ( $attachment_ids ) {
@@ -44,6 +44,17 @@ do_action( 'wc_quick_view_before_single_product' );
 					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src( 'woocommerce_single' ), esc_html__( 'Awaiting product image', 'woocommerce' ) ), $post->ID ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 				endif;
 				?>
+			</div>
+
+			<div class="slider slider-nav"
+			  data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+			  <div class="carousel-cell">1</div>
+			  <div class="carousel-cell">2</div>
+			  <div class="carousel-cell">3</div>
+			  <div class="carousel-cell">4</div>
+			  <div class="carousel-cell">5</div>
+			  <div class="carousel-cell">6</div>
+			  <div class="carousel-cell">7</div>
 			</div>
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
