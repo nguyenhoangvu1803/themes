@@ -21,7 +21,7 @@ if ( $total <= 1 ) {
 }
 ?>
 <div class="container">
-<nav class="woocommerce-pagination">
+<nav class="woocommerce-pagination">123456
 	<?php
 		$pages = paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
 			'base'      => $base,
