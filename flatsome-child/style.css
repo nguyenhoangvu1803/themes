@@ -1661,6 +1661,12 @@ blockquote {
     color: #000;
     background: #fff;
 } 
+.woocommerce-result-count {
+    color: #9E9FA7;
+}
+.woocommerce-ordering select {
+    height: 45px;
+}
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
