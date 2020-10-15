@@ -2026,6 +2026,11 @@ blockquote {
         -webkit-line-clamp: 3;
         min-height: 54px;
     }
+    .product-small .add-to-cart-quickview,
+    .product-small .box-text {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
