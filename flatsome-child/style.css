@@ -1627,10 +1627,14 @@ blockquote {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.woocommerce-pagination {
+    text-align: right;
+}
 .woocommerce-pagination ul {
     border: 1px solid #EEEEEE;
     border-radius: 3px;
-    padding: 7px 5px;
+    padding: 7px 20px;
+    display: inline-block;
 }
 .woocommerce-pagination ul li a, 
 .woocommerce-pagination ul li span {
