@@ -14,7 +14,14 @@ do_action( 'wc_quick_view_before_single_product' );
 <div class="product-quick-view-container">
 	<div class="row row-collapse mb-0 product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="product-gallery large-6 col">
-			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
+			<div class="slider slider-show-nav product-gallery-slider main-images mb-0" data-flickity-options='{
+				"cellAlign": "center",
+				"wrapAround": true,
+				"percentPosition": true,
+				"imagesLoaded": true,
+				"pageDots": true,
+				"contain": true
+			}'>
 				<?php if ( has_post_thumbnail() ) :
 
 					$image_title = esc_attr( get_the_title( get_post_thumbnail_id() ) );
