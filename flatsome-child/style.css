@@ -2031,6 +2031,9 @@ blockquote {
         padding-left: 12px;
         padding-right: 12px;
     }
+    .default-padding-col .product-small .col-inner {
+        padding: 12px;
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
