@@ -47,7 +47,7 @@ do_action( 'wc_quick_view_before_single_product' );
 				?>
 			</div>
 
-			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
+			<?php //do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
 		</div>
 
 		<div class="product-info summary large-6 col entry-summary" style="font-size:90%;">
