@@ -1277,12 +1277,12 @@ del span.amount {
     width: 30px;
     opacity: 1;
 }
-.slider-nav-outside .flickity-prev-next-button.previous {
+.flickity-prev-next-button.previous {
     left: -4%;
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
 }
-.slider-nav-outside .flickity-prev-next-button.next {
+.flickity-prev-next-button.next {
     right: -4%;
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
