@@ -2,7 +2,7 @@
 	<div class="page-title-inner flex-row  medium-flex-wrap container">
 	  <div class="flex-col flex-grow medium-text-center">
 	  	<?php do_action('flatsome_category_title') ;?>
-	  </div>
+	  </div>child
 	  <div class="flex-col medium-text-center">
 	  	<?php do_action('flatsome_category_title_alt') ;?>
 	  </div>
