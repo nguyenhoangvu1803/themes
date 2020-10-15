@@ -15,7 +15,7 @@ global $product, $woocommerce_loop, $flatsome_opt;
 
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="row row-collapse align-middle flip-slide" style="width:100%">
+<div class="row row-collapse align-middle flip-slide slider-nav-outside" style="width:100%">
       <div class="small-12 medium-5 large-6 col flip-page-one">
       <div class="featured-product col-inner">
         <a href="<?php the_permalink(); ?>">
