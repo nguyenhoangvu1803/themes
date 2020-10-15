@@ -10,7 +10,8 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.header-search > a').on('click', function(e){
-		console.log(1);
+		console.log($(this).parent());
+		$(this).parent().find('input[type="search"]').focus();;
 	})
 
 })
