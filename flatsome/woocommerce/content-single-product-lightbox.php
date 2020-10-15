@@ -14,6 +14,7 @@ do_action( 'wc_quick_view_before_single_product' );
 <div class="product-quick-view-container">
 	<div class="row row-collapse mb-0 product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="product-gallery large-6 col">
+			12345
 			<div class="slider slider-show-nav product-gallery-slider main-images mb-0">
 				<?php if ( has_post_thumbnail() ) :
 
