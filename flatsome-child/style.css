@@ -1620,7 +1620,7 @@ blockquote {
 .mfp-content .product-quick-head .mfp-close {
     position: inherit;
 }
-.mfp-ready > .mfp-close {
+.mfp-ready:not(.off-canvas) > .mfp-close {
     display: none;
 }
 .off-canvas .nav-vertical li li>a {
