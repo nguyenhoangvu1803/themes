@@ -311,6 +311,7 @@ span.amount {
 }
 .slider-nav {
     display: flex;
+    flex-wrap: wrap;
 }
 .flex-control-thumbs li,
 .slider-nav li {
@@ -320,6 +321,9 @@ span.amount {
     max-width: 80px;
     margin-bottom: 0;
     list-style: none;
+}
+.slider-nav li {
+    max-width: 70px;
 }
 .flex-control-thumbs li img,
 .slider-nav li img {
