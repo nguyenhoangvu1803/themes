@@ -52,7 +52,7 @@ do_action( 'wc_quick_view_before_single_product' );
 
 					if ( has_post_thumbnail() ) :
 						?>
-						<li class="nav-cell">
+						<li class="nav-cell active">
 							<?php
 								$image_id  = get_post_thumbnail_id( $post->ID );
 								$image     = wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' ) );
