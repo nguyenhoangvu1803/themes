@@ -40,7 +40,6 @@ if ( $attachment_ids ) {
 
 	$gallery_class[] = 'slider row row-small row-slider slider-nav-small small-columns-4';
 	?>
-	lkalaskdj
 	<div class="<?php echo implode( ' ', $gallery_class ); ?>"
 		data-flickity-options='{
 			"cellAlign": "<?php echo $thumb_cell_align; ?>",
