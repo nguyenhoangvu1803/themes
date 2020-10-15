@@ -507,9 +507,7 @@ if ( ! function_exists( 'add_pagination_category_title' ) ) {
    * Add Pagination
    */
   function add_pagination_category_title () {
-    ?>
-      12345
-    <?php
+    wc_get_template_part( 'loop/pagination.php' );
   }
 }
 add_action( 'flatsome_category_title_alt', 'add_pagination_category_title', 25 );
