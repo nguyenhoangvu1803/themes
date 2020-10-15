@@ -1654,7 +1654,7 @@ blockquote {
     width: 31px;
     vertical-align: middle;
 }
-.woocommerce-pagination ul li span .page-number.dots {
+.woocommerce-pagination ul li .page-number.dots {
     color: #9E9FA7;
 }
 .woocommerce-pagination .nav-pagination > li > a:hover {
