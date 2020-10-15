@@ -1620,6 +1620,9 @@ blockquote {
 .mfp-content .product-quick-head .mfp-close {
     position: inherit;
 }
+.mfp-ready > .mfp-close {
+    display: none;
+}
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
