@@ -1655,6 +1655,7 @@ blockquote {
 }
 .woocommerce-pagination .nav-pagination > li > a:hover {
     color: #000;
+    background: #fff;
 } 
 @media only screen and (min-width: 850px) {
     .col-remove-padding-desktop > .col {
