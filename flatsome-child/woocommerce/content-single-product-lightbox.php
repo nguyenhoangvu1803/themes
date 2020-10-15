@@ -56,12 +56,6 @@ do_action( 'wc_quick_view_before_single_product' );
 			  <div class="carousel-cell">7</div>
 			</div>
 
-			<script type="text/javascript">
-				jQuery(document).ready(function($) {
-					$('.slider').flickity('select', 3);
-				})
-			</script>
-
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
 		</div>
 
