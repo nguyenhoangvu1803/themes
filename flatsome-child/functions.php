@@ -500,3 +500,14 @@ function include_custom_slide_flickity() {
   wp_enqueue_script('flatsome-child-js', get_stylesheet_directory_uri() .'/assets/js/flatsome-child.js', array('flatsome-theme-woocommerce-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'include_custom_slide_flickity');
+
+
+if ( ! function_exists( 'add_pagination_category_title' ) ) {
+  /**
+   * Add Pagination
+   */
+  ?>
+    12345
+  <?php
+}
+add_action( 'flatsome_category_title', 'add_pagination_category_title', 15 );
