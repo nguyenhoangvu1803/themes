@@ -1790,6 +1790,9 @@ blockquote {
     .stamped-reviews-container {
         margin-bottom: 30px;
     }
+    .product-lightbox-inner {
+        padding: 0;
+    }
 }
 @media screen and (min-width: 550px) and (max-width: 849px) {
     .medium-text-center .pull-left {
@@ -2001,9 +2004,6 @@ blockquote {
     }
     .product-lightbox.lightbox-content {
         padding: 15px;
-    }
-    .product-lightbox-inner {
-        padding: 0;
     }
 }
 @media only screen and (max-width: 375px) {
