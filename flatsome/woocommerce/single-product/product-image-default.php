@@ -33,7 +33,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="product-gallery-default has-hover relative">
+<div class="product-gallery-default has-hover relative">12345
 
 <?php do_action('flatsome_sale_flash'); ?>
 
