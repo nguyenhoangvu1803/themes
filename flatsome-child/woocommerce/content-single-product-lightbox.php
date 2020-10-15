@@ -89,8 +89,18 @@ do_action( 'wc_quick_view_before_single_product' );
 		<div class="product-info summary large-6 col entry-summary">
 			<div class="product-lightbox-inner">
 				<a class="plain" href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
-				<div class="is-divider small"></div>
-
+				<div class="product-star" style="margin-top:-7px;margin-bottom:5px">
+				  <span class="star">
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				    <span class="fa fa-star checked"></span>
+				  </span>
+				  <a data-click="0" href="#tab-title-reviews_tab" class="load-review reviews middle-of-product-reviews">
+				    <?php echo do_shortcode('[jgm-review-rating]'); ?> Stars | <?php echo do_shortcode('[jgm-review-count]'); ?> reviews
+				  </a>
+				</div>
 				<?php do_action( 'woocommerce_single_product_lightbox_summary' ); ?>
 			</div>
 		</div>
