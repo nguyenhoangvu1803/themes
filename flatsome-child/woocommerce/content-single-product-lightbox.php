@@ -46,15 +46,13 @@ do_action( 'wc_quick_view_before_single_product' );
 				?>
 			</div>
 
-
-
-			<div class="slider-nav">
+			<ul class="slider-nav">
 			  	<?php 
 					$attachment_ids = $product->get_gallery_image_ids();
 
 					if ( has_post_thumbnail() ) :
 						?>
-						<div class="nav-cell">
+						<li class="nav-cell">
 							<?php
 								$image_id  = get_post_thumbnail_id( $post->ID );
 								$image     = wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' ) );
@@ -63,7 +61,7 @@ do_action( 'wc_quick_view_before_single_product' );
 
 								echo $image;
 							?>
-						</div>
+						</li>
 						<?php
 					endif;
 
@@ -74,10 +72,10 @@ do_action( 'wc_quick_view_before_single_product' );
 						$image_alt   = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
 						$image       = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '"  class="attachment-woocommerce_thumbnail" />';
 
-						echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="nav-cell">%s</div>', $image ), $attachment_id, $post->ID, $image_class );
+						echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li class="nav-cell">%s</li>', $image ), $attachment_id, $post->ID, $image_class );
 					}
 				?>
-			</div>
+			</ul>
 
 			<?php do_action( 'woocommerce_before_single_product_lightbox_summary' ); ?>
 		</div>
