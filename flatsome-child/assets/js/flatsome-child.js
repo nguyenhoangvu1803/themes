@@ -9,4 +9,8 @@ jQuery(document).ready(function($) {
 	  $('.product-lightbox .product-gallery .slider').flickity( 'select', index );
 	});
 
+	$('.header-search > a').on('click', function(e){
+		console.log(1);
+	})
+
 })
