@@ -24,7 +24,7 @@ do_action( 'wc_quick_view_before_single_product' );
 					) );
 
 					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="slide first">%s</div>', $image ), $post->ID ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
+						echo '123';
 					// Additional images.
 					$attachment_ids = $product->get_gallery_image_ids();
 					if ( $attachment_ids ) {
