@@ -2022,6 +2022,10 @@ blockquote {
     .inner-padding, .product-quick-head {
         padding: 15px;
     }
+    .box-text-products .title-wrapper .product-title a {
+        -webkit-line-clamp: 3;
+        min-height: 54px;
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
