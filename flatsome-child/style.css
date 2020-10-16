@@ -2146,6 +2146,9 @@ blockquote {
         margin-left: -15px;
         margin-right: -15px;
     }
+    figure.product-gallery-slider {
+        box-shadow: none;
+    }
     .flex-control-thumbs li,
     .slider-nav li {
         max-width: 50px;
@@ -2166,6 +2169,9 @@ blockquote {
     }
     .flickity-page-dots {
         display: block;
+        left: 12px;
+        bottom: -35px;
+        text-align: left;
     }
 }
 @media only screen and (max-width: 375px) {
