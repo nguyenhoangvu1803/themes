@@ -593,7 +593,7 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrap
 
 -->
 
-//   <?php
+   <?php
 
 //   } else {
 
@@ -614,7 +614,7 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrap
 
 -->
 
-//   <?php
+  <?php
 //   }
 // }
 
