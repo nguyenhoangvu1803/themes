@@ -8,7 +8,7 @@ get_header(); ?>
 
 <?php do_action( 'flatsome_before_page' ); ?>
 
-<?php wc_get_template('myaccount/header.php'); ?>
+<?php // wc_get_template('myaccount/header.php'); ?>
 
 <div class="page-wrapper my-account mb">
 <div class="container" role="main">

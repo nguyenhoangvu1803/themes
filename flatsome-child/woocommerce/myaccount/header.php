@@ -29,7 +29,7 @@ if ( function_exists( 'wc_get_account_menu_items' ) && get_theme_mod( 'wc_accoun
 	}
 }
 ?>
-12345577
+
 <div class="my-account-header page-title normal-title
 	<?php if ( get_theme_mod( 'my_account_title_text_color', 'dark' ) == 'light' ) echo 'dark'; ?>
 	<?php if ( $login_bg_image ) echo ' featured-title'; ?>">
