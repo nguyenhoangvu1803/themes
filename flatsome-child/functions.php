@@ -541,3 +541,15 @@ if ( ! function_exists( 'woocommerce_after_shop_loop_end_wrapper' ) ) {
 }
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrapper', 20 );
 
+// Add ShortCode 
+function login_page() {
+  return 'LOGIN PAGE';
+}
+
+function register_shortcodes(){
+  add_shortcode('login', 'login_page');
+}
+
+add_action( 'init', 'register_shortcodes');
+
+
