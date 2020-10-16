@@ -340,6 +340,10 @@ span.amount {
 .slider-nav li img {
     margin-bottom: 0;
 }
+.product-thumbnails.slider.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 .shop_table .quantity {
     max-width: 100%;
 }
