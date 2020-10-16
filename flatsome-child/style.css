@@ -2107,7 +2107,7 @@ blockquote {
     .sticky-add-to-cart--active .sticky-add-to-cart__product {
         display: none;
     }
-    .product-info .sticky-add-to-cart--active .button {
+    .product-info .sticky-add-to-cart--active .button.single_add_to_cart_button {
         width: calc( 100% - 144px - 15px );
     }
 }
