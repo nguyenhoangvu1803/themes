@@ -541,8 +541,9 @@ if ( ! function_exists( 'woocommerce_after_shop_loop_end_wrapper' ) ) {
 }
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrapper', 20 );
 
-// Add ShortCode 
+// Add ShortCode [login] from woocommerce account
 function login_page() {
+  if( !is_user_logged_in() ) {
   ?>
     <div class="account-container lightbox-inner">
         <div class="account-login-inner">
@@ -586,6 +587,9 @@ function login_page() {
         </div>
     </div>
   <?php
+  } else {
+    echo 'Login';
+  }
 }
 
 function register_shortcodes(){
