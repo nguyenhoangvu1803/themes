@@ -1039,6 +1039,11 @@ label.shipping__list_label {
     width: 100%;
     padding: 7px 0;
 }
+.woocommerce form button.button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 2px 25px;
+}
 .woocommerce-ResetPassword .form-row-first {
     float: initial;
     margin-right: 0;
