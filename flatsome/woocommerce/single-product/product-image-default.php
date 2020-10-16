@@ -27,7 +27,7 @@ global $product;
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
-	'woocommerce-product-gallery1',
+	'woocommerce-product-gallery',
 	'woocommerce-product-gallery--' . ( $product->get_image_id() ? 'with-images' : 'without-images' ),
 	'woocommerce-product-gallery--columns-' . absint( $columns ),
 	'images',
