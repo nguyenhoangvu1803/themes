@@ -341,6 +341,10 @@ span.amount {
 }
 .product-thumbnails .col img {
     margin-bottom: 0;
+    max-height: 68px;
+}
+.product-thumbnails a:hover img, .product-thumbnails .is-nav-selected a img {
+    transform: translateY(0);
 }
 .product-thumbnails.slider.row {
     margin-left: 0;
