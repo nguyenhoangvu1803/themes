@@ -41,7 +41,7 @@ if ( $attachment_ids ) {
 
 	$gallery_class[] = 'slider row row-small row-slider slider-nav-small small-columns-4';
 	?>
-	<ul class="slider-nav <?php echo implode( ' ', $gallery_class ); ?>"
+	<div class="<?php echo implode( ' ', $gallery_class ); ?>"
 		data-flickity-options='{
 			"cellAlign": "<?php echo $thumb_cell_align; ?>",
 			"wrapAround": false,
@@ -59,7 +59,7 @@ if ( $attachment_ids ) {
 
 		if ( has_post_thumbnail() ) :
 			?>
-			<li class="nav-cell is-nav-selected first">
+			<div class="col is-nav-selected first">
 				<a>
 					<?php
 					$image_id  = get_post_thumbnail_id( $post->ID );
@@ -70,7 +70,7 @@ if ( $attachment_ids ) {
 					echo $image;
 					?>
 				</a>
-			</li>
+			</div>
 			<?php
 		endif;
 
@@ -82,11 +82,11 @@ if ( $attachment_ids ) {
 			$image_alt   = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
 			$image       = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '"  class="attachment-woocommerce_thumbnail" />';
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li class="nav-cell"><a>%s</a></li>', $image ), $attachment_id, $post->ID, $image_class );
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="col"><a>%s</a></div>', $image ), $attachment_id, $post->ID, $image_class );
 
 			$loop ++;
 		}
 		?>
-	</ul>
+	</div>
 	<?php
 } ?>
