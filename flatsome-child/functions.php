@@ -543,7 +543,7 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrap
 
 // Add ShortCode [login] from woocommerce account
 function login_page() {
-  // if( !is_user_logged_in() ) {
+  if( !is_user_logged_in() ) {
   ?>
     <div class="account-container lightbox-inner">
         <div class="account-login-inner">
@@ -587,9 +587,18 @@ function login_page() {
         </div>
     </div>
   <?php
-  // } else {
-  //   echo 'Login';
-  // }
+
+  } else {
+
+  ?>
+    <div class="account-container lightbox-inner">
+      <h3>You are logged in</h3>
+      <p class="return-to-shop">
+        <a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"> <?php _e( '← Continue shopping ', 'woocommerce' ) ?> </a>
+      </p>
+    </div>
+  <?php
+  }
 }
 
 function register_shortcodes(){
@@ -597,7 +606,6 @@ function register_shortcodes(){
 }
 
 add_action( 'init', 'register_shortcodes');
-
 
 /**
 * Redirect users to custom URL based on their role after login
@@ -607,30 +615,21 @@ add_action( 'init', 'register_shortcodes');
 * @return string
 */
 function wc_custom_user_redirect( $redirect, $user ) {
-// Get the first of all the roles assigned to the user
-$role = $user->roles[0];
-$dashboard = admin_url();
-$myaccount = get_permalink( wc_get_page_id( 'shop' ) );
-if( $role == 'administrator' ) {
-//Redirect administrators to the dashboard
-$redirect = $dashboard;
-} elseif ( $role == 'shop-manager' ) {
-//Redirect shop managers to the dashboard
-$redirect = $dashboard;
-} elseif ( $role == 'editor' ) {
-//Redirect editors to the dashboard
-$redirect = $dashboard;
-} elseif ( $role == 'author' ) {
-//Redirect authors to the dashboard
-$redirect = $dashboard;
-} elseif ( $role == 'customer' || $role == 'subscriber' ) {
-//Redirect customers and subscribers to the "My Account" page
-$redirect = $myaccount;
-} else {
-//Redirect any other role to the previous visited page or, if not available, to the home
-$redirect = wp_get_referer() ? wp_get_referer() : home_url();
-}
-return $redirect;
+  // Get the first of all the roles assigned to the user
+  $role = $user->roles[0];
+  $dashboard = admin_url();
+  $myaccount = get_permalink( wc_get_page_id( 'my-account' ) );
+  if( $role == 'administrator' ) {
+    //Redirect administrators to the dashboard
+    $redirect = $dashboard;
+  } elseif ( $role == 'customer' || $role == 'subscriber' ) {
+    //Redirect customers and subscribers to the "My Account" page
+    $redirect = $myaccount;
+  } else {
+    //Redirect any other role to the previous visited page or, if not available, to the home
+    $redirect = wp_get_referer() ? wp_get_referer() : home_url();
+  }
+  return $redirect;
 }
 add_filter( 'woocommerce_login_redirect', 'wc_custom_user_redirect', 10, 2 );
 
