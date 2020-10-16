@@ -21,7 +21,8 @@ if ( is_rtl() ) {
 if ( $attachment_ids ) {
 	$loop          = 0;
 	$columns       = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
-	$image_size    = 'thumbnail';
+	// $image_size    = 'thumbnail';
+	$image_size    = 'gallery_thumbnail';
 	$gallery_class = array( 'product-thumbnails', 'thumbnails' );
 
 	// Check if custom gallery thumbnail size is set and use that.
@@ -45,7 +46,7 @@ if ( $attachment_ids ) {
 			"cellAlign": "<?php echo $thumb_cell_align; ?>",
 			"wrapAround": false,
 			"autoPlay": false,
-			"prevNextButtons": true,
+			"prevNextButtons": false,
 			"asNavFor": ".product-gallery-slider",
 			"percentPosition": true,
 			"imagesLoaded": true,
