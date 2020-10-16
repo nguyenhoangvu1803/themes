@@ -626,6 +626,15 @@ function wc_custom_user_redirect( $redirect, $user ) {
   if( $role == 'administrator' ) {
     //Redirect administrators to the dashboard
     $redirect = $dashboard;
+  } elseif ( $role == 'shop-manager' ) {
+    //Redirect shop managers to the dashboard
+    $redirect = $dashboard;
+  } elseif ( $role == 'editor' ) {
+    //Redirect editors to the dashboard
+    $redirect = $dashboard;
+  } elseif ( $role == 'author' ) {
+    //Redirect authors to the dashboard
+    $redirect = $dashboard;
   } elseif ( $role == 'customer' || $role == 'subscriber' ) {
     //Redirect customers and subscribers to the "My Account" page
     $redirect = $myaccount;
