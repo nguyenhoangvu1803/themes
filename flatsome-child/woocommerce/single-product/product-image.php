@@ -110,7 +110,7 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
     <?php do_action('flatsome_product_image_tools_bottom'); ?>
   </div>
 
-  <ul class="single-product slider-nav">
+  <!-- <ul class="slider-nav">
       <?php 
       $attachment_ids = $product->get_gallery_image_ids();
 
@@ -139,7 +139,7 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
         echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li class="nav-cell">%s</li>', $image ), $attachment_id, $post->ID, $image_class );
       }
     ?>
-  </ul>
+  </ul> -->
 
 </div>
 <?php do_action('flatsome_after_product_images'); ?>
