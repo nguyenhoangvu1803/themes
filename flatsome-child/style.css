@@ -2100,6 +2100,16 @@ blockquote {
     .slider-nav li img {
         padding: 3px;
     }
+    .sticky-add-to-cart--active {
+        padding: 8px 15px;
+        font-size: 100%;
+    }
+    .sticky-add-to-cart--active .sticky-add-to-cart__product {
+        display: none;
+    }
+    .product-info .sticky-add-to-cart--active .button {
+        width: calc( 100% - 144px - 15px );
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
