@@ -982,6 +982,18 @@ form .woocommerce-form-row input {
     height: 65px;
     padding-top: 22px;
 }
+form .woocommerce-form-row input[name="account_display_name"] {
+    margin-bottom: 0;
+}
+form .woocommerce-form-row > span {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
 .woocommerce-shipping-totals table {
     margin-bottom: 0;
 }
