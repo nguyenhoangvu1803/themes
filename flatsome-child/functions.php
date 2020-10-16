@@ -545,6 +545,9 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrap
 // function login_page() {
 //   if( !is_user_logged_in() ) {
 //   ?>
+
+<!--
+
 //     <div class="account-container lightbox-inner">
 //         <div class="account-login-inner">
 
@@ -586,11 +589,18 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrap
 //           <span>100.000+ flags sold in Flagwix last year</span>
 //         </div>
 //     </div>
+
+
+-->
+
 //   <?php
 
 //   } else {
 
 //   ?>
+
+<!--
+
 //     <div class="page-wrapper">
 //       <div class="woocommerce">
 //         <div class="text-center pt pb">
@@ -601,6 +611,9 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrap
 //         </div>
 //       </div>
 //     </div>
+
+-->
+
 //   <?php
 //   }
 // }
