@@ -1886,9 +1886,6 @@ blockquote {
     .cart-collaterals .shop_table tbody tr td:last-child {
         border-right: none;
     }
-    .flickity-prev-next-button {
-        display: none;
-    }
     .blog-post-inner .from_the_blog_excerpt {
         font-size: 13px;
     }
@@ -2057,9 +2054,6 @@ blockquote {
     }
     .woocommerce-order-received .is-well {
         padding: 15px;
-    }
-    .flickity-prev-next-button {
-        display: none;
     }
     .product-info .button {
         width: 100%;
