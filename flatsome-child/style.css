@@ -1064,7 +1064,7 @@ th {
     text-transform: capitalize;
     line-height: 1.5;
 }
-.uppercase {
+.uppercase, .is-uppercase {
     letter-spacing: 0;
     line-height: 1.5;
 }
