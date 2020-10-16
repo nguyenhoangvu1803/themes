@@ -20,6 +20,7 @@ defined( 'ABSPATH' ) || exit;
 global $post;
 ?>
 <div class="myaccount__order--tracking">
+<h3 class="myaccount__page--title"> Track Order</h3>
 <form action="<?php echo esc_url( get_permalink( $post->ID ).'track-order' ); ?>" method="post" class="woocommerce-form woocommerce-form-track-order track_order">
 
 	<p><?php esc_html_e( 'To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.', 'woocommerce' ); ?></p>
