@@ -596,7 +596,7 @@ function login_page() {
         <div class="text-center pt pb">
           <h3>You are logged in</h3>
           <p class="return-to-shop">
-            <a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"> <?php _e( '← Continue shopping ', 'woocommerce' ) ?> </a>
+            <a class="button wc-backward" href="<?php echo esc_url( wc_get_page_permalink( 'my-account' ) ); ?>"> <?php _e( 'My account ', 'woocommerce' ) ?> </a>
           </p>
         </div>
       </div>
