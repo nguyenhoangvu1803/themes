@@ -1860,6 +1860,10 @@ blockquote {
     .woocommerce-pagination {
         text-align: center;
     }
+    .product-summary .variations_button {
+        border-bottom: none;
+    }
+
 }
 @media screen and (min-width: 550px) and (max-width: 849px) {
     .medium-text-center .pull-left {
