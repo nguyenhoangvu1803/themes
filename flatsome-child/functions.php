@@ -512,6 +512,32 @@ if ( ! function_exists( 'add_pagination_category_title' ) ) {
 }
 add_action( 'flatsome_category_title_alt', 'add_pagination_category_title', 25 );
 
+// Add woocommerce_after_shop_loop start wrapper 
+if ( ! function_exists( 'woocommerce_after_shop_loop_start_wrapper' ) ) {
+  /**
+   * Add Pagination
+   */
+  function woocommerce_after_shop_loop_start_wrapper () {
+    ?> 
+      <div class="pagination-wrapper">
+    <?php
+  }
+}
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_start_wrapper', 10 );
+
 // Add show result to before pagination shop category end loop 
-add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 25 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 15 );
+
+// Add woocommerce_after_shop_loop end wrapper 
+if ( ! function_exists( 'woocommerce_after_shop_loop_end_wrapper' ) ) {
+  /**
+   * Add Pagination
+   */
+  function woocommerce_after_shop_loop_end_wrapper () {
+    ?> 
+      </div>
+    <?php
+  }
+}
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrapper', 20 );
 
