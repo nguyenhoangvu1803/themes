@@ -519,7 +519,7 @@ if ( ! function_exists( 'woocommerce_after_shop_loop_start_wrapper' ) ) {
    */
   function woocommerce_after_shop_loop_start_wrapper () {
     ?> 
-      <div class="pagination-wrapper">
+      <div class="pagination-wrapper text-right">
     <?php
   }
 }
