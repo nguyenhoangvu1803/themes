@@ -314,7 +314,8 @@ span.amount {
     flex-wrap: wrap;
 }
 .flex-control-thumbs li,
-.slider-nav li {
+.slider-nav li,
+.row-small>.flickity-viewport>.flickity-slider>.col  {
     width: initial;
     padding: 0;
     border-radius: 3px;
