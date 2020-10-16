@@ -879,6 +879,7 @@ ul.woocommerce-order-overview {
 .notice-order-success,
 .woocommerce-checkout.woocommerce-order-received .myaccount__page__list.myaccountorder__address,
 .woocommerce-checkout.woocommerce-order-received .myaccountorder__address,
+.woocommerce-checkout.woocommerce-order-received .myaccountorder > .myaccountorder__block,
 .woocommerce-customer-details,
 .woocommerce-order-details,
 .woocommerce-order-downloads {
@@ -1671,6 +1672,14 @@ blockquote {
     max-width: inherit;
     width: inherit;
     display: inline-block;
+}
+.woocommerce-table--custom-fields.shop_table tbody tr:first-child th,
+.woocommerce-table--custom-fields.shop_table tbody tr:first-child td {
+    border-top: 1px solid #e5e5e5;
+}
+.woocommerce-checkout .woocommerce-table--custom-fields.shop_table tbody tr td:last-child {
+    border-left: 1px solid #e5e5e5;
+    padding-right: 15px;
 }
 @media only screen and (min-width: 850px) {
     .pagination-wrapper > p, .pagination-wrapper > div {
