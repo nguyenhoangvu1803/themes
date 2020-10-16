@@ -542,108 +542,108 @@ if ( ! function_exists( 'woocommerce_after_shop_loop_end_wrapper' ) ) {
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrapper', 20 );
 
 // Add ShortCode [login] from woocommerce account
-function login_page() {
-  if( !is_user_logged_in() ) {
-  ?>
-    <div class="account-container lightbox-inner">
-        <div class="account-login-inner">
+// function login_page() {
+//   if( !is_user_logged_in() ) {
+//   ?>
+//     <div class="account-container lightbox-inner">
+//         <div class="account-login-inner">
 
-          <h3 class="uppercase"><?php esc_html_e( 'Log In', 'woocommerce' ); ?></h3>
+//           <h3 class="uppercase"><?php esc_html_e( 'Log In', 'woocommerce' ); ?></h3>
 
-          <form class="woocommerce-form woocommerce-form-login login" method="post">
+//           <form class="woocommerce-form woocommerce-form-login login" method="post">
 
-            <?php do_action( 'woocommerce_login_form_start' ); ?>
+//             <?php do_action( 'woocommerce_login_form_start' ); ?>
 
-            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-              <label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-              <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" placeholder="Your email..." autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-            </p>
-            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-              <label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-              <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" placeholder="Your first name..." autocomplete="current-password" />
-            </p>
+//             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+//               <label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+//               <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" placeholder="Your email..." autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+//             </p>
+//             <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+//               <label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+//               <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" placeholder="Your first name..." autocomplete="current-password" />
+//             </p>
 
-            <?php do_action( 'woocommerce_login_form' ); ?>
+//             <?php do_action( 'woocommerce_login_form' ); ?>
 
-            <p class="form-row remember-and-lost">
-              <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme pull-left">
-                <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-              </label>
-              <a class="woocommerce-LostPassword lost_password pull-right" href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
-            </p>
-            <p class="form-row">
-              <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-              <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-            </p>
+//             <p class="form-row remember-and-lost">
+//               <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme pull-left">
+//                 <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
+//               </label>
+//               <a class="woocommerce-LostPassword lost_password pull-right" href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+//             </p>
+//             <p class="form-row">
+//               <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+//               <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+//             </p>
 
-            <?php do_action( 'woocommerce_login_form_end' ); ?>
+//             <?php do_action( 'woocommerce_login_form_end' ); ?>
 
-          </form>
+//           </form>
 
-        </div>
+//         </div>
 
-        <div class="text-center review">
-          <span>100.000+ flags sold in Flagwix last year</span>
-        </div>
-    </div>
-  <?php
+//         <div class="text-center review">
+//           <span>100.000+ flags sold in Flagwix last year</span>
+//         </div>
+//     </div>
+//   <?php
 
-  } else {
+//   } else {
 
-  ?>
-    <div class="page-wrapper">
-      <div class="woocommerce">
-        <div class="text-center pt pb">
-          <h3>You are logged in</h3>
-          <p class="return-to-shop">
-            <a class="button wc-backward" href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>"> <?php _e( 'My account ', 'woocommerce' ) ?> </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  <?php
-  }
-}
+//   ?>
+//     <div class="page-wrapper">
+//       <div class="woocommerce">
+//         <div class="text-center pt pb">
+//           <h3>You are logged in</h3>
+//           <p class="return-to-shop">
+//             <a class="button wc-backward" href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>"> <?php _e( 'My account ', 'woocommerce' ) ?> </a>
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   <?php
+//   }
+// }
 
-function register_shortcodes(){
-  add_shortcode('login', 'login_page');
-}
+// function register_shortcodes(){
+//   add_shortcode('login', 'login_page');
+// }
 
-add_action( 'init', 'register_shortcodes');
+// add_action( 'init', 'register_shortcodes');
 
-/**
-* Redirect users to custom URL based on their role after login
-*
-* @param string $redirect
-* @param object $user
-* @return string
-*/
-function wc_custom_user_redirect( $redirect, $user ) {
-  // Get the first of all the roles assigned to the user
-  $role = $user->roles[0];
-  $dashboard = admin_url();
-  $myaccount = get_permalink( wc_get_page_id( 'my-account' ) );
-  if( $role == 'administrator' ) {
-    //Redirect administrators to the dashboard
-    $redirect = $dashboard;
-  } elseif ( $role == 'shop-manager' ) {
-    //Redirect shop managers to the dashboard
-    $redirect = $dashboard;
-  } elseif ( $role == 'editor' ) {
-    //Redirect editors to the dashboard
-    $redirect = $dashboard;
-  } elseif ( $role == 'author' ) {
-    //Redirect authors to the dashboard
-    $redirect = $dashboard;
-  } elseif ( $role == 'customer' || $role == 'subscriber' ) {
-    //Redirect customers and subscribers to the "My Account" page
-    $redirect = $myaccount;
-  } else {
-    //Redirect any other role to the previous visited page or, if not available, to the home
-    $redirect = wp_get_referer() ? wp_get_referer() : home_url();
-  }
-  return $redirect;
-}
-add_filter( 'woocommerce_login_redirect', 'wc_custom_user_redirect', 10, 2 );
+// /**
+// * Redirect users to custom URL based on their role after login
+// *
+// * @param string $redirect
+// * @param object $user
+// * @return string
+// */
+// function wc_custom_user_redirect( $redirect, $user ) {
+//   // Get the first of all the roles assigned to the user
+//   $role = $user->roles[0];
+//   $dashboard = admin_url();
+//   $myaccount = get_permalink( wc_get_page_id( 'my-account' ) );
+//   if( $role == 'administrator' ) {
+//     //Redirect administrators to the dashboard
+//     $redirect = $dashboard;
+//   } elseif ( $role == 'shop-manager' ) {
+//     //Redirect shop managers to the dashboard
+//     $redirect = $dashboard;
+//   } elseif ( $role == 'editor' ) {
+//     //Redirect editors to the dashboard
+//     $redirect = $dashboard;
+//   } elseif ( $role == 'author' ) {
+//     //Redirect authors to the dashboard
+//     $redirect = $dashboard;
+//   } elseif ( $role == 'customer' || $role == 'subscriber' ) {
+//     //Redirect customers and subscribers to the "My Account" page
+//     $redirect = $myaccount;
+//   } else {
+//     //Redirect any other role to the previous visited page or, if not available, to the home
+//     $redirect = wp_get_referer() ? wp_get_referer() : home_url();
+//   }
+//   return $redirect;
+// }
+// add_filter( 'woocommerce_login_redirect', 'wc_custom_user_redirect', 10, 2 );
 
 
