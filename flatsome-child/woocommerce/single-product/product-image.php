@@ -106,6 +106,10 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
     ?>
   </figure>
 
+  <div class="image-tools absolute bottom left z-3">
+    <?php do_action('flatsome_product_image_tools_bottom'); ?>
+  </div>
+
   <ul class="single-product slider-nav">
       <?php 
       $attachment_ids = $product->get_gallery_image_ids();
@@ -137,9 +141,6 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
     ?>
   </ul>
 
-  <div class="image-tools absolute bottom left z-3">
-    <?php do_action('flatsome_product_image_tools_bottom'); ?>
-  </div>
 </div>
 <?php do_action('flatsome_after_product_images'); ?>
 
