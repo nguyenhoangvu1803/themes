@@ -109,8 +109,10 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
   <div class="image-tools absolute bottom left z-3">
     <?php do_action('flatsome_product_image_tools_bottom'); ?>
   </div>
-  
+
+  <?php wc_get_template( 'woocommerce/single-product/product-gallery-thumbnails.php' ); ?>
+
 </div>
 <?php do_action('flatsome_after_product_images'); ?>
 
-<?php wc_get_template( 'woocommerce/single-product/product-gallery-thumbnails.php' ); ?>
+
