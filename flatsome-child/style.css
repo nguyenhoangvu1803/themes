@@ -335,7 +335,7 @@ span.amount {
 .slider-nav li img,
 .row-small>.flickity-viewport>.flickity-slider>.col {
     opacity: 1;
-    padding: 5px;
+    padding: 5px !important;
     border: 1px solid transparent;
     border-radius: 6px;
 }
