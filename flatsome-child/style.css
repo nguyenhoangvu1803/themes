@@ -2141,7 +2141,8 @@ blockquote {
     .default-padding-col .product-small .col-inner {
         padding: 12px;
     }
-    .woocommerce-product-gallery .flex-viewport {
+    .woocommerce-product-gallery .flex-viewport,
+    figure.product-gallery-slider  {
         margin-left: -15px;
         margin-right: -15px;
     }
