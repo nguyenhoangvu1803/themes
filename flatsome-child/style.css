@@ -1127,7 +1127,9 @@ form.searchform button {
     -webkit-box-shadow: 0 5px 20px rgba(10, 19, 60, 0.15);
     -moz-box-shadow: 0 5px 20px rgba(10, 19, 60, 0.15);
     box-shadow: 0 5px 20px rgba(10, 19, 60, 0.15);
-    margin-bottom: 13px;
+}
+.product-gallery-slider {
+    margin-bottom: 13px !important;
 }
 .wc-prl-recommendations > .wc-prl-title,
 .yith-similar-products > h2 {
