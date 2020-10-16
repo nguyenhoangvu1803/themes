@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 
-	var $carouselNav = $('.slider-nav');
-
+	
 	$(document).on('click', '.nav-cell', function(e) {
 	  var index = $( e.currentTarget ).index();
 	  $('.nav-cell').removeClass('active');
@@ -11,6 +10,13 @@ jQuery(document).ready(function($) {
 
 	$('.header-search > a').on('click', function(e){
 		$(this).parent().find('input[type="search"]').focus();;
+	})
+
+	var sliderNav = $('.single-product.slider-nav');
+
+	sliderNav.on('click', function(e) {
+		var index = $( e.currentTarget ).index();
+		console.log(index);
 	})
 
 })

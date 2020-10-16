@@ -106,7 +106,7 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
     ?>
   </figure>
 
-  <ul class="slider-nav">
+  <ul class="single-product slider-nav">
       <?php 
       $attachment_ids = $product->get_gallery_image_ids();
 
