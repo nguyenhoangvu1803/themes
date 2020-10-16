@@ -28,8 +28,8 @@ $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
 	'woocommerce-product-gallery',
-	'woocommerce-product-gallery--' . ( $product->get_image_id() ? 'with-images' : 'without-images' ),
-	'woocommerce-product-gallery--columns-' . absint( $columns ),
+	'woocommerce-product-gallery--1' . ( $product->get_image_id() ? 'with-images' : 'without-images' ),
+	'woocommerce-product-gallery--columns1-' . absint( $columns ),
 	'images',
 ) );
 ?>
