@@ -322,6 +322,9 @@ span.amount {
     margin-bottom: 0;
     list-style: none;
 }
+.row-small>.flickity-viewport>.flickity-slider>.col {
+    max-width: 80px;
+}
 .row-small>.flickity-viewport>.flickity-slider>.col a {
     border: none;
 }
@@ -336,7 +339,7 @@ span.amount {
     border: 1px solid transparent;
     border-radius: 6px;
 }
-.product-thumbnails li img {
+.product-thumbnails .col img {
     margin-bottom: 0;
 }
 .product-thumbnails.slider.row {
