@@ -586,7 +586,6 @@ function login_page() {
         </div>
     </div>
   <?php
-  return 'LOGIN PAGE';
 }
 
 function register_shortcodes(){
