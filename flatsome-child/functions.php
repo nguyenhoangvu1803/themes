@@ -591,11 +591,13 @@ function login_page() {
   } else {
 
   ?>
-    <div class="account-container lightbox-inner">
-      <h3>You are logged in</h3>
-      <p class="return-to-shop">
-        <a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"> <?php _e( '← Continue shopping ', 'woocommerce' ) ?> </a>
-      </p>
+    <div class="page-wrapper">
+      <div class="woocommerce text-center">
+        <h3>You are logged in</h3>
+        <p class="return-to-shop">
+          <a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"> <?php _e( '← Continue shopping ', 'woocommerce' ) ?> </a>
+        </p>
+      </div>
     </div>
   <?php
   }
