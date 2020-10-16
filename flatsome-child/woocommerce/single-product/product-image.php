@@ -110,38 +110,9 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
     <?php do_action('flatsome_product_image_tools_bottom'); ?>
   </div>
 
-  <!-- <ul class="slider-nav">
-      <?php 
-      $attachment_ids = $product->get_gallery_image_ids();
-
-      if ( has_post_thumbnail() ) :
-        ?>
-        <li class="nav-cell active">
-          <?php
-            $image_id  = get_post_thumbnail_id( $post->ID );
-            $image     = wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' ) );
-            $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
-            $image     = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '" class="attachment-woocommerce_thumbnail" />';
-
-            echo $image;
-          ?>
-        </li>
-        <?php
-      endif;
-
-      foreach ( $attachment_ids as $attachment_id ) {
-        $classes     = array( '' );
-        $image_class = esc_attr( implode( ' ', $classes ) );
-        $image       = wp_get_attachment_image_src( $attachment_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' ) );
-        $image_alt   = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
-        $image       = '<img src="' . $image[0] . '" alt="' . $image_alt . '" width="' . $gallery_thumbnail['width'] . '" height="' . $gallery_thumbnail['height'] . '"  class="attachment-woocommerce_thumbnail" />';
-
-        echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li class="nav-cell">%s</li>', $image ), $attachment_id, $post->ID, $image_class );
-      }
-    ?>
-  </ul> -->
+ 
 
 </div>
 <?php do_action('flatsome_after_product_images'); ?>
 
-<?php //wc_get_template( 'woocommerce/single-product/product-gallery-thumbnails.php' ); ?>
+<?php wc_get_template( 'woocommerce/single-product/product-gallery-thumbnails.php' ); ?>
