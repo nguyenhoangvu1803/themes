@@ -1816,10 +1816,6 @@ blockquote {
     .single-product .product-info .product-title {
         display: none;
     }
-    .woocommerce-product-gallery .flex-viewport {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
     .footer-style > .col {
         padding-left: 40px;
         padding-right: 40px;
@@ -2087,6 +2083,10 @@ blockquote {
     }
     .default-padding-col .product-small .col-inner {
         padding: 12px;
+    }
+    .woocommerce-product-gallery .flex-viewport {
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 @media only screen and (max-width: 375px) {
