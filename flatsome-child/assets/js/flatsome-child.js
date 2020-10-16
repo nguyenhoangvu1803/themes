@@ -12,12 +12,12 @@ jQuery(document).ready(function($) {
 		$(this).parent().find('input[type="search"]').focus();;
 	})
 
-	$('.slider-nav').flickity({
-	  	asNavFor: '.slider',
-	  	contain: true,
-	  	pageDots: true,
-	  	prevNextButtons: false,
-	  	cellAlign: 'left'
-	});
+	// $('.slider-nav').flickity({
+	//   	asNavFor: '.slider',
+	//   	contain: true,
+	//   	pageDots: true,
+	//   	prevNextButtons: false,
+	//   	cellAlign: 'left'
+	// });
 
 })
