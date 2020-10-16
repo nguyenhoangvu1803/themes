@@ -323,15 +323,22 @@ span.amount {
     margin-bottom: 0;
     list-style: none;
 }
+.row-small>.flickity-viewport>.flickity-slider>.col a {
+    border: none;
+}
 .slider-nav li {
     max-width: 70px;
 }
 .flex-control-thumbs li img,
-.slider-nav li img {
+.slider-nav li img,
+.row-small>.flickity-viewport>.flickity-slider>.col {
     opacity: 1;
     padding: 5px;
     border: 1px solid transparent;
     border-radius: 6px;
+}
+.slider-nav li img {
+    margin-bottom: 0;
 }
 .shop_table .quantity {
     max-width: 100%;
