@@ -523,10 +523,10 @@ if ( ! function_exists( 'woocommerce_after_shop_loop_start_wrapper' ) ) {
     <?php
   }
 }
-add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_start_wrapper', 10 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_start_wrapper', 1 );
 
 // Add show result to before pagination shop category end loop 
-add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 15 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 5 );
 
 // Add woocommerce_after_shop_loop end wrapper 
 if ( ! function_exists( 'woocommerce_after_shop_loop_end_wrapper' ) ) {
