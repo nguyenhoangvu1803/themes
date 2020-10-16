@@ -337,7 +337,7 @@ span.amount {
     border: 1px solid transparent;
     border-radius: 6px;
 }
-.slider-nav li img {
+.product-thumbnails li img {
     margin-bottom: 0;
 }
 .product-thumbnails.slider.row {
