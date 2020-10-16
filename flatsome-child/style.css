@@ -2142,6 +2142,9 @@ blockquote {
     .product-info .sticky-add-to-cart--active .button.single_add_to_cart_button {
         width: calc( 100% - 144px - 15px );
     }
+    .flickity-page-dots {
+        display: block;
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
