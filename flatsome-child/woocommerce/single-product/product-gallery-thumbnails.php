@@ -49,7 +49,7 @@ if ( $attachment_ids ) {
 			"asNavFor": ".product-gallery-slider",
 			"percentPosition": true,
 			"imagesLoaded": true,
-			"pageDots": true,
+			"pageDots": false,
 			"rightToLeft": <?php echo $rtl; ?>,
 			"contain": true
 		}'>

@@ -47,7 +47,7 @@ global $product;
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
-	'woocommerce-product-gallery1',
+	'woocommerce-product-gallery',
 	'woocommerce-product-gallery--' . ( $product->get_image_id() ? 'with-images' : 'without-images' ),
 	'woocommerce-product-gallery--columns-' . absint( $columns ),
 	'images',
@@ -82,7 +82,7 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
         data-flickity-options='{
                 "cellAlign": "center",
                 "wrapAround": true,
-                "autoPdlay": false,
+                "autoPlay": false,
                 "prevNextButtons":true,
                 "adaptiveHeight": true,
                 "imagesLoaded": true,
@@ -109,9 +109,7 @@ if(get_theme_mod('product_lightbox','default') == 'disabled'){
   <div class="image-tools absolute bottom left z-3">
     <?php do_action('flatsome_product_image_tools_bottom'); ?>
   </div>
-
- 
-
+  
 </div>
 <?php do_action('flatsome_after_product_images'); ?>
 
