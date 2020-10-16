@@ -1672,12 +1672,12 @@ blockquote {
     width: inherit;
     display: inline-block;
 }
-.pagination-wrapper > p, .pagination-wrapper > div {
-    width: inherit;
-    display: inline-block;
-    flex-wrap: wrap;
-}
 @media only screen and (min-width: 850px) {
+    .pagination-wrapper > p, .pagination-wrapper > div {
+        width: inherit;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
     .col-remove-padding-desktop > .col {
         padding-bottom: 0;
     }
