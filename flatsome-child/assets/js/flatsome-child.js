@@ -15,8 +15,9 @@ jQuery(document).ready(function($) {
 	$('.slider-nav').flickity({
 	  	asNavFor: '.slider',
 	  	contain: true,
-	  	pageDots: false,
-	  	prevNextButtons: false
+	  	pageDots: true,
+	  	prevNextButtons: false,
+	  	cellAlign: 'left'
 	});
 
 })
