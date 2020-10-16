@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 
 	var sliderNav = $('.single-product.slider-nav');
 
-	sliderNav.on('click', function(e) {
+	sliderNav.on('click', '.nav-cell', function(e) {
 		var index = $( e.currentTarget ).index();
 		console.log(index);
 	})
