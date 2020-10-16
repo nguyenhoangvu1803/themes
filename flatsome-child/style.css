@@ -1123,10 +1123,11 @@ form.searchform button {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.flex-viewport {
+.flex-viewport, .product-gallery-slider {
     -webkit-box-shadow: 0 5px 20px rgba(10, 19, 60, 0.15);
     -moz-box-shadow: 0 5px 20px rgba(10, 19, 60, 0.15);
     box-shadow: 0 5px 20px rgba(10, 19, 60, 0.15);
+    margin-bottom: 13px;
 }
 .wc-prl-recommendations > .wc-prl-title,
 .yith-similar-products > h2 {
