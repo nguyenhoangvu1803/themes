@@ -2211,6 +2211,9 @@ blockquote {
         width: 12px;
         height: 12px;
     }
+    .flipContainer .flickity-page-dots {
+        display: none;
+    }
 }
 @media only screen and (max-width: 375px) {
     .add-to-cart-quickview a {
