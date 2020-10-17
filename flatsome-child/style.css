@@ -1544,16 +1544,26 @@ del span.amount {
 .blog-post-inner .is-divider {
     display: none;
 }
-.blog-post-inner .post-title.is-large {
+.blog-post-inner .post-title.is-large,
+.product-category .box-category .header-title {
     font-size: 18px;
     margin-bottom: 8px;
+}
+.box-category .description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #505261;
 }
 .blog-post-inner button.is-large {
     font-weight: 600;
     font-size: 15px;
     line-height: 15px;
 }
-.blog-post-inner button:after {
+.box-category .box-text-inner > span {
+    color: #243A98;
+}
+.blog-post-inner button:after,
+.box-category .box-text-inner > span:after { 
     content: "";
     width: 17px;
     height: 10px;
@@ -1562,7 +1572,8 @@ del span.amount {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAYAAABSfLWiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACRSURBVHgBtZExCoNAEEX/bDxAsA2p4iHCXiEEco50niB7hHQxVS4Re630EHZaCx5Ax1UQZbtZ8MEMzMC84g8gILp+X1O5ewUJhA6KjSs6QEDb/MvwfCMrM+HpPs25WDKL6jRzRXTRyQ8eEPhh+xH9EAdgJviwXMlSXZm/pBOO9MfAh90EASSowebJcVU839v1CHn/MvkMlDi+AAAAAElFTkSuQmCC);
     transition: margin 0.3s;
 }
-.box-blog-post:hover .blog-post-inner button:after {
+.box-blog-post:hover .blog-post-inner button:after,
+.box-category:hover .box-text-inner > span:after {
     margin-left: 8px;
 }
 .button:hover,
