@@ -1739,6 +1739,9 @@ blockquote {
     border-left: 1px solid #e5e5e5;
     padding-right: 15px;
 }
+.woocommerce.tax-product_cat .shop-container .term-description {
+    display: none;
+}
 @media only screen and (min-width: 850px) {
     .pagination-wrapper > p, .pagination-wrapper > div {
         width: inherit;
