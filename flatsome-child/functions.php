@@ -557,7 +557,9 @@ add_action('template_redirect','my_template_page_info_redirect');
 
 // Add Description to [ux_product_categories]
 function add_description_to_ux_product_categories($category) {
-  print_r($category);
+  $html = '<div class="description">' . $category->description . '</div>';
+  $html = '<a href="#">Browse This Category</a>';
+  return $html;
 }
 add_action('woocommerce_after_subcategory_title','add_description_to_ux_product_categories');
 
