@@ -541,4 +541,17 @@ if ( ! function_exists( 'woocommerce_after_shop_loop_end_wrapper' ) ) {
 }
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_after_shop_loop_end_wrapper', 20 );
 
+function my_template_page_info_redirect(){
+   //pages you want to make true, ex. is_shop()
+   $url_path = trim(parse_url(add_query_arg(array()), PHP_URL_PATH), '/');
+   if(     stripos($url_path, 'privacy-policy')!== false
+        || stripos($url_path, 'shipping-information')!== false
+        || stripos($url_path, 'return-refund')!== false
+        || stripos($url_path, 'terms-of-service')!== false
+     ) {
+    load_template(get_theme_file_path().'/page-info.php');
+     exit();
+   }
+}
+add_action('template_redirect','my_template_page_info_redirect');
 

@@ -322,10 +322,10 @@ span.amount {
     margin-bottom: 0;
     list-style: none;
 }
-.row-small>.flickity-viewport>.flickity-slider>.col {
+.product-thumbnails.row-small>.flickity-viewport>.flickity-slider>.col {
     max-width: 80px;
 }
-.row-small>.flickity-viewport>.flickity-slider>.col a {
+.product-thumbnails.row-small>.flickity-viewport>.flickity-slider>.col a {
     border: none;
 }
 .slider-nav li {
@@ -333,7 +333,7 @@ span.amount {
 }
 .flex-control-thumbs li img,
 .slider-nav li img,
-.row-small>.flickity-viewport>.flickity-slider>.col {
+.product-thumbnails.row-small>.flickity-viewport>.flickity-slider>.col {
     opacity: 1;
     padding: 5px !important;
     border: 1px solid transparent;
