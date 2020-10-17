@@ -1465,6 +1465,9 @@ del span.amount {
     width: 120px;
     font-size: 14px;
 }
+.testimonial-text p {
+    margin-bottom: 0;
+}
 .testimonial-box .star-rating span:before,
 .testimonial-box .star-rating:before {
     color: #ffc209;
