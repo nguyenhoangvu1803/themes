@@ -1931,6 +1931,11 @@ blockquote {
         top: 5px;
         left: -10px;
     }
+    .slider .flickity-prev-next-button .arrow,
+    .slider .flickity-prev-next-button svg {
+        background-color: transparent;
+        color: #fff;
+    }
 }
 @media screen and (min-width: 550px) and (max-width: 849px) {
     .medium-text-center .pull-left {
@@ -2189,6 +2194,17 @@ blockquote {
         left: 12px;
         bottom: -35px;
         text-align: left;
+    }
+    .flickity-page-dots .dot {
+        width: 9px;
+        height: 9px;
+        margin: 0 3px;
+    }
+    .flickity-page-dots .dot.is-selected {
+        background: #243A98;
+        border-color: #243A98;
+        width: 12px;
+        height: 12px;
     }
 }
 @media only screen and (max-width: 375px) {
