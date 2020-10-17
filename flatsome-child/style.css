@@ -2214,15 +2214,15 @@ blockquote {
     .flipContainer .flickity-page-dots {
         display: none;
     }
-}
-@media only screen and (max-width: 375px) {
-    .add-to-cart-quickview a {
-        font-size: 14px;
-    }
     .guaranteed-safe-checkout-single:before {
         height: 110px;
     }
     .four-step:before {
         height: 105px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .add-to-cart-quickview a {
+        font-size: 14px;
     }
 }
