@@ -2199,6 +2199,8 @@ blockquote {
         width: 9px;
         height: 9px;
         margin: 0 3px;
+        background-color: #CACEE0;
+        border-color: #CACEE0;
     }
     .flickity-page-dots .dot.is-selected {
         background: #243A98;
