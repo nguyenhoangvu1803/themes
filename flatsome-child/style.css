@@ -1553,6 +1553,7 @@ del span.amount {
     font-size: 15px;
     line-height: 1.8;
     color: #505261;
+    margin-bottom: 10px;
 }
 .blog-post-inner button.is-large {
     font-weight: 600;
@@ -1561,6 +1562,8 @@ del span.amount {
 }
 .box-category .box-text-inner > span {
     color: #243A98;
+    font-weight: 600;
+    font-size: 15px;
 }
 .blog-post-inner button:after,
 .box-category .box-text-inner > span:after { 
@@ -1935,6 +1938,12 @@ blockquote {
     }
     .medium-text-center .pull-right {
         float: right;
+    }
+    .box-category .description {
+        font-size: 13px;
+    }
+    .box-category .box-text-inner > span {
+        font-size: 14px;
     }
 }
 @media only screen and (max-width: 549px) {
