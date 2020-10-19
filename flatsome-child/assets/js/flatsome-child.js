@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 	//   	cellAlign: 'left'
 	// });
 
-	var cellElements = $carousel.flickity('getCellElements')
+	var cellElements = $('.product-gallery-slider').flickity('getCellElements')
 	console.log( cellElements );
 
 	var flkty = $('.product-gallery-slider').data('flickity')
