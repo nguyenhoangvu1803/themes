@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 	//   	cellAlign: 'left'
 	// });
 
-	$('.product-gallery-slider').data('flickity')
+	var flkty = $('.product-gallery-slider').data('flickity')
 	console.log( 'carousel at ' + flkty.selectedIndex );
 
 })
