@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 
 	// $('.slider-nav').flickity('select');
 
-	var $carousel = $('.slider').flickity({
+	$('.slider-nav').flickity({
 	  on: {
 	    ready: function() {
 	      console.log('Flickity is ready');
