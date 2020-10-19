@@ -15,9 +15,10 @@ jQuery(document).ready(function($) {
 
 	// Listen event change Flickity
 	var $carousel = $('.product-gallery-slider').flickity()
+	var flkty = $carousel.data('flickity');
 	var span = $('<span />')
 	.addClass('current-slider-number show-for-small')
-	.text( ($carousel.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length)
+	.text( ($flkty.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length + flkty.selectedElement)
 	.appendTo($carousel.parent())
 
 	$carousel.on( 'change.flickity', function( event, index ) {
