@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 	  	console.log( index + '/' + $carousel.flickity('getCellElements').length )
 	  	span.empty()
 	  	.text(index + '/' + $carousel.flickity('getCellElements').length)
-	  	.appendTo(this.parent())
+	  	.appendTo($carousel.parent())
 	});
 
 
