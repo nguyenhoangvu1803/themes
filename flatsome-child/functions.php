@@ -390,7 +390,7 @@ function uoy_custom_css() {
           {background-color: <?php echo $color_primary; ?>;}
 
           /* BORDER COLOR */
-          .flex-control-thumbs li img.flex-active, .slider-nav li.active img, .product-thumbnails.slider .is-selected.is-nav-selected, .fl-wrap.fl-is-active > input, .fl-wrap.fl-is-active > textarea, .fl-wrap.fl-has-focus > input , .fl-wrap.fl-has-focus > textarea, form .woocommerce-form-row:hover input, input[type='email']:hover,nput[type='email']:focus,
+          .flex-control-thumbs li img.flex-active, .slider-nav li.active img, .product-thumbnails.slider .is-selected.is-nav-selected, .fl-wrap.fl-is-active > input, .fl-wrap.fl-is-active > textarea, .fl-wrap.fl-has-focus > input , .fl-wrap.fl-has-focus > textarea, form .woocommerce-form-row:hover > input, input[type='email']:hover,nput[type='email']:focus,
           input[type='date']:hover,input[type='date']:focus,
           input[type='search']:hover,input[type='search']:focus,
           input[type='number']:hover,input[type='number']:focus,

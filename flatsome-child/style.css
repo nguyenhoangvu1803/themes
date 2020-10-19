@@ -1012,6 +1012,18 @@ form .woocommerce-form-row > span {
     width: 100%;
     margin-bottom: 10px;
 }
+form .woocommerce-form-row  span input, 
+.select2-container .select2-choice>.select2-chosen, 
+.select2-container .select2-selection--single .select2-selection__rendered, 
+.select2-selection {
+    font-style: normal;
+}
+.select2-container .select2-choice>.select2-chosen, 
+.select2-container .select2-selection--single .select2-selection__rendered, 
+.select2-selection {
+    color: #000;
+}
+form .woocommerce-form-row > 
 .woocommerce-shipping-totals table {
     margin-bottom: 0;
 }
