@@ -15,12 +15,15 @@ jQuery(document).ready(function($) {
 
 	// Listen event change Flickity
 	var $carousel = $('.product-gallery-slider').flickity()
-	var span = $('<span />').addClass('current-slider-number show-for-small')
+	var span = $('<span />')
+	.addClass('current-slider-number show-for-small')
+	.text( ($carousel.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length)
+	.appendTo($carousel.parent())
+
 	$carousel.on( 'change.flickity', function( event, index ) {
 	  	console.log( index + '/' + $carousel.flickity('getCellElements').length )
 	  	span.empty()
 	  	.text(index + '/' + $carousel.flickity('getCellElements').length)
-	  	.appendTo($carousel.parent())
 	});
 
 
