@@ -23,9 +23,9 @@ jQuery(document).ready(function($) {
 	// var cellElements = $('.product-gallery-slider').flickity('getCellElements')
 	// console.log( cellElements );
 
-	// var flkty = $('.product-gallery-slider').data('flickity')
-	// console.log( 'carousel at ' + flkty.selectedIndex );
-	// console.log( flkty.selectedIndex, flkty.selectedElement );
+	var flkty = $('.slider').data('flickity')
+	console.log( 'carousel at ' + flkty.selectedIndex );
+	console.log( flkty.selectedIndex, flkty.selectedElement );
 
 	// $('.slider-nav').flickity('select');
 
