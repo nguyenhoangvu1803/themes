@@ -16,18 +16,18 @@ jQuery(document).ready(function($) {
 
 	// Listen event change Flickity
 	var $carousel = $('.product-gallery-slider').flickity()
-	console.log($carousel);
-	console.log($carousel.length);
-	var flkty = $carousel.data('flickity');
-	var elements = $carousel.flickity('getCellElements').length;
-	var span = $('<span />')
-	.addClass('current-slider-number show-for-small')
-	.text( (flkty.selectedIndex + 1) + '/' + elements)
-	.appendTo($carousel.parent())
+	if($carousel.length > 0) {
+		var flkty = $carousel.data('flickity');
+		var elements = $carousel.flickity('getCellElements').length;
+		var span = $('<span />')
+		.addClass('current-slider-number show-for-small')
+		.text( (flkty.selectedIndex + 1) + '/' + elements)
+		.appendTo($carousel.parent())
 
-	$carousel.on( 'change.flickity', function( event, index ) {
-	  	span.empty()
-	  	.text( (index +1 ) + '/' + elements)
-	});
+		$carousel.on( 'change.flickity', function( event, index ) {
+		  	span.empty()
+		  	.text( (index +1 ) + '/' + elements)
+		});
+	}
 
 })
