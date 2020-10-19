@@ -29,21 +29,10 @@ jQuery(document).ready(function($) {
 
 	// $('.slider-nav').flickity('select');
 
-	$('.slider-nav').flickity({
-	  on: {
-	    ready: function() {
-	      console.log('Flickity is ready');
-	    },
-	    change: function( index ) {
-	      console.log( 'Slide changed to' + index );
-	    }
-	  }
-	});
-
-	var $carousel = $('.slider').flickity();
+	var $carousel = $('.product-gallery-slider').flickity();
 
 	$carousel.on( 'change.flickity', function( event, index ) {
-	  console.log( 'Flickity change ' + index );
+	  console.log( 'Flickity change ' + index + '/' $carousel.flickity('getCellElements').length );
 	});
 
 
