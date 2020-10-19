@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 	$carousel.on( 'change.flickity', function( event, index ) {
 	  	console.log( index + '/' + $carousel.flickity('getCellElements').length )
 	  	span.empty()
-	  	.text(index + '/' + $carousel.flickity('getCellElements').length)
+	  	.text( (index +1 ) + '/' + $carousel.flickity('getCellElements').length)
 	});
 
 
