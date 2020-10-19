@@ -17,15 +17,15 @@ jQuery(document).ready(function($) {
 	// Listen event change Flickity
 	var $carousel = $('.product-gallery-slider').flickity()
 	var flkty = $carousel.data('flickity');
+	var elements = $carousel.flickity('getCellElements').length;
 	var span = $('<span />')
 	.addClass('current-slider-number show-for-small')
-	.text( (flkty.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length)
+	.text( (flkty.selectedIndex + 1) + '/' + elements)
 	.appendTo($carousel.parent())
 
 	$carousel.on( 'change.flickity', function( event, index ) {
-	  	console.log( index + '/' + $carousel.flickity('getCellElements').length )
 	  	span.empty()
-	  	.text( (index +1 ) + '/' + $carousel.flickity('getCellElements').length)
+	  	.text( (index +1 ) + '/' + elements)
 	});
 
 })
