@@ -2249,6 +2249,9 @@ blockquote {
     body.single-product .product-info .product-short-description p {
         margin-bottom: 5px;
     }
+    .flag-pieces {
+        margin-bottom: 10px;
+    }
 }
 @media only screen and (max-width: 450px) {
     .guaranteed-safe-checkout-single:before {
