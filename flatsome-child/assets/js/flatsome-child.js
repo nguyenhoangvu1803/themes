@@ -20,6 +20,9 @@ jQuery(document).ready(function($) {
 	//   	cellAlign: 'left'
 	// });
 
+	var cellElements = $carousel.flickity('getCellElements')
+	console.log( cellElements );
+
 	var flkty = $('.product-gallery-slider').data('flickity')
 	console.log( 'carousel at ' + flkty.selectedIndex );
 
