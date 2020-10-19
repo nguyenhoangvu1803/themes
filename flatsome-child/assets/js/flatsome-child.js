@@ -27,5 +27,18 @@ jQuery(document).ready(function($) {
 	console.log( 'carousel at ' + flkty.selectedIndex );
 	console.log( flkty.selectedIndex, flkty.selectedElement );
 
+	$('.slider-nav').flickity('select');
+
+	var $carousel = $('.product-gallery-slider').flickity({
+	  on: {
+	    ready: function() {
+	      console.log('Flickity is ready');
+	    },
+	    change: function( index ) {
+	      console.log( 'Slide changed to' + index );
+	    }
+	  }
+	});
+
 
 })
