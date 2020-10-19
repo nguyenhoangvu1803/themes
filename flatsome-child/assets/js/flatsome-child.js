@@ -20,14 +20,14 @@ jQuery(document).ready(function($) {
 	//   	cellAlign: 'left'
 	// });
 
-	var cellElements = $('.product-gallery-slider').flickity('getCellElements')
-	console.log( cellElements );
+	// var cellElements = $('.product-gallery-slider').flickity('getCellElements')
+	// console.log( cellElements );
 
-	var flkty = $('.product-gallery-slider').data('flickity')
-	console.log( 'carousel at ' + flkty.selectedIndex );
-	console.log( flkty.selectedIndex, flkty.selectedElement );
+	// var flkty = $('.product-gallery-slider').data('flickity')
+	// console.log( 'carousel at ' + flkty.selectedIndex );
+	// console.log( flkty.selectedIndex, flkty.selectedElement );
 
-	$('.slider-nav').flickity('select');
+	// $('.slider-nav').flickity('select');
 
 	var $carousel = $('.product-gallery-slider').flickity({
 	  on: {
