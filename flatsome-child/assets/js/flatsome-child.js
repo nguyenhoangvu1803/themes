@@ -17,7 +17,12 @@ jQuery(document).ready(function($) {
 	var $carousel = $('.product-gallery-slider').flickity();
 	console.log($carousel);
 	$carousel.on( 'change.flickity', function( event, index ) {
-	  console.log( index + '/' + $carousel.flickity('getCellElements').length );
+		console.log(this);
+	  	console.log( index + '/' + $carousel.flickity('getCellElements').length )
+	  	let span = $('<span />')
+	  	span.addClass('cureent-index')
+	  	span.text(index + '/' + $carousel.flickity('getCellElements').length)
+	  	span.appendTo($carousel);
 	});
 
 
