@@ -14,10 +14,9 @@ jQuery(document).ready(function($) {
 
 
 	// Listen event change Flickity
-	// var $carousel = $('.product-gallery-slider').flickity();
-	var flkty = new Flickity('.product-gallery-slider');
-	flkty.on( 'change', function( index ) {
-	  console.log( index + '/' + flkty.getCellElements().length );
+	var $carousel = $('.product-gallery-slider').flickity();
+	$carousel.on( 'change.flickity', function( event, index ) {
+	  console.log( index + '/' + $carousel.getCellElements().length );
 	});
 
 
