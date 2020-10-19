@@ -12,27 +12,11 @@ jQuery(document).ready(function($) {
 		$(this).parent().find('input[type="search"]').focus();;
 	})
 
-	// $('.slider-nav').flickity({
-	//   	asNavFor: '.slider',
-	//   	contain: true,
-	//   	pageDots: true,
-	//   	prevNextButtons: false,
-	//   	cellAlign: 'left'
-	// });
 
-	var cellElements = $('.product-gallery-slider').flickity('getCellElements')
-	console.log( cellElements );
-
-	var flkty = $('.slider').data('flickity')
-	console.log( 'carousel at ' + flkty.selectedIndex );
-	console.log( flkty.selectedIndex, flkty.selectedElement );
-
-	// $('.slider-nav').flickity('select');
-
+	// Listen event change Flickity
 	var $carousel = $('.product-gallery-slider').flickity();
-
 	$carousel.on( 'change.flickity', function( event, index ) {
-	  console.log( 'Flickity change ' + index + '/' + $carousel.flickity('getCellElements').length );
+	  console.log( index + '/' + $carousel.getCellElements().length );
 	});
 
 
