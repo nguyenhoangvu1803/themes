@@ -2243,10 +2243,10 @@ blockquote {
         display: none;
     }
     .guaranteed-safe-checkout-single:before {
-        height: 110px;
+        height: calc( 100vw * 156/525 - 30px*156/525 );
     }
     .four-step:before {
-        height: 105px;
+        height: calc( 100vw * 118/525 - 30px*118/525 );
     }
     body.single-product table.variations,
     body.single-product .product-summary .variations_button,
@@ -2265,12 +2265,6 @@ blockquote {
     }
 }
 @media only screen and (max-width: 450px) {
-    .guaranteed-safe-checkout-single:before {
-        height: 95px;
-    }
-    .four-step:before {
-        height: 74px;
-    }
     .add-to-cart-quickview a {
         font-size: 14px;
     }
