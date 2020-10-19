@@ -897,7 +897,7 @@ ul.woocommerce-order-overview {
 .notice-order-success,
 .woocommerce-checkout.woocommerce-order-received .myaccount__page__list.myaccountorder__address,
 .woocommerce-checkout.woocommerce-order-received .myaccountorder__address,
-.woocommerce-checkout.woocommerce-order-received .myaccountorder > .myaccountorder__block,
+.woocommerce-checkout.woocommerce-order-received .myaccountorder,
 .woocommerce-customer-details,
 .woocommerce-order-details,
 .woocommerce-order-downloads {
