@@ -20,8 +20,8 @@ jQuery(document).ready(function($) {
 	//   	cellAlign: 'left'
 	// });
 
-	// var cellElements = $('.product-gallery-slider').flickity('getCellElements')
-	// console.log( cellElements );
+	var cellElements = $('.product-gallery-slider').flickity('getCellElements')
+	console.log( cellElements );
 
 	var flkty = $('.slider').data('flickity')
 	console.log( 'carousel at ' + flkty.selectedIndex );
@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 	var $carousel = $('.product-gallery-slider').flickity();
 
 	$carousel.on( 'change.flickity', function( event, index ) {
-	  console.log( 'Flickity change ' + index + '/' $carousel.flickity('getCellElements').length );
+	  console.log( 'Flickity change ' + index + '/' + $carousel.flickity('getCellElements').length );
 	});
 
 
