@@ -1154,6 +1154,15 @@ form.searchform button {
     display: flex;
     align-items: center;
 }
+.flag-body {
+    font-size: 15px;
+    color: #000;
+}
+.flag-pieces {
+    font-size: 13px;
+    color: #4F4F4F;
+    margin-bottom: 20px;
+}
 .product-lightbox-inner .single_variation_wrap .flag-body {
     display: inline-block;
     width: 100%;
@@ -2229,8 +2238,12 @@ blockquote {
         height: 105px;
     }
     body.single-product table.variations,
-    body.single-product .product-summary .variations_button {
+    body.single-product .product-summary .variations_button,
+    .guaranteed-safe-checkout-single:before {
         margin-bottom: 0;
+    }
+    body.single-product .product-summary .variations_button {
+        padding-bottom: 10px;
     }
     body.single-product .product-info .product-short-description,
     body.single-product .product-info .product-short-description p {
