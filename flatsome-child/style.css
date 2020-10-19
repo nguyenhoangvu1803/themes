@@ -1763,6 +1763,17 @@ blockquote {
 .woocommerce.tax-product_cat .shop-container .term-description {
     display: none;
 }
+.current-slider-number {
+    position: absolute;
+    right: 0;
+    background: #9FA3B8;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding: 2px 5px;
+}
 @media only screen and (min-width: 850px) {
     .pagination-wrapper > p, .pagination-wrapper > div {
         width: inherit;
