@@ -25,5 +25,7 @@ jQuery(document).ready(function($) {
 
 	var flkty = $('.product-gallery-slider').data('flickity')
 	console.log( 'carousel at ' + flkty.selectedIndex );
+	console.log( flkty.selectedIndex, flkty.selectedElement );
+
 
 })
