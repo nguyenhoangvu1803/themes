@@ -14,15 +14,13 @@ jQuery(document).ready(function($) {
 
 
 	// Listen event change Flickity
-	var $carousel = $('.product-gallery-slider').flickity();
-	console.log($carousel);
+	var $carousel = $('.product-gallery-slider').flickity()
+	var span = $('<span />').addClass('show-for-small')
 	$carousel.on( 'change.flickity', function( event, index ) {
-		console.log(this);
 	  	console.log( index + '/' + $carousel.flickity('getCellElements').length )
-	  	let span = $('<span />')
-	  	span.addClass('cureent-index')
-	  	span.text(index + '/' + $carousel.flickity('getCellElements').length)
-	  	span.appendTo($carousel);
+	  	span.empty()
+	  	.text(index + '/' + $carousel.flickity('getCellElements').length)
+	  	.appendTo(this.parent())
 	});
 
 
