@@ -40,5 +40,14 @@ jQuery(document).ready(function($) {
 	  }
 	});
 
+	// jQuery
+	var $carousel = $('.product-gallery-slider');
+	// bind event listener first
+	$carousel.on( 'ready.flickity', function() {
+	  console.log('Flickity ready');
+	});
+	// initialize Flickity
+	$carousel.flickity();
+
 
 })
