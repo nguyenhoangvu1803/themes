@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 	var flkty = $carousel.data('flickity');
 	var span = $('<span />')
 	.addClass('current-slider-number show-for-small')
-	.text( ($flkty.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length + flkty.selectedElement)
+	.text( (flkty.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length + flkty.selectedElement)
 	.appendTo($carousel.parent())
 
 	$carousel.on( 'change.flickity', function( event, index ) {
