@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-
 	
 	$(document).on('click', '.nav-cell', function(e) {
 	  var index = $( e.currentTarget ).index();
@@ -8,6 +7,8 @@ jQuery(document).ready(function($) {
 	  $('.product-lightbox .product-gallery .slider').flickity( 'select', index );
 	});
 
+
+	// Focus search input
 	$('.header-search > a').on('click', function(e){
 		$(this).parent().find('input[type="search"]').focus();;
 	})
@@ -18,7 +19,7 @@ jQuery(document).ready(function($) {
 	var flkty = $carousel.data('flickity');
 	var span = $('<span />')
 	.addClass('current-slider-number show-for-small')
-	.text( (flkty.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length + flkty.selectedElement)
+	.text( (flkty.selectedIndex + 1) + '/' + $carousel.flickity('getCellElements').length)
 	.appendTo($carousel.parent())
 
 	$carousel.on( 'change.flickity', function( event, index ) {
@@ -26,6 +27,5 @@ jQuery(document).ready(function($) {
 	  	span.empty()
 	  	.text( (index +1 ) + '/' + $carousel.flickity('getCellElements').length)
 	});
-
 
 })
