@@ -1941,10 +1941,10 @@ blockquote {
         font-size: 14px;
     }
     .guaranteed-safe-checkout-single:before {
-        height: 213px;
+        height: calc( 100vw * 156/525 - 30px*156/525 );
     }
     .four-step:before {
-        height: 166px;
+        height: calc( 100vw * 118/525 - 30px*118/525 );
     }
     .stamped-reviews-container {
         margin-bottom: 30px;
@@ -2241,12 +2241,6 @@ blockquote {
     }
     .flipContainer .flickity-page-dots {
         display: none;
-    }
-    .guaranteed-safe-checkout-single:before {
-        height: calc( 100vw * 156/525 - 30px*156/525 );
-    }
-    .four-step:before {
-        height: calc( 100vw * 118/525 - 30px*118/525 );
     }
     body.single-product table.variations,
     body.single-product .product-summary .variations_button,
