@@ -1858,16 +1858,12 @@ blockquote {
         padding-left: 21px;
         padding-right: 21px;
     }
-    i[data-icon-label]:after {
-        background: #ff9e45 !important;
-    }
     [data-icon-label]:after {
         line-height: 23px;
         width: 23px;
         height: 23px;
         top: -12px;
         right: -15px;
-        color: #000;
     }
     .product-page-title .medium-text-center {
         text-align: left !important;
@@ -2220,8 +2216,22 @@ blockquote {
     .four-step:before {
         height: 105px;
     }
+    body.single-product table.variations,
+    body.single-product .product-summary .variations_button {
+        margin-bottom: 0;
+    }
+    body.single-product .product-info .product-short-description,
+    body.single-product .product-info .product-short-description p {
+        margin-bottom: 5px;
+    }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
+    .guaranteed-safe-checkout-single:before {
+        height: 95px;
+    }
+    .four-step:before {
+        height: 74px;
+    }
     .add-to-cart-quickview a {
         font-size: 14px;
     }
