@@ -222,7 +222,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<div class="stamped-reviews-title-wrapper"><a href="https://flagwix.com/happy/" alt="Happy Customers">What they say about the products?</a></div>
 
 	<?php 
-		echo get_permalink( get_page_by_path( 'contact' ) );
+		echo get_permalink( get_page_by_path( 'about-us' ) );
 
 	?>
 
