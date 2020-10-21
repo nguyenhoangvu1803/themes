@@ -575,11 +575,11 @@ add_action('woocommerce_after_subcategory_title','add_description_to_ux_product_
 /**
  * Redirect users after add to cart.
  */
-function my_custom_add_to_cart_redirect( $url ) {
+function redirect_card_page_after_add_to_cart( $url ) {
 
   $url = wc_get_cart_url();
 
   return $url;
 
 }
-add_filter( 'woocommerce_add_to_cart_redirect', 'my_custom_add_to_cart_redirect' );
+add_filter( 'woocommerce_add_to_cart_redirect', 'redirect_card_page_after_add_to_cart' );
