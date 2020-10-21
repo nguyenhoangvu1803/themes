@@ -454,7 +454,7 @@ do_action( 'woocommerce_before_cart' ); ?>
     }
 	.stamped-reviews-container {
 		font-size:14px;
-		padding: 20px 20px 20px 20px;
+		padding: 20px;
 		border: 1px solid #e5e5e5;
 		border-radius: 3px;
 	}
