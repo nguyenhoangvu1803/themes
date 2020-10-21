@@ -283,7 +283,7 @@ function woo_rename_tabs( $tabs ) {
   $id = get_the_ID();
   if(has_term( 'Truck Tailgate Wrap', 'product_cat', $id )) {
       $tabs['woo_truck_tailgate_decal'] = array(
-      'title'   => __( 'APPLICATION INSTRUCTIONS', 'woocommerce' ),
+      'title'   => __( 'Application Instructions', 'woocommerce' ),
       'priority'  => 10,
       'callback'  => 'woo_truck_tailgate_decal_tab_content'
     );
