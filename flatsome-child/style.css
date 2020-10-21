@@ -1,15 +1,9 @@
 /*
-Theme Name:        Flatsome Child
-Theme URI:         http://flatsome.uxthemes.com/
-Author:            UX-Themes
-Author URI:        http://www.uxthemes.com/
-Description:       Multi-Purpose Responsive WooCommerce Theme
-Version:           3.12.2
-Requires at least: 4.7.0
-Requires PHP:      5.6.20
-Text Domain:       flatsome
-License:           http://themeforest.net/licenses
-License URI:       http://themeforest.net/licenses
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
 */
 body {
     font-size: 14px;
