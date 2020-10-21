@@ -280,6 +280,14 @@ function woo_rename_tabs( $tabs ) {
       'priority'  => 30,
       'callback'  => 'woo_new_product_tab_content'
   );
+  $id = get_the_ID();
+  if(has_term( 'Truck Tailgate Wrap', 'product_cat', $id )) {
+      $tabs['woo_truck_tailgate_decal'] = array(
+      'title'   => __( 'APPLICATION INSTRUCTIONS', 'woocommerce' ),
+      'priority'  => 10,
+      'callback'  => 'woo_truck_tailgate_decal_tab_content'
+    );
+  }
   return $tabs;
 }
 function woo_content_shipping_information() {
@@ -583,3 +591,45 @@ function redirect_card_page_after_add_to_cart( $url ) {
 
 }
 add_filter( 'woocommerce_add_to_cart_redirect', 'redirect_card_page_after_add_to_cart' );
+
+function woo_truck_tailgate_decal_tab_content() {
+    ?>
+    <style media="screen">
+        .truck_tailgate_decal_tab_content strong, .truck_tailgate_decal_tab_content h2, .truck_tailgate_decal_tab_content h3 {
+            font-weight: bold;
+        }
+    </style>
+    <div class="truck_tailgate_decal_tab_content">
+
+        <ol>
+            <li>
+                <p>
+                    <strong>Preparation:</strong>
+                </p>
+               <p>A spray bottle with detergent water, lint-free towel or cloth, razor knife or scissors, squeegee - felt-edge. </p>
+                <p><strong>Attention:</strong></p>
+                <ul>
+                    <li>The optimum temperature range for decal adhesion is between 70º to 80º F with low levels of humidity, away from direct sunlight. </li>
+                    <li>We recommend do the installation with the tailgate off and laying flat. </li>
+                    <li>Please allow 24 hours for the vinyl decals to completely dry and properly adhere to the tailgate. Do not get the vinyl decals wet during this time.</li>
+                    <li>Try not to unroll or place the film on the floor, as this will leave dust and debris on the film, causing scratches when applying with a squeegee.</li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Application Instructions:</strong></p>
+                <p>Please read instructions first before you install so you get an idea of what the steps are and make no mistakes.</p>
+                <ul style="list-style:none;margin-left:0">
+                    <li><strong>Step 1:</strong> Cleaning the surface to remove all grease, wax, tar, dirt and dry with a lint-free towel/cloth. Make sure there is nothing hindering your application.</li>
+                    <li><strong>Step 2:</strong> Plan vinyl wrap placement by laying your film (with the liner still on) on the tailgate to determine a good placement for your decal. </li>
+                    <li><strong>Step 3:</strong> Use detergent water to spray your tailgate, ensuring that the entire area is wet.</li>
+                    <li><strong>Step 4:</strong> Remove the film from the liner and place it on the wet tailgate. Slide the decal around in order to get a good level placement on the tailgate. Just keep the surface wet so that you can position it correctly. </li>
+                    <li><strong>Step 5:</strong> Use firm pressure to adhere the vinyl to the surface. The vinyl will quickly adhere to the vehicle as the moisture is removed so be sure it is positioned correctly. </li>
+                    <li><strong>Step 6:</strong> Gently blot the excess moisture and bubbles from the area with a squeegee and make several more gentle passes with your thumbs until there is no more moisture coming out from under the vinyl decal. </li>
+                    <li><strong>Step 7:</strong> Slowly cut along the edges of the vinyl and remove any excess vinyl. </li>
+                </ul>
+            </li>
+        </ol>
+        <h2>YOU ARE NOW DONE!</h2>
+    </div>
+    <?php
+}
