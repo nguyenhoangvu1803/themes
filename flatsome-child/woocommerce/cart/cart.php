@@ -221,6 +221,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<div class="stamped-reviews-title-wrapper"><a href="https://flagwix.com/happy/" alt="Happy Customers">What they say about the products?</a></div>
 
+	<?php echo get_page_by_path('happy'); ?>
+
 	<div class="stamped-reviews-wrapper">
 	    
 	    <div class="stamped-ratings-wrapper stamped-review-card">
@@ -493,7 +495,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 jQuery('.stamped-reviews-wrapper').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 3000,
      dots: false,
     prevArrow: false,
