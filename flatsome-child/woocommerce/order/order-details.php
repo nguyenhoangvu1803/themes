@@ -20,7 +20,6 @@ defined( 'ABSPATH' ) || exit;
 $order = wc_get_order( $order_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
 
 echo "<pre>";
-print_r($order['total']);
 print_r($order);
 echo "</pre>";
 
