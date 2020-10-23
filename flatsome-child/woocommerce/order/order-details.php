@@ -18,10 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 $order = wc_get_order( $order_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
-echo $order->get_total();
-echo "<pre>";
-print_r($order);
-echo "</pre>";
 
 function filter_woocommerce_get_order_item_totals( $array, $order, $b ) {
 	$ar = [];
@@ -164,4 +160,22 @@ if ( $show_downloads ) {
 
 </section>
 
-<?php
+<script>
+/*    This event measures purchases. */
+dataLayer.push({
+  'dr_event_type' : 'purchase',
+  'dr_value' : <?php $order->get_total(); ?>, // Type: number. This is purchase total.
+  'dr_items' : [
+    <?php 
+            foreach ( $order_items as $item_id => $item ) {
+                  $id = ($item['variation_id']) ? $item['variation_id'] : $item_id;
+                  echo '{';
+                        echo "'id':'". $id ."',";
+                        echo "'google_business_vertical': 'retail'";
+                  echo '},';
+            }
+      ?>
+  ],
+  'event':'dynamic_remarketing'
+});
+</script>
