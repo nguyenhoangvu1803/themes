@@ -19,9 +19,9 @@ defined( 'ABSPATH' ) || exit;
 
 $order = wc_get_order( $order_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
 
-$order_total = $order['order_total']['value'];
-
-echo $order_total;
+echo "<pre>";
+print_r($order);
+echo "</pre>";
 
 function filter_woocommerce_get_order_item_totals( $array, $order, $b ) {
 	$ar = [];
