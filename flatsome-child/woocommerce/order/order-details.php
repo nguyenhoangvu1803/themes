@@ -164,7 +164,7 @@ if ( $show_downloads ) {
 /*    This event measures purchases. */
 dataLayer.push({
   'dr_event_type' : 'purchase',
-  'dr_value' : <?php $order->get_total(); ?>, // Type: number. This is purchase total.
+  'dr_value' : <?php echo $order->get_total(); ?>, // Type: number. This is purchase total.
   'dr_items' : [
     <?php 
             foreach ( $order_items as $item_id => $item ) {
